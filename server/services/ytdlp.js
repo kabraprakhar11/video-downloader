@@ -239,20 +239,6 @@ function isYouTubeUrl(url) {
 
 async function extractInfo(url) {
   logger.info(`[extract] Starting extraction for: ${url}`);
-
-  // Use VidsSave API for YouTube links exclusively to bypass IP ban
-  if (isYouTubeUrl(url)) {
-    try {
-      const result = await extractViaVidsSave(url);
-      if (result.formats.combined.length > 0 || result.formats.audioOnly.length > 0) {
-        return result;
-      }
-    } catch (apiErr) {
-      logger.warn(`[vidssave] API failed, falling back to yt-dlp: ${apiErr.message}`);
-    }
-  }
-
-  // Fallback to local yt-dlp for everything else
   return extractViaYtdlp(url);
 }
 
