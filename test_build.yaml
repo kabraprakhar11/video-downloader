@@ -1,0 +1,16 @@
+steps:
+  - name: 'node:18'
+    entrypoint: 'npm'
+    args: ['install', 'play-dl']
+  - name: 'node:18'
+    entrypoint: 'node'
+    args: 
+      - '-e'
+      - |
+        const play = require("play-dl");
+        play.video_info("https://www.youtube.com/watch?v=jNQXAC9IVRw")
+          .then(info => console.log("[SUCCESS] Play-dl extracted:", info.video_details.title))
+          .catch(err => {
+            console.error("[ERROR] Play-dl failed:", err.message);
+            process.exit(1);
+          });
