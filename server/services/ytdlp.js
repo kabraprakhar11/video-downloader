@@ -2,6 +2,7 @@ const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const logger = require('../utils/logger');
+const ALLOWED_EXTRACTORS = require('../utils/allowedExtractors');
 
 const YTDLP_BIN = 'yt-dlp';
 
@@ -40,8 +41,6 @@ function buildYtdlpArgs(url) {
     '--no-warnings',
     '--socket-timeout', '30',
     '--retries', '3',
-    '--add-header', 'Accept-Language:en-US,en;q=0.9',
-    '--add-header', 'User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
   ];
 
   // Only inject cookies if they exist
@@ -153,6 +152,9 @@ function parseFormats(raw, url) {
       result.formats.combined.push(obj);
     } else if (isAudioStream) {
       result.formats.audioOnly.push(obj);
+    } else {
+      // Fallback for formats with no codec metadata (like Snapchat)
+      result.formats.combined.push(obj);
     }
   });
 
@@ -268,6 +270,11 @@ async function extractInfo(url) {
     throw new Error(`Could not extract video information. ${stderr.slice(0, 150)}`);
   }
 
+  const extractor = raw.extractor_key || raw.extractor;
+  if (extractor && !ALLOWED_EXTRACTORS.has(extractor.toLowerCase())) {
+    throw new Error('This website is not supported. Please try a different platform.');
+  }
+
   return parseFormats(raw, url);
 }
 
@@ -290,6 +297,11 @@ async function extractFormatUrl(pageUrl, formatId) {
     }
   }
 
+  const extractor = raw.extractor_key || raw.extractor;
+  if (extractor && !ALLOWED_EXTRACTORS.has(extractor.toLowerCase())) {
+    throw new Error('This website is not supported. Please try a different platform.');
+  }
+
   const allFormats = [
     ...(raw.formats || []),
   ];
@@ -303,6 +315,8 @@ async function extractFormatUrl(pageUrl, formatId) {
       videoUrl: videoFmt?.url || null,
       audioUrl: audioFmt?.url || null,
       isMerge: true,
+      videoHeaders: videoFmt?.http_headers || null,
+      audioHeaders: audioFmt?.http_headers || null,
     };
   }
 
@@ -328,6 +342,7 @@ async function extractFormatUrl(pageUrl, formatId) {
     videoUrl: isAudioOnly ? null : fmt.url,
     audioUrl: isAudioOnly ? fmt.url : null,
     isMerge: false,
+    headers: fmt.http_headers || null,
   };
 }
 

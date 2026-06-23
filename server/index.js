@@ -167,8 +167,9 @@ app.get('/api/thumbnail', async (req, res) => {
   }, (proxyRes) => {
     // Follow redirects once
     if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
-      const redirectClient = proxyRes.headers.location.startsWith('https') ? require('https') : require('http');
-      return redirectClient.get(proxyRes.headers.location, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (r2) => {
+      const nextUrl = new URL(proxyRes.headers.location, url).href;
+      const redirectClient = nextUrl.startsWith('https') ? require('https') : require('http');
+      return redirectClient.get(nextUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (r2) => {
         res.setHeader('Content-Type', r2.headers['content-type'] || 'image/jpeg');
         res.setHeader('Cache-Control', 'public, max-age=3600');
         res.setHeader('Access-Control-Allow-Origin', '*');

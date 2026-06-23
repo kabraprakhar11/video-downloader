@@ -87,6 +87,7 @@ router.post('/', proxyLimiter, async (req, res) => {
 
   downloadSessions.set(jobId, {
     ...streamInfo,
+    pageUrl,
     displayName,
     createdAt: Date.now(),
   });
@@ -113,14 +114,34 @@ router.get('/stream/:jobId', (req, res) => {
 
   logger.info(`[Stream] Starting: ${session.displayName} | merge=${session.isMerge} | video=${!!session.videoUrl} | audio=${!!session.audioUrl}`);
 
+  const buildHeadersArg = (headersObj) => {
+    let headersStr = '';
+    const referer = headersObj?.['Referer'] || headersObj?.['referer'] || session.pageUrl || '';
+    if (referer) headersStr += `Referer: ${referer}\r\n`;
+    if (headersObj) {
+      for (const [k, v] of Object.entries(headersObj)) {
+        if (k.toLowerCase() !== 'referer' && k.toLowerCase() !== 'user-agent') {
+          headersStr += `${k}: ${v}\r\n`;
+        }
+      }
+    }
+    return headersStr ? ['-headers', headersStr] : [];
+  };
+
+  const getUserAgent = (headersObj) => {
+    return headersObj?.['User-Agent'] || headersObj?.['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36';
+  };
+
   // ── FFmpeg merge (video + audio separate streams) ─────────────────────────
   if (session.isMerge && session.videoUrl && session.audioUrl) {
     const FFMPEG_PATH = require('ffmpeg-static');
     const args = [
-      '-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+      '-user_agent', getUserAgent(session.videoHeaders),
+      ...buildHeadersArg(session.videoHeaders),
       '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.videoUrl,
-      '-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+      '-user_agent', getUserAgent(session.audioHeaders),
+      ...buildHeadersArg(session.audioHeaders),
       '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.audioUrl,
       '-c:v', 'copy',
@@ -145,7 +166,8 @@ router.get('/stream/:jobId', (req, res) => {
   if (session.audioUrl && !session.videoUrl) {
     const FFMPEG_PATH = require('ffmpeg-static');
     const args = [
-      '-user_agent', 'Mozilla/5.0',
+      '-user_agent', getUserAgent(session.headers),
+      ...buildHeadersArg(session.headers),
       '-i', session.audioUrl,
       '-vn',
       '-c:a', 'libmp3lame',
@@ -167,6 +189,32 @@ router.get('/stream/:jobId', (req, res) => {
     return res.status(422).send('No stream URL available.');
   }
 
+  if (targetUrl.includes('.m3u8') || targetUrl.includes('.mpd') || targetUrl.includes('m3u8')) {
+    const FFMPEG_PATH = require('ffmpeg-static');
+    const args = [
+      '-user_agent', getUserAgent(session.headers),
+      ...buildHeadersArg(session.headers),
+      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
+      '-i', targetUrl,
+      '-c:v', 'copy',
+      '-c:a', 'copy',
+      '-bsf:a', 'aac_adtstoasc',
+      '-movflags', 'frag_keyframe+empty_moov',
+      '-f', 'mp4',
+      'pipe:1',
+    ];
+    const proc = spawn(FFMPEG_PATH, args);
+    proc.stdout.pipe(res);
+    let ffmpegStderr = '';
+    proc.stderr.on('data', d => { ffmpegStderr += d.toString(); });
+    proc.on('close', code => {
+      if (code !== 0) logger.error(`[Stream] FFmpeg (m3u8) exited code=${code}. Stderr: ${ffmpegStderr}`);
+      try { res.end(); } catch (_) {}
+    });
+    req.on('close', () => proc.kill('SIGKILL'));
+    return;
+  }
+
   function proxyStream(url, depth = 0) {
     if (depth > 3) {
       logger.error('[Stream] Too many redirects');
@@ -174,18 +222,23 @@ router.get('/stream/:jobId', (req, res) => {
     }
 
     const client = url.startsWith('https') ? https : http;
+    
+    const reqHeaders = {
+      'User-Agent': getUserAgent(session.headers),
+      'Accept': '*/*',
+      'Referer': session.headers?.['Referer'] || session.headers?.['referer'] || session.pageUrl || url,
+      ...(session.headers || {})
+    };
+
     const proxyReq = client.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-        'Accept': '*/*',
-        'Referer': session.pageUrl || url,
-      },
+      headers: reqHeaders,
       timeout: 30000,
     }, (proxyRes) => {
       // Follow redirects
       if ([301, 302, 303, 307, 308].includes(proxyRes.statusCode) && proxyRes.headers.location) {
         proxyRes.resume();
-        return proxyStream(proxyRes.headers.location, depth + 1);
+        const nextUrl = new URL(proxyRes.headers.location, url).href;
+        return proxyStream(nextUrl, depth + 1);
       }
 
       if (proxyRes.statusCode !== 200) {

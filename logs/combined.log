@@ -6530,3 +6530,1295 @@ Caused by: Error
 2026-06-21 13:10:18 [info]: [yt-dlp] Using node runtime at: D:\Program Files\nodejs\node.exe
 2026-06-21 13:10:18 [info]: [extract] Starting extraction for: https://www.youtube.com/watch?v=jNQXAC9IVRw
 2026-06-21 13:10:18 [info]: [vidssave-api] Routing request through api.vidssave.com for: https://www.youtube.com/watch?v=jNQXAC9IVRw
+2026-06-23 20:59:13 [info]: [extract] Starting for: https://www.reddit.com/r/india/comments/1u72q7k/test/
+2026-06-23 20:59:13 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/india/comments/1u72q7k/test/
+2026-06-23 20:59:18 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 1u72q7k: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-23 20:59:48 [info]: [extract] Starting for: https://twitter.com/SpaceX/status/1768270566367584501
+2026-06-23 20:59:48 [info]: [yt-dlp] Running extraction for: https://twitter.com/SpaceX/status/1768270566367584501
+2026-06-23 20:59:52 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270566367584501: No video could be found in this tweet
+
+2026-06-23 21:01:59 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:02:01 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:02:01 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:02:01 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:02:01 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:02:01 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:02:01 [info]:    Environment: development
+2026-06-23 21:02:01 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:02:01 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:02:03 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:02:03 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:02:04 [debug]: GET / 200 26ms — ::1
+2026-06-23 21:02:05 [debug]: GET /css/styles.css 200 14ms — ::1
+2026-06-23 21:02:05 [debug]: GET /js/auth.js 304 7ms — ::1
+2026-06-23 21:02:05 [debug]: GET /js/api.js 200 20ms — ::1
+2026-06-23 21:02:05 [debug]: GET /js/ui.js 200 27ms — ::1
+2026-06-23 21:02:05 [debug]: GET /js/app.js 200 11ms — ::1
+2026-06-23 21:02:05 [debug]: GET /api/config 200 6ms — ::1
+2026-06-23 21:02:08 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-23 21:02:08 [debug]: GET /favicon.ico 200 15ms — ::1
+2026-06-23 21:02:10 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:02:10 [debug]: POST /verify 200 2440ms — ::1
+2026-06-23 21:02:38 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:02:38 [info]: [extract] Starting for: https://www.instagram.com/reel/DZNVAxYh_Qn/?igsh=NzBpbW1lNjNqemts
+2026-06-23 21:02:38 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/reel/DZNVAxYh_Qn/?igsh=NzBpbW1lNjNqemts
+2026-06-23 21:02:42 [debug]: POST / 200 4268ms — ::1
+2026-06-23 21:02:43 [debug]: GET /api/thumbnail 200 277ms — ::1
+2026-06-23 21:02:46 [info]: [extractFormatUrl] Using cached extraction for: https://www.instagram.com/reel/DZNVAxYh_Qn/?igsh=NzBpbW1lNjNqemts
+2026-06-23 21:02:46 [debug]: POST / 200 6ms — ::1
+2026-06-23 21:02:46 [info]: [Stream] Starting: Video by gargi_sh_965.mp4 | merge=false | video=true | audio=false
+2026-06-23 21:02:49 [debug]: GET /stream/87b352a421c06a1c8156514a4b7a 200 2277ms — ::1
+2026-06-23 21:03:18 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:03:18 [info]: [extract] Starting for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:03:18 [info]: [yt-dlp] Running extraction for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:03:23 [debug]: POST / 200 5318ms — ::1
+2026-06-23 21:03:24 [debug]: GET /api/thumbnail 200 526ms — ::1
+2026-06-23 21:03:26 [info]: [extractFormatUrl] Using cached extraction for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:03:26 [debug]: POST / 200 6ms — ::1
+2026-06-23 21:03:26 [info]: [Stream] Starting: Addressing the joint press meet with PM Robert Fico of Slovakia.  @RobertFicoSVK.mp4 | merge=false | video=true | audio=false
+2026-06-23 21:03:26 [debug]: GET /stream/4ae94ff32558bf3a1927ea5d7ef0 200 279ms — ::1
+2026-06-23 21:05:27 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:05:28 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:05:28 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:05:28 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:05:28 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:05:28 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:05:28 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:05:28 [info]:    Environment: development
+2026-06-23 21:05:28 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:05:30 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:05:30 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:05:41 [debug]: GET / 200 13ms — ::1
+2026-06-23 21:05:42 [debug]: GET /css/styles.css 200 7ms — ::1
+2026-06-23 21:05:42 [debug]: GET /js/api.js 200 5ms — ::1
+2026-06-23 21:05:42 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-23 21:05:42 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-23 21:05:42 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-23 21:05:42 [debug]: GET /api/config 200 5ms — ::1
+2026-06-23 21:05:43 [debug]: GET /favicon.ico 200 10ms — ::1
+2026-06-23 21:05:44 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-23 21:05:44 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:05:44 [info]: [extract] Starting for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:05:44 [info]: [yt-dlp] Running extraction for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:05:46 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:05:46 [debug]: POST /verify 200 2441ms — ::1
+2026-06-23 21:05:49 [debug]: POST / 200 4910ms — ::1
+2026-06-23 21:05:49 [debug]: GET /api/thumbnail 200 98ms — ::1
+2026-06-23 21:05:54 [info]: [extractFormatUrl] Using cached extraction for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:05:54 [debug]: POST / 200 7ms — ::1
+2026-06-23 21:05:54 [info]: [Stream] Starting: Addressing the joint press meet with PM Robert Fico of Slovakia.  @RobertFicoSVK.mp4 | merge=false | video=true | audio=false
+2026-06-23 21:05:55 [debug]: GET /stream/f90640c28f75cf6a841f1612cb4c 200 630ms — ::1
+2026-06-23 21:05:55 [error]: [Stream] FFmpeg (m3u8) exited code=4294967295. Stderr: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --pkg-config=pkgconf --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-dxva2 --enable-d3d11va --enable-libvpl --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+mime type is not rfc8216 compliant
+[hls @ 0000025a4512d400] Skip ('#EXT-X-VERSION:6')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-INDEPENDENT-SEGMENTS')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:17.771Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:20.779Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:23.764Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:26.774Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:29.778Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:32.767Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:35.776Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:38.761Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:40.745Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:43.734Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:46.740Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:49.745Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:52.735Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:55.742Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:58.729Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:01.738Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:04.745Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:07.732Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:10.740Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:13.745Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:16.735Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:19.744Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:22.731Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:25.737Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:28.746Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:31.733Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:34.740Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:37.745Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:40.735Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:43.743Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:46.731Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:49.741Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:52.745Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:55.734Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:58.998Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:02.005Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:05.012Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:08.001Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:11.008Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:14.012Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:17.002Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:20.018Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:22.165Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:25.173Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:28.801Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:31.807Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:34.812Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:37.803Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:40.823Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:43.798Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:46.805Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:49.813Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:53.479Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:56.470Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:59.478Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:02.465Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:05.473Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:08.479Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:11.470Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:14.475Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:17.481Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:20.469Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:24.972Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:27.979Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:30.965Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:33.974Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:36.979Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:39.955Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:42.964Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:46.879Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:49.866Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:52.875Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:55.879Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:58.856Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:01.865Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:04.851Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:07.874Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:10.879Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:13.866Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:16.874Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:20.439Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:23.446Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:26.433Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:29.441Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:32.446Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:34.837Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:37.845Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:39.979Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:42.965Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:45.973Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:48.980Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:51.969Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:54.976Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:57.964Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:00.971Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:03.979Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:06.967Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:09.974Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:12.640Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:15.646Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:18.935Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:21.943Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:24.947Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:27.937Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:30.945Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:33.932Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:36.942Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:39.946Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:42.935Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:45.944Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:48.946Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:51.937Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:54.944Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:57.932Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:00.939Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:03.947Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:06.935Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:09.943Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:13.397Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:17.004Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:20.012Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:24.896Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:28.971Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:31.979Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:34.966Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:37.975Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:40.979Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:43.970Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:46.978Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:49.963Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:52.972Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:55.680Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:58.580Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:01.568Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:04.577Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:07.564Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:10.572Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:13.579Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:16.567Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:19.576Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:22.568Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:25.558Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:28.576Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:31.563Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:34.571Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:37.579Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:40.567Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:43.573Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:46.580Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:49.569Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:52.578Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:55.565Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:58.572Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:01.579Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:04.566Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:07.575Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:10.580Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:14.766Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:17.771Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:20.780Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:23.767Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:26.775Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:31.147Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:34.432Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:37.442Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:40.447Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:43.437Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:46.443Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:49.432Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:52.630Z')
+[hls @ 0000025a4512d400] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:55.380Z')
+[hls @ 0000025a4512d400] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515930391075988_965_a.ts' for reading
+[hls @ 0000025a4512d400] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515934812456046_966_a.ts' for reading
+Input #0, hls, from 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/playlist_16665227602535066264.m3u8?type=replay':
+  Duration: 00:08:37.83, start: 2919.033000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0: Data: timed_id3 (ID3  / 0x20334449)
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:1: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p, 1920x1080, 30 tbr, 90k tbn
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:2: Audio: aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp
+    Metadata:
+      variant_bitrate : 0
+Output #0, mp4, to 'pipe:1':
+  Metadata:
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080, q=2-31, 30 tbr, 90k tbn
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp
+    Metadata:
+      variant_bitrate : 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (copy)
+  Stream #0:2 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    [mp4 @ 0000025a459c7b80] Malformed AAC bitstream detected: use the audio bitstream filter 'aac_adtstoasc' to fix it ('-bsf:a aac_adtstoasc' option with ffmpeg)
+[vost#0:0/copy @ 0000025a457266c0] Error submitting a packet to the muxer: Operation not permitted
+[out#0/mp4 @ 0000025a4597fc80] Error muxing a packet
+[mp4 @ 0000025a459c7b80] Malformed AAC bitstream detected: use the audio bitstream filter 'aac_adtstoasc' to fix it ('-bsf:a aac_adtstoasc' option with ffmpeg)
+[mp4 @ 0000025a459c7b80] Estimating the duration of the last packet in a fragment, consider setting the duration field in AVPacket instead.
+[out#0/mp4 @ 0000025a4597fc80] Error writing trailer: Operation not permitted
+[out#0/mp4 @ 0000025a4597fc80] video:45kB audio:1kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.157881%
+size=      46kB time=00:00:00.19 bitrate=1982.5kbits/s speed= 173x    
+Conversion failed!
+
+2026-06-23 21:07:56 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:07:57 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:07:57 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:07:57 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:07:57 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:07:57 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:07:57 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:07:57 [info]:    Environment: development
+2026-06-23 21:07:57 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:07:57 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:07:59 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:08:50 [debug]: GET / 200 14ms — ::1
+2026-06-23 21:08:50 [debug]: GET /css/styles.css 200 4ms — ::1
+2026-06-23 21:08:50 [debug]: GET /js/api.js 200 10ms — ::1
+2026-06-23 21:08:50 [debug]: GET /js/auth.js 200 10ms — ::1
+2026-06-23 21:08:50 [debug]: GET /js/ui.js 200 10ms — ::1
+2026-06-23 21:08:50 [debug]: GET /js/app.js 200 9ms — ::1
+2026-06-23 21:08:50 [debug]: GET /api/config 200 5ms — ::1
+2026-06-23 21:08:51 [debug]: GET /favicon.ico 200 10ms — ::1
+2026-06-23 21:08:52 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-23 21:08:52 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:08:52 [info]: [extract] Starting for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:08:52 [info]: [yt-dlp] Running extraction for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:08:54 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:08:54 [debug]: POST /verify 200 2497ms — ::1
+2026-06-23 21:08:58 [debug]: POST / 200 5330ms — ::1
+2026-06-23 21:08:58 [debug]: GET /api/thumbnail 200 94ms — ::1
+2026-06-23 21:09:11 [info]: [extractFormatUrl] Using cached extraction for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:09:11 [debug]: POST / 200 14ms — ::1
+2026-06-23 21:09:11 [info]: [Stream] Starting: Addressing the joint press meet with PM Robert Fico of Slovakia.  @RobertFicoSVK.mp4 | merge=false | video=true | audio=false
+2026-06-23 21:09:20 [error]: [Stream] FFmpeg (m3u8) exited code=null. Stderr: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --pkg-config=pkgconf --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-dxva2 --enable-d3d11va --enable-libvpl --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+mime type is not rfc8216 compliant
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-VERSION:6')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-INDEPENDENT-SEGMENTS')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:17.771Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:20.779Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:23.764Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:26.774Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:29.778Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:32.767Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:35.776Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:38.761Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:40.745Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:43.734Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:46.740Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:49.745Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:52.735Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:55.742Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:58.729Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:01.738Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:04.745Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:07.732Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:10.740Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:13.745Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:16.735Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:19.744Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:22.731Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:25.737Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:28.746Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:31.733Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:34.740Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:37.745Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:40.735Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:43.743Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:46.731Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:49.741Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:52.745Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:55.734Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:58.998Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:02.005Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:05.012Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:08.001Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:11.008Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:14.012Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:17.002Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:20.018Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:22.165Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:25.173Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:28.801Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:31.807Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:34.812Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:37.803Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:40.823Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:43.798Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:46.805Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:49.813Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:53.479Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:56.470Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:59.478Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:02.465Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:05.473Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:08.479Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:11.470Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:14.475Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:17.481Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:20.469Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:24.972Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:27.979Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:30.965Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:33.974Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:36.979Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:39.955Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:42.964Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:46.879Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:49.866Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:52.875Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:55.879Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:58.856Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:01.865Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:04.851Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:07.874Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:10.879Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:13.866Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:16.874Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:20.439Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:23.446Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:26.433Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:29.441Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:32.446Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:34.837Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:37.845Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:39.979Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:42.965Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:45.973Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:48.980Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:51.969Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:54.976Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:57.964Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:00.971Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:03.979Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:06.967Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:09.974Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:12.640Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:15.646Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:18.935Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:21.943Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:24.947Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:27.937Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:30.945Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:33.932Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:36.942Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:39.946Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:42.935Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:45.944Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:48.946Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:51.937Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:54.944Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:57.932Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:00.939Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:03.947Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:06.935Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:09.943Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:13.397Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:17.004Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:20.012Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:24.896Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:28.971Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:31.979Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:34.966Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:37.975Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:40.979Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:43.970Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:46.978Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:49.963Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:52.972Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:55.680Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:58.580Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:01.568Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:04.577Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:07.564Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:10.572Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:13.579Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:16.567Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:19.576Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:22.568Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:25.558Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:28.576Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:31.563Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:34.571Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:37.579Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:40.567Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:43.573Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:46.580Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:49.569Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:52.578Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:55.565Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:58.572Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:01.579Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:04.566Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:07.575Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:10.580Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:14.766Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:17.771Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:20.780Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:23.767Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:26.775Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:31.147Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:34.432Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:37.442Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:40.447Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:43.437Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:46.443Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:49.432Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:52.630Z')
+[hls @ 00000255cfc2d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:55.380Z')
+[hls @ 00000255cfc2d480] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515930391075988_965_a.ts' for reading
+[hls @ 00000255cfc2d480] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515934812456046_966_a.ts' for reading
+Input #0, hls, from 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/playlist_16665227602535066264.m3u8?type=replay':
+  Duration: 00:08:37.83, start: 2919.033000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0: Data: timed_id3 (ID3  / 0x20334449)
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:1: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p, 1920x1080, 30 tbr, 90k tbn
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:2: Audio: aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp
+    Metadata:
+      variant_bitrate : 0
+Output #0, mp4, to 'pipe:1':
+  Metadata:
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1920x1080, q=2-31, 30 tbr, 90k tbn
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp
+    Metadata:
+      variant_bitrate : 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (copy)
+  Stream #0:2 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515937833592346_967_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515940816955042_968_a.ts' for reading
+[https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515943787067530_969_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515946825577946_970_a.ts' for reading
+size=    1226kB time=00:00:11.98 bitrate= 837.4kbits/s speed=23.1x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515949843579014_971_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515952825846271_972_a.ts' for reading
+[https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515955795748702_973_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515958812536481_974_a.ts' for reading
+size=    2974kB time=00:00:25.47 bitrate= 956.5kbits/s speed=24.9x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515960810606477_975_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515963794969812_976_a.ts' for reading
+[https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515966756942857_977_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515969773614831_978_a.ts' for reading
+size=    4621kB time=00:00:37.01 bitrate=1022.8kbits/s speed=24.2x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515972767181473_979_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515975781762881_980_a.ts' for reading
+[https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515978757068384_981_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515981762118889_982_a.ts' for reading
+size=    6125kB time=00:00:49.40 bitrate=1015.5kbits/s speed=24.2x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515984809109937_983_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515987783972912_984_a.ts' for reading
+[https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515990800355703_985_a.ts' for reading
+size=    7325kB time=00:00:58.56 bitrate=1024.7kbits/s speed=  23x    [https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515993810549991_986_a.ts' for reading
+[https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515996776382943_987_a.ts' for reading
+size=    7739kB time=00:01:01.95 bitrate=1023.3kbits/s speed=19.3x    [https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781515999789848517_988_a.ts' for reading
+[https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516002786208271_989_a.ts' for reading
+size=    8793kB time=00:01:07.94 bitrate=1060.1kbits/s speed=17.2x    [https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516005803536561_990_a.ts' for reading
+size=    9714kB time=00:01:12.76 bitrate=1093.6kbits/s speed=16.2x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516008781966052_991_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516011763072432_992_a.ts' for reading
+size=   10115kB time=00:01:16.92 bitrate=1077.1kbits/s speed=14.8x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516014794318193_993_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516017807770204_994_a.ts' for reading
+size=   10931kB time=00:01:22.94 bitrate=1079.6kbits/s speed=13.9x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516020793872813_995_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516023776096597_996_a.ts' for reading
+size=   11729kB time=00:01:28.91 bitrate=1080.6kbits/s speed=13.4x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516026784861677_997_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516029792297838_998_a.ts' for reading
+size=   12502kB time=00:01:34.95 bitrate=1078.6kbits/s speed=12.9x    [https @ 00000255d0156bc0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516032805521488_999_a.ts' for reading
+[https @ 00000255d0235180] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ18xMDgwcDMwXzEwIiwiSGVpZ2h0IjoxMDgwLCJLYnBzIjo1NTAwLCJXaWR0aCI6MTkyMH0.OImMZabKYJ0cs9CnIapU-4aBk6KNBiJxi1hh-6l4BZ4/chunk_1781516035769386094_1000_a.ts' for reading
+size=   13365kB time=00:01:41.20 bitrate=1081.9kbits/s speed=12.6x    
+2026-06-23 21:09:25 [info]: [extractFormatUrl] Using cached extraction for: https://x.com/i/broadcasts/1oJMvvqzngYxQ?s=20
+2026-06-23 21:09:25 [debug]: POST / 200 3ms — ::1
+2026-06-23 21:09:25 [info]: [Stream] Starting: Addressing the joint press meet with PM Robert Fico of Slovakia.  @RobertFicoSVK.mp4 | merge=false | video=true | audio=false
+2026-06-23 21:09:36 [error]: [Stream] FFmpeg (m3u8) exited code=null. Stderr: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --pkg-config=pkgconf --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-dxva2 --enable-d3d11va --enable-libvpl --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+mime type is not rfc8216 compliant
+[hls @ 000002fedd17d480] Skip ('#EXT-X-VERSION:6')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-INDEPENDENT-SEGMENTS')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:17.771Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:20.779Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:23.764Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:26.774Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:29.778Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:32.767Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:35.776Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:38.761Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:40.745Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:43.734Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:46.740Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:49.745Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:52.735Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:55.742Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:32:58.729Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:01.738Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:04.745Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:07.732Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:10.740Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:13.745Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:16.735Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:19.744Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:22.731Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:25.737Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:28.746Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:31.733Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:34.740Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:37.745Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:40.735Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:43.743Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:46.731Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:49.741Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:52.745Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:55.734Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:33:58.998Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:02.005Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:05.012Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:08.001Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:11.008Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:14.012Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:17.002Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:20.018Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:22.165Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:25.173Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:28.801Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:31.807Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:34.812Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:37.803Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:40.823Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:43.798Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:46.805Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:49.813Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:53.479Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:56.470Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:34:59.478Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:02.465Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:05.473Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:08.479Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:11.470Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:14.475Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:17.481Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:20.469Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:24.972Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:27.979Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:30.965Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:33.974Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:36.979Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:39.955Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:42.964Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:46.879Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:49.866Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:52.875Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:55.879Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:35:58.856Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:01.865Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:04.851Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:07.874Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:10.879Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:13.866Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:16.874Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:20.439Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:23.446Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:26.433Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:29.441Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:32.446Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:34.837Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:37.845Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:39.979Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:42.965Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:45.973Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:48.980Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:51.969Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:54.976Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:36:57.964Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:00.971Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:03.979Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:06.967Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:09.974Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:12.640Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:15.646Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:18.935Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:21.943Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:24.947Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:27.937Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:30.945Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:33.932Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:36.942Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:39.946Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:42.935Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:45.944Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:48.946Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:51.937Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:54.944Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:37:57.932Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:00.939Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:03.947Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:06.935Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:09.943Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:13.397Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:17.004Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:20.012Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:24.896Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:28.971Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:31.979Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:34.966Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:37.975Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:40.979Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:43.970Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:46.978Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:49.963Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:52.972Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:55.680Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:38:58.580Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:01.568Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:04.577Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:07.564Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:10.572Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:13.579Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:16.567Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:19.576Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:22.568Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:25.558Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:28.576Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:31.563Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:34.571Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:37.579Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:40.567Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:43.573Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:46.580Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:49.569Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:52.578Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:55.565Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:39:58.572Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:01.579Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:04.566Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:07.575Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:10.580Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:14.766Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:17.771Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:20.780Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:23.767Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:26.775Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:31.147Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:34.432Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:37.442Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:40.447Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:43.437Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:46.443Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:49.432Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:52.630Z')
+[hls @ 000002fedd17d480] Skip ('#EXT-X-PROGRAM-DATE-TIME:2026-06-15T09:40:55.380Z')
+[hls @ 000002fedd17d480] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515930391075988_965_a.ts' for reading
+[hls @ 000002fedd17d480] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515934812456046_966_a.ts' for reading
+Input #0, hls, from 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/playlist_16665227602535066264.m3u8?type=replay':
+  Duration: 00:08:37.83, start: 2919.033000, bitrate: N/A
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0: Data: timed_id3 (ID3  / 0x20334449)
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:1: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p, 848x480, 30 tbr, 90k tbn
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:2: Audio: aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp
+    Metadata:
+      variant_bitrate : 0
+Output #0, mp4, to 'pipe:1':
+  Metadata:
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: h264 (High) (avc1 / 0x31637661), yuv420p, 848x480, q=2-31, 30 tbr, 90k tbn
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp
+    Metadata:
+      variant_bitrate : 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (copy)
+  Stream #0:2 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    [https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515937833592346_967_a.ts' for reading
+[https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515940816955042_968_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515943787067530_969_a.ts' for reading
+size=     369kB time=00:00:08.96 bitrate= 337.7kbits/s speed=13.4x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515946825577946_970_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515949843579014_971_a.ts' for reading
+size=     732kB time=00:00:14.99 bitrate= 400.0kbits/s speed=11.9x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515952825846271_972_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515955795748702_973_a.ts' for reading
+size=    1083kB time=00:00:20.94 bitrate= 423.7kbits/s speed=10.3x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515958812536481_974_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515960810606477_975_a.ts' for reading
+size=    1335kB time=00:00:25.92 bitrate= 421.8kbits/s speed=9.53x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515963794969812_976_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515966756942857_977_a.ts' for reading
+size=    1719kB time=00:00:31.95 bitrate= 440.6kbits/s speed=9.43x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515969773614831_978_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515972767181473_979_a.ts' for reading
+size=    2067kB time=00:00:37.93 bitrate= 446.4kbits/s speed= 9.5x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515975781762881_980_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515978757068384_981_a.ts' for reading
+size=    2417kB time=00:00:43.90 bitrate= 451.0kbits/s speed=9.38x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515981762118889_982_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515984809109937_983_a.ts' for reading
+size=    2746kB time=00:00:49.92 bitrate= 450.6kbits/s speed=9.38x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515987783972912_984_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515990800355703_985_a.ts' for reading
+size=    3089kB time=00:00:55.95 bitrate= 452.1kbits/s speed=9.42x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515993810549991_986_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515996776382943_987_a.ts' for reading
+size=    3461kB time=00:01:01.95 bitrate= 457.6kbits/s speed=9.33x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781515999789848517_988_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516002786208271_989_a.ts' for reading
+size=    3890kB time=00:01:07.94 bitrate= 469.0kbits/s speed=9.25x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516005803536561_990_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516008781966052_991_a.ts' for reading
+size=    4288kB time=00:01:13.92 bitrate= 475.3kbits/s speed=9.26x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516011763072432_992_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516014794318193_993_a.ts' for reading
+size=    4644kB time=00:01:19.95 bitrate= 475.8kbits/s speed=9.12x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516017807770204_994_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516020793872813_995_a.ts' for reading
+size=    5024kB time=00:01:25.90 bitrate= 479.1kbits/s speed=9.09x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516023776096597_996_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516026784861677_997_a.ts' for reading
+size=    5368kB time=00:01:31.94 bitrate= 478.2kbits/s speed=9.15x    [https @ 000002fedd1f2040] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516029792297838_998_a.ts' for reading
+[https @ 000002fedd6440c0] Opening 'https://prod-fastly-us-west-2.video.pscp.tv/Transcoding/v1/hls/YVo47bfH3y8tlE2DgToQG9XRLgYPeGslzjoAYQiS85sh5FBflh6bEB8ELSPDS9S2HD-0H_QZ0KJ0wqrd22keRw/transcode/us-west-2/periscope-replay-direct-prod-us-west-2-public/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlcnNpb24iOiIyIn0.eyJFbmNvZGVyU2V0dGluZyI6ImVuY29kZXJfc2V0dGluZ180ODBwMzBfMTAiLCJIZWlnaHQiOjQ4MCwiS2JwcyI6MTIwMCwiV2lkdGgiOjg0OH0.0LJi1usWbiPqp0QIcpq7Md5g1WxvJcPqVWNqsKw5nhA/chunk_1781516032805521488_999_a.ts' for reading
+
+2026-06-23 21:10:46 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:10:46 [info]: [extract] Starting for: https://snapchat.com/t/DkcbZfsX
+2026-06-23 21:10:46 [info]: [yt-dlp] Running extraction for: https://snapchat.com/t/DkcbZfsX
+2026-06-23 21:10:51 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-23 21:10:51 [error]: [/api/extract] Error for URL "https://snapchat.com/t/DkcbZfsX": Video not found. The link may be broken or the video may have been deleted.
+2026-06-23 21:10:51 [warn]: POST / 422 5349ms — ::1
+2026-06-23 21:10:57 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:10:57 [info]: [extract] Starting for: https://snapchat.com/t/DkcbZfsX
+2026-06-23 21:10:57 [info]: [yt-dlp] Running extraction for: https://snapchat.com/t/DkcbZfsX
+2026-06-23 21:11:02 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-23 21:11:02 [error]: [/api/extract] Error for URL "https://snapchat.com/t/DkcbZfsX": Video not found. The link may be broken or the video may have been deleted.
+2026-06-23 21:11:02 [warn]: POST / 422 5222ms — ::1
+2026-06-23 21:11:45 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:11:46 [info]: [extract] Starting for: https://www.reddit.com/user/playtombraider/comments/1tw4gm0/unleash_deadly_attacks_with_lara_crofts_iconic/?p=1&impressionid=5383930744898888310&utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button
+2026-06-23 21:11:46 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/user/playtombraider/comments/1tw4gm0/unleash_deadly_attacks_with_lara_crofts_iconic/?p=1&impressionid=5383930744898888310&utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button
+2026-06-23 21:11:51 [debug]: POST / 200 5159ms — ::1
+2026-06-23 21:11:52 [debug]: GET /api/thumbnail 200 1450ms — ::1
+2026-06-23 21:11:58 [info]: [extractFormatUrl] Using cached extraction for: https://www.reddit.com/user/playtombraider/comments/1tw4gm0/unleash_deadly_attacks_with_lara_crofts_iconic/?p=1&impressionid=5383930744898888310&utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button
+2026-06-23 21:11:58 [debug]: POST / 200 13ms — ::1
+2026-06-23 21:11:58 [info]: [Stream] Starting: Unleash deadly attacks with Lara Croft’s iconic dual pistols and othe_..mp4 | merge=true | video=true | audio=true
+2026-06-23 21:12:01 [debug]: GET /stream/d23489954da972d6853243cab6a8 200 2371ms — ::1
+2026-06-23 21:14:11 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:14:11 [info]: [extract] Starting for: https://www.snapchat.com/@snapchat/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYd3NvamxhcXlvAZnzg2FHAZnzg0yfAAAAAQ
+2026-06-23 21:14:11 [info]: [yt-dlp] Running extraction for: https://www.snapchat.com/@snapchat/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYd3NvamxhcXlvAZnzg2FHAZnzg0yfAAAAAQ
+2026-06-23 21:14:20 [debug]: POST / 200 9595ms — ::1
+2026-06-23 21:14:21 [debug]: GET /api/thumbnail 200 204ms — ::1
+2026-06-23 21:16:04 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:16:04 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:16:05 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:16:05 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:16:05 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:16:05 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:16:05 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:16:05 [info]:    Environment: development
+2026-06-23 21:16:05 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:16:06 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:16:07 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:16:35 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:16:36 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:16:36 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:16:36 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:16:36 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:16:36 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:16:36 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:16:36 [info]:    Environment: development
+2026-06-23 21:16:36 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:16:38 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:16:39 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:16:40 [info]: [extract] Starting for: https://www.snapchat.com/@snapchat/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYd3NvamxhcXlvAZnzg2FHAZnzg0yfAAAAAQ
+2026-06-23 21:16:40 [info]: [yt-dlp] Running extraction for: https://www.snapchat.com/@snapchat/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYd3NvamxhcXlvAZnzg2FHAZnzg0yfAAAAAQ
+2026-06-23 21:17:02 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:17:03 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:17:03 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:17:03 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:17:04 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:17:04 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:17:04 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:17:04 [info]:    Environment: development
+2026-06-23 21:17:04 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:17:04 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:17:06 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:17:08 [info]: [extract] Starting for: https://www.snapchat.com/@snapchat/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYd3NvamxhcXlvAZnzg2FHAZnzg0yfAAAAAQ
+2026-06-23 21:17:08 [info]: [yt-dlp] Running extraction for: https://www.snapchat.com/@snapchat/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYd3NvamxhcXlvAZnzg2FHAZnzg0yfAAAAAQ
+2026-06-23 21:17:30 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:17:31 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:17:32 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:17:32 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:17:32 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:17:32 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:17:32 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:17:32 [info]:    Environment: development
+2026-06-23 21:17:32 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:17:33 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:17:34 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:17:48 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:17:49 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:17:49 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:17:49 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:17:49 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:17:49 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:17:49 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:17:49 [info]:    Environment: development
+2026-06-23 21:17:49 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:17:50 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:17:51 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:18:37 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:18:38 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:18:38 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:18:38 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:18:38 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:18:38 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:18:38 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:18:38 [info]:    Environment: development
+2026-06-23 21:18:38 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:18:40 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:18:40 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:19:30 [debug]: GET / 200 11ms — ::1
+2026-06-23 21:19:30 [debug]: GET /css/styles.css 200 5ms — ::1
+2026-06-23 21:19:30 [debug]: GET /js/api.js 200 8ms — ::1
+2026-06-23 21:19:30 [debug]: GET /js/auth.js 200 7ms — ::1
+2026-06-23 21:19:30 [debug]: GET /js/ui.js 200 6ms — ::1
+2026-06-23 21:19:30 [debug]: GET /js/app.js 200 8ms — ::1
+2026-06-23 21:19:31 [debug]: GET /api/config 200 4ms — ::1
+2026-06-23 21:19:32 [debug]: GET /favicon.ico 200 7ms — ::1
+2026-06-23 21:19:32 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-23 21:19:34 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:19:34 [debug]: POST /verify 200 2302ms — ::1
+2026-06-23 21:19:34 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:19:34 [warn]: URL validation failed: URL must use http or https protocol. | Input: 【【Reaction】穷人永远接触不到的场景】 https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:19:34 [warn]: POST / 400 5ms — ::1
+2026-06-23 21:19:36 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:19:36 [warn]: URL validation failed: URL must use http or https protocol. | Input: 【【Reaction】穷人永远接触不到的场景】 https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:19:36 [warn]: POST / 400 3ms — ::1
+2026-06-23 21:19:43 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:19:44 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:19:44 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:19:50 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fLjt69ERX: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-23 21:19:50 [error]: [/api/extract] Error for URL "https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web": Could not extract video information. ERROR: [BiliBili] 1fLjt69ERX: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-23 21:19:50 [warn]: POST / 422 6487ms — ::1
+2026-06-23 21:21:12 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:21:13 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:21:13 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:21:13 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:21:13 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:21:13 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:21:13 [info]:    Environment: development
+2026-06-23 21:21:13 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:21:16 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:21:17 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:21:17 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:26:17 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:26:18 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:26:18 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:26:18 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:26:18 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:26:18 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:26:18 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:26:18 [info]:    Environment: development
+2026-06-23 21:26:18 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:26:19 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:26:20 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:26:39 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:26:40 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:26:40 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:26:40 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:26:40 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:26:40 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:26:40 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:26:40 [info]:    Environment: development
+2026-06-23 21:26:40 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:26:42 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:26:42 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:26:49 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:26:50 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:26:51 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:26:51 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:26:51 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:26:51 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:26:51 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:26:51 [info]:    Environment: development
+2026-06-23 21:26:51 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:26:52 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:26:53 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:26:59 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:27:00 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:27:00 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:27:00 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:27:00 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:27:01 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:27:01 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:27:01 [info]:    Environment: development
+2026-06-23 21:27:01 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:27:01 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:27:03 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:27:27 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:27:28 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:27:29 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:27:29 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:27:29 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:27:29 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:27:29 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:27:29 [info]:    Environment: development
+2026-06-23 21:27:29 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:27:30 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:27:31 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:27:41 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:27:41 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:27:42 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:27:42 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:27:42 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:27:42 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:27:42 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:27:42 [info]:    Environment: development
+2026-06-23 21:27:42 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:27:42 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:27:44 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:27:52 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:27:53 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:27:53 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:27:53 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:27:53 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:27:53 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:27:53 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:27:53 [info]:    Environment: development
+2026-06-23 21:27:53 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:27:54 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:27:55 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:29:48 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:29:49 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:29:49 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:29:49 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:29:49 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:29:49 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:29:49 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:29:49 [info]:    Environment: development
+2026-06-23 21:29:49 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:29:50 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:29:52 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:29:53 [info]: [extract] Starting for: https://vimeo.com/22439234
+2026-06-23 21:29:53 [info]: [yt-dlp] Running extraction for: https://vimeo.com/22439234
+2026-06-23 21:30:25 [info]: [extract] Starting for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-23 21:30:25 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-23 21:30:29 [info]: [extract] Starting for: https://www.reddit.com/r/videos/comments/16v8f1i/the_history_of_the_world_i_guess/
+2026-06-23 21:30:29 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/videos/comments/16v8f1i/the_history_of_the_world_i_guess/
+2026-06-23 21:30:33 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16v8f1i: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-23 21:30:33 [info]: [extract] Starting for: https://www.youtube.com/watch?v=jNQXAC9IVRw
+2026-06-23 21:30:33 [info]: [yt-dlp] Running extraction for: https://www.youtube.com/watch?v=jNQXAC9IVRw
+2026-06-23 21:31:17 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:31:18 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:31:18 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:31:18 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:31:18 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:31:18 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:31:18 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:31:18 [info]:    Environment: development
+2026-06-23 21:31:18 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:31:20 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:31:20 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:31:51 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:31:52 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:31:52 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:31:52 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:31:52 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:31:52 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:31:52 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:31:52 [info]:    Environment: development
+2026-06-23 21:31:52 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:31:53 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:31:54 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:32:00 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:32:01 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:32:01 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:32:01 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:32:01 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:32:01 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:32:01 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:32:01 [info]:    Environment: development
+2026-06-23 21:32:01 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:32:02 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:32:03 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:32:05 [info]: [extract] Starting for: https://vimeo.com/22439234
+2026-06-23 21:32:05 [info]: [yt-dlp] Running extraction for: https://vimeo.com/22439234
+2026-06-23 21:32:10 [info]: [extract] Starting for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-23 21:32:10 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-23 21:32:14 [info]: [extract] Starting for: https://www.reddit.com/r/videos/comments/16v8f1i/the_history_of_the_world_i_guess/
+2026-06-23 21:32:14 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/videos/comments/16v8f1i/the_history_of_the_world_i_guess/
+2026-06-23 21:32:20 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16v8f1i: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-23 21:32:20 [info]: [extract] Starting for: https://www.youtube.com/watch?v=jNQXAC9IVRw
+2026-06-23 21:32:20 [info]: [yt-dlp] Running extraction for: https://www.youtube.com/watch?v=jNQXAC9IVRw
+2026-06-23 21:33:21 [debug]: GET / 200 12ms — ::1
+2026-06-23 21:33:21 [debug]: GET /css/styles.css 200 6ms — ::1
+2026-06-23 21:33:21 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-23 21:33:21 [debug]: GET /js/auth.js 200 2ms — ::1
+2026-06-23 21:33:21 [debug]: GET /js/ui.js 200 4ms — ::1
+2026-06-23 21:33:21 [debug]: GET /js/app.js 200 6ms — ::1
+2026-06-23 21:33:21 [debug]: GET /api/config 200 4ms — ::1
+2026-06-23 21:33:22 [debug]: GET /favicon.ico 200 9ms — ::1
+2026-06-23 21:33:23 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-23 21:33:24 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:33:24 [debug]: POST /verify 200 2334ms — ::1
+2026-06-23 21:33:30 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:33:30 [warn]: URL validation failed: URL must use http or https protocol. | Input: 【【Reaction】穷人永远接触不到的场景】 https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:33:30 [warn]: POST / 400 11ms — ::1
+2026-06-23 21:33:32 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:33:32 [warn]: URL validation failed: URL must use http or https protocol. | Input: 【【Reaction】穷人永远接触不到的场景】 https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:33:32 [warn]: POST / 400 4ms — ::1
+2026-06-23 21:33:40 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:33:41 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:33:41 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:33:47 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fLjt69ERX: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-23 21:33:47 [error]: [/api/extract] Error for URL "https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web": Could not extract video information. ERROR: [BiliBili] 1fLjt69ERX: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-23 21:33:47 [warn]: POST / 422 6831ms — ::1
+2026-06-23 21:35:00 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:35:00 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:35:01 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:35:01 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:35:01 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:35:01 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:35:01 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:35:01 [info]:    Environment: development
+2026-06-23 21:35:01 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:35:03 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:35:04 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:35:14 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:35:15 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:35:15 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:35:15 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:35:15 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:35:15 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:35:15 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:35:15 [info]:    Environment: development
+2026-06-23 21:35:15 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:35:17 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:35:18 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:35:49 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:35:50 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:35:50 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:35:50 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:35:50 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:35:50 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:35:50 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:35:50 [info]:    Environment: development
+2026-06-23 21:35:50 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:35:51 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:35:52 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:35:58 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:35:59 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:35:59 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:35:59 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:35:59 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:35:59 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:35:59 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:35:59 [info]:    Environment: development
+2026-06-23 21:35:59 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:36:01 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:36:01 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:36:30 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-23 21:36:31 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-23 21:36:31 [info]: [yt-dlp] Binary found and ready.
+2026-06-23 21:36:31 [info]: ✅ yt-dlp found: vtrue
+2026-06-23 21:36:31 [info]: [yt-dlp] Running auto-update...
+2026-06-23 21:36:31 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-23 21:36:31 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-23 21:36:31 [info]:    Environment: development
+2026-06-23 21:36:31 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-23 21:36:33 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-23 21:36:33 [info]: [yt-dlp] Update check complete.
+2026-06-23 21:36:52 [debug]: GET / 200 11ms — ::1
+2026-06-23 21:36:52 [debug]: GET /css/styles.css 200 8ms — ::1
+2026-06-23 21:36:52 [debug]: GET /js/api.js 200 8ms — ::1
+2026-06-23 21:36:52 [debug]: GET /js/auth.js 200 10ms — ::1
+2026-06-23 21:36:52 [debug]: GET /js/app.js 200 4ms — ::1
+2026-06-23 21:36:52 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-23 21:36:52 [debug]: GET /api/config 200 4ms — ::1
+2026-06-23 21:36:53 [debug]: GET /favicon.ico 200 10ms — ::1
+2026-06-23 21:36:54 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-23 21:36:56 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:36:56 [debug]: POST /verify 200 2582ms — ::1
+2026-06-23 21:36:59 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:36:59 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:36:59 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web
+2026-06-23 21:37:05 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fLjt69ERX: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-23 21:37:05 [error]: [/api/extract] Error for URL "https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web": Could not extract video information. ERROR: [BiliBili] 1fLjt69ERX: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-23 21:37:05 [warn]: POST / 422 6752ms — ::1
+2026-06-23 21:42:04 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:42:04 [info]: [extract] Starting for: https://vimeo.com/1201819515
+2026-06-23 21:42:04 [info]: [yt-dlp] Running extraction for: https://vimeo.com/1201819515
+2026-06-23 21:42:12 [debug]: POST / 200 8372ms — ::1
+2026-06-23 21:42:14 [debug]: GET /api/thumbnail 200 1173ms — ::1
+2026-06-23 21:42:16 [info]: [extractFormatUrl] Using cached extraction for: https://vimeo.com/1201819515
+2026-06-23 21:42:16 [debug]: POST / 200 5ms — ::1
+2026-06-23 21:42:16 [info]: [Stream] Starting: Wander to Wonder.mp4 | merge=false | video=true | audio=false
+2026-06-23 21:43:19 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:43:19 [info]: [extract] Starting for: https://www.facebook.com/watch/?v=1414428130709230
+2026-06-23 21:43:19 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/watch/?v=1414428130709230
+2026-06-23 21:43:25 [debug]: POST / 200 5950ms — ::1
+2026-06-23 21:43:26 [debug]: GET /api/thumbnail 200 466ms — ::1
+2026-06-23 21:43:50 [info]: [extractFormatUrl] Using cached extraction for: https://www.facebook.com/watch/?v=1414428130709230
+2026-06-23 21:43:50 [debug]: POST / 200 70ms — ::1
+2026-06-23 21:43:50 [info]: [Stream] Starting: 901K views · 6.2K reactions _ Just ask 🌺 Gwyneth Yuma needed flowers to make leis, so she knocked on the auntie’s door across the street. _Most people are kind and happy to help if you're kind and re.mp4 | merge=false | video=true | audio=false
+2026-06-23 21:43:55 [debug]: GET /stream/3c41f7ad7ccbef027357ca0d3318 200 5325ms — ::1
+2026-06-23 21:44:00 [debug]: GET /stream/3ef03e58c43f006fc09f510c45b1 200 104728ms — ::1
+2026-06-23 21:58:34 [debug]: GET / 200 10ms — ::1
+2026-06-23 21:58:34 [debug]: GET /css/styles.css 200 6ms — ::1
+2026-06-23 21:58:34 [debug]: GET /js/api.js 200 5ms — ::1
+2026-06-23 21:58:34 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-23 21:58:34 [debug]: GET /js/ui.js 200 4ms — ::1
+2026-06-23 21:58:34 [debug]: GET /js/app.js 200 4ms — ::1
+2026-06-23 21:58:34 [debug]: GET /api/config 200 3ms — ::1
+2026-06-23 21:58:35 [debug]: GET /favicon.ico 200 10ms — ::1
+2026-06-23 21:58:36 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-23 21:58:37 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 21:58:37 [debug]: POST /verify 200 2457ms — ::1
+2026-06-23 22:00:23 [debug]: Auth: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-23 22:00:23 [info]: [extract] Starting for: https://www.reddit.com/user/playtombraider/comments/1tw4gm0/unleash_deadly_attacks_with_lara_crofts_iconic/?p=1&impressionid=5383930744898888310&utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button
+2026-06-23 22:00:23 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/user/playtombraider/comments/1tw4gm0/unleash_deadly_attacks_with_lara_crofts_iconic/?p=1&impressionid=5383930744898888310&utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button
+2026-06-23 22:00:29 [debug]: POST / 200 5529ms — ::1
