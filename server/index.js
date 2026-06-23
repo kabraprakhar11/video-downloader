@@ -137,6 +137,56 @@ app.use('/api/download', downloadRoute);
 app.use('/api/merge', mergeRoute);
 app.use('/api/checkout', razorpayRoute);
 
+// ── Thumbnail Proxy ────────────────────────────────────────────────────────────
+// Proxies external thumbnail images to avoid CORS/CSP issues in the browser
+app.get('/api/thumbnail', async (req, res) => {
+  const { url } = req.query;
+  if (!url || typeof url !== 'string') return res.status(400).send('Missing url');
+
+  let parsed;
+  try {
+    parsed = new URL(url);
+    if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') throw new Error();
+  } catch {
+    return res.status(400).send('Invalid url');
+  }
+
+  // Block private IPs (basic SSRF guard)
+  const hostname = parsed.hostname.toLowerCase();
+  if (/^(localhost|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/i.test(hostname)) {
+    return res.status(403).send('Forbidden');
+  }
+
+  const client = parsed.protocol === 'https:' ? require('https') : require('http');
+  const proxyReq = client.get(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; Click2VideoBot/1.0)',
+      'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
+    },
+    timeout: 8000,
+  }, (proxyRes) => {
+    // Follow redirects once
+    if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
+      const redirectClient = proxyRes.headers.location.startsWith('https') ? require('https') : require('http');
+      return redirectClient.get(proxyRes.headers.location, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (r2) => {
+        res.setHeader('Content-Type', r2.headers['content-type'] || 'image/jpeg');
+        res.setHeader('Cache-Control', 'public, max-age=3600');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        r2.pipe(res);
+      }).on('error', () => res.status(502).send('Proxy error'));
+    }
+    if (proxyRes.statusCode !== 200) return res.status(proxyRes.statusCode).send('Upstream error');
+    res.setHeader('Content-Type', proxyRes.headers['content-type'] || 'image/jpeg');
+    res.setHeader('Cache-Control', 'public, max-age=3600');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    proxyRes.pipe(res);
+  });
+
+  proxyReq.on('error', () => res.status(502).send('Proxy error'));
+  proxyReq.on('timeout', () => { proxyReq.destroy(); res.status(504).send('Timeout'); });
+  req.on('close', () => proxyReq.destroy());
+});
+
 // ── Config Endpoint ────────────────────────────────────────────────────────────
 app.get('/api/config', (req, res) => {
   res.json({

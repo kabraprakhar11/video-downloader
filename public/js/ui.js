@@ -292,7 +292,12 @@
     const tierBadge = document.getElementById('result-tier-badge');
 
     if (thumbnail) {
-      thumbnail.src = info.thumbnail || '';
+      if (info.thumbnail) {
+        // Proxy thumbnail through backend to bypass CORS/CSP issues with external CDNs
+        thumbnail.src = (window.API_BASE || '') + '/api/thumbnail?url=' + encodeURIComponent(info.thumbnail);
+      } else {
+        thumbnail.src = '';
+      }
       thumbnail.alt = info.title || 'Video thumbnail';
     }
     if (title)     title.textContent = info.title || 'Untitled';
@@ -342,7 +347,7 @@
       return;
     }
 
-    formats.forEach((fmt) => {
+    [...formats].reverse().forEach((fmt) => {
       const card = createFormatCard(fmt, { isPremium, bestAudio, videoTitle, pageUrl });
       grid.appendChild(card);
     });
