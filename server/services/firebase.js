@@ -122,7 +122,7 @@ async function getUserTier(uid, email = null) {
   if (uid === 'mock-uid-premium-123') return 'premium';
   if (uid === 'mock-uid-free-123') return 'free';
 
-  const ADMIN_EMAILS = ['kabraprakhar11@gmail.com', 'arjitdaga@gmail.com', 'arjitdaga@example.com'];
+  const ADMIN_EMAILS = ['kabraprakhar@gmail.com', 'kabraprakhar11@gmail.com', 'arjitdaga@gmail.com', 'arjitdaga@example.com'];
   if (email && ADMIN_EMAILS.includes(email.toLowerCase())) {
     return 'premium';
   }
