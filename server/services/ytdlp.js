@@ -269,8 +269,9 @@ async function extractInfo(url) {
   }
 
   return parseFormats(raw, url);
+}
+
 // ─── Re-extract a fresh direct URL for a specific format ─────────────────────
-// Called by the download route to get a fresh, non-expired stream URL
 async function extractFormatUrl(pageUrl, formatId) {
   const urlLower = pageUrl.toLowerCase();
   let raw;

@@ -118,8 +118,10 @@ router.get('/stream/:jobId', (req, res) => {
     const FFMPEG_PATH = require('ffmpeg-static');
     const args = [
       '-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.videoUrl,
       '-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.audioUrl,
       '-c:v', 'copy',
       '-c:a', 'aac',
@@ -129,9 +131,10 @@ router.get('/stream/:jobId', (req, res) => {
     ];
     const proc = spawn(FFMPEG_PATH, args);
     proc.stdout.pipe(res);
-    proc.stderr.on('data', () => {}); // consume stderr
+    let ffmpegStderr = '';
+    proc.stderr.on('data', d => { ffmpegStderr += d.toString(); }); // capture stderr
     proc.on('close', code => {
-      if (code !== 0) logger.error(`[Stream] FFmpeg exited code=${code}`);
+      if (code !== 0) logger.error(`[Stream] FFmpeg exited code=${code}. Stderr: ${ffmpegStderr}`);
       try { res.end(); } catch (_) {}
     });
     req.on('close', () => proc.kill('SIGKILL'));
