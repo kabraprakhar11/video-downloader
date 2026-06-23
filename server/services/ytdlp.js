@@ -156,12 +156,6 @@ function parseFormats(raw, url) {
     }
   });
 
-  // ── Fallback: no combined formats? promote videoOnly ──────────────────────
-  if (result.formats.combined.length === 0 && result.formats.videoOnly.length > 0) {
-    result.formats.combined = result.formats.videoOnly.map(f => ({ ...f, type: 'combined' }));
-    result.formats.videoOnly = [];
-  }
-
   // ── Pick bestAudio for merge operations ───────────────────────────────────
   if (result.formats.audioOnly.length > 0) {
     result.bestAudio = result.formats.audioOnly
@@ -170,6 +164,31 @@ function parseFormats(raw, url) {
   } else if (result.formats.combined.length > 0) {
     // Use a combined format as audio source if no dedicated audio
     result.bestAudio = result.formats.combined[0];
+  }
+
+  // ── Synthesize combined formats if none exist natively ────────────────────
+  if (result.formats.combined.length === 0 && result.formats.videoOnly.length > 0) {
+    if (result.bestAudio) {
+      // Platform has separate video and audio, synthesize merged formats
+      result.formats.videoOnly.forEach(v => {
+        result.formats.combined.push({
+          ...v,
+          formatId: `${v.formatId}+${result.bestAudio.formatId}`,
+          format_id: `${v.format_id}+${result.bestAudio.format_id}`,
+          acodec: result.bestAudio.acodec || 'unknown',
+          filesize: (v.filesize && result.bestAudio.filesize) ? (v.filesize + result.bestAudio.filesize) : null,
+          filesizeHuman: humanFilesize((v.filesize || 0) + (result.bestAudio.filesize || 0)),
+          type: 'combined'
+        });
+      });
+      // We explicitly leave result.formats.videoOnly intact so the "Video Only" tab still works!
+    } else {
+      // Silent video (no audio exists on the platform)
+      // Mirror video-only into combined so the default tab isn't empty, but label it clearly as video-only
+      result.formats.videoOnly.forEach(v => {
+        result.formats.combined.push({ ...v, type: 'video-only' });
+      });
+    }
   }
 
   // ── Deduplicate combined formats by resolution ─────────────────────────────
