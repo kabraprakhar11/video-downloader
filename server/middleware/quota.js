@@ -10,7 +10,7 @@
 const logger = require('../utils/logger');
 const { getUserDailyUsage } = require('../services/firebase');
 
-const FREE_DAILY_LIMIT = 3;
+const FREE_DAILY_LIMIT = 100;
 
 // In-memory store: { ip: { date: 'YYYY-MM-DD', count: N } }
 const ipQuotaStore = new Map();
