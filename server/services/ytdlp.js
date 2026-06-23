@@ -217,10 +217,7 @@ async function extractInfo(url) {
 
   const urlLower = url.toLowerCase();
 
-  // Block platforms with known server-side issues
-  if (urlLower.includes('youtube.com') || urlLower.includes('youtu.be')) {
-    throw new Error('YouTube downloads are currently unsupported due to server IP restrictions. Please try Twitter, Reddit, Vimeo, Dailymotion, etc.');
-  }
+
 
   let raw;
   try {

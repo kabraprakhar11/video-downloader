@@ -11,10 +11,9 @@
 const logger = require('../utils/logger');
 const dns = require('dns').promises;
 
-// Explicitly blocked platforms (YouTube blocked due to datacenter IP ban,
+// Explicitly blocked platforms
 // DRM services blocked as they are technically impossible to support)
 const BLOCKED_HOSTS = [
-  'youtube.com', 'www.youtube.com', 'youtu.be', 'm.youtube.com', 'music.youtube.com',
   'netflix.com', 'www.netflix.com',
   'hulu.com', 'www.hulu.com',
   'disneyplus.com', 'www.disneyplus.com',
@@ -24,10 +23,6 @@ const BLOCKED_HOSTS = [
 ];
 
 const BLOCKED_MESSAGES = {
-  'youtube.com': 'YouTube downloads are currently unsupported due to server-side IP restrictions. Please try Twitter, Reddit, Vimeo, Dailymotion, or any other supported platform.',
-  'youtu.be': 'YouTube downloads are currently unsupported due to server-side IP restrictions.',
-  'm.youtube.com': 'YouTube downloads are currently unsupported due to server-side IP restrictions.',
-  'music.youtube.com': 'YouTube Music downloads are currently unsupported.',
   'netflix.com': 'Netflix uses DRM encryption and cannot be downloaded.',
   'hulu.com': 'Hulu uses DRM encryption and cannot be downloaded.',
   'disneyplus.com': 'Disney+ uses DRM encryption and cannot be downloaded.',

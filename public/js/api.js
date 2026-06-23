@@ -12,9 +12,6 @@ const API_BASE = window.API_BASE || '';
  */
 async function apiExtract(url, idToken = null) {
   const urlLower = url.toLowerCase();
-  if (urlLower.includes('youtube.com') || urlLower.includes('youtu.be')) {
-    throw new Error("YouTube downloads are currently unsupported. Please try Twitter, Reddit, Vimeo, Facebook, etc.");
-  }
   if (urlLower.includes('spotify.com') || urlLower.includes('netflix.com') || urlLower.includes('hulu.com') || urlLower.includes('crunchyroll.com')) {
     throw new Error("DRM-protected streaming services are unsupported.");
   }
