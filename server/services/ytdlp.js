@@ -154,39 +154,100 @@ function parseFormats(raw, url) {
     formats: { combined: [], videoOnly: [], audioOnly: [] }
   };
 
+  const extractor = (raw.extractor || '').toLowerCase();
+
   (raw.formats || []).forEach(f => {
-    const vcodec = f.vcodec || 'none';
-    const acodec = f.acodec || 'none';
-    const isVideoOnly = vcodec !== 'none' && acodec === 'none';
-    const isAudioOnly = vcodec === 'none' && acodec !== 'none';
-    const isCombined = vcodec !== 'none' && acodec !== 'none';
+    const vcodec = (f.vcodec || '').toLowerCase();
+    const acodec = (f.acodec || '').toLowerCase();
+
+    // Explicit codec flags
+    const hasVideo = vcodec && vcodec !== 'none';
+    const hasAudio = acodec && acodec !== 'none';
+
+    // Dimension hints — if yt-dlp reports height/width, there IS video
+    const hasVideoDimension = f.height > 0 || f.width > 0;
+
+    // ABR (audio bitrate) hint — if yt-dlp reports abr, there IS audio
+    const hasAudioBitrate = f.abr > 0;
+
+    // VBR/TBR/FPS hint — if yt-dlp reports fps, there IS video
+    const hasVideoFps = f.fps > 0;
+
+    // Determine stream type
+    const isVideoStream = hasVideo || hasVideoDimension || hasVideoFps;
+    const isAudioStream = hasAudio || hasAudioBitrate;
+
+    // Explicit audio-only marker
+    const isExplicitAudioOnly = (vcodec === 'none') && isAudioStream;
+
+    // Explicit video-only marker
+    const isExplicitVideoOnly = (acodec === 'none') && isVideoStream && !isAudioStream;
+
+    // Compute quality tier from height
+    function getQualityTier(height) {
+      if (!height) return 'SD';
+      if (height >= 2160) return '4K';
+      if (height >= 1440) return '2K';
+      if (height >= 1080) return 'FHD';
+      if (height >= 720)  return 'HD';
+      return 'SD';
+    }
+
+    function humanFilesize(bytes) {
+      if (!bytes) return '';
+      if (bytes >= 1e9) return `${(bytes / 1e9).toFixed(1)} GB`;
+      if (bytes >= 1e6) return `${(bytes / 1e6).toFixed(1)} MB`;
+      if (bytes >= 1e3) return `${(bytes / 1e3).toFixed(0)} KB`;
+      return `${bytes} B`;
+    }
+
+    const height = f.height || null;
+    const qualityTier = isExplicitAudioOnly ? 'audio' : getQualityTier(height);
+    const isPremiumOnly = ['4K', '2K', 'FHD'].includes(qualityTier);
+    const filesize = f.filesize || f.filesize_approx || null;
+
     const obj = {
       formatId: String(f.format_id || f.id || f.ext || 'default'),
       format_id: String(f.format_id || f.id || f.ext || 'default'),
       ext: f.ext || 'mp4',
-      resolution: f.resolution || (f.width ? `${f.width}x${f.height}` : 'unknown'),
-      filesize: f.filesize || f.filesize_approx || null,
-      vcodec, acodec, url: f.url
+      resolution: f.resolution || (f.width && f.height ? `${f.width}x${f.height}` : (height ? `${height}p` : 'unknown')),
+      filesize,
+      filesizeHuman: humanFilesize(filesize),
+      vcodec: vcodec || 'unknown',
+      acodec: acodec || 'unknown',
+      fps: f.fps || null,
+      abr: f.abr || null,
+      tbr: f.tbr || null,
+      height,
+      width: f.width || null,
+      qualityTier,
+      isPremiumOnly,
+      type: isExplicitAudioOnly ? 'audio-only' : (isExplicitVideoOnly ? 'video-only' : 'combined'),
+      url: f.url
     };
 
-    const isInstagram = raw.extractor && raw.extractor.toLowerCase() === 'instagram';
-    if (isInstagram) {
-      if (f.ext === 'mp4' || isCombined) result.formats.combined.push(obj);
-      else if (isVideoOnly) result.formats.videoOnly.push(obj);
-      else if (isAudioOnly) result.formats.audioOnly.push(obj);
-    } else {
-      if (isCombined) result.formats.combined.push(obj);
-      else if (isVideoOnly) result.formats.videoOnly.push(obj);
-      else if (isAudioOnly) result.formats.audioOnly.push(obj);
+    if (isExplicitAudioOnly) {
+      result.formats.audioOnly.push(obj);
+    } else if (isExplicitVideoOnly) {
+      result.formats.videoOnly.push(obj);
+    } else if (isVideoStream) {
+      // Treat everything with video as combined — most platforms mux audio+video together
+      result.formats.combined.push(obj);
+    } else if (isAudioStream) {
+      result.formats.audioOnly.push(obj);
     }
   });
 
-  const isInstagram = raw.extractor && raw.extractor.toLowerCase() === 'instagram';
-  if (isInstagram && result.formats.combined.length === 0 && result.formats.videoOnly.length > 0) {
-    result.formats.combined.push(result.formats.videoOnly.shift());
+  // Fallback: if combined is empty but videoOnly has items, promote them
+  // (handles platforms that don't report acodec at all but the file has audio)
+  if (result.formats.combined.length === 0 && result.formats.videoOnly.length > 0) {
+    result.formats.combined = [...result.formats.videoOnly];
+    result.formats.videoOnly = [];
   }
+
   return result;
 }
+
 
 function runYtdlp(url, playerClient) {
   return new Promise((resolve, reject) => {
