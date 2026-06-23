@@ -230,6 +230,10 @@ function runYtdlp(url) {
   });
 }
 
+// ─── Cache to prevent HTTP 429 on rapid re-extractions ───────────────────────
+const extractionCache = new Map();
+const CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes
+
 // ─── Main extraction function ─────────────────────────────────────────────────
 async function extractInfo(url) {
   logger.info(`[extract] Starting for: ${url}`);
@@ -241,6 +245,12 @@ async function extractInfo(url) {
   let raw;
   try {
     raw = await runYtdlp(url);
+    extractionCache.set(urlLower, { data: raw, timestamp: Date.now() });
+    
+    // Cleanup old cache entries
+    for (const [key, val] of extractionCache.entries()) {
+      if (Date.now() - val.timestamp > CACHE_TTL_MS) extractionCache.delete(key);
+    }
   } catch (err) {
     const stderr = err.stderr || '';
     if (stderr.includes('Unsupported URL')) {
@@ -259,18 +269,24 @@ async function extractInfo(url) {
   }
 
   return parseFormats(raw, url);
-}
-
 // ─── Re-extract a fresh direct URL for a specific format ─────────────────────
 // Called by the download route to get a fresh, non-expired stream URL
 async function extractFormatUrl(pageUrl, formatId) {
-  logger.info(`[extract-format] Getting fresh URL for format=${formatId} from ${pageUrl}`);
-
+  const urlLower = pageUrl.toLowerCase();
   let raw;
-  try {
-    raw = await runYtdlp(pageUrl);
-  } catch (err) {
-    throw new Error(`Re-extraction failed: ${(err.stderr || '').slice(0, 150)}`);
+  
+  const cached = extractionCache.get(urlLower);
+  if (cached && (Date.now() - cached.timestamp < CACHE_TTL_MS)) {
+    logger.info(`[extractFormatUrl] Using cached extraction for: ${pageUrl}`);
+    raw = cached.data;
+  } else {
+    logger.info(`[extractFormatUrl] Cache miss/expired, re-extracting: ${pageUrl}`);
+    try {
+      raw = await runYtdlp(pageUrl);
+      extractionCache.set(urlLower, { data: raw, timestamp: Date.now() });
+    } catch (err) {
+      throw new Error(`Re-extraction failed: ${(err.stderr || '').slice(0, 150)}`);
+    }
   }
 
   const allFormats = [
