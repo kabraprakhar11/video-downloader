@@ -22,7 +22,7 @@ async function attachUserTier(req, res, next) {
   if (token) {
     const decoded = await verifyIdToken(token);
     if (decoded) {
-      const tier = await getUserTier(decoded.uid);
+      const tier = await getUserTier(decoded.uid, decoded.email);
       req.firebaseUid = decoded.uid;
       req.userEmail = decoded.email || null;
       req.userTier = tier;

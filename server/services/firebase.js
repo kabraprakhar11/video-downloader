@@ -117,11 +117,15 @@ async function verifyIdToken(token) {
  * Get user subscription status from Firestore.
  * Returns 'premium' | 'free'.
  */
-async function getUserTier(uid) {
+async function getUserTier(uid, email = null) {
   if (uid === 'mock-uid-admin-arjit') return 'premium';
   if (uid === 'mock-uid-premium-123') return 'premium';
   if (uid === 'mock-uid-free-123') return 'free';
 
+  const ADMIN_EMAILS = ['kabraprakhar11@gmail.com', 'arjitdaga@gmail.com', 'arjitdaga@example.com'];
+  if (email && ADMIN_EMAILS.includes(email.toLowerCase())) {
+    return 'premium';
+  }
 
   if (!db || !uid) return 'free';
   try {

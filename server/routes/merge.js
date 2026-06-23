@@ -34,7 +34,7 @@ router.post('/', mergeLimiter, async (req, res) => {
     return res.status(401).json({ error: 'Invalid or expired authentication token.' });
   }
 
-  const tier = await getUserTier(decoded.uid);
+  const tier = await getUserTier(decoded.uid, decoded.email);
   if (tier !== 'premium') {
     return res.status(403).json({ error: 'FFmpeg stream merging is a Premium-only feature. Please upgrade.' });
   }

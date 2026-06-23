@@ -60,7 +60,7 @@ router.post('/', proxyLimiter, async (req, res) => {
       let tier = 'free';
       if (token) {
         const decoded = await verifyIdToken(token);
-        if (decoded) tier = await getUserTier(decoded.uid);
+        if (decoded) tier = await getUserTier(decoded.uid, decoded.email);
       }
       if (tier !== 'premium') {
         return res.status(403).json({
