@@ -1,9 +1,9 @@
 'use strict';
 /**
- * Download API — Zero-Data-Storage Streaming Architecture
+ * Download API
  *
- * POST /api/download         — Validates request/auth, re-extracts URLs, and generates a download session.
- * GET  /api/download/stream/:jobId — Streams the video directly from the host (or via FFmpeg pipe) to the client.
+ * POST /api/download          — Validates, re-extracts fresh URLs, stores session
+ * GET  /api/download/stream/:jobId — Streams the video to browser (with FFmpeg for merges)
  */
 
 const express = require('express');
@@ -16,10 +16,10 @@ const crypto = require('crypto');
 const { proxyLimiter } = require('../middleware/rateLimiter');
 const { sanitizeFilename, validateUrl } = require('../middleware/sanitize');
 const { verifyIdToken, getUserTier } = require('../services/firebase');
-const ytdlp = require('../services/ytdlp');
+const { extractFormatUrl } = require('../services/ytdlp');
 const logger = require('../utils/logger');
 
-const JOB_TTL_MS = 10 * 60 * 1000; // 10 min for session validity before starting stream
+const JOB_TTL_MS = 15 * 60 * 1000; // 15 minutes
 
 // ── In-memory session store ──────────────────────────────────────────────────
 const downloadSessions = new Map();
@@ -27,13 +27,11 @@ const downloadSessions = new Map();
 setInterval(() => {
   const now = Date.now();
   for (const [id, session] of downloadSessions) {
-    if (now - session.createdAt > JOB_TTL_MS) {
-      downloadSessions.delete(id);
-    }
+    if (now - session.createdAt > JOB_TTL_MS) downloadSessions.delete(id);
   }
 }, 5 * 60 * 1000);
 
-// ── POST /api/download (Start Session) ────────────────────────────────────────
+// ── POST /api/download ────────────────────────────────────────────────────────
 router.post('/', proxyLimiter, async (req, res) => {
   const { pageUrl, formatId, title, ext } = req.body;
 
@@ -44,99 +42,53 @@ router.post('/', proxyLimiter, async (req, res) => {
     return res.status(400).json({ error: 'formatId is required.' });
   }
 
-  // Validate URL (SSRF, allowed platform check, format validation)
-  let validatedPageUrl;
+  // Validate URL (SSRF protection)
   try {
-    const parsed = await validateUrl(pageUrl);
-    validatedPageUrl = parsed.href;
+    await validateUrl(pageUrl);
   } catch (err) {
-    logger.warn(`Download URL validation failed: ${err.message} | Input: ${pageUrl}`);
     return res.status(400).json({ error: err.message });
   }
 
-  let actualFormatId = formatId;
-  let extractAudio = false;
-
-  if (formatId.endsWith('-audio')) {
-    actualFormatId = formatId.replace('-audio', '');
-    extractAudio = true;
-  } else if (formatId.endsWith('-video')) {
-    actualFormatId = formatId.replace('-video', '');
-  }
-
-  const isMerge = actualFormatId.includes('+');
-
-  function isMergePremiumQuality(fmtId) {
+  // Premium check for merge operations with HD formats
+  const isMerge = formatId.includes('+');
+  if (isMerge) {
     const PREMIUM_VIDEO_IDS = new Set(['137','248','216','270','271','272','313','315','400','401','264','266','308','394','395','396','397','398','399']);
-    const videoPartId = fmtId.split('+')[0];
-    return PREMIUM_VIDEO_IDS.has(videoPartId);
-  }
-
-  if (isMerge && isMergePremiumQuality(actualFormatId)) {
-    const authHeader = req.headers.authorization || '';
-    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
-    let tier = 'free';
-
-    if (token) {
-      const decoded = await verifyIdToken(token);
-      if (decoded) {
-        tier = await getUserTier(decoded.uid);
+    const videoPartId = formatId.split('+')[0];
+    if (PREMIUM_VIDEO_IDS.has(videoPartId)) {
+      const authHeader = req.headers.authorization || '';
+      const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+      let tier = 'free';
+      if (token) {
+        const decoded = await verifyIdToken(token);
+        if (decoded) tier = await getUserTier(decoded.uid);
+      }
+      if (tier !== 'premium') {
+        return res.status(403).json({
+          error: 'High-definition merging is a Premium feature. Please upgrade.',
+          upgradeRequired: true,
+        });
       }
     }
-
-    if (tier !== 'premium') {
-      return res.status(403).json({
-        error: 'High-definition video merging is a Premium feature. Please upgrade to unlock.',
-        upgradeRequired: true
-      });
-    }
   }
 
-  let info;
+  // Re-extract fresh stream URLs from the platform
+  let streamInfo;
   try {
-    info = await ytdlp.extractInfo(validatedPageUrl);
+    streamInfo = await extractFormatUrl(pageUrl, formatId);
   } catch (err) {
-    logger.error(`[Download Session] Error extracting info: ${err.message}`);
+    logger.error(`[Download] extractFormatUrl failed: ${err.message}`);
     return res.status(422).json({ error: err.message });
   }
 
-  let targetVideoUrl = null;
-  let targetAudioUrl = null;
-
-  if (isMerge) {
-    const videoFmt = info.formats.videoOnly.find(f => f.format_id === actualFormatId);
-    if (!videoFmt) {
-      return res.status(422).json({ error: 'Requested video format not found' });
-    }
-    targetVideoUrl = videoFmt.url;
-    
-    if (info.formats.audioOnly.length > 0) {
-      targetAudioUrl = info.formats.audioOnly.sort((a,b) => (b.bitrate||0) - (a.bitrate||0))[0].url;
-    }
-  } else if (extractAudio) {
-    const audioFmt = info.formats.audioOnly.find(f => f.format_id === actualFormatId) || info.formats.audioOnly[0];
-    if (audioFmt) targetAudioUrl = audioFmt.url;
-  } else {
-    const fmt = info.formats.combined.find(f => f.format_id === actualFormatId) || info.formats.videoOnly.find(f => f.format_id === actualFormatId);
-    if (fmt) targetVideoUrl = fmt.url;
-  }
-
-  if (!targetVideoUrl && !targetAudioUrl) {
-    return res.status(422).json({ error: 'Could not find stream URLs for the requested format.' });
-  }
-
   const safeTitle = sanitizeFilename(title || 'download');
-  const safeExt = extractAudio ? 'mp3' : (ext || 'mp4').replace(/[^a-zA-Z0-9]/g, '').slice(0, 10);
+  const safeExt = (ext || 'mp4').replace(/[^a-zA-Z0-9]/g, '').slice(0, 10);
   const displayName = `${safeTitle}.${safeExt}`;
   const jobId = crypto.randomBytes(14).toString('hex');
 
   downloadSessions.set(jobId, {
-    targetVideoUrl,
-    targetAudioUrl,
-    extractAudio,
-    isMerge,
+    ...streamInfo,
     displayName,
-    createdAt: Date.now()
+    createdAt: Date.now(),
   });
 
   const downloadUrl = `/api/download/stream/${jobId}?filename=${encodeURIComponent(displayName)}`;
@@ -147,110 +99,123 @@ router.post('/', proxyLimiter, async (req, res) => {
 router.get('/stream/:jobId', (req, res) => {
   const session = downloadSessions.get(req.params.jobId);
   if (!session) {
-    return res.status(404).send('Download session not found or expired.');
+    return res.status(404).send('Download session not found or expired. Please try again.');
   }
 
-  // Delete session to prevent reuse
   downloadSessions.delete(req.params.jobId);
 
   const safeAsciiName = session.displayName.replace(/[^a-zA-Z0-9.\-_ ]/g, '_');
   const encodedName = encodeURIComponent(session.displayName);
-  
+
   res.setHeader('Content-Disposition', `attachment; filename="${safeAsciiName}"; filename*=UTF-8''${encodedName}`);
-  // Use octet-stream to force download
   res.setHeader('Content-Type', 'application/octet-stream');
-  res.setHeader('Cache-Control', 'no-cache, must-revalidate');
+  res.setHeader('Cache-Control', 'no-cache');
 
-  logger.info(`[Download Stream] Starting stream for: ${session.displayName}`);
+  logger.info(`[Stream] Starting: ${session.displayName} | merge=${session.isMerge} | video=${!!session.videoUrl} | audio=${!!session.audioUrl}`);
 
-  // Scenario 1: Audio Extraction (requires FFmpeg transcoding to MP3)
-  // Scenario 2: Video+Audio Merging (requires FFmpeg muxing)
-  if (session.extractAudio || session.isMerge) {
+  // ── FFmpeg merge (video + audio separate streams) ─────────────────────────
+  if (session.isMerge && session.videoUrl && session.audioUrl) {
     const FFMPEG_PATH = require('ffmpeg-static');
-    const args = [];
-
-    if (session.targetVideoUrl) {
-      args.push('-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36');
-      args.push('-i', session.targetVideoUrl);
-    }
-    
-    if (session.targetAudioUrl) {
-      args.push('-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36');
-      args.push('-i', session.targetAudioUrl);
-    }
-
-    if (session.extractAudio) {
-      args.push('-vn', '-c:a', 'libmp3lame', '-q:a', '2', '-f', 'mp3');
-    } else {
-      // Merge: copy codecs, use faststart/frag_keyframe for streaming MP4
-      args.push('-c:v', 'copy', '-c:a', 'copy', '-strict', 'experimental', '-movflags', 'frag_keyframe+empty_moov', '-f', 'mp4');
-    }
-
-    args.push('pipe:1'); // output to stdout
-
-    const proc = spawn(FFMPEG_PATH, args, { shell: false });
-
-    // Pipe FFmpeg stdout directly to response
+    const args = [
+      '-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+      '-i', session.videoUrl,
+      '-user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+      '-i', session.audioUrl,
+      '-c:v', 'copy',
+      '-c:a', 'aac',
+      '-movflags', 'frag_keyframe+empty_moov',
+      '-f', 'mp4',
+      'pipe:1',
+    ];
+    const proc = spawn(FFMPEG_PATH, args);
     proc.stdout.pipe(res);
-
-    proc.stderr.on('data', (chunk) => {
-      // ffmpeg logs to stderr, just consume it so buffer doesn't fill up
+    proc.stderr.on('data', () => {}); // consume stderr
+    proc.on('close', code => {
+      if (code !== 0) logger.error(`[Stream] FFmpeg exited code=${code}`);
+      try { res.end(); } catch (_) {}
     });
+    req.on('close', () => proc.kill('SIGKILL'));
+    return;
+  }
 
-    proc.on('close', (code) => {
-      if (code !== 0) {
-        logger.error(`[Download Stream] FFmpeg exited with code ${code}`);
-      }
-      res.end();
-    });
+  // ── Audio-only extraction via FFmpeg ─────────────────────────────────────
+  if (session.audioUrl && !session.videoUrl) {
+    const FFMPEG_PATH = require('ffmpeg-static');
+    const args = [
+      '-user_agent', 'Mozilla/5.0',
+      '-i', session.audioUrl,
+      '-vn',
+      '-c:a', 'libmp3lame',
+      '-q:a', '2',
+      '-f', 'mp3',
+      'pipe:1',
+    ];
+    const proc = spawn(FFMPEG_PATH, args);
+    proc.stdout.pipe(res);
+    proc.stderr.on('data', () => {});
+    proc.on('close', () => { try { res.end(); } catch (_) {} });
+    req.on('close', () => proc.kill('SIGKILL'));
+    return;
+  }
 
-    req.on('close', () => {
-      proc.kill('SIGKILL');
-    });
+  // ── Direct stream proxy (combined format) ─────────────────────────────────
+  const targetUrl = session.videoUrl || session.audioUrl;
+  if (!targetUrl) {
+    return res.status(422).send('No stream URL available.');
+  }
 
-  } else {
-    // Scenario 3: Single stream (Combined format or Video-only). 
-    // We can just pipe the HTTP response directly to the client without FFmpeg!
-    const targetUrl = session.targetVideoUrl || session.targetAudioUrl;
-    const client = targetUrl.startsWith('https') ? https : http;
-    
-    const requestOptions = {
+  function proxyStream(url, depth = 0) {
+    if (depth > 3) {
+      logger.error('[Stream] Too many redirects');
+      return res.status(502).send('Too many redirects from platform.');
+    }
+
+    const client = url.startsWith('https') ? https : http;
+    const proxyReq = client.get(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+        'Accept': '*/*',
+        'Referer': session.pageUrl || url,
+      },
+      timeout: 30000,
+    }, (proxyRes) => {
+      // Follow redirects
+      if ([301, 302, 303, 307, 308].includes(proxyRes.statusCode) && proxyRes.headers.location) {
+        proxyRes.resume();
+        return proxyStream(proxyRes.headers.location, depth + 1);
       }
-    };
 
-    const proxyReq = client.get(targetUrl, requestOptions, (proxyRes) => {
-      if (proxyRes.statusCode >= 300 && proxyRes.statusCode < 400 && proxyRes.headers.location) {
-        // Handle redirect
-        const redirectUrl = proxyRes.headers.location;
-        const redirectClient = redirectUrl.startsWith('https') ? https : http;
-        redirectClient.get(redirectUrl, requestOptions, (redirectRes) => {
-          if (redirectRes.headers['content-length']) res.setHeader('Content-Length', redirectRes.headers['content-length']);
-          redirectRes.pipe(res);
-        }).on('error', (err) => {
-          logger.error(`[Download Stream] Redirect Error: ${err.message}`);
-          res.end();
-        });
-        return;
+      if (proxyRes.statusCode !== 200) {
+        logger.error(`[Stream] Upstream returned ${proxyRes.statusCode}`);
+        proxyRes.resume();
+        return res.status(502).send(`Platform returned error ${proxyRes.statusCode}.`);
       }
 
       if (proxyRes.headers['content-length']) {
         res.setHeader('Content-Length', proxyRes.headers['content-length']);
       }
-      
+
       proxyRes.pipe(res);
+      proxyRes.on('error', (err) => {
+        logger.error(`[Stream] Proxy read error: ${err.message}`);
+        try { res.end(); } catch (_) {}
+      });
     });
 
     proxyReq.on('error', (err) => {
-      logger.error(`[Download Stream] Proxy Error: ${err.message}`);
-      res.end();
+      logger.error(`[Stream] Proxy request error: ${err.message}`);
+      try { res.status(502).send('Stream proxy error.'); } catch (_) {}
     });
 
-    req.on('close', () => {
+    proxyReq.on('timeout', () => {
       proxyReq.destroy();
+      try { res.status(504).send('Stream timeout.'); } catch (_) {}
     });
+
+    req.on('close', () => proxyReq.destroy());
   }
+
+  proxyStream(targetUrl);
 });
 
 module.exports = router;

@@ -216,27 +216,27 @@
         </button>
       `;
     } else if (fmt.type === 'video-only' && bestAudio && isPremium) {
-      // Merge button for premium video-only
+      // Premium video-only with merge option
       actionsHtml = `
-        <button class="btn-download" data-action="download" data-page-url="${escHtml(options.pageUrl || '')}" data-format-id="${escHtml(fmt.formatId)}" data-title="${escHtml(videoTitle)}" data-ext="${escHtml(fmt.ext)}" aria-label="Direct download">
+        <button class="btn-download" data-action="download" data-page-url="${escHtml(options.pageUrl || '')}" data-format-id="${escHtml(fmt.formatId)}" data-title="${escHtml(videoTitle)}" data-ext="${escHtml(fmt.ext)}" aria-label="Download video only">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download
+          Video Only
         </button>
-        <button class="btn-merge" data-action="merge" data-page-url="${escHtml(options.pageUrl || '')}" data-format-id="${escHtml(fmt.formatId)}" data-audio-format-id="${escHtml(bestAudio.formatId)}" data-title="${escHtml(videoTitle)}" data-ext="${escHtml(fmt.ext)}" aria-label="Merge and download with audio">
+        <button class="btn-merge" data-action="merge" data-page-url="${escHtml(options.pageUrl || '')}" data-format-id="${escHtml(fmt.formatId)}" data-audio-format-id="${escHtml(bestAudio.formatId)}" data-title="${escHtml(videoTitle)}" data-ext="${escHtml(fmt.ext)}" aria-label="Merge with audio">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
           +Audio
         </button>
       `;
-    } else if (fmt.type === 'video-only' && !isPremiumOnly) {
-      // Video only — download without audio
+    } else if (fmt.type === 'video-only') {
+      // Video only (no audio available or not premium)
       actionsHtml = `
         <button class="btn-download" data-action="download" data-page-url="${escHtml(options.pageUrl || '')}" data-format-id="${escHtml(fmt.formatId)}" data-title="${escHtml(videoTitle)}_video" data-ext="${escHtml(fmt.ext)}" aria-label="Download video only">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Video Only
         </button>
       `;
-    } else if (!isPremiumOnly) {
-      // Combined (native or synthetic merged) — free or premium already unlocked
+    } else {
+      // Combined (audio+video) or audio-only — standard download
       actionsHtml = `
         <button class="btn-download" data-action="download" data-page-url="${escHtml(options.pageUrl || '')}" data-format-id="${escHtml(fmt.formatId)}" data-title="${escHtml(videoTitle)}" data-ext="${escHtml(fmt.ext)}" aria-label="Download ${qualityLabel} ${fmt.ext}">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>

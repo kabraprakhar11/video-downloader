@@ -1,205 +1,123 @@
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
 const logger = require('../utils/logger');
 
 const YTDLP_BIN = 'yt-dlp';
 
-// Find node binary path for the --js-runtimes flag
-function findNodePath() {
-  const candidates = [
-    process.execPath,
-    '/usr/local/bin/node',
-    '/usr/bin/node',
-    'node',
-  ];
-  for (const candidate of candidates) {
-    try {
-      if (candidate === 'node' || fs.existsSync(candidate)) return candidate;
-    } catch (_) {}
-  }
-  return 'node';
+// ─── Quality helpers ──────────────────────────────────────────────────────────
+function getQualityTier(height) {
+  if (!height) return 'SD';
+  if (height >= 2160) return '4K';
+  if (height >= 1440) return '2K';
+  if (height >= 1080) return 'FHD';
+  if (height >= 720)  return 'HD';
+  return 'SD';
 }
 
-const NODE_PATH = findNodePath();
-logger.info(`[yt-dlp] Using node runtime at: ${NODE_PATH}`);
-
-// ─── VidsSave API Fallback ───────────────────────────────────────────────────
-
-async function extractViaVidsSave(url) {
-  return new Promise((resolve, reject) => {
-    logger.info(`[vidssave-api] Routing request through api.vidssave.com for: ${url}`);
-    
-    // Exact payload used by vidssave.com
-    const data = `auth=20250901majwlqo&domain=api-ak.vidssave.com&origin=source&link=${encodeURIComponent(url)}`;
-    
-    const req = https.request({
-      hostname: 'api.vidssave.com',
-      path: '/api/contentsite_api/media/parse',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Content-Length': Buffer.byteLength(data),
-        'Origin': 'https://vidssave.com',
-        'Referer': 'https://vidssave.com/',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
-      },
-      timeout: 20000
-    }, res => {
-      let body = '';
-      res.on('data', chunk => body += chunk);
-      res.on('end', () => {
-        if (res.statusCode !== 200) {
-          return reject(new Error(`VidsSave API returned HTTP ${res.statusCode}`));
-        }
-        try {
-          const j = JSON.parse(body);
-          if (!j.data || !j.data.resources) {
-            return reject(new Error('VidsSave API returned invalid format or failed'));
-          }
-          
-          const vData = j.data;
-          
-          const result = {
-            title: vData.title || 'Unknown Title',
-            thumbnail: vData.thumbnail || '',
-            duration: vData.duration || 0,
-            extractor: 'youtube', // Assuming youtube or generic
-            webpage_url: url,
-            formats: { combined: [], videoOnly: [], audioOnly: [] }
-          };
-
-          // Map VidsSave resources to our format
-          vData.resources.forEach(res => {
-            const isVideo = res.type === 'video';
-            const isAudio = res.type === 'audio';
-            const ext = res.format ? res.format.toLowerCase() : (isVideo ? 'mp4' : 'mp3');
-            
-            const formatObj = {
-              formatId: String(res.resource_id || res.quality),
-              format_id: String(res.resource_id || res.quality),
-              ext: ext,
-              resolution: isVideo ? res.quality : 'unknown',
-              filesize: res.size || null,
-              vcodec: isVideo ? 'avc1' : 'none',
-              acodec: isVideo ? 'mp4a' : (isAudio ? 'mp3' : 'none'), // Assumes combined if it's video
-              url: res.download_url || res.url || '', // Trusting their download_url
-              vidssave_resource_id: res.resource_id 
-            };
-            
-            if (formatObj.url) {
-                if (isVideo) {
-                    // VidsSave provides fully muxed MP4s with audio
-                    result.formats.combined.push(formatObj);
-                } else if (isAudio) {
-                    result.formats.audioOnly.push(formatObj);
-                }
-            }
-          });
-
-          resolve(result);
-        } catch(e) {
-          reject(new Error('Failed to parse VidsSave response: ' + e.message));
-        }
-      });
-    });
-    
-    req.on('error', reject);
-    req.on('timeout', () => { req.destroy(); reject(new Error('VidsSave API timeout')); });
-    req.write(data);
-    req.end();
-  });
+function humanFilesize(bytes) {
+  if (!bytes || bytes <= 0) return '';
+  if (bytes >= 1e9) return `${(bytes / 1e9).toFixed(1)} GB`;
+  if (bytes >= 1e6) return `${(bytes / 1e6).toFixed(1)} MB`;
+  if (bytes >= 1e3) return `${(bytes / 1e3).toFixed(0)} KB`;
+  return `${bytes} B`;
 }
 
-// ─── yt-dlp fallback (for non-YouTube URLs) ──────────────────────────────────
-function isBotDetectionError(stderr) {
-  return (
-    stderr.includes('Sign in to confirm') ||
-    stderr.includes('confirm you\'re not a bot') ||
-    stderr.includes('HTTP Error 429') ||
-    stderr.includes('Too Many Requests') ||
-    stderr.includes('detected as a bot') ||
-    stderr.includes('not a bot')
-  );
+function formatDuration(seconds) {
+  if (!seconds) return '';
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor(seconds % 60);
+  if (h > 0) return `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  return `${m}:${String(s).padStart(2, '0')}`;
 }
 
-const PLAYER_CLIENTS = ['android', 'ios', 'tv_embedded'];
-
-function buildYtdlpArgs(url, playerClient) {
+// ─── yt-dlp args builder ──────────────────────────────────────────────────────
+function buildYtdlpArgs(url) {
   const args = [
     '--dump-json',
     '--no-playlist',
     '--no-warnings',
-    '--socket-timeout', '20',
-    '--extractor-args', `youtube:player_client=${playerClient}`,
+    '--socket-timeout', '30',
+    '--retries', '3',
     '--add-header', 'Accept-Language:en-US,en;q=0.9',
-    '--js-runtimes', `node:${NODE_PATH}`,
+    '--add-header', 'User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
   ];
+
+  // Only inject cookies if they exist
   const cookiesPath = path.join(__dirname, '../../cookies.txt');
   if (fs.existsSync(cookiesPath)) {
     args.push('--cookies', cookiesPath);
   }
+
   args.push(url);
   return args;
 }
 
+// ─── Parse raw yt-dlp JSON into our format structure ──────────────────────────
 function parseFormats(raw, url) {
   const result = {
     title: raw.title || 'Unknown Title',
-    thumbnail: raw.thumbnail || '',
+    thumbnail: raw.thumbnail || (raw.thumbnails && raw.thumbnails.length > 0 ? raw.thumbnails[raw.thumbnails.length - 1].url : ''),
     duration: raw.duration || 0,
-    extractor: raw.extractor || 'unknown',
+    durationFormatted: formatDuration(raw.duration),
+    extractor: raw.extractor_key || raw.extractor || 'unknown',
+    uploader: raw.uploader || raw.channel || raw.creator || '',
+    viewCount: raw.view_count || null,
+    description: (raw.description || '').slice(0, 300),
     webpage_url: raw.webpage_url || url,
-    formats: { combined: [], videoOnly: [], audioOnly: [] }
+    formats: { combined: [], videoOnly: [], audioOnly: [] },
+    bestAudio: null,
   };
 
-  const extractor = (raw.extractor || '').toLowerCase();
+  const rawFormats = raw.formats || [];
 
-  (raw.formats || []).forEach(f => {
-    const vcodec = (f.vcodec || '').toLowerCase();
-    const acodec = (f.acodec || '').toLowerCase();
+  // If no formats array, treat the single URL as a combined format
+  if (rawFormats.length === 0 && raw.url) {
+    const obj = {
+      formatId: 'default',
+      format_id: 'default',
+      ext: raw.ext || 'mp4',
+      resolution: raw.resolution || (raw.height ? `${raw.height}p` : 'unknown'),
+      filesize: raw.filesize || raw.filesize_approx || null,
+      filesizeHuman: humanFilesize(raw.filesize || raw.filesize_approx),
+      vcodec: 'unknown',
+      acodec: 'unknown',
+      fps: raw.fps || null,
+      abr: null,
+      tbr: raw.tbr || null,
+      height: raw.height || null,
+      width: raw.width || null,
+      qualityTier: getQualityTier(raw.height),
+      isPremiumOnly: false,
+      type: 'combined',
+      url: raw.url,
+    };
+    result.formats.combined.push(obj);
+    return result;
+  }
 
-    // Explicit codec flags
-    const hasVideo = vcodec && vcodec !== 'none';
-    const hasAudio = acodec && acodec !== 'none';
+  rawFormats.forEach(f => {
+    if (!f.url) return; // Skip formats with no direct URL
 
-    // Dimension hints — if yt-dlp reports height/width, there IS video
-    const hasVideoDimension = f.height > 0 || f.width > 0;
+    const vcodec = (f.vcodec || '').toLowerCase().trim();
+    const acodec = (f.acodec || '').toLowerCase().trim();
 
-    // ABR (audio bitrate) hint — if yt-dlp reports abr, there IS audio
-    const hasAudioBitrate = f.abr > 0;
+    // Determine what streams this format contains
+    const hasVideoCodec  = vcodec && vcodec !== 'none';
+    const hasAudioCodec  = acodec && acodec !== 'none';
+    const hasHeight      = f.height > 0;
+    const hasWidth       = f.width > 0;
+    const hasFps         = f.fps > 0;
+    const hasAbr         = f.abr > 0;
 
-    // VBR/TBR/FPS hint — if yt-dlp reports fps, there IS video
-    const hasVideoFps = f.fps > 0;
+    const isVideoStream = hasVideoCodec || hasHeight || hasWidth || hasFps;
+    const isAudioStream = hasAudioCodec || hasAbr;
 
-    // Determine stream type
-    const isVideoStream = hasVideo || hasVideoDimension || hasVideoFps;
-    const isAudioStream = hasAudio || hasAudioBitrate;
-
-    // Explicit audio-only marker
-    const isExplicitAudioOnly = (vcodec === 'none') && isAudioStream;
-
-    // Explicit video-only marker
-    const isExplicitVideoOnly = (acodec === 'none') && isVideoStream && !isAudioStream;
-
-    // Compute quality tier from height
-    function getQualityTier(height) {
-      if (!height) return 'SD';
-      if (height >= 2160) return '4K';
-      if (height >= 1440) return '2K';
-      if (height >= 1080) return 'FHD';
-      if (height >= 720)  return 'HD';
-      return 'SD';
-    }
-
-    function humanFilesize(bytes) {
-      if (!bytes) return '';
-      if (bytes >= 1e9) return `${(bytes / 1e9).toFixed(1)} GB`;
-      if (bytes >= 1e6) return `${(bytes / 1e6).toFixed(1)} MB`;
-      if (bytes >= 1e3) return `${(bytes / 1e3).toFixed(0)} KB`;
-      return `${bytes} B`;
-    }
+    // Explicitly audio-only: codec says video is none, or no video dimensions at all
+    const isExplicitAudioOnly = vcodec === 'none' && isAudioStream;
+    // Explicitly video-only: codec says audio is none AND no audio bitrate
+    const isExplicitVideoOnly = acodec === 'none' && !hasAbr && isVideoStream;
 
     const height = f.height || null;
     const qualityTier = isExplicitAudioOnly ? 'audio' : getQualityTier(height);
@@ -213,8 +131,8 @@ function parseFormats(raw, url) {
       resolution: f.resolution || (f.width && f.height ? `${f.width}x${f.height}` : (height ? `${height}p` : 'unknown')),
       filesize,
       filesizeHuman: humanFilesize(filesize),
-      vcodec: vcodec || 'unknown',
-      acodec: acodec || 'unknown',
+      vcodec,
+      acodec,
       fps: f.fps || null,
       abr: f.abr || null,
       tbr: f.tbr || null,
@@ -223,7 +141,7 @@ function parseFormats(raw, url) {
       qualityTier,
       isPremiumOnly,
       type: isExplicitAudioOnly ? 'audio-only' : (isExplicitVideoOnly ? 'video-only' : 'combined'),
-      url: f.url
+      url: f.url,
     };
 
     if (isExplicitAudioOnly) {
@@ -231,91 +149,156 @@ function parseFormats(raw, url) {
     } else if (isExplicitVideoOnly) {
       result.formats.videoOnly.push(obj);
     } else if (isVideoStream) {
-      // Treat everything with video as combined — most platforms mux audio+video together
+      // Everything with video goes to combined — most platforms mux audio+video
       result.formats.combined.push(obj);
     } else if (isAudioStream) {
       result.formats.audioOnly.push(obj);
     }
   });
 
-  // Fallback: if combined is empty but videoOnly has items, promote them
-  // (handles platforms that don't report acodec at all but the file has audio)
+  // ── Fallback: no combined formats? promote videoOnly ──────────────────────
   if (result.formats.combined.length === 0 && result.formats.videoOnly.length > 0) {
-    result.formats.combined = [...result.formats.videoOnly];
+    result.formats.combined = result.formats.videoOnly.map(f => ({ ...f, type: 'combined' }));
     result.formats.videoOnly = [];
   }
+
+  // ── Pick bestAudio for merge operations ───────────────────────────────────
+  if (result.formats.audioOnly.length > 0) {
+    result.bestAudio = result.formats.audioOnly
+      .slice()
+      .sort((a, b) => (b.abr || b.tbr || 0) - (a.abr || a.tbr || 0))[0];
+  } else if (result.formats.combined.length > 0) {
+    // Use a combined format as audio source if no dedicated audio
+    result.bestAudio = result.formats.combined[0];
+  }
+
+  // ── Deduplicate combined formats by resolution ─────────────────────────────
+  const seen = new Set();
+  result.formats.combined = result.formats.combined.filter(f => {
+    const key = `${f.resolution}-${f.ext}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  // ── Flag if HD formats exist (for merge notice) ────────────────────────────
+  result.hasHDFormats = result.formats.videoOnly.some(f => ['FHD', '2K', '4K'].includes(f.qualityTier));
 
   return result;
 }
 
-
-function runYtdlp(url, playerClient) {
+// ─── Run yt-dlp ───────────────────────────────────────────────────────────────
+function runYtdlp(url) {
   return new Promise((resolve, reject) => {
-    const args = buildYtdlpArgs(url, playerClient);
-    logger.info(`[yt-dlp] Trying player_client=${playerClient} for ${url}`);
+    const args = buildYtdlpArgs(url);
+    logger.info(`[yt-dlp] Running extraction for: ${url}`);
     const proc = spawn(YTDLP_BIN, args);
     let stdout = '', stderr = '';
     proc.stdout.on('data', c => { stdout += c; });
     proc.stderr.on('data', c => { stderr += c; });
     proc.on('close', code => {
       if (code !== 0) {
-        logger.warn(`[yt-dlp] client=${playerClient} failed: ${stderr.slice(0, 200)}`);
-        return reject({ code, stderr, isBot: isBotDetectionError(stderr) });
+        logger.warn(`[yt-dlp] Failed (code=${code}): ${stderr.slice(0, 300)}`);
+        return reject({ code, stderr });
       }
-      try { resolve(JSON.parse(stdout)); }
-      catch (e) { reject({ code: -1, stderr: e.message, isBot: false }); }
+      try {
+        resolve(JSON.parse(stdout));
+      } catch (e) {
+        reject({ code: -1, stderr: `JSON parse error: ${e.message}` });
+      }
     });
-    proc.on('error', err => reject({ code: -1, stderr: err.message, isBot: false }));
+    proc.on('error', err => reject({ code: -1, stderr: err.message }));
   });
 }
 
-async function extractViaYtdlp(url) {
-  let lastError = null;
-  for (const client of PLAYER_CLIENTS) {
-    try {
-      const raw = await runYtdlp(url, client);
-      const result = parseFormats(raw, url);
-      logger.info(`[yt-dlp] Success client=${client}: ${result.formats.combined.length} combined`);
-      return result;
-    } catch (err) {
-      lastError = err;
-      if (!err.isBot) break;
-      logger.warn(`[yt-dlp] Bot detected client=${client}, trying next...`);
-    }
-  }
-  let msg = 'Failed to extract video information.';
-  if (lastError?.isBot) msg = 'YouTube bot detection blocked the request. Please try again later or configure cookies.';
-  else if (lastError?.stderr?.includes('Unsupported URL')) msg = 'This website or URL is not supported.';
-  else if (lastError?.stderr?.includes('Video unavailable') || lastError?.stderr?.includes('Private video')) msg = 'This video is private or unavailable.';
-  throw { message: msg, status: lastError?.isBot ? 422 : 500, rawError: lastError?.stderr };
-}
-
-// ─── Main entry point ────────────────────────────────────────────────────────
-function isYouTubeUrl(url) {
-  try {
-    const hostname = new URL(url).hostname.replace('www.', '');
-    return hostname === 'youtube.com' || hostname === 'youtu.be' || hostname === 'm.youtube.com';
-  } catch (_) { return false; }
-}
-
+// ─── Main extraction function ─────────────────────────────────────────────────
 async function extractInfo(url) {
-  logger.info(`[extract] Starting extraction for: ${url}`);
-  
+  logger.info(`[extract] Starting for: ${url}`);
+
   const urlLower = url.toLowerCase();
+
+  // Block platforms with known server-side issues
   if (urlLower.includes('youtube.com') || urlLower.includes('youtu.be')) {
-    throw new Error('YouTube downloads are currently unsupported from this server. Please try Twitter, Reddit, Vimeo, Facebook, etc.');
-  }
-  if (urlLower.includes('spotify.com') || urlLower.includes('netflix.com') || urlLower.includes('hulu.com') || urlLower.includes('crunchyroll.com')) {
-    throw new Error('DRM-protected streaming services are unsupported.');
-  }
-  if (urlLower.includes('patreon.com') || urlLower.includes('onlyfans.com')) {
-    throw new Error('Platforms requiring paid subscriptions are unsupported.');
+    throw new Error('YouTube downloads are currently unsupported due to server IP restrictions. Please try Twitter, Reddit, Vimeo, Dailymotion, etc.');
   }
 
-  return extractViaYtdlp(url);
+  let raw;
+  try {
+    raw = await runYtdlp(url);
+  } catch (err) {
+    const stderr = err.stderr || '';
+    if (stderr.includes('Unsupported URL')) {
+      throw new Error('This website is not supported. Please try a different platform.');
+    }
+    if (stderr.includes('Video unavailable') || stderr.includes('Private video')) {
+      throw new Error('This video is private or unavailable.');
+    }
+    if (stderr.includes('HTTP Error 403') || stderr.includes('HTTP Error 401')) {
+      throw new Error('Access denied by the platform. The video may be private or age-restricted.');
+    }
+    if (stderr.includes('HTTP Error 404')) {
+      throw new Error('Video not found. The link may be broken or the video may have been deleted.');
+    }
+    throw new Error(`Could not extract video information. ${stderr.slice(0, 150)}`);
+  }
+
+  return parseFormats(raw, url);
 }
 
-// ─── Utility functions (used by index.js) ────────────────────────────────────
+// ─── Re-extract a fresh direct URL for a specific format ─────────────────────
+// Called by the download route to get a fresh, non-expired stream URL
+async function extractFormatUrl(pageUrl, formatId) {
+  logger.info(`[extract-format] Getting fresh URL for format=${formatId} from ${pageUrl}`);
+
+  let raw;
+  try {
+    raw = await runYtdlp(pageUrl);
+  } catch (err) {
+    throw new Error(`Re-extraction failed: ${(err.stderr || '').slice(0, 150)}`);
+  }
+
+  const allFormats = [
+    ...(raw.formats || []),
+  ];
+
+  // Handle merged format IDs like "137+140"
+  if (formatId.includes('+')) {
+    const [videoId, audioId] = formatId.split('+');
+    const videoFmt = allFormats.find(f => String(f.format_id) === videoId);
+    const audioFmt = allFormats.find(f => String(f.format_id) === audioId);
+    return {
+      videoUrl: videoFmt?.url || null,
+      audioUrl: audioFmt?.url || null,
+      isMerge: true,
+    };
+  }
+
+  // Single format
+  const fmt = allFormats.find(f => String(f.format_id) === String(formatId));
+  if (!fmt) {
+    // Fallback: if only one format exists (e.g. direct URL platforms), use it
+    if (allFormats.length === 1) {
+      return { videoUrl: allFormats[0].url, audioUrl: null, isMerge: false };
+    }
+    // Final fallback: raw.url (single-format response)
+    if (raw.url) {
+      return { videoUrl: raw.url, audioUrl: null, isMerge: false };
+    }
+    throw new Error('Requested format not found. Please try extracting the video again.');
+  }
+
+  const vcodec = (fmt.vcodec || '').toLowerCase();
+  const acodec = (fmt.acodec || '').toLowerCase();
+  const isAudioOnly = vcodec === 'none' && acodec !== 'none';
+
+  return {
+    videoUrl: isAudioOnly ? null : fmt.url,
+    audioUrl: isAudioOnly ? fmt.url : null,
+    isMerge: false,
+  };
+}
+
+// ─── Check yt-dlp is installed ────────────────────────────────────────────────
 function checkYtdlpAvailable() {
   return new Promise((resolve) => {
     const proc = spawn(YTDLP_BIN, ['--version']);
@@ -327,13 +310,18 @@ function checkYtdlpAvailable() {
   });
 }
 
-function autoUpdateYtdlp() {
+// ─── Auto-update yt-dlp ───────────────────────────────────────────────────────
+async function autoUpdateYtdlp() {
   return new Promise((resolve) => {
-    logger.info('[yt-dlp] Checking for updates...');
+    logger.info('[yt-dlp] Running auto-update...');
     const proc = spawn(YTDLP_BIN, ['-U']);
-    proc.on('close', code => { logger.info(`[yt-dlp] Update check done code=${code}`); resolve(); });
-    proc.on('error', () => { logger.warn('[yt-dlp] Update check failed.'); resolve(); });
+    proc.on('close', code => {
+      if (code === 0) logger.info('[yt-dlp] Update check complete.');
+      else logger.warn(`[yt-dlp] Update exited with code ${code}`);
+      resolve();
+    });
+    proc.on('error', () => resolve());
   });
 }
 
-module.exports = { checkYtdlpAvailable, autoUpdateYtdlp, extractInfo };
+module.exports = { extractInfo, extractFormatUrl, checkYtdlpAvailable, autoUpdateYtdlp };
