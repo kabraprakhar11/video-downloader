@@ -49,6 +49,11 @@ function buildYtdlpArgs(url) {
     args.push('--cookies', cookiesPath);
   }
 
+  // Inject Proxy to bypass datacenter IP bans (e.g. Reddit 429 Too Many Requests)
+  if (process.env.YTDLP_PROXY) {
+    args.push('--proxy', process.env.YTDLP_PROXY);
+  }
+
   args.push(url);
   return args;
 }
