@@ -113,8 +113,8 @@ function parseFormats(raw, url) {
     const isVideoStream = hasVideoCodec || hasHeight || hasWidth || hasFps;
     const isAudioStream = hasAudioCodec || hasAbr;
 
-    // Explicitly audio-only: codec says video is none, or no video dimensions at all
-    const isExplicitAudioOnly = vcodec === 'none' && isAudioStream;
+    // Explicitly audio-only: codec says video is none, or no video dimensions at all, or string match
+    const isExplicitAudioOnly = (vcodec === 'none' && isAudioStream) || (f.resolution === 'audio only') || (f.format_note && f.format_note.toLowerCase().includes('audio'));
     // Explicitly video-only: codec says audio is none AND no audio bitrate
     const isExplicitVideoOnly = acodec === 'none' && !hasAbr && isVideoStream;
 

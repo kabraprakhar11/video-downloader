@@ -168,6 +168,7 @@ router.get('/stream/:jobId', (req, res) => {
     const args = [
       '-user_agent', getUserAgent(session.headers),
       ...buildHeadersArg(session.headers),
+      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.audioUrl,
       '-vn',
       '-c:a', 'libmp3lame',
@@ -196,9 +197,7 @@ router.get('/stream/:jobId', (req, res) => {
       ...buildHeadersArg(session.headers),
       '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', targetUrl,
-      '-c:v', 'copy',
-      '-c:a', 'copy',
-      '-bsf:a', 'aac_adtstoasc',
+      '-c', 'copy',
       '-movflags', 'frag_keyframe+empty_moov',
       '-f', 'mp4',
       'pipe:1',
