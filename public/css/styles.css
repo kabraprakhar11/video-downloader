@@ -1421,8 +1421,8 @@ ul { list-style: none; }
 .footer {
   position: relative;
   z-index: 1;
-  border-top: 1px solid var(--glass-border);
-  background: rgba(2, 6, 23, 0.70);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 0;
@@ -1455,7 +1455,7 @@ ul { list-style: none; }
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
+  color: #ffffff;
   text-decoration: none;
   transition: opacity var(--transition);
 }
@@ -1463,7 +1463,7 @@ ul { list-style: none; }
 
 .footer-tagline {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
 }
 
@@ -1481,7 +1481,7 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-col ul {
@@ -1492,15 +1492,15 @@ ul { list-style: none; }
 
 .footer-col ul li a {
   font-size: 0.84rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   transition: color var(--transition);
 }
-.footer-col ul li a:hover { color: var(--text-primary); }
+.footer-col ul li a:hover { color: #ffffff; }
 
 /* Bottom bar */
 .footer-bottom {
-  border-top: 1px solid var(--glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px 24px;
   max-width: 100%;
   display: flex;
@@ -1523,7 +1523,7 @@ ul { list-style: none; }
 .footer-copyright {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.01em;
 }
 
@@ -1536,27 +1536,27 @@ ul { list-style: none; }
 
 .footer-bottom-links a {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   transition: color var(--transition);
   white-space: nowrap;
 }
 
 .footer-bottom-links a:hover {
-  color: var(--text-primary);
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .footer-divider {
   font-size: 0.7rem;
-  color: var(--glass-border);
+  color: rgba(255, 255, 255, 0.15);
   user-select: none;
 }
 
 .footer-legal-note {
   font-size: 0.72rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.45);
   line-height: 1.65;
   max-width: 780px;
 }
