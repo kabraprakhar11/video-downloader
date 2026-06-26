@@ -295,44 +295,46 @@
   }
 
   /**
-   * Sign up with Email and Password
+   * Register Premium User Post-Checkout
    */
-  async function signUpWithEmail(email, password, displayName) {
+  async function registerPremiumUser(userData, paymentDetails) {
     if (signInInProgress) return;
     signInInProgress = true;
     try {
-      if (!auth) throw new Error('Firebase is not initialized.');
-      console.log('[Auth] Attempting email sign-up...');
-      const credential = await auth.createUserWithEmailAndPassword(email, password);
+      const payload = { ...userData, ...paymentDetails };
+      console.log('[Auth] Attempting premium registration...', payload.email);
       
-      // Update display name and avatar
-      if (credential.user) {
-        await credential.user.updateProfile({
-          displayName: displayName || 'User',
-          photoURL: `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName || 'User')}&background=6366f1&color=fff`
-        });
-        
-        // Force refresh current user
-        currentUser = auth.currentUser;
-        currentIdToken = await currentUser.getIdToken();
-        const info = await StreamAPI.apiVerifyAuth(currentIdToken);
-        currentTier = info.tier;
-        notifyListeners({ user: currentUser, tier: currentTier, idToken: currentIdToken });
-      }
+      const res = await fetch((window.API_BASE || '') + '/api/auth/register-premium', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
       
-      console.log('[Auth] Email sign-up successful.');
-      StreamUI.showToast('Account created successfully!', 'success');
-      StreamUI.hideAuthModal();
+      const data = await res.json();
+      if (!data.success) throw new Error(data.error || 'Registration failed.');
+
+      // Registration successful! Now sign them in so Firebase Auth is initialized locally
+      await auth.signInWithEmailAndPassword(userData.email, userData.password);
+      
+      console.log('[Auth] Premium registration successful.');
+      StreamUI.showToast('Account created! Welcome to Premium.', 'success');
+      StreamUI.hideRegisterModal();
+      
+      // Force refresh current user and token to pull new custom claims
+      currentUser = auth.currentUser;
+      currentIdToken = await currentUser.getIdToken(true);
+      const info = await StreamAPI.apiVerifyAuth(currentIdToken);
+      currentTier = info.tier;
+      notifyListeners({ user: currentUser, tier: currentTier, idToken: currentIdToken });
 
       setTimeout(() => {
-        if (currentTier === 'free') {
-          StreamUI.showUpgradeModal();
-        }
-      }, 800);
+        window.location.reload(); // Hard refresh to sync UI fully
+      }, 1500);
+
     } catch (e) {
-      console.error('[Auth] Email sign-up error:', e);
-      alert(`Sign-up Error:\n${e.message}`);
-      StreamUI.showToast(`Sign-up failed: ${e.message}`, 'error');
+      console.error('[Auth] Premium registration error:', e);
+      alert(`Registration Error:\n${e.message}`);
+      StreamUI.showToast(`Registration failed: ${e.message}`, 'error');
     } finally {
       signInInProgress = false;
     }
@@ -343,7 +345,7 @@
     init,
     signInWithGoogle,
     signInWithEmail,
-    signUpWithEmail,
+    registerPremiumUser,
     signInWithMock,
     signOut,
     getIdToken,

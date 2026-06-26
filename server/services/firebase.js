@@ -232,4 +232,18 @@ async function createUserRecord(uid, email, displayName, photoURL) {
   }
 }
 
-module.exports = { initFirebase, verifyIdToken, getUserTier, upgradeUserToPremium, recordFirestoreUsage, getUserDailyUsage, createUserRecord };
+/**
+ * Create a new user in Firebase Auth.
+ */
+async function createFirebaseUserAccount(email, password, displayName) {
+  if (!auth) throw new Error('Firebase Admin SDK is not initialized.');
+  const userRecord = await auth.createUser({
+    email,
+    password,
+    displayName,
+    emailVerified: false,
+  });
+  return userRecord;
+}
+
+module.exports = { initFirebase, verifyIdToken, getUserTier, upgradeUserToPremium, recordFirestoreUsage, getUserDailyUsage, createUserRecord, createFirebaseUserAccount };

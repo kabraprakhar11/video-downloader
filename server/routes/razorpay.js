@@ -45,6 +45,23 @@ router.post('/create-order', requireAuth, async (req, res) => {
 });
 
 /**
+ * Creates a new Razorpay Guest Order (No auth required)
+ */
+router.post('/create-guest-order', async (req, res) => {
+  if (!razorpayService.isConfigured) {
+    return res.status(503).json({ error: 'Payments are currently disabled.' });
+  }
+
+  try {
+    const order = await razorpayService.createOrder('guest', null);
+    res.json({ success: true, order });
+  } catch (err) {
+    logger.error('Create guest order error:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+/**
  * Verifies the Razorpay payment signature
  */
 router.post('/verify-payment', requireAuth, async (req, res) => {

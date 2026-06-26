@@ -208,22 +208,13 @@
 
   // ── Razorpay Checkout ─────────────────────────────────────────────────────
   async function handleCheckout() {
-    const idToken = await StreamAuth.getIdToken();
-    if (!idToken) {
-      StreamUI.showToast('Please create an account to upgrade to Premium.', 'info', 4000);
-      StreamUI.hideUpgradeModal();
-      StreamUI.showAuthModal('signup');
-      return;
-    }
-
     btnCheckout.disabled = true;
     btnCheckout.textContent = 'Initializing Payment...';
 
     try {
-      // 1. Create Order on Backend
-      const res = await fetch((window.API_BASE || '') + '/api/checkout/create-order', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${idToken}` },
+      // 1. Create Guest Order on Backend
+      const res = await fetch((window.API_BASE || '') + '/api/checkout/create-guest-order', {
+        method: 'POST'
       });
       const data = await res.json();
       if (!data.success) throw new Error(data.error);
@@ -238,35 +229,13 @@
         name: 'Click2Video Premium',
         description: 'Unlimited 4K & Merged Downloads',
         order_id: order.id,
-        handler: async function (response) {
-          // 3. Verify Payment Signature
-          try {
-            btnCheckout.textContent = 'Verifying...';
-            const verifyRes = await fetch((window.API_BASE || '') + '/api/checkout/verify-payment', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${idToken}`,
-              },
-              body: JSON.stringify({
-                razorpay_order_id: response.razorpay_order_id,
-                razorpay_payment_id: response.razorpay_payment_id,
-                razorpay_signature: response.razorpay_signature,
-              }),
-            });
-            const verifyData = await verifyRes.json();
-            if (!verifyData.success) throw new Error(verifyData.error);
-
-            StreamUI.showToast('Payment successful! Welcome to Premium.', 'success');
-            StreamUI.hideUpgradeModal();
-            // Force token refresh to get new custom claims / tier
-            await StreamAuth.getIdToken();
-            window.location.reload(); // Refresh to apply UI changes
-          } catch (err) {
-            StreamUI.showToast(`Verification failed: ${err.message}`, 'error');
-            btnCheckout.disabled = false;
-            btnCheckout.textContent = 'Get Premium — Only $49/mo';
-          }
+        handler: function (response) {
+          // 3. Payment Success - Open Registration Modal
+          StreamUI.hideUpgradeModal();
+          StreamUI.showRegisterModal(response);
+          
+          btnCheckout.disabled = false;
+          btnCheckout.textContent = 'Get Premium — Only $49/mo';
         },
         prefill: {
           email: StreamAuth.currentUser?.email || '',
@@ -358,6 +327,41 @@
     btnAuthClose?.addEventListener('click', () => StreamUI.hideAuthModal());
     modalAuth?.addEventListener('click', (e) => {
       if (e.target === modalAuth) StreamUI.hideAuthModal();
+    });
+
+    document.getElementById('register-modal-close')?.addEventListener('click', StreamUI.hideRegisterModal);
+
+    document.getElementById('form-register-premium')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const firstName = document.getElementById('reg-first-name').value;
+      const lastName = document.getElementById('reg-last-name').value;
+      const mobile = document.getElementById('reg-mobile').value;
+      const email = document.getElementById('reg-email').value;
+      const password = document.getElementById('reg-password').value;
+      const confirmPassword = document.getElementById('reg-confirm-password').value;
+      
+      const paymentDetails = {
+        razorpay_payment_id: document.getElementById('reg-razorpay-payment-id').value,
+        razorpay_order_id: document.getElementById('reg-razorpay-order-id').value,
+        razorpay_signature: document.getElementById('reg-razorpay-signature').value
+      };
+
+      if (password !== confirmPassword) {
+        StreamUI.showToast('Passwords do not match.', 'error');
+        return;
+      }
+      
+      const submitBtn = document.getElementById('btn-register-submit');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Creating Account...';
+
+      try {
+        await window.StreamAuth.registerPremiumUser({ firstName, lastName, mobile, email, password }, paymentDetails);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
     });
 
     linkGotoSignup?.addEventListener('click', (e) => {

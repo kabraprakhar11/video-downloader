@@ -419,10 +419,32 @@
 
   function switchAuthState(state) {
     const signinView = document.getElementById('auth-state-signin');
-    const signupView = document.getElementById('auth-state-signup');
-    if (signinView && signupView) {
+    if (signinView) {
       signinView.classList.toggle('hidden', state !== 'signin');
-      signupView.classList.toggle('hidden', state !== 'signup');
+    }
+  }
+
+  // ── Register Modal ────────────────────────────────────────────────────────
+  function showRegisterModal(paymentDetails) {
+    const modal = document.getElementById('modal-register-premium');
+    if (modal) {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      
+      // Inject payment details into hidden fields
+      if (paymentDetails) {
+        document.getElementById('reg-razorpay-payment-id').value = paymentDetails.razorpay_payment_id || '';
+        document.getElementById('reg-razorpay-order-id').value = paymentDetails.razorpay_order_id || '';
+        document.getElementById('reg-razorpay-signature').value = paymentDetails.razorpay_signature || '';
+      }
+    }
+  }
+
+  function hideRegisterModal() {
+    const modal = document.getElementById('modal-register-premium');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
     }
   }
 
@@ -493,6 +515,8 @@
     showAuthModal,
     hideAuthModal,
     switchAuthState,
+    showRegisterModal,
+    hideRegisterModal,
     setDownloadProgress,
     formatNumber,
   };

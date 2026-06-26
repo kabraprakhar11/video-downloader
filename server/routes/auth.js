@@ -6,7 +6,8 @@
 const express = require('express');
 const router = express.Router();
 
-const { verifyIdToken, getUserTier, createUserRecord, getUserDailyUsage } = require('../services/firebase');
+const { verifyIdToken, getUserTier, createUserRecord, getUserDailyUsage, createFirebaseUserAccount, upgradeUserToPremium } = require('../services/firebase');
+const razorpayService = require('../services/razorpay');
 const { getIpQuota } = require('../middleware/quota');
 const logger = require('../utils/logger');
 
@@ -87,6 +88,44 @@ router.post('/verify', async (req, res) => {
       remaining: Math.max(0, (tier === 'premium' ? 99999 : 3) - dailyUsage),
     }
   });
+});
+
+/**
+ * POST /api/auth/register-premium
+ * Registers a new user after successful Razorpay guest checkout.
+ */
+router.post('/register-premium', async (req, res) => {
+  const { firstName, lastName, mobile, email, password, razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+
+  if (!email || !password || !firstName || !razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
+    return res.status(400).json({ success: false, error: 'Missing required registration or payment details.' });
+  }
+
+  try {
+    // 1. Verify Razorpay signature to ensure payment is valid
+    const isValid = razorpayService.verifySignature(razorpay_order_id, razorpay_payment_id, razorpay_signature);
+    if (!isValid) {
+      return res.status(400).json({ success: false, error: 'Invalid payment signature. Payment could not be verified.' });
+    }
+
+    // 2. Create the Firebase Auth user
+    const displayName = `${firstName} ${lastName}`.trim();
+    const userRecord = await createFirebaseUserAccount(email, password, displayName);
+    
+    // 3. Create Firestore profile (we include mobile in this record if desired, or just use createUserRecord)
+    const photoURL = `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=6366f1&color=fff`;
+    await createUserRecord(userRecord.uid, email, displayName, photoURL);
+
+    // 4. Upgrade user to Premium in Firestore
+    await upgradeUserToPremium(userRecord.uid, razorpay_payment_id, razorpay_order_id);
+
+    logger.info(`Successfully created premium account for ${email} (UID: ${userRecord.uid})`);
+    res.json({ success: true, message: 'Premium account created successfully.' });
+
+  } catch (err) {
+    logger.error('Premium registration error:', err);
+    res.status(500).json({ success: false, error: err.message || 'Failed to create premium account.' });
+  }
 });
 
 module.exports = router;
