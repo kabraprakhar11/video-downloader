@@ -8063,3 +8063,33 @@ size=    5368kB time=00:01:31.94 bitrate= 478.2kbits/s speed=9.15x    [https @ 
 2026-06-26 13:45:19 [info]: [yt-dlp] Update check complete.
 2026-06-26 13:45:24 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
 2026-06-26 13:45:25 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:45:41 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:45:42 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:45:42 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:45:42 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:45:42 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:45:42 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:45:42 [info]:    Environment: development
+2026-06-26 13:45:42 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:45:50 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:46:36 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:46:56 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 14:01:14 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 14:01:15 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 14:01:15 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 14:01:15 [info]: [yt-dlp] Running auto-update...
+2026-06-26 14:01:15 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 14:01:15 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 14:01:15 [info]:    Environment: development
+2026-06-26 14:01:15 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 14:01:17 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 14:01:18 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 14:01:18 [info]: [yt-dlp] Update check complete.
+2026-06-26 14:01:26 [info]: [extract] Starting for: https://www.reddit.com/r/Damnthatsinteresting/comments/1iino1e/the_way_this_guy_cleans_the_street/
+2026-06-26 14:01:26 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/Damnthatsinteresting/comments/1iino1e/the_way_this_guy_cleans_the_street/
+2026-06-26 14:01:31 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 1iino1e: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
