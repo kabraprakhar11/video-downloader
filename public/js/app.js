@@ -372,6 +372,11 @@
     // Form Submissions
     const formSignin = document.getElementById('form-signin');
     const formSignup = document.getElementById('form-signup');
+    const btnGoogleSignin = document.getElementById('btn-google-signin');
+    const btnGoogleSignup = document.getElementById('btn-google-signup');
+
+    btnGoogleSignin?.addEventListener('click', () => StreamAuth.signInWithGoogle());
+    btnGoogleSignup?.addEventListener('click', () => StreamAuth.signInWithGoogle());
 
     formSignin?.addEventListener('submit', (e) => {
       e.preventDefault();
