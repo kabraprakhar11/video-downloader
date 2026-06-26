@@ -87,6 +87,8 @@ router.post('/', proxyLimiter, async (req, res) => {
 
   downloadSessions.set(jobId, {
     ...streamInfo,
+    formatId,
+    jobId,
     pageUrl,
     displayName,
     createdAt: Date.now(),
@@ -108,236 +110,81 @@ router.get('/stream/:jobId', (req, res) => {
   const safeAsciiName = session.displayName.replace(/[^a-zA-Z0-9.\-_ ]/g, '_');
   const encodedName = encodeURIComponent(session.displayName);
 
-  const setDownloadHeaders = () => {
+  const setDownloadHeaders = (size) => {
     if (!res.headersSent) {
       res.setHeader('Content-Disposition', `attachment; filename="${safeAsciiName}"; filename*=UTF-8''${encodedName}`);
       res.setHeader('Content-Type', 'application/octet-stream');
       res.setHeader('Cache-Control', 'no-cache');
+      if (size) res.setHeader('Content-Length', size);
     }
   };
 
-  logger.info(`[Stream] Starting: ${session.displayName} | merge=${session.isMerge} | video=${!!session.videoUrl} | audio=${!!session.audioUrl}`);
+  const os = require('os');
+  const fs = require('fs');
+  const path = require('path');
+  const targetPath = path.join(os.tmpdir(), `${session.jobId}.mp4`);
 
-  const buildHeadersArg = (headersObj) => {
-    let headersStr = '';
-    const referer = headersObj?.['Referer'] || headersObj?.['referer'] || session.pageUrl || '';
-    if (referer) headersStr += `Referer: ${referer}\r\n`;
-    if (headersObj) {
-      for (const [k, v] of Object.entries(headersObj)) {
-        if (k.toLowerCase() !== 'referer' && k.toLowerCase() !== 'user-agent') {
-          headersStr += `${k}: ${v}\r\n`;
-        }
-      }
-    }
-    return headersStr ? ['-headers', headersStr] : [];
-  };
+  logger.info(`[Stream] yt-dlp disk download starting: ${session.displayName} format=${session.formatId}`);
 
-  const getUserAgent = (headersObj) => {
-    return headersObj?.['User-Agent'] || headersObj?.['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36';
-  };
+  const args = [
+    '-f', session.formatId,
+    '--no-playlist',
+    '--no-warnings',
+    '--merge-output-format', 'mp4',
+    '-o', targetPath
+  ];
 
-  const buildProxyArgs = () => {
-    return process.env.YTDLP_PROXY ? ['-http_proxy', process.env.YTDLP_PROXY] : [];
-  };
-
-  // ── FFmpeg merge (video + audio separate streams) ─────────────────────────
-  if (session.isMerge && session.videoUrl && session.audioUrl) {
-    const FFMPEG_PATH = require('ffmpeg-static');
-    const args = [
-      '-user_agent', getUserAgent(session.videoHeaders),
-      ...buildHeadersArg(session.videoHeaders),
-      ...buildProxyArgs(),
-      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
-      '-timeout', '15000000',
-      '-rw_timeout', '15000000',
-      '-i', session.videoUrl,
-      '-user_agent', getUserAgent(session.audioHeaders),
-      ...buildHeadersArg(session.audioHeaders),
-      ...buildProxyArgs(),
-      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
-      '-timeout', '15000000',
-      '-rw_timeout', '15000000',
-      '-i', session.audioUrl,
-      '-c:v', 'copy',
-      '-c:a', 'aac',
-      '-movflags', 'frag_keyframe+empty_moov',
-      '-f', 'mp4',
-      'pipe:1',
-    ];
-    const proc = spawn(FFMPEG_PATH, args);
-    let headersSet = false;
-    proc.stdout.on('data', (chunk) => {
-      if (!headersSet) {
-        setDownloadHeaders();
-        headersSet = true;
-      }
-      res.write(chunk);
-    });
-    proc.stdout.on('end', () => res.end());
-    let ffmpegStderr = '';
-    proc.stderr.on('data', d => { ffmpegStderr += d.toString(); }); // capture stderr
-    proc.on('close', code => {
-      if (code !== 0) {
-        logger.error(`[Stream] FFmpeg exited code=${code}. Stderr: ${ffmpegStderr}`);
-        if (!res.headersSent) {
-          try { res.status(502).send(`Platform stream error. FFmpeg exited with code ${code}. Please try a different format or use a Residential Proxy.`); } catch (_) {}
-          return;
-        }
-      }
-      try { res.end(); } catch (_) {}
-    });
-    req.on('close', () => proc.kill('SIGKILL'));
-    return;
+  if (process.env.YTDLP_PROXY) {
+    args.push('--proxy', process.env.YTDLP_PROXY);
   }
 
-  // ── Audio-only extraction via FFmpeg ─────────────────────────────────────
-  if (session.audioUrl && !session.videoUrl) {
-    const FFMPEG_PATH = require('ffmpeg-static');
-    const args = [
-      '-user_agent', getUserAgent(session.headers),
-      ...buildHeadersArg(session.headers),
-      ...buildProxyArgs(),
-      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
-      '-timeout', '15000000',
-      '-rw_timeout', '15000000',
-      '-i', session.audioUrl,
-      '-vn',
-      '-c:a', 'libmp3lame',
-      '-q:a', '2',
-      '-f', 'mp3',
-      'pipe:1',
-    ];
-    const proc = spawn(FFMPEG_PATH, args);
-    let headersSet = false;
-    proc.stdout.on('data', (chunk) => {
-      if (!headersSet) {
-        setDownloadHeaders();
-        headersSet = true;
-      }
-      res.write(chunk);
-    });
-    proc.stdout.on('end', () => res.end());
-    proc.stderr.on('data', () => {});
-    proc.on('close', () => { try { res.end(); } catch (_) {} });
-    req.on('close', () => proc.kill('SIGKILL'));
-    return;
+  const cookiesPath = path.join(__dirname, '../../cookies.txt');
+  if (fs.existsSync(cookiesPath)) {
+    args.push('--cookies', cookiesPath);
   }
 
-  // ── Direct stream proxy (combined format) ─────────────────────────────────
-  const targetUrl = session.videoUrl || session.audioUrl;
-  if (!targetUrl) {
-    return res.status(422).send('No stream URL available.');
-  }
+  args.push(session.pageUrl);
 
-  if (targetUrl.includes('.m3u8') || targetUrl.includes('.mpd') || targetUrl.includes('m3u8')) {
-    const FFMPEG_PATH = require('ffmpeg-static');
-    const args = [
-      '-user_agent', getUserAgent(session.headers),
-      ...buildHeadersArg(session.headers),
-      ...buildProxyArgs(),
-      '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
-      '-timeout', '15000000',
-      '-rw_timeout', '15000000',
-      '-i', targetUrl,
-      '-c', 'copy',
-      '-movflags', 'frag_keyframe+empty_moov',
-      '-f', 'mp4',
-      'pipe:1',
-    ];
-    const proc = spawn(FFMPEG_PATH, args);
-    let headersSet = false;
-    proc.stdout.on('data', (chunk) => {
-      if (!headersSet) {
-        setDownloadHeaders();
-        headersSet = true;
-      }
-      res.write(chunk);
-    });
-    proc.stdout.on('end', () => res.end());
-    let ffmpegStderr = '';
-    proc.stderr.on('data', d => { ffmpegStderr += d.toString(); });
-    proc.on('close', code => {
-      if (code !== 0) {
-        logger.error(`[Stream] FFmpeg (m3u8) exited code=${code}. Stderr: ${ffmpegStderr}`);
-        if (!res.headersSent) {
-          try { res.status(502).send(`Platform stream error. FFmpeg exited with code ${code}. Please try a different format or use a Residential Proxy.`); } catch (_) {}
-          return;
-        }
-      }
-      try { res.end(); } catch (_) {}
-    });
-    req.on('close', () => proc.kill('SIGKILL'));
-    return;
-  }
+  const proc = spawn('yt-dlp', args);
+  let stderr = '';
+  proc.stderr.on('data', d => { stderr += d.toString(); });
+  
+  // Heartbeat to prevent Render 100s timeout if download takes a while?
+  // We can't send headers early, so we just have to hope it finishes within 100s.
+  // For most short videos, it takes < 10s.
 
-  function proxyStream(url, depth = 0) {
-    if (depth > 3) {
-      logger.error('[Stream] Too many redirects');
-      return res.status(502).send('Too many redirects from platform.');
-    }
-
-    const client = url.startsWith('https') ? https : http;
-    const { HttpsProxyAgent } = require('https-proxy-agent');
-    
-    const reqHeaders = {
-      'User-Agent': getUserAgent(session.headers),
-      'Accept': '*/*',
-      'Referer': session.headers?.['Referer'] || session.headers?.['referer'] || session.pageUrl || url,
-      ...(session.headers || {})
-    };
-
-    const reqOptions = {
-      headers: reqHeaders,
-      timeout: 30000,
-    };
-    if (process.env.YTDLP_PROXY) {
-      reqOptions.agent = new HttpsProxyAgent(process.env.YTDLP_PROXY);
-    }
-
-    const proxyReq = client.get(url, reqOptions, (proxyRes) => {
-      // Follow redirects
-      if ([301, 302, 303, 307, 308].includes(proxyRes.statusCode) && proxyRes.headers.location) {
-        proxyRes.resume();
-        const nextUrl = new URL(proxyRes.headers.location, url).href;
-        return proxyStream(nextUrl, depth + 1);
-      }
-
-      if (proxyRes.statusCode !== 200) {
-        logger.error(`[Stream] Upstream returned ${proxyRes.statusCode}`);
-        proxyRes.resume();
-        return res.status(502).send(`Platform returned error ${proxyRes.statusCode}. Please try a different format or use a Residential Proxy.`);
-      }
-
-      setDownloadHeaders();
-      if (proxyRes.headers['content-length']) {
-        res.setHeader('Content-Length', proxyRes.headers['content-length']);
-      }
-
-      proxyRes.pipe(res);
-      proxyRes.on('error', (err) => {
-        logger.error(`[Stream] Proxy read error: ${err.message}`);
-        try { res.end(); } catch (_) {}
-      });
-    });
-
-    proxyReq.on('error', (err) => {
-      logger.error(`[Stream] Proxy request error: ${err.message}`);
+  proc.on('close', code => {
+    if (code !== 0 || !fs.existsSync(targetPath)) {
+      logger.error(`[Stream] yt-dlp disk download failed code=${code}. Stderr: ${stderr}`);
       if (!res.headersSent) {
-        try { res.status(502).send('Stream proxy error: ' + err.message); } catch (_) {}
-      } else {
-        try { res.end(); } catch (_) {}
+        return res.status(502).send(`Platform download error. yt-dlp exited with code ${code}.`);
       }
-    });
+      return res.end();
+    }
 
-    proxyReq.on('timeout', () => {
-      proxyReq.destroy();
-      try { res.status(504).send('Stream timeout.'); } catch (_) {}
-    });
+    try {
+      const stat = fs.statSync(targetPath);
+      setDownloadHeaders(stat.size);
+      const readStream = fs.createReadStream(targetPath);
+      readStream.pipe(res);
+      readStream.on('end', () => {
+        try { fs.unlinkSync(targetPath); } catch (_) {}
+      });
+      readStream.on('error', () => {
+        try { fs.unlinkSync(targetPath); res.end(); } catch (_) {}
+      });
+    } catch (err) {
+      logger.error(`[Stream] Error piping file: ${err.message}`);
+      try { res.end(); } catch (_) {}
+    }
+  });
 
-    req.on('close', () => proxyReq.destroy());
-  }
-
-  proxyStream(targetUrl);
+  req.on('close', () => {
+    proc.kill('SIGKILL');
+    setTimeout(() => {
+      try { if (fs.existsSync(targetPath)) fs.unlinkSync(targetPath); } catch (_) {}
+    }, 2000);
+  });
 });
 
 module.exports = router;
