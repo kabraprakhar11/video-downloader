@@ -220,12 +220,19 @@ app.use(
   express.static(path.join(__dirname, '..', 'public'), {
     maxAge: '1d',
     etag: true,
+    setHeaders: (res, path) => {
+      if (path.endsWith('.html')) {
+        res.setHeader('Cache-Control', 'no-cache');
+      }
+    }
   })
 );
 
 // SPA fallback — serve index.html for any unmatched GET (Express 5 wildcard syntax)
 app.get('/{*path}', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'), {
+    headers: { 'Cache-Control': 'no-cache' }
+  });
 });
 
 // ── Global Error Handler ───────────────────────────────────────────────────────
