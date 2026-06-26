@@ -7,12 +7,15 @@ const ALLOWED_EXTRACTORS = require('../utils/allowedExtractors');
 const YTDLP_BIN = 'yt-dlp';
 
 // ─── Quality helpers ──────────────────────────────────────────────────────────
-function getQualityTier(height) {
-  if (!height) return 'SD';
-  if (height >= 2160) return '4K';
-  if (height >= 1440) return '2K';
-  if (height >= 1080) return 'FHD';
-  if (height >= 720)  return 'HD';
+function getQualityTier(width, height) {
+  let minDim = height;
+  if (width && height) minDim = Math.min(width, height);
+  
+  if (!minDim) return 'SD';
+  if (minDim >= 2160) return '4K';
+  if (minDim >= 1440) return '2K';
+  if (minDim >= 1080) return 'FHD';
+  if (minDim >= 720)  return 'HD';
   return 'SD';
 }
 
@@ -92,7 +95,7 @@ function parseFormats(raw, url) {
       tbr: raw.tbr || null,
       height: raw.height || null,
       width: raw.width || null,
-      qualityTier: getQualityTier(raw.height),
+      qualityTier: getQualityTier(raw.width, raw.height),
       isPremiumOnly: false,
       type: 'combined',
       url: raw.url,
@@ -124,7 +127,8 @@ function parseFormats(raw, url) {
     const isExplicitVideoOnly = acodec === 'none' && !hasAbr && isVideoStream;
 
     const height = f.height || null;
-    const qualityTier = isExplicitAudioOnly ? 'audio' : getQualityTier(height);
+    const width = f.width || null;
+    const qualityTier = isExplicitAudioOnly ? 'audio' : getQualityTier(width, height);
     const isPremiumOnly = ['4K', '2K', 'FHD'].includes(qualityTier);
     const filesize = f.filesize || f.filesize_approx || null;
 
@@ -209,6 +213,15 @@ function parseFormats(raw, url) {
 
   // ── Flag if HD formats exist (for merge notice) ────────────────────────────
   result.hasHDFormats = result.formats.videoOnly.some(f => ['FHD', '2K', '4K'].includes(f.qualityTier));
+
+  // ── Ensure at least one free format exists if possible ─────────────────────
+  const totalCombined = result.formats.combined.length;
+  const totalVideoOnly = result.formats.videoOnly.length;
+  if (totalCombined === 1 && totalVideoOnly === 0) {
+    result.formats.combined[0].isPremiumOnly = false;
+  } else if (totalCombined === 0 && totalVideoOnly === 1) {
+    result.formats.videoOnly[0].isPremiumOnly = false;
+  }
 
   return result;
 }
