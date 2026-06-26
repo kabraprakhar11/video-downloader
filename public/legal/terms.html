@@ -3,83 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms &amp; Conditions - Click2Video</title>
+  <title>Terms & Conditions — Click2Video</title>
+  <meta name="description" content="Terms and Conditions for Click2Video — Universal Video Downloader." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?t=20260626_1752" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?t=20260626_1946" />
   <style>
-    .legal-page {
+    /* Legal page specific overrides */
+    .legal-wrapper {
       max-width: 800px;
-      margin: 80px auto;
-      padding: 0 24px;
-      line-height: 1.8;
+      margin: 0 auto;
+      padding: 48px 24px 100px;
+      position: relative;
+      z-index: 1;
     }
-    .legal-page-header {
-      margin-bottom: 40px;
-      text-align: center;
-    }
-    .legal-page-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-    .legal-page-subtitle {
-      color: var(--text-muted);
-    }
-    .legal-page section {
-      margin-bottom: 32px;
-    }
-    .legal-page h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--text-primary);
-    }
-    .legal-page p, .legal-page ul {
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-    .legal-page ul {
-      list-style: disc;
-      padding-left: 24px;
-    }
-    .back-btn {
+
+    .legal-back {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 500;
+      font-size: 0.85rem;
+      font-weight: 600;
       margin-bottom: 40px;
       transition: color 0.2s;
+      font-family: 'Exo 2', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
-    .back-btn:hover {
-      color: var(--text-primary);
+    .legal-back:hover { color: var(--cyan); }
+    .legal-back svg { transition: transform 0.2s; }
+    .legal-back:hover svg { transform: translateX(-4px); }
+
+    .legal-header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,212,255,0.08);
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-family: 'Exo 2', sans-serif;
+    }
+
+    .legal-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .legal-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .legal-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .legal-section {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 24px 28px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .legal-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, #00d4ff, #b300ff);
+      border-radius: 0 0 0 0;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .legal-section:hover {
+      border-color: rgba(0,212,255,0.2);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .legal-section:hover::before { opacity: 1; }
+
+    .legal-section h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .legal-section p {
+      font-size: 0.9rem;
+      color: var(--text-sec);
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .legal-section ul li {
+      font-size: 0.88rem;
+      color: var(--text-sec);
+      line-height: 1.7;
+      padding-left: 20px;
+      position: relative;
+    }
+    .legal-section ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .legal-wrapper { padding: 32px 16px 80px; }
+      .legal-section { padding: 18px 18px; }
+      .legal-title { font-size: 1.6rem; }
     }
   </style>
 </head>
 <body>
-  <div class="legal-page">
-    <a href="/" class="back-btn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to Home
-    </a>
-    
-    <div class="legal-page-header">
-      <h1 class="legal-page-title">Terms &amp; Conditions</h1>
-      <p class="legal-page-subtitle">Last updated: June 2026</p>
+
+<!-- Aurora Background -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-orb aurora-orb--1"></div>
+  <div class="aurora-orb aurora-orb--2"></div>
+  <div class="aurora-orb aurora-orb--3"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<div class="legal-wrapper">
+
+  <a href="/" class="legal-back">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to Home
+  </a>
+
+  <div class="legal-header">
+    <div class="legal-badge">📄 Legal Document</div>
+    <h1 class="legal-title">Terms & Conditions</h1>
+    <p class="legal-meta">Last updated: June 2026</p>
+  </div>
+
+  <div class="legal-body">
+    <div class="legal-section">
+      <h3>1. Acceptance of Terms</h3>
+      <p>By accessing or using Click2Video (the "Service"), you confirm that you are at least 13 years of age and agree to be bound by these Terms & Conditions ("Terms"). If you do not agree, you must discontinue use of the Service immediately.</p>
     </div>
 
-    <section>
-      <h3>1. Acceptance of Terms</h3>
-      <p>By accessing or using Click2Video (the &ldquo;Service&rdquo;), you confirm that you are at least 13 years of age and agree to be bound by these Terms &amp; Conditions (&ldquo;Terms&rdquo;). If you do not agree, you must discontinue use of the Service immediately.</p>
-    </section>
-    <section>
+    <div class="legal-section">
       <h3>2. Description of Service</h3>
       <p>Click2Video provides a technology platform that facilitates the retrieval and downloading of publicly accessible media content from supported third-party platforms. Click2Video does not host, store, upload, or distribute any media content. All content originates from and remains owned by its respective rights holders.</p>
-    </section>
-    <section>
+    </div>
+
+    <div class="legal-section">
       <h3>3. User Responsibilities</h3>
       <p>You acknowledge and agree that:</p>
       <ul>
@@ -88,35 +200,45 @@
         <li>You will comply with the terms of service of any platform from which you retrieve content.</li>
         <li>You are solely responsible for all content you download and for any consequences arising from its use.</li>
       </ul>
-    </section>
-    <section>
+    </div>
+
+    <div class="legal-section">
       <h3>4. Prohibited Uses</h3>
       <p>You agree not to use the Service to: (a) download, reproduce, or redistribute copyrighted content without authorisation from the rights holder; (b) circumvent or attempt to circumvent any digital rights management (DRM) or other technological protection measures; (c) engage in any activity that violates applicable local, national, or international law; or (d) use automated means, bots, scrapers, or scripts to access the Service in a volume or frequency that places an unreasonable burden on our infrastructure.</p>
-    </section>
-    <section>
+    </div>
+
+    <div class="legal-section">
       <h3>5. Premium Subscription</h3>
-      <p>Premium plans are billed on a recurring monthly basis. Payments are processed securely via Razorpay. Subscriptions may be cancelled at any time; cancellation takes effect at the end of the then-current billing period. Click2Video reserves the right to modify pricing with 30 days&rsquo; prior notice.</p>
-    </section>
-    <section>
+      <p>Premium plans are billed on a recurring monthly basis. Payments are processed securely via Razorpay. Subscriptions may be cancelled at any time; cancellation takes effect at the end of the then-current billing period. Click2Video reserves the right to modify pricing with 30 days' prior notice.</p>
+    </div>
+
+    <div class="legal-section">
       <h3>6. Disclaimer of Warranties</h3>
-      <p>The Service is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis without any warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-    </section>
-    <section>
+      <p>The Service is provided on an "as is" and "as available" basis without any warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+    </div>
+
+    <div class="legal-section">
       <h3>7. Limitation of Liability</h3>
       <p>To the fullest extent permitted by law, Click2Video and its affiliates, officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of the Service.</p>
-    </section>
-    <section>
+    </div>
+
+    <div class="legal-section">
       <h3>8. Changes to Terms</h3>
       <p>Click2Video reserves the right to amend these Terms at any time. Continued use of the Service following the posting of revised Terms constitutes your acceptance of the changes.</p>
-    </section>
-    <section>
+    </div>
+
+    <div class="legal-section">
       <h3>9. Governing Law</h3>
       <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Click2Video operates, without regard to its conflict of law provisions.</p>
-    </section>
-    <section>
+    </div>
+
+    <div class="legal-section">
       <h3>10. Contact</h3>
       <p>For any queries regarding these Terms, please contact us through the Click2Video website.</p>
-    </section>
+    </div>
   </div>
+
+</div>
+
 </body>
 </html>

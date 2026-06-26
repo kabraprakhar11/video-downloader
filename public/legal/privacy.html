@@ -3,67 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - Click2Video</title>
+  <title>Privacy Policy — Click2Video</title>
+  <meta name="description" content="Privacy Policy for Click2Video — Universal Video Downloader." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?t=20260626_1752" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?t=20260626_1946" />
   <style>
-    .legal-page { max-width: 800px; margin: 80px auto; padding: 0 24px; line-height: 1.8; }
-    .legal-page-header { margin-bottom: 40px; text-align: center; }
-    .legal-page-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 8px; }
-    .legal-page-subtitle { color: var(--text-muted); }
-    .legal-page section { margin-bottom: 32px; }
-    .legal-page h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary); }
-    .legal-page p, .legal-page ul { color: var(--text-secondary); margin-bottom: 16px; }
-    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); text-decoration: none; font-weight: 500; margin-bottom: 40px; transition: color 0.2s; }
-    .back-btn:hover { color: var(--text-primary); }
+    .legal-wrapper { max-width: 800px; margin: 0 auto; padding: 48px 24px 100px; position: relative; z-index: 1; }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; transition: color 0.2s; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; }
+    .legal-back:hover { color: var(--cyan); }
+    .legal-back:hover svg { transform: translateX(-4px); }
+    .legal-back svg { transition: transform 0.2s; }
+    .legal-header { margin-bottom: 48px; text-align: center; }
+    .legal-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 100px; padding: 5px 16px; font-size: 0.75rem; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: 'Exo 2', sans-serif; }
+    .legal-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .legal-meta { font-size: 0.82rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+    .legal-body { display: flex; flex-direction: column; gap: 8px; }
+    .legal-section { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px 28px; transition: border-color 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+    .legal-section::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #b300ff, #ff006e); opacity: 0; transition: opacity 0.2s; }
+    .legal-section:hover { border-color: rgba(179,0,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .legal-section:hover::before { opacity: 1; }
+    .legal-section h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--purple, #b300ff); margin-bottom: 12px; letter-spacing: 0.02em; }
+    .legal-section p { font-size: 0.9rem; color: var(--text-sec); line-height: 1.8; margin-bottom: 10px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .legal-section ul li { font-size: 0.88rem; color: var(--text-sec); line-height: 1.7; padding-left: 20px; position: relative; }
+    .legal-section ul li::before { content: '›'; position: absolute; left: 0; color: var(--purple, #b300ff); font-weight: 700; }
+    @media (max-width: 640px) { .legal-wrapper { padding: 32px 16px 80px; } .legal-section { padding: 18px; } .legal-title { font-size: 1.6rem; } }
   </style>
 </head>
 <body>
-  <div class="legal-page">
-    <a href="/" class="back-btn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to Home
-    </a>
-    
-    <div class="legal-page-header">
-      <h1 class="legal-page-title">Privacy Policy</h1>
-      <p class="legal-page-subtitle">Last updated: June 2026</p>
-    </div>
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-orb aurora-orb--1"></div>
+  <div class="aurora-orb aurora-orb--2"></div>
+  <div class="aurora-orb aurora-orb--3"></div>
+  <div class="grid-overlay"></div>
+</div>
 
-    <section>
+<div class="legal-wrapper">
+  <a href="/" class="legal-back">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to Home
+  </a>
+
+  <div class="legal-header">
+    <div class="legal-badge">🔒 Legal Document</div>
+    <h1 class="legal-title">Privacy Policy</h1>
+    <p class="legal-meta">Last updated: June 2026</p>
+  </div>
+
+  <div class="legal-body">
+    <div class="legal-section">
       <h3>1. Information We Collect</h3>
       <p>We collect information you provide directly (such as your email address and name when creating an account), usage data (such as URLs submitted for processing, download counts, and session activity), and technical data (such as IP address, browser type, and device information) to operate and improve the Service.</p>
-    </section>
-    <section>
+    </div>
+    <div class="legal-section">
       <h3>2. How We Use Your Information</h3>
       <p>We use collected information to: provide and maintain the Service; process payments and manage subscriptions; enforce usage quotas and prevent abuse; send transactional communications; and improve our platform through aggregated analytics. We do not sell your personal data to third parties.</p>
-    </section>
-    <section>
-      <h3>3. Data Storage &amp; Security</h3>
+    </div>
+    <div class="legal-section">
+      <h3>3. Data Storage & Security</h3>
       <p>Your data is stored securely using Google Firebase infrastructure. We implement industry-standard technical and organisational measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction.</p>
-    </section>
-    <section>
+    </div>
+    <div class="legal-section">
       <h3>4. Third-Party Services</h3>
       <p>We use the following third-party services which may process your data under their own privacy policies: Google Firebase (authentication &amp; database), Razorpay (payment processing), and Google Cloud Run (backend infrastructure).</p>
-    </section>
-    <section>
+    </div>
+    <div class="legal-section">
       <h3>5. Cookies</h3>
       <p>We use essential session cookies necessary for authentication and service operation. We do not use tracking or advertising cookies without your explicit consent.</p>
-    </section>
-    <section>
+    </div>
+    <div class="legal-section">
       <h3>6. Your Rights</h3>
       <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or port your personal data, and to object to or restrict certain processing. To exercise these rights, please contact us through the Click2Video website.</p>
-    </section>
-    <section>
+    </div>
+    <div class="legal-section">
       <h3>7. Data Retention</h3>
       <p>We retain your account data for as long as your account is active. You may request deletion of your account and associated data at any time. Anonymised usage statistics may be retained indefinitely for analytical purposes.</p>
-    </section>
-    <section>
+    </div>
+    <div class="legal-section">
       <h3>8. Changes to This Policy</h3>
       <p>We may update this Privacy Policy periodically. We will notify registered users of material changes via email or a prominent notice on the Service. Your continued use after such notice constitutes acceptance of the updated policy.</p>
-    </section>
+    </div>
   </div>
+</div>
 </body>
 </html>
