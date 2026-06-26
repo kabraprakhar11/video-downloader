@@ -132,16 +132,22 @@ router.get('/stream/:jobId', (req, res) => {
     return headersObj?.['User-Agent'] || headersObj?.['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36';
   };
 
+  const buildProxyArgs = () => {
+    return process.env.YTDLP_PROXY ? ['-http_proxy', process.env.YTDLP_PROXY] : [];
+  };
+
   // ── FFmpeg merge (video + audio separate streams) ─────────────────────────
   if (session.isMerge && session.videoUrl && session.audioUrl) {
     const FFMPEG_PATH = require('ffmpeg-static');
     const args = [
       '-user_agent', getUserAgent(session.videoHeaders),
       ...buildHeadersArg(session.videoHeaders),
+      ...buildProxyArgs(),
       '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.videoUrl,
       '-user_agent', getUserAgent(session.audioHeaders),
       ...buildHeadersArg(session.audioHeaders),
+      ...buildProxyArgs(),
       '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.audioUrl,
       '-c:v', 'copy',
@@ -168,6 +174,7 @@ router.get('/stream/:jobId', (req, res) => {
     const args = [
       '-user_agent', getUserAgent(session.headers),
       ...buildHeadersArg(session.headers),
+      ...buildProxyArgs(),
       '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', session.audioUrl,
       '-vn',
@@ -195,6 +202,7 @@ router.get('/stream/:jobId', (req, res) => {
     const args = [
       '-user_agent', getUserAgent(session.headers),
       ...buildHeadersArg(session.headers),
+      ...buildProxyArgs(),
       '-protocol_whitelist', 'file,http,https,tcp,tls,crypto,data',
       '-i', targetUrl,
       '-c', 'copy',
@@ -221,6 +229,7 @@ router.get('/stream/:jobId', (req, res) => {
     }
 
     const client = url.startsWith('https') ? https : http;
+    const { HttpsProxyAgent } = require('https-proxy-agent');
     
     const reqHeaders = {
       'User-Agent': getUserAgent(session.headers),
@@ -229,10 +238,15 @@ router.get('/stream/:jobId', (req, res) => {
       ...(session.headers || {})
     };
 
-    const proxyReq = client.get(url, {
+    const reqOptions = {
       headers: reqHeaders,
       timeout: 30000,
-    }, (proxyRes) => {
+    };
+    if (process.env.YTDLP_PROXY) {
+      reqOptions.agent = new HttpsProxyAgent(process.env.YTDLP_PROXY);
+    }
+
+    const proxyReq = client.get(url, reqOptions, (proxyRes) => {
       // Follow redirects
       if ([301, 302, 303, 307, 308].includes(proxyRes.statusCode) && proxyRes.headers.location) {
         proxyRes.resume();
