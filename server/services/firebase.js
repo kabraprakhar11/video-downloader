@@ -51,28 +51,34 @@ function initFirebase() {
  */
 async function seedAdminUser() {
   if (!auth || !db) return;
-  const email = 'arjitdaga@example.com';
+  const admins = [
+    { email: 'arjitdaga@example.com', password: '123456', displayName: 'Arjit Daga (Admin)' },
+    { email: 'kabraprakhar11@gmail.com', password: 'PK@c2v11', displayName: 'Admin Prakhar' }
+  ];
+
   try {
-    let userRecord;
-    try {
-      userRecord = await auth.getUserByEmail(email);
-      logger.info(`Admin user ${email} already exists in Firebase Auth.`);
-    } catch (err) {
-      if (err.code === 'auth/user-not-found') {
-        userRecord = await auth.createUser({
-          email: email,
-          password: '123456',
-          displayName: 'Arjit Daga (Admin)',
-          emailVerified: true,
-        });
-        logger.info(`Successfully created admin user ${email} in Firebase Auth.`);
-      } else {
-        throw err;
+    for (const admin of admins) {
+      let userRecord;
+      try {
+        userRecord = await auth.getUserByEmail(admin.email);
+        logger.info(`Admin user ${admin.email} already exists in Firebase Auth.`);
+      } catch (err) {
+        if (err.code === 'auth/user-not-found') {
+          userRecord = await auth.createUser({
+            email: admin.email,
+            password: admin.password,
+            displayName: admin.displayName,
+            emailVerified: true,
+          });
+          logger.info(`Successfully created admin user ${admin.email} in Firebase Auth.`);
+        } else {
+          throw err;
+        }
       }
+      // Set premium subscription in Firestore
+      await upgradeUserToPremium(userRecord.uid, 'admin-seed', 'admin-seed');
     }
 
-    // Set premium subscription in Firestore
-    await upgradeUserToPremium(userRecord.uid, 'admin-seed', 'admin-seed');
   } catch (err) {
     logger.error('Failed to seed admin user:', err);
   }

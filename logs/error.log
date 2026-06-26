@@ -3340,3 +3340,5 @@ size=    5368kB time=00:01:31.94 bitrate= 478.2kbits/s speed=9.15x    [https @ 
 
 2026-06-23 21:37:05 [error]: [/api/extract] Error for URL "https://www.bilibili.com/video/BV1fLjt69ERX/?share_source=copy_web": Could not extract video information. ERROR: [BiliBili] 1fLjt69ERX: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
 
+2026-06-26 17:11:07 [error]: ReferenceError: userRecord is not defined
+    at seedAdminUser (D:\video downloader\server\services\firebase.js:83:32)

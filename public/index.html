@@ -26,7 +26,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/css/styles.css?t=20260621_0020" />
 
@@ -40,12 +40,7 @@
 </head>
 <body>
 
-<!-- ── Animated Background ──────────────────────────────────────────────── -->
-<div class="bg-mesh" aria-hidden="true">
-  <div class="mesh-orb mesh-orb--1"></div>
-  <div class="mesh-orb mesh-orb--2"></div>
-  <div class="mesh-orb mesh-orb--3"></div>
-</div>
+<!-- Minimal Background -->
 
 <!-- ── Navigation ──────────────────────────────────────────────────────── -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -102,10 +97,7 @@
   <!-- ──────────── HERO / IDLE STATE ──────────────────────────────────── -->
   <section class="hero" id="view-idle" role="main" aria-label="Video downloader">
     <div class="hero-content">
-      <div class="hero-badge" role="note">
-        <span class="badge-dot" aria-hidden="true"></span>
-        Free & Premium · 1000+ Platforms · No Registration Required
-      </div>
+
 
       <h1 class="hero-title">
         Download Any Video,<br />
@@ -145,34 +137,7 @@
         </button>
       </div>
 
-      <!-- Supported Platform Badges -->
-      <div class="platform-grid" aria-label="Supported platforms">
 
-        <div class="platform-badge" id="badge-twitter" data-platform="twitter">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1DA1F2" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-          Twitter / X
-        </div>
-        <div class="platform-badge" id="badge-facebook" data-platform="facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          Facebook
-        </div>
-        <div class="platform-badge" id="badge-vimeo" data-platform="vimeo">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1AB7EA" aria-hidden="true"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.787 4.789.968 5.576.537 2.45 1.128 3.67 1.776 3.67.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.483 4.842z"/></svg>
-          Vimeo
-        </div>
-        <div class="platform-badge" id="badge-reddit" data-platform="reddit">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF4500" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path fill="white" d="M20 12a2 2 0 0 0-2-2 2 2 0 0 0-1.35.52A9.7 9.7 0 0 0 12.5 9v-.1l2.75-.65a1.3 1.3 0 0 0 1.25 1 1.3 1.3 0 0 0 1.3-1.3 1.3 1.3 0 0 0-1.3-1.3 1.3 1.3 0 0 0-1.23.9l-3.07.72A.15.15 0 0 0 12 8.4v2.14A9.38 9.38 0 0 0 8.3 11.5a2 2 0 0 0-1.3-.5 2 2 0 0 0-2 2 2 2 0 0 0 1.1 1.78 3.72 3.72 0 0 0 0 .42c0 2.14 2.5 3.88 5.59 3.88s5.6-1.74 5.6-3.88a3.72 3.72 0 0 0 0-.42A2 2 0 0 0 20 12zm-11.5 1a1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1zm5.53 2.65a3.44 3.44 0 0 1-2 .54 3.44 3.44 0 0 1-2-.54.16.16 0 0 1 .19-.24 3.16 3.16 0 0 0 1.79.47 3.16 3.16 0 0 0 1.79-.47.16.16 0 0 1 .19.24zm-.22-1.65a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1z"/></svg>
-          Reddit
-        </div>
-        <div class="platform-badge" id="badge-snapchat" data-platform="snapchat">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFFC00" stroke="#000" stroke-width="1.5" aria-hidden="true"><path d="M12 2C9.4 2 7.5 3.9 7.5 6.5C7.5 7.1 7.6 7.6 7.8 8.1C7 8.3 6.3 8.7 5.7 9.4C4.8 10.3 4.5 11.6 4.7 12.8C4.8 13.5 5.2 14.1 5.7 14.6C5.5 14.9 5.3 15.3 5.3 15.7C5.3 16.4 5.9 17 6.6 17H7.1C7.8 17.8 8.8 18.3 10 18.4C10.1 19.3 10.9 20 11.9 20C12.9 20 13.7 19.3 13.8 18.4C15 18.3 16 17.8 16.7 17H17.2C17.9 17 18.5 16.4 18.5 15.7C18.5 15.3 18.3 14.9 18.1 14.6C18.6 14.1 19 13.5 19.1 12.8C19.3 11.6 19 10.3 18.1 9.4C17.5 8.7 16.8 8.3 16 8.1C16.2 7.6 16.3 7.1 16.3 6.5C16.3 3.9 14.4 2 12 2Z"/></svg>
-          Snapchat
-        </div>
-        <div class="platform-badge platform-badge--more" id="badge-more" aria-label="And many more platforms">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          1000+ More
-        </div>
-      </div>
     </div>
   </section>
 
@@ -491,8 +456,8 @@
       <div class="footer-col">
         <h3 class="footer-col-title">Legal</h3>
         <ul>
-          <li><a href="#modal-terms" id="footer-terms-link">Terms &amp; Conditions</a></li>
-          <li><a href="#modal-privacy" id="footer-privacy-link">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html" id="footer-terms-link">Terms &amp; Conditions</a></li>
+          <li><a href="/legal/privacy.html" id="footer-privacy-link">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
@@ -504,11 +469,11 @@
     <div class="footer-bottom-row">
       <p class="footer-copyright">&copy; 2026 Click2Video. All rights reserved.</p>
       <div class="footer-bottom-links">
-        <a href="#modal-terms" id="footer-terms-link-bottom">Terms &amp; Conditions</a>
+        <a href="/legal/terms.html" id="footer-terms-link-bottom">Terms &amp; Conditions</a>
         <span class="footer-divider" aria-hidden="true">|</span>
-        <a href="#modal-privacy" id="footer-privacy-link-bottom">Privacy Policy</a>
+        <a href="/legal/privacy.html" id="footer-privacy-link-bottom">Privacy Policy</a>
         <span class="footer-divider" aria-hidden="true">|</span>
-        <a href="#modal-copyright" id="footer-copyright-link">Copyright Notice</a>
+        <a href="/legal/copyright.html" id="footer-copyright-link">Copyright Notice</a>
       </div>
     </div>
     <p class="footer-legal-note">
@@ -520,163 +485,7 @@
   </div>
 </footer>
 
-<!-- ── Terms & Conditions Modal ──────────────────────────────────────────── -->
-<div class="modal-overlay hidden" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
-  <div class="modal-card glass-card legal-modal-card">
-    <button class="modal-close" id="terms-modal-close" aria-label="Close Terms">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="legal-modal-header">
-      <span class="modal-badge">📄 Legal</span>
-      <h2 class="modal-title" id="terms-modal-title">Terms &amp; Conditions</h2>
-      <p class="modal-subtitle">Last updated: June 2026</p>
-    </div>
-    <div class="legal-body">
-      <section>
-        <h3>1. Acceptance of Terms</h3>
-        <p>By accessing or using Click2Video (the &ldquo;Service&rdquo;), you confirm that you are at least 13 years of age and agree to be bound by these Terms &amp; Conditions (&ldquo;Terms&rdquo;). If you do not agree, you must discontinue use of the Service immediately.</p>
-      </section>
-      <section>
-        <h3>2. Description of Service</h3>
-        <p>Click2Video provides a technology platform that facilitates the retrieval and downloading of publicly accessible media content from supported third-party platforms. Click2Video does not host, store, upload, or distribute any media content. All content originates from and remains owned by its respective rights holders.</p>
-      </section>
-      <section>
-        <h3>3. User Responsibilities</h3>
-        <p>You acknowledge and agree that:</p>
-        <ul>
-          <li>You will only download content for which you hold the necessary rights or permissions, or that is otherwise freely available under applicable law (e.g., content in the public domain or licensed under Creative Commons).</li>
-          <li>You will not use the Service to infringe upon any intellectual property rights, including copyrights, trademarks, or related rights of any third party.</li>
-          <li>You will comply with the terms of service of any platform from which you retrieve content.</li>
-          <li>You are solely responsible for all content you download and for any consequences arising from its use.</li>
-        </ul>
-      </section>
-      <section>
-        <h3>4. Prohibited Uses</h3>
-        <p>You agree not to use the Service to: (a) download, reproduce, or redistribute copyrighted content without authorisation from the rights holder; (b) circumvent or attempt to circumvent any digital rights management (DRM) or other technological protection measures; (c) engage in any activity that violates applicable local, national, or international law; or (d) use automated means, bots, scrapers, or scripts to access the Service in a volume or frequency that places an unreasonable burden on our infrastructure.</p>
-      </section>
-      <section>
-        <h3>5. Premium Subscription</h3>
-        <p>Premium plans are billed on a recurring monthly basis. Payments are processed securely via Razorpay. Subscriptions may be cancelled at any time; cancellation takes effect at the end of the then-current billing period. Click2Video reserves the right to modify pricing with 30 days&rsquo; prior notice.</p>
-      </section>
-      <section>
-        <h3>6. Disclaimer of Warranties</h3>
-        <p>The Service is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis without any warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-      </section>
-      <section>
-        <h3>7. Limitation of Liability</h3>
-        <p>To the fullest extent permitted by law, Click2Video and its affiliates, officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of the Service.</p>
-      </section>
-      <section>
-        <h3>8. Changes to Terms</h3>
-        <p>Click2Video reserves the right to amend these Terms at any time. Continued use of the Service following the posting of revised Terms constitutes your acceptance of the changes.</p>
-      </section>
-      <section>
-        <h3>9. Governing Law</h3>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Click2Video operates, without regard to its conflict of law provisions.</p>
-      </section>
-      <section>
-        <h3>10. Contact</h3>
-        <p>For any queries regarding these Terms, please contact us through the Click2Video website.</p>
-      </section>
-    </div>
-  </div>
-</div>
 
-<!-- ── Copyright Notice Modal ────────────────────────────────────────────── -->
-<div class="modal-overlay hidden" id="modal-copyright" role="dialog" aria-modal="true" aria-labelledby="copyright-modal-title">
-  <div class="modal-card glass-card legal-modal-card">
-    <button class="modal-close" id="copyright-modal-close" aria-label="Close Copyright Notice">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="legal-modal-header">
-      <span class="modal-badge">&copy; Copyright</span>
-      <h2 class="modal-title" id="copyright-modal-title">Copyright Notice</h2>
-      <p class="modal-subtitle">Last updated: June 2026</p>
-    </div>
-    <div class="legal-body">
-      <section>
-        <h3>1. Ownership of Platform</h3>
-        <p>The Click2Video platform, including all software, algorithms, interfaces, branding, logos, visual design, and documentation, is the exclusive intellectual property of Click2Video and its licensors. &copy; 2026 Click2Video. All rights reserved worldwide.</p>
-      </section>
-      <section>
-        <h3>2. Third-Party Content</h3>
-        <p>Click2Video facilitates access to publicly available media content hosted on third-party platforms. Such content is owned exclusively by the respective content creators, uploaders, or rights holders, and is subject to the copyright laws and platform terms of service applicable to those platforms. Click2Video claims no ownership over any such third-party content.</p>
-      </section>
-      <section>
-        <h3>3. Permitted Use of Platform</h3>
-        <p>You are granted a limited, non-exclusive, non-transferable, revocable licence to access and use the Click2Video platform solely for lawful purposes and in accordance with these Terms. You may not reproduce, modify, distribute, publicly display, or create derivative works of any proprietary elements of this platform without prior written consent from Click2Video.</p>
-      </section>
-      <section>
-        <h3>4. User Responsibility for Downloaded Content</h3>
-        <p>The downloading of any media content via Click2Video is undertaken entirely at the user&rsquo;s own risk and responsibility. Users must independently verify that they possess the legal right to download, store, and use any content they retrieve. Downloading or redistributing copyrighted content without the express permission of the rights holder may constitute copyright infringement under applicable law and may result in civil or criminal liability.</p>
-      </section>
-      <section>
-        <h3>5. DMCA &amp; Copyright Takedown</h3>
-        <p>Click2Video respects the intellectual property rights of others and expects its users to do the same. If you believe that any content facilitated through this Service infringes your copyright, please contact us with the following information: (a) identification of the copyrighted work claimed to be infringed; (b) identification of the material that is claimed to be infringing; (c) your contact information; (d) a statement that you have a good-faith belief that use of the material is not authorised by the copyright owner; and (e) a statement, under penalty of perjury, that the information is accurate. We will respond promptly to valid takedown requests in compliance with the Digital Millennium Copyright Act (DMCA) and equivalent legislation.</p>
-      </section>
-      <section>
-        <h3>6. Disclaimer of Affiliation</h3>
-        <p>Click2Video is an independent, third-party service. It is not affiliated with, endorsed by, or in any way officially connected to TikTok, Instagram, Meta, Twitter/X, Vimeo, Reddit, or any other platform referenced herein. All product names, logos, and brands are property of their respective owners.</p>
-      </section>
-      <section>
-        <h3>7. Limitation of Liability</h3>
-        <p>Click2Video shall not be held liable for any direct, indirect, incidental, consequential, or punitive damages arising from a user&rsquo;s downloading or use of third-party content. Users indemnify and hold harmless Click2Video, its officers, employees, and agents against any claims, damages, or legal proceedings resulting from their breach of applicable copyright or intellectual property law.</p>
-      </section>
-      <section>
-        <h3>8. Contact</h3>
-        <p>For copyright inquiries, DMCA notices, or intellectual property concerns, please contact us through the Click2Video website. We are committed to resolving all legitimate intellectual property matters in a timely and professional manner.</p>
-      </section>
-    </div>
-  </div>
-</div>
-
-<!-- ── Privacy Policy Modal ───────────────────────────────────────────────── -->
-<div class="modal-overlay hidden" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
-  <div class="modal-card glass-card legal-modal-card">
-    <button class="modal-close" id="privacy-modal-close" aria-label="Close Privacy Policy">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="legal-modal-header">
-      <span class="modal-badge">🔒 Privacy</span>
-      <h2 class="modal-title" id="privacy-modal-title">Privacy Policy</h2>
-      <p class="modal-subtitle">Last updated: June 2026</p>
-    </div>
-    <div class="legal-body">
-      <section>
-        <h3>1. Information We Collect</h3>
-        <p>We collect information you provide directly (such as your email address and name when creating an account), usage data (such as URLs submitted for processing, download counts, and session activity), and technical data (such as IP address, browser type, and device information) to operate and improve the Service.</p>
-      </section>
-      <section>
-        <h3>2. How We Use Your Information</h3>
-        <p>We use collected information to: provide and maintain the Service; process payments and manage subscriptions; enforce usage quotas and prevent abuse; send transactional communications; and improve our platform through aggregated analytics. We do not sell your personal data to third parties.</p>
-      </section>
-      <section>
-        <h3>3. Data Storage &amp; Security</h3>
-        <p>Your data is stored securely using Google Firebase infrastructure. We implement industry-standard technical and organisational measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction.</p>
-      </section>
-      <section>
-        <h3>4. Third-Party Services</h3>
-        <p>We use the following third-party services which may process your data under their own privacy policies: Google Firebase (authentication &amp; database), Razorpay (payment processing), and Google Cloud Run (backend infrastructure).</p>
-      </section>
-      <section>
-        <h3>5. Cookies</h3>
-        <p>We use essential session cookies necessary for authentication and service operation. We do not use tracking or advertising cookies without your explicit consent.</p>
-      </section>
-      <section>
-        <h3>6. Your Rights</h3>
-        <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or port your personal data, and to object to or restrict certain processing. To exercise these rights, please contact us through the Click2Video website.</p>
-      </section>
-      <section>
-        <h3>7. Data Retention</h3>
-        <p>We retain your account data for as long as your account is active. You may request deletion of your account and associated data at any time. Anonymised usage statistics may be retained indefinitely for analytical purposes.</p>
-      </section>
-      <section>
-        <h3>8. Changes to This Policy</h3>
-        <p>We may update this Privacy Policy periodically. We will notify registered users of material changes via email or a prominent notice on the Service. Your continued use after such notice constitutes acceptance of the updated policy.</p>
-      </section>
-    </div>
-  </div>
-</div>
 
 <!-- Scripts -->
 <script src="/js/api.js?t=20260618_1800"></script>
@@ -685,61 +494,6 @@
 <script src="/js/app.js?t=20260618_1800"></script>
 
 <script>
-  /* ── Legal Modal Helpers ── */
-  (function () {
-    function openLegal(modalId) {
-      const m = document.getElementById(modalId);
-      if (!m) return;
-      m.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLegal(modalId) {
-      const m = document.getElementById(modalId);
-      if (!m) return;
-      m.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    // Footer links (upper)
-    const termsLink   = document.getElementById('footer-terms-link');
-    const privacyLink = document.getElementById('footer-privacy-link');
-    if (termsLink)   termsLink.addEventListener('click',   function(e){ e.preventDefault(); openLegal('modal-terms'); });
-    if (privacyLink) privacyLink.addEventListener('click', function(e){ e.preventDefault(); openLegal('modal-privacy'); });
-
-    // Footer bottom quick-links
-    const termsLinkBottom     = document.getElementById('footer-terms-link-bottom');
-    const privacyLinkBottom   = document.getElementById('footer-privacy-link-bottom');
-    const copyrightLinkBottom = document.getElementById('footer-copyright-link');
-    if (termsLinkBottom)     termsLinkBottom.addEventListener('click',     function(e){ e.preventDefault(); openLegal('modal-terms'); });
-    if (privacyLinkBottom)   privacyLinkBottom.addEventListener('click',   function(e){ e.preventDefault(); openLegal('modal-privacy'); });
-    if (copyrightLinkBottom) copyrightLinkBottom.addEventListener('click', function(e){ e.preventDefault(); openLegal('modal-copyright'); });
-
-    // Close buttons
-    const termsClose     = document.getElementById('terms-modal-close');
-    const privacyClose   = document.getElementById('privacy-modal-close');
-    const copyrightClose = document.getElementById('copyright-modal-close');
-    if (termsClose)     termsClose.addEventListener('click',     function(){ closeLegal('modal-terms'); });
-    if (privacyClose)   privacyClose.addEventListener('click',   function(){ closeLegal('modal-privacy'); });
-    if (copyrightClose) copyrightClose.addEventListener('click', function(){ closeLegal('modal-copyright'); });
-
-    // Click overlay to close
-    ['modal-terms', 'modal-privacy', 'modal-copyright'].forEach(function(id) {
-      const overlay = document.getElementById(id);
-      if (!overlay) return;
-      overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) closeLegal(id);
-      });
-    });
-
-    // Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeLegal('modal-terms');
-        closeLegal('modal-privacy');
-        closeLegal('modal-copyright');
-      }
-    });
-
     // Footer upgrade link
     const footerUpgrade = document.getElementById('footer-upgrade-link');
     if (footerUpgrade) {

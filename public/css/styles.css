@@ -6,23 +6,23 @@
 /* ── CSS Custom Properties ──────────────────────────────────── */
 :root {
   /* Color Palette */
-  --bg-950:       #f8fafc;
-  --bg-900:       #f1f5f9;
-  --bg-800:       #e2e8f0;
-  --bg-700:       #cbd5e1;
-  --bg-600:       #94a3b8;
-  --text-primary:   #0f172a;
-  --text-secondary: #334155;
-  --text-muted:     #64748b;
-  --border:         rgba(15, 23, 42, 0.10);
-  --border-active:  rgba(99, 102, 241, 0.40);
+  --bg-950:       #fafafa;
+  --bg-900:       #f5f5f5;
+  --bg-800:       #eeeeee;
+  --bg-700:       #e0e0e0;
+  --bg-600:       #9e9e9e;
+  --text-primary:   #111111;
+  --text-secondary: #444444;
+  --text-muted:     #777777;
+  --border:         rgba(0, 0, 0, 0.08);
+  --border-active:  rgba(0, 0, 0, 0.25);
 
-  /* Accent — Indigo */
-  --accent:         #6366f1;
-  --accent-light:   #818cf8;
-  --accent-dark:    #4f46e5;
-  --accent-glow:    rgba(99, 102, 241, 0.35);
-  --accent-glow-lg: rgba(99, 102, 241, 0.15);
+  /* Accent — Obsidian Black */
+  --accent:         #111111;
+  --accent-light:   #333333;
+  --accent-dark:    #000000;
+  --accent-glow:    rgba(0, 0, 0, 0.15);
+  --accent-glow-lg: rgba(0, 0, 0, 0.05);
 
   /* Premium — Amber/Gold */
   --premium:        #f59e0b;
@@ -44,9 +44,9 @@
   --tier-audio:#22c55e;
 
   /* Glass */
-  --glass-bg:     rgba(255, 255, 255, 0.70);
-  --glass-border: rgba(255, 255, 255, 0.40);
-  --glass-blur:   24px;
+  --glass-bg:     rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-blur:   30px;
 
   /* Spacing */
   --radius-sm:  6px;
@@ -78,7 +78,7 @@ html {
 }
 
 body {
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-950);
   color: var(--text-primary);
   min-height: 100vh;
@@ -97,53 +97,7 @@ ul { list-style: none; }
 
 .hidden { display: none !important; }
 
-/* ── Animated Mesh Background ──────────────────────────────── */
-.bg-mesh {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
 
-.mesh-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.25;
-  animation: orbFloat 18s ease-in-out infinite;
-}
-
-.mesh-orb--1 {
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, #6366f1, #4f46e5);
-  top: -15%; left: -10%;
-  animation-duration: 20s;
-}
-
-.mesh-orb--2 {
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, #8b5cf6, #6366f1);
-  bottom: -10%; right: -10%;
-  animation-duration: 25s;
-  animation-delay: -8s;
-}
-
-.mesh-orb--3 {
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, #06b6d4, #3b82f6);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  animation-duration: 30s;
-  animation-delay: -15s;
-}
-
-@keyframes orbFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25%       { transform: translate(3%, 5%) scale(1.05); }
-  50%       { transform: translate(-3%, 3%) scale(0.97); }
-  75%       { transform: translate(2%, -4%) scale(1.03); }
-}
 
 /* ── Navbar ──────────────────────────────────────────────────── */
 .navbar {
