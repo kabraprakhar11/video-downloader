@@ -25,6 +25,7 @@ const downloadRoute = require('./routes/download');
 const mergeRoute    = require('./routes/merge');
 const razorpayRoute = require('./routes/razorpay');
 const authRoute     = require('./routes/auth');
+const seoRoute      = require('./routes/seo');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -137,6 +138,9 @@ app.use('/api/extract', extractRoute);
 app.use('/api/download', downloadRoute);
 app.use('/api/merge', mergeRoute);
 app.use('/api/checkout', razorpayRoute);
+
+// ── Programmatic SEO & Dynamic Sitemap ─────────────────────────────────────────
+app.use('/', seoRoute);
 
 // ── Thumbnail Proxy ────────────────────────────────────────────────────────────
 // Proxies external thumbnail images to avoid CORS/CSP issues in the browser
