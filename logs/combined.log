@@ -8266,3 +8266,18 @@ size=    5368kB time=00:01:31.94 bitrate= 478.2kbits/s speed=9.15x    [https @ 
 2026-06-26 17:11:07 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
 2026-06-26 17:11:07 [error]: ReferenceError: userRecord is not defined
     at seedAdminUser (D:\video downloader\server\services\firebase.js:83:32)
+2026-06-26 17:11:10 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 17:11:10 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 17:11:11 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 17:11:11 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 17:11:11 [info]: [yt-dlp] Running auto-update...
+2026-06-26 17:11:11 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 17:11:11 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 17:11:11 [info]:    Environment: development
+2026-06-26 17:11:11 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 17:11:13 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 17:11:13 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-26 17:11:13 [info]: [yt-dlp] Update check complete.
+2026-06-26 17:11:14 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
