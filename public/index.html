@@ -7,7 +7,6 @@
       ? ''
       : 'https://video-downloader-c15r.onrender.com';
   </script>
-  <!-- Google AdSense Auto Ads Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_PUB_ID_HERE" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8" />
@@ -15,48 +14,53 @@
   <title>Click2Video — Universal Video Downloader</title>
   <meta name="description" content="Download HD videos from Twitter, Reddit, Vimeo, Facebook, and 1000+ platforms. Free up to 720p. Premium gives you 4K + audio merge." />
   <meta name="keywords" content="video downloader, twitter downloader, reddit downloader, vimeo downloader, 4K download, HD video" />
-  <meta name="theme-color" content="#7c3aed" />
-
-  <!-- Open Graph -->
+  <meta name="theme-color" content="#0a0a1a" />
   <meta property="og:title" content="Click2Video — Universal Video Downloader" />
-  <meta property="og:description" content="Download HD videos from 1000+ platforms. Free & Premium tiers." />
+  <meta property="og:description" content="Download HD videos from 1000+ platforms." />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="/css/styles.css?t=20260626_1930" />
+  <link rel="stylesheet" href="/css/styles.css?t=20260626_1939" />
 
-  <!-- Firebase SDKs (v9 compat) -->
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-
-  <!-- Razorpay Checkout -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
 
-<!-- ── Navigation ──────────────────────────────────────────────────────── -->
+<!-- Aurora Background -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-orb aurora-orb--1"></div>
+  <div class="aurora-orb aurora-orb--2"></div>
+  <div class="aurora-orb aurora-orb--3"></div>
+  <div class="aurora-orb aurora-orb--4"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- Navigation -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <div class="nav-left-group">
-      <button class="btn-back hidden" id="btn-nav-back" aria-label="Go back to search" title="Download another video">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      <button class="btn-back hidden" id="btn-nav-back" aria-label="Go back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
       <a href="/" class="nav-logo" id="nav-logo" aria-label="Click2Video Home">
-        <div class="logo-mark" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
-            <polygon points="12,9 24,16 12,23" fill="white"/>
+        <div class="logo-crystal" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <defs>
-              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#7c3aed"/>
-                <stop offset="100%" stop-color="#db2777"/>
+              <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00d4ff"/>
+                <stop offset="50%" stop-color="#b300ff"/>
+                <stop offset="100%" stop-color="#ff006e"/>
               </linearGradient>
             </defs>
+            <rect width="32" height="32" rx="9" fill="url(#lg1)" opacity="0.15"/>
+            <rect width="32" height="32" rx="9" fill="none" stroke="url(#lg1)" stroke-width="1.5"/>
+            <polygon points="12,8 25,16 12,24" fill="url(#lg1)"/>
           </svg>
         </div>
         <span class="logo-text">Click2<span class="logo-accent">Video</span></span>
@@ -64,28 +68,25 @@
     </div>
 
     <div class="nav-actions">
-      <div class="quota-badge" id="quota-badge" aria-live="polite" aria-label="Download quota"></div>
-
+      <div class="quota-badge" id="quota-badge" aria-live="polite"></div>
       <button class="btn btn--premium btn--sm" id="btn-upgrade" aria-label="Upgrade to Premium">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <span class="btn-text">Go Premium</span>
       </button>
-
       <div class="auth-area" id="auth-area">
-        <button class="btn btn--ghost btn--sm" id="btn-signin" aria-label="Sign in">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <button class="btn btn--glass btn--sm" id="btn-signin" aria-label="Sign in">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span class="btn-text">Sign In</span>
         </button>
       </div>
-
       <div class="user-profile hidden" id="user-profile">
         <div class="user-avatar-wrap">
           <img class="user-avatar" id="user-avatar" src="" alt="User avatar" width="32" height="32" />
           <span class="user-tier-dot" id="user-tier-dot" aria-hidden="true"></span>
         </div>
         <span class="user-name" id="user-name"></span>
-        <button class="btn btn--ghost btn--sm" id="btn-signout" aria-label="Sign out">
-          <svg class="signout-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        <button class="btn btn--glass btn--sm" id="btn-signout" aria-label="Sign out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
           <span class="btn-text">Sign Out</span>
         </button>
       </div>
@@ -93,65 +94,52 @@
   </div>
 </nav>
 
-<!-- ── Main Content ──────────────────────────────────────────────────────── -->
+<!-- Main -->
 <main class="main" id="main-content">
 
-  <!-- ──────────── HERO / IDLE STATE ──────────────────────────────────── -->
+  <!-- HERO -->
   <section class="hero" id="view-idle" role="main" aria-label="Video downloader">
-    <!-- Animated mesh background -->
-    <div class="hero-bg" aria-hidden="true">
-      <div class="mesh-orb mesh-orb--1"></div>
-      <div class="mesh-orb mesh-orb--2"></div>
-      <div class="mesh-orb mesh-orb--3"></div>
-    </div>
-
     <div class="hero-content">
 
-      <!-- Trust pill -->
-      <div class="trust-pill" aria-label="Trusted platform">
-        <span class="trust-dot"></span>
-        <span>1000+ platforms supported · Trusted by thousands</span>
+      <div class="hero-badge" aria-label="Status">
+        <span class="badge-pulse"></span>
+        <span>Live · 1000+ Platforms Supported</span>
       </div>
 
       <h1 class="hero-title">
-        Download Any Video<br />
-        <span class="gradient-text">from Anywhere.</span>
+        Download Any<br/>
+        <span class="hero-title-gradient">Video. Instantly.</span>
       </h1>
 
       <p class="hero-subtitle">
-        Twitter, Reddit, Facebook, Vimeo, TikTok, and 1000+ more sites.<br />
-        Up to 4K resolution with lossless audio merging — in seconds.
+        Twitter, Reddit, Facebook, Vimeo, TikTok &amp; 1000+ more.<br/>
+        Crystal-clear 4K downloads with lossless audio — zero effort.
       </p>
 
-      <!-- URL Input -->
       <div class="input-container" role="search" aria-label="Video URL input">
-        <div class="input-wrap" id="input-wrap">
+        <div class="input-glass" id="input-wrap">
           <div class="input-icon" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </div>
           <input
-            type="url"
-            class="url-input"
-            id="url-input"
-            placeholder="Paste a video URL from Twitter, Reddit, YouTube..."
-            autocomplete="off"
-            autocorrect="off"
-            spellcheck="false"
-            aria-label="Video URL"
-            aria-required="true"
+            type="url" class="url-input" id="url-input"
+            placeholder="Paste any video URL here..."
+            autocomplete="off" autocorrect="off" spellcheck="false"
+            aria-label="Video URL" aria-required="true"
           />
-          <button class="btn-paste" id="btn-paste" aria-label="Paste from clipboard" title="Paste from clipboard">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <button class="btn-paste" id="btn-paste" aria-label="Paste from clipboard" title="Paste">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             Paste
           </button>
         </div>
-        <button class="btn btn--extract" id="btn-extract" aria-label="Download video">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Extract &amp; Download
+        <button class="btn-extract" id="btn-extract" aria-label="Extract and download">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Extract &amp; Download</span>
+          <div class="btn-extract-shine"></div>
         </button>
       </div>
 
-      <!-- Platform grid -->
+      <!-- Platform chips -->
       <div class="platform-scroll" aria-label="Supported platforms">
         <div class="platform-track">
           <span class="platform-chip">𝕏 Twitter</span>
@@ -163,8 +151,7 @@
           <span class="platform-chip">Dailymotion</span>
           <span class="platform-chip">Twitch</span>
           <span class="platform-chip">Bilibili</span>
-          <span class="platform-chip">+ 1000 more</span>
-          <!-- Duplicate for seamless loop -->
+          <span class="platform-chip platform-chip--more">+ 1000 more</span>
           <span class="platform-chip">𝕏 Twitter</span>
           <span class="platform-chip">Reddit</span>
           <span class="platform-chip">Facebook</span>
@@ -174,417 +161,278 @@
           <span class="platform-chip">Dailymotion</span>
           <span class="platform-chip">Twitch</span>
           <span class="platform-chip">Bilibili</span>
-          <span class="platform-chip">+ 1000 more</span>
+          <span class="platform-chip platform-chip--more">+ 1000 more</span>
         </div>
       </div>
 
-      <!-- Stats row -->
-      <div class="hero-stats" aria-label="Platform statistics">
-        <div class="stat-item">
-          <span class="stat-number">4K</span>
-          <span class="stat-label">Max Quality</span>
+      <!-- 3D floating stat cards -->
+      <div class="stat-cards" aria-label="Key stats">
+        <div class="stat-card" data-tilt>
+          <div class="stat-card-glow stat-card-glow--blue"></div>
+          <div class="stat-icon">🎬</div>
+          <div class="stat-number">4K</div>
+          <div class="stat-label">Max Quality</div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number">1000+</span>
-          <span class="stat-label">Platforms</span>
+        <div class="stat-card" data-tilt>
+          <div class="stat-card-glow stat-card-glow--purple"></div>
+          <div class="stat-icon">🌐</div>
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">Platforms</div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number">Free</span>
-          <span class="stat-label">Up to 720p</span>
+        <div class="stat-card" data-tilt>
+          <div class="stat-card-glow stat-card-glow--pink"></div>
+          <div class="stat-icon">⚡</div>
+          <div class="stat-number">Free</div>
+          <div class="stat-label">Up to 720p</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ──────────── PROCESSING STATE ─────────────────────────────────────── -->
-  <section class="view-processing hidden" id="view-processing" aria-live="polite" aria-label="Processing video">
+  <!-- PROCESSING -->
+  <section class="view-processing hidden" id="view-processing" aria-live="polite" aria-label="Processing">
     <div class="processing-card glass-card">
       <div class="processing-spinner" aria-hidden="true">
         <div class="spinner-ring"></div>
         <div class="spinner-ring spinner-ring--2"></div>
         <div class="spinner-ring spinner-ring--3"></div>
       </div>
-
       <h2 class="processing-title">Extracting Media</h2>
       <p class="processing-step" id="processing-step">Initializing...</p>
-
       <div class="step-timeline" aria-label="Processing steps" role="list">
-        <div class="step-item" id="step-1" role="listitem">
-          <div class="step-dot" aria-hidden="true"></div>
-          <span>Validating URL</span>
-        </div>
-        <div class="step-item" id="step-2" role="listitem">
-          <div class="step-dot" aria-hidden="true"></div>
-          <span>Connecting to platform</span>
-        </div>
-        <div class="step-item" id="step-3" role="listitem">
-          <div class="step-dot" aria-hidden="true"></div>
-          <span>Parsing media streams</span>
-        </div>
-        <div class="step-item" id="step-4" role="listitem">
-          <div class="step-dot" aria-hidden="true"></div>
-          <span>Mapping quality formats</span>
-        </div>
-        <div class="step-item" id="step-5" role="listitem">
-          <div class="step-dot" aria-hidden="true"></div>
-          <span>Preparing download options</span>
-        </div>
+        <div class="step-item" id="step-1" role="listitem"><div class="step-dot"></div><span>Validating URL</span></div>
+        <div class="step-item" id="step-2" role="listitem"><div class="step-dot"></div><span>Connecting to platform</span></div>
+        <div class="step-item" id="step-3" role="listitem"><div class="step-dot"></div><span>Parsing media streams</span></div>
+        <div class="step-item" id="step-4" role="listitem"><div class="step-dot"></div><span>Mapping quality formats</span></div>
+        <div class="step-item" id="step-5" role="listitem"><div class="step-dot"></div><span>Preparing download options</span></div>
       </div>
-
-      <p class="processing-url" id="processing-url" aria-label="URL being processed"></p>
+      <p class="processing-url" id="processing-url"></p>
     </div>
   </section>
 
-  <!-- ──────────── SUCCESS / RESULTS STATE ──────────────────────────────── -->
+  <!-- RESULTS -->
   <section class="view-results hidden" id="view-results" aria-label="Download results">
-
-    <!-- Video Metadata Card -->
     <div class="video-meta-card glass-card" id="video-meta-card">
       <div class="video-thumbnail-wrap">
-        <img class="video-thumbnail" id="result-thumbnail" src="" alt="Video thumbnail" loading="lazy" crossorigin="anonymous" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'225\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%23f1f3f9\'/%3E%3Ctext x=\'200\' y=\'112\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'16\' font-family=\'sans-serif\'%3EPreview not available%3C/text%3E%3C/svg%3E';" />
-        <div class="duration-badge" id="result-duration" aria-label="Video duration"></div>
-        <div class="platform-label" id="result-platform" aria-label="Platform"></div>
+        <img class="video-thumbnail" id="result-thumbnail" src="" alt="Video thumbnail" loading="lazy" crossorigin="anonymous" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'225\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%230a0a1a\'/%3E%3Ctext x=\'200\' y=\'112\' text-anchor=\'middle\' fill=\'%23334155\' font-size=\'16\' font-family=\'sans-serif\'%3EPreview unavailable%3C/text%3E%3C/svg%3E';" />
+        <div class="duration-badge" id="result-duration"></div>
+        <div class="platform-label" id="result-platform"></div>
       </div>
       <div class="video-info">
         <h2 class="video-title" id="result-title"></h2>
         <div class="video-meta-row">
-          <span class="meta-item" id="result-uploader">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span id="result-uploader-name"></span>
-          </span>
-          <span class="meta-item" id="result-views">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            <span id="result-views-count"></span>
-          </span>
-          <span class="meta-item tier-badge" id="result-tier-badge" aria-label="Content tier"></span>
+          <span class="meta-item" id="result-uploader"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="result-uploader-name"></span></span>
+          <span class="meta-item" id="result-views"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span id="result-views-count"></span></span>
+          <span class="meta-item tier-badge" id="result-tier-badge"></span>
         </div>
         <p class="video-description" id="result-description"></p>
       </div>
     </div>
 
-    <!-- Reset button -->
     <div class="results-actions-top">
-      <button class="btn btn--ghost btn--sm" id="btn-reset" aria-label="Download another video">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15,3 21,3 21,9"/><path d="M21 3L10 14"/><path d="M3 12a9 9 0 0 0 9 9 9 9 0 0 0 6.36-2.64"/></svg>
+      <button class="btn btn--glass btn--sm" id="btn-reset" aria-label="Download another">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,3 21,3 21,9"/><path d="M21 3L10 14"/><path d="M3 12a9 9 0 0 0 9 9 9 9 0 0 0 6.36-2.64"/></svg>
         Download Another
       </button>
     </div>
 
-    <!-- Format Tabs -->
     <div class="format-tabs" role="tablist" aria-label="Format selection">
       <button class="format-tab active" id="tab-combined" role="tab" aria-selected="true" aria-controls="panel-combined">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="23,7 16,12 23,17 23,7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23,7 16,12 23,17 23,7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
         Video + Audio
       </button>
       <button class="format-tab" id="tab-video" role="tab" aria-selected="false" aria-controls="panel-video">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         Video Only
       </button>
       <button class="format-tab" id="tab-audio" role="tab" aria-selected="false" aria-controls="panel-audio">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
         Audio Only
       </button>
     </div>
 
-    <!-- Format Grid Panels -->
     <div class="format-panel active" id="panel-combined" role="tabpanel" aria-labelledby="tab-combined">
-      <div class="format-grid" id="grid-combined" aria-label="Combined video and audio formats"></div>
+      <div class="format-grid" id="grid-combined"></div>
     </div>
     <div class="format-panel" id="panel-video" role="tabpanel" aria-labelledby="tab-video">
       <div class="merge-notice glass-card" id="merge-notice">
-        <div class="merge-notice-icon" aria-hidden="true">⚡</div>
+        <div class="merge-notice-icon">⚡</div>
         <div class="merge-notice-text">
           <strong>4K Merged Download Available</strong>
-          <p>Premium users can merge video-only + audio streams on-the-fly via FFmpeg for the highest quality.</p>
+          <p>Premium users can merge video + audio streams via FFmpeg for highest quality.</p>
         </div>
-        <button class="btn btn--premium btn--sm" id="btn-merge-upgrade" aria-label="Upgrade for merged downloads">Upgrade</button>
+        <button class="btn btn--premium btn--sm" id="btn-merge-upgrade">Upgrade</button>
       </div>
-      <div class="format-grid" id="grid-video" aria-label="Video-only formats"></div>
+      <div class="format-grid" id="grid-video"></div>
     </div>
     <div class="format-panel" id="panel-audio" role="tabpanel" aria-labelledby="tab-audio">
-      <div class="format-grid" id="grid-audio" aria-label="Audio-only formats"></div>
+      <div class="format-grid" id="grid-audio"></div>
     </div>
-
   </section>
 
-  <!-- ──────────── ERROR STATE ──────────────────────────────────────────── -->
-  <section class="view-error hidden" id="view-error" aria-live="assertive" aria-label="Error notification">
+  <!-- ERROR -->
+  <section class="view-error hidden" id="view-error" aria-live="assertive" aria-label="Error">
     <div class="error-card glass-card">
-      <div class="error-icon" aria-hidden="true">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
+      <div class="error-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
       <h2 class="error-title">Extraction Failed</h2>
       <p class="error-message" id="error-message"></p>
       <div class="error-actions">
-        <button class="btn btn--primary" id="btn-retry" aria-label="Try again">Try Again</button>
-        <button class="btn btn--ghost" id="btn-error-reset" aria-label="Start over">Start Over</button>
+        <button class="btn btn--primary" id="btn-retry">Try Again</button>
+        <button class="btn btn--glass" id="btn-error-reset">Start Over</button>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ── Premium Upgrade Modal ─────────────────────────────────────────────── -->
+<!-- Premium Modal -->
 <div class="modal-overlay hidden" id="modal-upgrade" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-card glass-card">
-    <button class="modal-close" id="modal-close" aria-label="Close modal">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-
-    <div class="modal-hero-icon" aria-hidden="true">
-      <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="10" fill="url(#mGrad)"/>
-        <path d="M16 8l2.5 5.1 5.6.8-4 3.9.95 5.55L16 20.8l-5.05 2.55.95-5.55-4-3.9 5.6-.8z" fill="white"/>
-        <defs>
-          <linearGradient id="mGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#f59e0b"/>
-            <stop offset="100%" stop-color="#d97706"/>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-
-    <div class="sale-ribbon" aria-label="Limited time offer">🔥 LIMITED TIME OFFER</div>
-
+    <button class="modal-close" id="modal-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal-glow-orb"></div>
+    <div class="sale-ribbon">🔥 LIMITED TIME OFFER</div>
+    <div class="modal-badge">⭐ Premium</div>
     <h2 class="modal-title" id="modal-title">Unlock Full Power</h2>
     <p class="modal-subtitle">4K downloads · Unlimited · Lossless audio</p>
-
     <div class="pricing-card">
       <div class="discount-badge">80% OFF</div>
       <div class="price-display">
-        <div class="price-original-wrap">
-          <span class="price-original">$249</span>
-          <span class="price-original-label">/ mo</span>
-        </div>
-        <div class="price-current-wrap">
-          <span class="price-currency">$</span>
-          <span class="price-amount">49</span>
-          <span class="price-period">/month</span>
-        </div>
+        <div class="price-original-wrap"><span class="price-original">$249</span><span class="price-original-label">/ mo</span></div>
+        <div class="price-current-wrap"><span class="price-currency">$</span><span class="price-amount">49</span><span class="price-period">/month</span></div>
       </div>
       <div class="urgency-bar" role="timer" aria-live="polite">
         <span class="urgency-icon">⏰</span>
         <span class="urgency-text">Deal expires in&nbsp;</span>
         <span class="urgency-countdown" id="deal-countdown">23:59:47</span>
       </div>
-      <ul class="feature-list" aria-label="Premium features">
-        <li class="feature-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-          Unlimited downloads (no daily cap)
-        </li>
-        <li class="feature-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-          4K + 2K ultra-high definition
-        </li>
-        <li class="feature-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-          On-the-fly FFmpeg audio + video merge
-        </li>
-        <li class="feature-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-          Priority extraction speed
-        </li>
-        <li class="feature-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-          Cancel anytime
-        </li>
+      <ul class="feature-list">
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Unlimited downloads (no daily cap)</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>4K + 2K ultra-high definition</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>On-the-fly FFmpeg audio + video merge</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Priority extraction speed</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Cancel anytime</li>
       </ul>
     </div>
-
-    <button class="btn btn--premium btn--full" id="btn-checkout" aria-label="Subscribe to Premium via Razorpay">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+    <button class="btn btn--premium btn--full" id="btn-checkout">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
       Get Premium — Only $49/mo
     </button>
-    <p class="modal-disclaimer">🔒 Secure payment via Razorpay. No hidden fees. Was <s>$249/mo</s>.</p>
-    <p class="modal-auth-restore">
-      Already a Premium user? <a href="#" id="link-modal-signin" class="modal-signin-link">Sign In here</a>
-    </p>
+    <p class="modal-disclaimer">🔒 Secure payment via Razorpay. Was <s>$249/mo</s>.</p>
+    <p class="modal-auth-restore">Already Premium? <a href="#" id="link-modal-signin" class="modal-signin-link">Sign In here</a></p>
   </div>
 </div>
 
-<!-- ── Auth Modal ─────────────────────────────────────────────────────────── -->
+<!-- Auth Modal -->
 <div class="modal-overlay hidden" id="modal-auth" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
   <div class="modal-card glass-card auth-modal-card">
-    <button class="modal-close" id="auth-modal-close" aria-label="Close modal">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-
+    <button class="modal-close" id="auth-modal-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div id="auth-state-signin">
-      <div class="auth-modal-top">
-        <div class="auth-icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <h2 class="modal-title" id="auth-modal-title">Welcome Back</h2>
-        <p class="modal-subtitle">Sign in to your Premium account</p>
-      </div>
-
+      <h2 class="modal-title" id="auth-modal-title">Welcome Back</h2>
+      <p class="modal-subtitle">Sign in to your Premium account</p>
       <button type="button" class="btn-google" id="btn-google-signin">
-        <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
         Continue with Google
       </button>
-
-      <div class="auth-divider">
-        <span>or</span>
-      </div>
-
+      <div class="auth-divider"><span>or</span></div>
       <form id="form-signin" class="auth-form">
-        <div class="form-group">
-          <label for="signin-email">Email Address</label>
-          <input type="email" id="signin-email" required placeholder="you@example.com" class="form-input" />
-        </div>
-        <div class="form-group">
-          <label for="signin-password">Password</label>
-          <input type="password" id="signin-password" required placeholder="••••••••" class="form-input" />
-        </div>
-        <button type="submit" class="btn btn--primary btn--full" id="btn-signin-submit">
-          Sign In
-        </button>
+        <div class="form-group"><label for="signin-email">Email</label><input type="email" id="signin-email" required placeholder="you@example.com" class="form-input" /></div>
+        <div class="form-group"><label for="signin-password">Password</label><input type="password" id="signin-password" required placeholder="••••••••" class="form-input" /></div>
+        <button type="submit" class="btn btn--primary btn--full" id="btn-signin-submit">Sign In</button>
       </form>
-
-      <p class="auth-switch-text">
-        Don't have an account? <a href="#" onclick="document.getElementById('auth-modal-close').click(); document.getElementById('btn-upgrade').click(); return false;" class="auth-link">Buy Premium to Register</a>
-      </p>
+      <p class="auth-switch-text">No account? <a href="#" onclick="document.getElementById('auth-modal-close').click();document.getElementById('btn-upgrade').click();return false;" class="auth-link">Buy Premium to Register</a></p>
     </div>
   </div>
 </div>
 
-<!-- ── Post-Payment Registration Modal ────────────────────────────────────── -->
+<!-- Register Modal -->
 <div class="modal-overlay hidden" id="modal-register-premium" role="dialog" aria-modal="true" aria-labelledby="register-modal-title">
   <div class="modal-card glass-card auth-modal-card">
-    <button class="modal-close" id="register-modal-close" aria-label="Close modal">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-
-    <div class="auth-modal-top">
-      <div class="auth-icon success-icon" aria-hidden="true">✓</div>
-      <h2 class="modal-title" id="register-modal-title">Payment Successful!</h2>
-      <p class="modal-subtitle">Complete your profile to activate Premium.</p>
-    </div>
-
+    <button class="modal-close" id="register-modal-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <h2 class="modal-title" id="register-modal-title">🎉 Payment Successful!</h2>
+    <p class="modal-subtitle">Complete your profile to activate Premium.</p>
     <form id="form-register-premium" class="auth-form">
       <input type="hidden" id="reg-razorpay-payment-id" />
       <input type="hidden" id="reg-razorpay-order-id" />
       <input type="hidden" id="reg-razorpay-signature" />
-
       <div class="form-row">
-        <div class="form-group">
-          <label for="reg-first-name">First Name</label>
-          <input type="text" id="reg-first-name" required placeholder="John" class="form-input" />
-        </div>
-        <div class="form-group">
-          <label for="reg-last-name">Last Name</label>
-          <input type="text" id="reg-last-name" required placeholder="Doe" class="form-input" />
-        </div>
+        <div class="form-group"><label for="reg-first-name">First Name</label><input type="text" id="reg-first-name" required placeholder="John" class="form-input" /></div>
+        <div class="form-group"><label for="reg-last-name">Last Name</label><input type="text" id="reg-last-name" required placeholder="Doe" class="form-input" /></div>
       </div>
-
-      <div class="form-group">
-        <label for="reg-mobile">Mobile Number</label>
-        <input type="tel" id="reg-mobile" required placeholder="+91 98765 43210" class="form-input" />
-      </div>
-
-      <div class="form-group">
-        <label for="reg-email">Email Address</label>
-        <input type="email" id="reg-email" required placeholder="you@example.com" class="form-input" />
-      </div>
-
-      <div class="form-group">
-        <label for="reg-password">Password</label>
-        <input type="password" id="reg-password" required placeholder="At least 6 characters" class="form-input" minlength="6" />
-      </div>
-
-      <div class="form-group">
-        <label for="reg-confirm-password">Confirm Password</label>
-        <input type="password" id="reg-confirm-password" required placeholder="Re-type password" class="form-input" minlength="6" />
-      </div>
-
-      <button type="submit" class="btn btn--premium btn--full" id="btn-register-submit">
-        Activate Premium Account
-      </button>
+      <div class="form-group"><label for="reg-mobile">Mobile</label><input type="tel" id="reg-mobile" required placeholder="+91 98765 43210" class="form-input" /></div>
+      <div class="form-group"><label for="reg-email">Email</label><input type="email" id="reg-email" required placeholder="you@example.com" class="form-input" /></div>
+      <div class="form-group"><label for="reg-password">Password</label><input type="password" id="reg-password" required placeholder="At least 6 characters" class="form-input" minlength="6" /></div>
+      <div class="form-group"><label for="reg-confirm-password">Confirm Password</label><input type="password" id="reg-confirm-password" required placeholder="Re-type password" class="form-input" minlength="6" /></div>
+      <button type="submit" class="btn btn--premium btn--full" id="btn-register-submit">Activate Premium Account</button>
     </form>
   </div>
 </div>
 
-<!-- ── Toast Notification ─────────────────────────────────────────────────── -->
 <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-<!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+<!-- Footer -->
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="/" class="footer-logo" aria-label="Click2Video Home">
-        <div class="logo-mark-sm" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="url(#fGrad)"/>
-            <polygon points="12,9 24,16 12,23" fill="white"/>
-            <defs>
-              <linearGradient id="fGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#7c3aed"/>
-                <stop offset="100%" stop-color="#db2777"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+          <defs><linearGradient id="fl" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#b300ff"/></linearGradient></defs>
+          <rect width="32" height="32" rx="8" fill="url(#fl)" opacity="0.2"/>
+          <rect width="32" height="32" rx="8" fill="none" stroke="url(#fl)" stroke-width="1.5"/>
+          <polygon points="12,9 24,16 12,23" fill="url(#fl)"/>
+        </svg>
         <span>Click2<span class="logo-accent">Video</span></span>
       </a>
       <p class="footer-tagline">Download any video. Any platform. Instantly.</p>
     </div>
-
     <div class="footer-links">
       <div class="footer-col">
         <h3 class="footer-col-title">Product</h3>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/#btn-upgrade" id="footer-upgrade-link">Go Premium</a></li>
-        </ul>
+        <ul><li><a href="/">Home</a></li><li><a href="#" id="footer-upgrade-link">Go Premium</a></li></ul>
       </div>
       <div class="footer-col">
         <h3 class="footer-col-title">Legal</h3>
-        <ul>
-          <li><a href="/legal/terms.html" id="footer-terms-link">Terms &amp; Conditions</a></li>
-          <li><a href="/legal/privacy.html" id="footer-privacy-link">Privacy Policy</a></li>
-        </ul>
+        <ul><li><a href="/legal/terms.html" id="footer-terms-link">Terms &amp; Conditions</a></li><li><a href="/legal/privacy.html" id="footer-privacy-link">Privacy Policy</a></li></ul>
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
     <div class="footer-bottom-row">
       <p class="footer-copyright">&copy; 2026 Click2Video. All rights reserved.</p>
       <div class="footer-bottom-links">
-        <a href="/legal/terms.html" id="footer-terms-link-bottom">Terms &amp; Conditions</a>
-        <span class="footer-divider" aria-hidden="true">|</span>
-        <a href="/legal/privacy.html" id="footer-privacy-link-bottom">Privacy Policy</a>
-        <span class="footer-divider" aria-hidden="true">|</span>
-        <a href="/legal/copyright.html" id="footer-copyright-link">Copyright Notice</a>
+        <a href="/legal/terms.html" id="footer-terms-link-bottom">Terms</a>
+        <span class="footer-divider">|</span>
+        <a href="/legal/privacy.html" id="footer-privacy-link-bottom">Privacy</a>
+        <span class="footer-divider">|</span>
+        <a href="/legal/copyright.html" id="footer-copyright-link">Copyright</a>
       </div>
     </div>
-    <p class="footer-legal-note">
-      Click2Video is an independent service not affiliated with, endorsed by, or sponsored by any third-party platform or their parent companies.
-      All trademarks, service marks, and trade names referenced herein are the property of their respective owners.
-      Users bear sole legal responsibility for ensuring that any content they download complies with applicable copyright law, platform terms of service,
-      and all other relevant regulations in their jurisdiction. Click2Video does not host, cache, store, or distribute any third-party media content.
-    </p>
+    <p class="footer-legal-note">Click2Video is an independent service not affiliated with any third-party platform. Users bear sole legal responsibility for compliance with applicable copyright law and platform terms of service.</p>
   </div>
 </footer>
 
-<!-- Scripts -->
-<script src="/js/api.js?t=20260626_1930"></script>
-<script src="/js/auth.js?t=20260626_1930"></script>
-<script src="/js/ui.js?t=20260626_1930"></script>
-<script src="/js/app.js?t=20260626_1930"></script>
+<script src="/js/api.js?t=20260626_1939"></script>
+<script src="/js/auth.js?t=20260626_1939"></script>
+<script src="/js/ui.js?t=20260626_1939"></script>
+<script src="/js/app.js?t=20260626_1939"></script>
 
 <script>
-  const footerUpgrade = document.getElementById('footer-upgrade-link');
-  if (footerUpgrade) {
-    footerUpgrade.addEventListener('click', function(e) {
-      e.preventDefault();
-      const upgradeBtn = document.getElementById('btn-upgrade');
-      if (upgradeBtn) upgradeBtn.click();
+  // Footer upgrade link
+  const fu = document.getElementById('footer-upgrade-link');
+  if (fu) fu.addEventListener('click', e => { e.preventDefault(); document.getElementById('btn-upgrade')?.click(); });
+
+  // 3D tilt effect on stat cards
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(600px) rotateY(${x * 18}deg) rotateX(${-y * 18}deg) translateZ(8px)`;
     });
-  }
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) translateZ(0px)';
+    });
+  });
 </script>
 
 </body>
