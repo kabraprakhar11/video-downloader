@@ -27,6 +27,7 @@ const razorpayRoute = require('./routes/razorpay');
 const authRoute     = require('./routes/auth');
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = parseInt(process.env.PORT || '3000', 10);
 
 // Trust downstream proxy (GCR / Vercel load balancer)
