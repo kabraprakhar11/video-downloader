@@ -43,8 +43,8 @@ async function createOrder(userId, email) {
     const order = await razorpay.orders.create(options);
     return order;
   } catch (err) {
-    logger.error('Failed to create Razorpay order:', err);
-    throw new Error('Could not initialize payment. Please try again.');
+    logger.error('Failed to create Razorpay order:', err.error || err);
+    throw new Error(err.error?.description || 'Could not initialize payment. Please try again.');
   }
 }
 
