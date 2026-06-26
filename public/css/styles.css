@@ -182,7 +182,7 @@ ul { list-style: none; }
   display: flex; align-items: center;
   transition: filter var(--t);
 }
-.nav-logo:hover .logo-crystal { filter: drop-shadow(0 0 8px rgba(0,212,255,0.6)); }
+.nav-logo:hover .logo-crystal { filter: drop-shadow(0 0 8px rgba(179,0,255,0.6)); }
 
 .logo-text { color: var(--text); }
 .logo-accent {
