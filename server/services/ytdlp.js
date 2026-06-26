@@ -42,6 +42,7 @@ function buildYtdlpArgs(url) {
     '--dump-json',
     '--no-playlist',
     '--no-warnings',
+    '--impersonate', 'chrome',
     '--socket-timeout', '30',
     '--retries', '3',
   ];
