@@ -52,25 +52,9 @@ async function enforceQuota(req, res, next) {
     return next();
   }
 
-  let count = 0;
-  let isFirebaseUser = false;
-
-  if (req.firebaseUid) {
-    isFirebaseUser = true;
-    const firestoreCount = await getUserDailyUsage(req.firebaseUid);
-    if (firestoreCount === null) {
-      const ip = req.ip || req.socket?.remoteAddress || 'unknown';
-      const quota = getIpQuota(ip);
-      count = quota.count;
-      logger.warn(`Firestore daily usage check failed. Falling back to IP-based quota for UID ${req.firebaseUid} (IP: ${ip})`);
-    } else {
-      count = firestoreCount;
-    }
-  } else {
-    const ip = req.ip || req.socket?.remoteAddress || 'unknown';
-    const quota = getIpQuota(ip);
-    count = quota.count;
-  }
+  const ip = req.ip || req.socket?.remoteAddress || 'unknown';
+  const quota = getIpQuota(ip);
+  const count = quota.count;
 
   req.userTier = 'free';
   req.quotaInfo = {
@@ -81,7 +65,7 @@ async function enforceQuota(req, res, next) {
   };
 
   if (count >= FREE_DAILY_LIMIT) {
-    const targetId = isFirebaseUser ? `UID ${req.firebaseUid}` : `IP ${req.ip || 'unknown'}`;
+    const targetId = `IP ${req.ip || 'unknown'}`;
     logger.info(`Quota exceeded for ${targetId}: ${count}/${FREE_DAILY_LIMIT}`);
     return res.status(429).json({
       error: `Daily free limit reached (${FREE_DAILY_LIMIT} extractions/day). Upgrade to Premium for unlimited downloads.`,

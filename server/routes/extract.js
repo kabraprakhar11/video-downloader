@@ -51,12 +51,11 @@ router.post(
       // (Actual download endpoint could enforce this in a real prod env)
 
       // Record usage
-      let dbSuccess = false;
-      if (req.firebaseUid) {
-        dbSuccess = await recordFirestoreUsage(req.firebaseUid, url);
-      }
-      if (!dbSuccess) {
+      if (tier !== 'premium') {
         recordUsage(ip);
+      } else if (req.firebaseUid) {
+        // Record Premium usage for analytics only
+        await recordFirestoreUsage(req.firebaseUid, url);
       }
 
       // Update quota info in-place for the response to avoid lag

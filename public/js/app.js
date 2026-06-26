@@ -210,7 +210,9 @@
   async function handleCheckout() {
     const idToken = await StreamAuth.getIdToken();
     if (!idToken) {
-      StreamUI.showToast('Please sign in first.', 'warning');
+      StreamUI.showToast('Please create an account to upgrade to Premium.', 'info', 4000);
+      StreamUI.hideUpgradeModal();
+      StreamUI.showAuthModal('signup');
       return;
     }
 
