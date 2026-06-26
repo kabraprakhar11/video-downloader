@@ -7895,3 +7895,171 @@ size=    5368kB time=00:01:31.94 bitrate= 478.2kbits/s speed=9.15x    [https @ 
 2026-06-26 13:08:03 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
 2026-06-26 13:08:05 [info]: [yt-dlp] Update check complete.
 2026-06-26 13:08:06 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:08:37 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:08:39 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:08:39 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:08:39 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:08:39 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:08:39 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:08:39 [info]:    Environment: development
+2026-06-26 13:08:39 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:08:39 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:08:41 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:08:41 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:23:38 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:23:39 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:23:39 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:23:39 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:23:39 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:23:39 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:23:39 [info]:    Environment: development
+2026-06-26 13:23:39 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:23:47 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:23:52 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:23:59 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:24:05 [info]: [extractFormatUrl] Cache miss/expired, re-extracting: https://www.reddit.com/r/videos/comments/1exkj1/what_a_wonderful_world/
+2026-06-26 13:24:05 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/videos/comments/1exkj1/what_a_wonderful_world/
+2026-06-26 13:24:11 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 1exkj1: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-26 13:24:33 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:24:34 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:24:34 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:24:34 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:24:34 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:24:34 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:24:34 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:24:34 [info]:    Environment: development
+2026-06-26 13:24:34 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:24:35 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:24:37 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:29:01 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:29:05 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:29:05 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:29:05 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:29:05 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:29:05 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:29:05 [info]:    Environment: development
+2026-06-26 13:29:05 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:29:13 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:29:42 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:29:48 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:31:20 [info]: [extract] Starting for: https://www.reddit.com/r/videos/comments/1iio32r/dude_plays_super_mario_theme_while_the_fire_alarm/
+2026-06-26 13:31:20 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/videos/comments/1iio32r/dude_plays_super_mario_theme_while_the_fire_alarm/
+2026-06-26 13:31:26 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 1iio32r: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-26 13:32:40 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:32:42 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:32:42 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:32:42 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:32:42 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:32:42 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:32:42 [info]:    Environment: development
+2026-06-26 13:32:42 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:32:51 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:32:51 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:32:57 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:37:05 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:37:06 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:37:06 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:37:06 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:37:06 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:37:06 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:37:06 [info]:    Environment: development
+2026-06-26 13:37:06 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:37:11 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:37:12 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:37:21 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:37:50 [info]: [extract] Starting for: https://www.reddit.com/r/Damnthatsinteresting/comments/1iino1e/the_way_this_guy_cleans_the_street/
+2026-06-26 13:37:50 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/Damnthatsinteresting/comments/1iino1e/the_way_this_guy_cleans_the_street/
+2026-06-26 13:38:00 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 1iino1e: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-26 13:39:47 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:39:50 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:39:50 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:39:50 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:39:50 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:39:50 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:39:50 [info]:    Environment: development
+2026-06-26 13:39:50 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:39:56 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:39:57 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:40:00 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:41:25 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:41:26 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:41:26 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:41:26 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:41:26 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:41:26 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:41:26 [info]:    Environment: development
+2026-06-26 13:41:26 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:41:34 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:41:34 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:41:37 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:42:20 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:42:21 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:42:21 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:42:21 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:42:21 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:42:21 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:42:21 [info]:    Environment: development
+2026-06-26 13:42:21 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:42:38 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:42:38 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:42:39 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:43:14 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:43:15 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:43:15 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:43:15 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:43:15 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:43:15 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:43:15 [info]:    Environment: development
+2026-06-26 13:43:15 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:43:35 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:43:36 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:43:36 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:43:54 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:43:55 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:43:55 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:43:55 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:43:55 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:43:55 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:43:55 [info]:    Environment: development
+2026-06-26 13:43:55 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:44:09 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:44:10 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:44:20 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 13:45:10 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 13:45:11 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 13:45:11 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 13:45:11 [info]: [yt-dlp] Running auto-update...
+2026-06-26 13:45:11 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 13:45:11 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 13:45:11 [info]:    Environment: development
+2026-06-26 13:45:11 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 13:45:19 [info]: [yt-dlp] Update check complete.
+2026-06-26 13:45:24 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 13:45:25 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)

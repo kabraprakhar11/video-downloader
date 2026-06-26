@@ -108,9 +108,13 @@ router.get('/stream/:jobId', (req, res) => {
   const safeAsciiName = session.displayName.replace(/[^a-zA-Z0-9.\-_ ]/g, '_');
   const encodedName = encodeURIComponent(session.displayName);
 
-  res.setHeader('Content-Disposition', `attachment; filename="${safeAsciiName}"; filename*=UTF-8''${encodedName}`);
-  res.setHeader('Content-Type', 'application/octet-stream');
-  res.setHeader('Cache-Control', 'no-cache');
+  const setDownloadHeaders = () => {
+    if (!res.headersSent) {
+      res.setHeader('Content-Disposition', `attachment; filename="${safeAsciiName}"; filename*=UTF-8''${encodedName}`);
+      res.setHeader('Content-Type', 'application/octet-stream');
+      res.setHeader('Cache-Control', 'no-cache');
+    }
+  };
 
   logger.info(`[Stream] Starting: ${session.displayName} | merge=${session.isMerge} | video=${!!session.videoUrl} | audio=${!!session.audioUrl}`);
 
@@ -157,11 +161,25 @@ router.get('/stream/:jobId', (req, res) => {
       'pipe:1',
     ];
     const proc = spawn(FFMPEG_PATH, args);
-    proc.stdout.pipe(res);
+    let headersSet = false;
+    proc.stdout.on('data', (chunk) => {
+      if (!headersSet) {
+        setDownloadHeaders();
+        headersSet = true;
+      }
+      res.write(chunk);
+    });
+    proc.stdout.on('end', () => res.end());
     let ffmpegStderr = '';
     proc.stderr.on('data', d => { ffmpegStderr += d.toString(); }); // capture stderr
     proc.on('close', code => {
-      if (code !== 0) logger.error(`[Stream] FFmpeg exited code=${code}. Stderr: ${ffmpegStderr}`);
+      if (code !== 0) {
+        logger.error(`[Stream] FFmpeg exited code=${code}. Stderr: ${ffmpegStderr}`);
+        if (!res.headersSent) {
+          try { res.status(502).send(`Platform stream error. FFmpeg exited with code ${code}. Please try a different format or use a Residential Proxy.`); } catch (_) {}
+          return;
+        }
+      }
       try { res.end(); } catch (_) {}
     });
     req.on('close', () => proc.kill('SIGKILL'));
@@ -184,7 +202,15 @@ router.get('/stream/:jobId', (req, res) => {
       'pipe:1',
     ];
     const proc = spawn(FFMPEG_PATH, args);
-    proc.stdout.pipe(res);
+    let headersSet = false;
+    proc.stdout.on('data', (chunk) => {
+      if (!headersSet) {
+        setDownloadHeaders();
+        headersSet = true;
+      }
+      res.write(chunk);
+    });
+    proc.stdout.on('end', () => res.end());
     proc.stderr.on('data', () => {});
     proc.on('close', () => { try { res.end(); } catch (_) {} });
     req.on('close', () => proc.kill('SIGKILL'));
@@ -211,11 +237,25 @@ router.get('/stream/:jobId', (req, res) => {
       'pipe:1',
     ];
     const proc = spawn(FFMPEG_PATH, args);
-    proc.stdout.pipe(res);
+    let headersSet = false;
+    proc.stdout.on('data', (chunk) => {
+      if (!headersSet) {
+        setDownloadHeaders();
+        headersSet = true;
+      }
+      res.write(chunk);
+    });
+    proc.stdout.on('end', () => res.end());
     let ffmpegStderr = '';
     proc.stderr.on('data', d => { ffmpegStderr += d.toString(); });
     proc.on('close', code => {
-      if (code !== 0) logger.error(`[Stream] FFmpeg (m3u8) exited code=${code}. Stderr: ${ffmpegStderr}`);
+      if (code !== 0) {
+        logger.error(`[Stream] FFmpeg (m3u8) exited code=${code}. Stderr: ${ffmpegStderr}`);
+        if (!res.headersSent) {
+          try { res.status(502).send(`Platform stream error. FFmpeg exited with code ${code}. Please try a different format or use a Residential Proxy.`); } catch (_) {}
+          return;
+        }
+      }
       try { res.end(); } catch (_) {}
     });
     req.on('close', () => proc.kill('SIGKILL'));
@@ -257,9 +297,10 @@ router.get('/stream/:jobId', (req, res) => {
       if (proxyRes.statusCode !== 200) {
         logger.error(`[Stream] Upstream returned ${proxyRes.statusCode}`);
         proxyRes.resume();
-        return res.status(502).send(`Platform returned error ${proxyRes.statusCode}.`);
+        return res.status(502).send(`Platform returned error ${proxyRes.statusCode}. Please try a different format or use a Residential Proxy.`);
       }
 
+      setDownloadHeaders();
       if (proxyRes.headers['content-length']) {
         res.setHeader('Content-Length', proxyRes.headers['content-length']);
       }
@@ -273,7 +314,11 @@ router.get('/stream/:jobId', (req, res) => {
 
     proxyReq.on('error', (err) => {
       logger.error(`[Stream] Proxy request error: ${err.message}`);
-      try { res.status(502).send('Stream proxy error.'); } catch (_) {}
+      if (!res.headersSent) {
+        try { res.status(502).send('Stream proxy error: ' + err.message); } catch (_) {}
+      } else {
+        try { res.end(); } catch (_) {}
+      }
     });
 
     proxyReq.on('timeout', () => {
