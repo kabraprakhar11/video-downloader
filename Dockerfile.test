@@ -1,0 +1,9 @@
+FROM node:22-slim
+
+RUN apt-get update && apt-get install -y python3 python3-pip ffmpeg curl ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN ln -sf /usr/bin/python3 /usr/bin/python
+
+RUN pip3 install --break-system-packages "yt-dlp[default]" "bgutil-ytdlp-pot-provider"
+
+RUN yt-dlp --version
+RUN yt-dlp https://vkvideo.ru/video-43618728_456357566 --dump-json || true

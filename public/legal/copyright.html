@@ -1,100 +1,224 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Adsterra Popunder -->
+  <script src="https://pl30157873.effectivecpmnetwork.com/19/c3/1d/19c31d208d63a44651af3265a25b6468.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copyright Notice — Click2Video</title>
-  <meta name="description" content="Copyright Notice for Click2Video — Universal Video Downloader." />
+  <title>Copyright Notice â€” Click2Video</title>
+  <meta name="description" content="Click2Video's copyright policy, DMCA procedures, fair use stance, and how to report infringement." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?t=20260626_1946" />
   <style>
-    .legal-wrapper { max-width: 800px; margin: 0 auto; padding: 48px 24px 100px; position: relative; z-index: 1; }
-    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; transition: color 0.2s; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; }
-    .legal-back:hover { color: var(--pink, #ff006e); }
-    .legal-back:hover svg { transform: translateX(-4px); }
+    .legal-wrapper { max-width: 1000px; margin: 0 auto; padding: 48px 24px 100px; position: relative; z-index: 1; }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; transition: color 0.2s; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; }
+    .legal-back:hover { color: var(--cyan); }
     .legal-back svg { transition: transform 0.2s; }
+    .legal-back:hover svg { transform: translateX(-4px); }
     .legal-header { margin-bottom: 48px; text-align: center; }
-    .legal-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,0,110,0.08); border: 1px solid rgba(255,0,110,0.2); border-radius: 100px; padding: 5px 16px; font-size: 0.75rem; font-weight: 700; color: #ff006e; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: 'Exo 2', sans-serif; }
+    .legal-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 100px; padding: 5px 16px; font-size: 0.75rem; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: 'Exo 2', sans-serif; }
     .legal-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em; margin-bottom: 10px; }
-    .legal-meta { font-size: 0.82rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
-    .legal-body { display: flex; flex-direction: column; gap: 8px; }
-    .legal-section { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px 28px; transition: border-color 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
-    .legal-section::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #ff006e, #b300ff); opacity: 0; transition: opacity 0.2s; }
-    .legal-section:hover { border-color: rgba(255,0,110,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
-    .legal-section:hover::before { opacity: 1; }
-    .legal-section h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; color: #ff006e; margin-bottom: 12px; letter-spacing: 0.02em; }
-    .legal-section p { font-size: 0.9rem; color: var(--text-sec); line-height: 1.8; margin-bottom: 10px; }
-    .legal-section p:last-child { margin-bottom: 0; }
-    .legal-section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-    .legal-section ul li { font-size: 0.88rem; color: var(--text-sec); line-height: 1.7; padding-left: 20px; position: relative; }
-    .legal-section ul li::before { content: '›'; position: absolute; left: 0; color: #ff006e; font-weight: 700; }
-    @media (max-width: 640px) { .legal-wrapper { padding: 32px 16px 80px; } .legal-section { padding: 18px; } .legal-title { font-size: 1.6rem; } }
+    .legal-meta { font-size: 0.82rem; color: var(--text-muted); font-family: 'Exo 2', sans-serif; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .blog-card { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
+    .blog-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #00d4ff, #b300ff); opacity: 0; transition: opacity 0.2s; }
+    .blog-card:hover { border-color: rgba(0,212,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transform: translateY(-4px); }
+    .blog-card:hover::before { opacity: 1; }
+    .card-title { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: #fff; margin-bottom: 12px; line-height: 1.4; }
+    .card-excerpt { color: var(--text-sec); font-size: 0.88rem; flex-grow: 1; margin-bottom: 20px; line-height: 1.6; }
+    .read-btn { align-self: flex-start; background: transparent; color: var(--cyan); border: 1px solid rgba(0,212,255,0.4); border-radius: 8px; padding: 8px 18px; font-family: 'Orbitron', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; transition: all 0.2s ease; }
+    .read-btn:hover { background: rgba(0,212,255,0.1); border-color: var(--cyan); box-shadow: 0 0 15px rgba(0,212,255,0.2); }
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(6,7,10,0.85); backdrop-filter: blur(12px); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-card { background: rgba(10,11,18,0.95); backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; max-width: 780px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 44px; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+    .close-modal { position: absolute; top: 18px; right: 22px; background: transparent; border: none; color: var(--text-muted); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
+    .close-modal:hover { color: var(--cyan); }
+    .modal-body h2 { font-family: 'Orbitron', sans-serif; margin-bottom: 22px; font-size: 1.6rem; background: linear-gradient(135deg, #00d4ff, #b300ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .modal-body p { margin-bottom: 18px; color: var(--text-sec); font-size: 0.95rem; line-height: 1.85; font-family: 'Exo 2', sans-serif; }
+    .modal-body ul { margin-bottom: 18px; padding-left: 0; list-style: none; }
+    .modal-body li { margin-bottom: 10px; font-size: 0.92rem; line-height: 1.7; color: var(--text-sec); position: relative; padding-left: 22px; font-family: 'Exo 2', sans-serif; }
+    .modal-body li::before { content: 'â€º'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; font-size: 1.1rem; }
+    .modal-body h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; color: rgba(0,212,255,0.8); margin: 24px 0 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* -- Adsterra Ad Containers -- */
+    .ad-wrap { display: flex; justify-content: center; align-items: center; width: 100%; position: relative; z-index: 1; margin: 24px 0; overflow: hidden; }
+    .ad-label { font-size: 0.65rem; color: rgba(255,255,255,0.2); text-align: center; display: block; margin-bottom: 4px; font-family: Exo 2, sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ad-sticky-mobile { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: rgba(6,7,10,0.95); padding: 6px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    @media (max-width: 768px) { .ad-sticky-mobile { display: block; } }
+    @media (max-width: 640px) { .legal-wrapper { padding: 32px 16px 80px; } .modal-card { padding: 24px; } }
   </style>
 </head>
 <body>
-<div class="aurora" aria-hidden="true">
-  <div class="aurora-orb aurora-orb--1"></div>
-  <div class="aurora-orb aurora-orb--2"></div>
-  <div class="aurora-orb aurora-orb--3"></div>
-  <div class="grid-overlay"></div>
-</div>
-
-<div class="legal-wrapper">
-  <a href="/" class="legal-back">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-    Back to Home
-  </a>
-
-  <div class="legal-header">
-    <div class="legal-badge">©️ Legal Document</div>
-    <h1 class="legal-title">Copyright Notice</h1>
-    <p class="legal-meta">Last updated: June 2026</p>
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-orb aurora-orb--1"></div>
+    <div class="aurora-orb aurora-orb--2"></div>
+    <div class="aurora-orb aurora-orb--3"></div>
+    <div class="grid-overlay"></div>
   </div>
 
-  <div class="legal-body">
-    <div class="legal-section">
-      <h3>1. Ownership of Platform</h3>
-      <p>The Click2Video platform, including all software, algorithms, interfaces, branding, logos, visual design, and documentation, is the exclusive intellectual property of Click2Video and its licensors. &copy; 2026 Click2Video. All rights reserved worldwide.</p>
-    </div>
-    <div class="legal-section">
-      <h3>2. Third-Party Content</h3>
-      <p>Click2Video facilitates access to publicly available media content hosted on third-party platforms. Such content is owned exclusively by the respective content creators, uploaders, or rights holders, and is subject to the copyright laws and platform terms of service applicable to those platforms. Click2Video claims no ownership over any such third-party content.</p>
-    </div>
-    <div class="legal-section">
-      <h3>3. Permitted Use of Platform</h3>
-      <p>You are granted a limited, non-exclusive, non-transferable, revocable licence to access and use the Click2Video platform solely for lawful purposes and in accordance with these Terms. You may not reproduce, modify, distribute, publicly display, or create derivative works of any proprietary elements of this platform without prior written consent from Click2Video.</p>
-    </div>
-    <div class="legal-section">
-      <h3>4. User Responsibility for Downloaded Content</h3>
-      <p>The downloading of any media content via Click2Video is undertaken entirely at the user's own risk and responsibility. Users must independently verify that they possess the legal right to download, store, and use any content they retrieve. Downloading or redistributing copyrighted content without the express permission of the rights holder may constitute copyright infringement under applicable law and may result in civil or criminal liability.</p>
-    </div>
-    <div class="legal-section">
-      <h3>5. DMCA &amp; Copyright Takedown</h3>
-      <p>Click2Video respects the intellectual property rights of others and expects its users to do the same. If you believe that any content facilitated through this Service infringes your copyright, please contact us with the following information:</p>
-      <ul>
-        <li>Identification of the copyrighted work claimed to be infringed.</li>
-        <li>Identification of the material that is claimed to be infringing.</li>
-        <li>Your contact information.</li>
-        <li>A statement that you have a good-faith belief that use of the material is not authorised by the copyright owner.</li>
-        <li>A statement, under penalty of perjury, that the information is accurate.</li>
-      </ul>
-      <p>We will respond promptly to valid takedown requests in compliance with the Digital Millennium Copyright Act (DMCA) and equivalent legislation.</p>
-    </div>
-    <div class="legal-section">
-      <h3>6. Disclaimer of Affiliation</h3>
-      <p>Click2Video is an independent, third-party service. It is not affiliated with, endorsed by, or in any way officially connected to TikTok, Instagram, Meta, Twitter/X, Vimeo, Reddit, or any other platform referenced herein. All product names, logos, and brands are property of their respective owners.</p>
-    </div>
-    <div class="legal-section">
-      <h3>7. Limitation of Liability</h3>
-      <p>Click2Video shall not be held liable for any direct, indirect, incidental, consequential, or punitive damages arising from a user's downloading or use of third-party content. Users indemnify and hold harmless Click2Video, its officers, employees, and agents against any claims, damages, or legal proceedings resulting from their breach of applicable copyright or intellectual property law.</p>
-    </div>
-    <div class="legal-section">
-      <h3>8. Contact</h3>
-      <p>For copyright inquiries, DMCA notices, or intellectual property concerns, please contact us through the Click2Video website. We are committed to resolving all legitimate intellectual property matters in a timely and professional manner.</p>
+  <div class="legal-wrapper">
+    <a href="/" class="legal-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Home
+    </a>
+    <header class="legal-header">
+      <div class="legal-badge">Â©ï¸ Copyright</div>
+      <h1 class="legal-title">Copyright Notice</h1>
+      <p class="legal-meta">Last updated: June 2026 &nbsp;Â·&nbsp; We respect intellectual property rights</p>
+    </header>
+      <!-- Adsterra Native Banner -->
+  <div class="ad-wrap" style="max-width:1000px;margin:24px auto;padding:0 24px;" aria-label="Advertisement">
+    <div style="width:100%;">
+      <span class="ad-label">Advertisement</span>
+      <script async="async" data-cfasync="false" src="https://pl30157874.effectivecpmnetwork.com/c9bf9833eeaff4f31771822536040402e0/invoke.js"></script>
+      <div id="container-c9bf9833eeaff4f31771822536040402e0"></div>
     </div>
   </div>
-</div>
+  <div class="blog-grid" id="sectionsGrid"></div>
+  </div>
+
+  <div class="modal-overlay" id="articleModal">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal" aria-label="Close">Ã—</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const sections = [
+      {
+        title: "1. Click2Video's Own Copyright",
+        excerpt: "Our website design, original written content, extraction algorithms, and branding are copyright of Click2Video. All rights reserved.",
+        content: `<h2>1. Click2Video's Own Copyright</h2>
+          <p>The Click2Video website, including its visual design, user interface layout, original written documentation, marketing copy, blog articles, technical guides, logo, brand identity, and the source code of our web application are Â© 2026 Click2Video. All rights reserved.</p>
+          <p>You may not copy, reproduce, republish, modify, transmit, or distribute any original Click2Video content without our prior written permission, except as permitted by applicable fair use or fair dealing laws for personal, non-commercial reference purposes.</p>
+          <p>Our extraction algorithms, API schemas, conversion pipeline logic, and crawler heuristics constitute proprietary trade secrets and are protected under applicable intellectual property law. Reverse engineering, decompiling, or attempting to reconstruct these systems is expressly prohibited and may subject you to civil and criminal liability.</p>
+          <h3>What Is Ours</h3>
+          <ul>
+            <li>The Click2Video brand name and logo</li>
+            <li>All original written guides, blog posts, and documentation on this site</li>
+            <li>The user interface design, CSS, and frontend JavaScript code</li>
+            <li>Our backend extraction and transcoding pipeline architecture</li>
+          </ul>`
+      },
+      {
+        title: "2. Third-Party Content",
+        excerpt: "Click2Video does not claim ownership over any media that users download. All third-party trademarks remain the property of their owners.",
+        content: `<h2>2. Third-Party Content</h2>
+          <p>Click2Video does not own, claim, or assert any rights over the video, audio, image, or subtitle content that users download through our service. All such content remains the exclusive property of its original creators, rights holders, publishers, and platform licensees.</p>
+          <p>Third-party platform names, logos, and trademarks referenced on our website â€” including but not limited to YouTube (Google LLC), TikTok (ByteDance), Instagram (Meta Platforms), Vimeo, Dailymotion, Twitter/X, Reddit, and others â€” are the intellectual property of their respective owners. Their appearance on Click2Video is solely for the purpose of identifying supported platforms and does not imply any affiliation, endorsement, or partnership.</p>
+          <p>As a technology intermediary, Click2Video functions analogously to a browser or download manager â€” we do not curate, modify, or editorially select the content that flows through our service. Users, not Click2Video, are responsible for any copyright implications of the content they choose to download.</p>`
+      },
+      {
+        title: "3. DMCA Takedown Policy",
+        excerpt: "We respond to valid DMCA Section 512 notices. Submit your takedown request to dmca@click2video.com with the required legal elements.",
+        content: `<h2>3. DMCA Takedown Policy</h2>
+          <p>Click2Video respects the intellectual property rights of creators and complies with the Digital Millennium Copyright Act (DMCA), 17 U.S.C. Â§ 512. While we do not permanently host the media files that users download, we can and do blacklist specific URLs or domains from being processed by our extraction engine at the request of verified rights holders.</p>
+          <p>To submit a valid DMCA takedown notice, your written request must include all of the following elements as required by 17 U.S.C. Â§ 512(c)(3):</p>
+          <ul>
+            <li>A physical or electronic signature of the authorized copyright owner or agent</li>
+            <li>Identification of the copyrighted work(s) you claim are being infringed</li>
+            <li>The specific URL(s) on Click2Video or the source URL(s) you want restricted</li>
+            <li>Your contact information (name, address, telephone number, email address)</li>
+            <li>A statement that you have a good-faith belief that the disputed use is not authorized</li>
+            <li>A statement, made under penalty of perjury, that the information in the notice is accurate and that you are the copyright owner or are authorized to act on their behalf</li>
+          </ul>
+          <p>Send completed DMCA notices to: <strong style="color:#00d4ff;">dmca@click2video.com</strong>. We will process valid notices within 2â€“5 business days.</p>`
+      },
+      {
+        title: "4. Counter-Notification",
+        excerpt: "If your access was restricted in error, you may file a counter-notification. We'll restore access after 10 business days if no lawsuit is filed.",
+        content: `<h2>4. Counter-Notification Procedure</h2>
+          <p>If you believe that a URL was restricted from Click2Video's service as a result of a mistaken or misidentified DMCA takedown notice, you have the right to submit a counter-notification under 17 U.S.C. Â§ 512(g).</p>
+          <p>A valid counter-notification must include:</p>
+          <ul>
+            <li>Your physical or electronic signature</li>
+            <li>Identification of the URL that was restricted and the content it referenced</li>
+            <li>A statement under penalty of perjury that the restriction resulted from mistake or misidentification</li>
+            <li>Your name, address, and telephone number</li>
+            <li>Consent to the jurisdiction of the Federal District Court in the judicial district of your address, or (if outside the US) to any judicial district in which Click2Video may be found</li>
+            <li>An agreement to accept service of process from the original complainant</li>
+          </ul>
+          <p>Send your counter-notification to <strong style="color:#00d4ff;">dmca@click2video.com</strong>. Upon receipt of a valid counter-notice, we will forward it to the original complainant. If the complainant does not notify us of a lawsuit within 10â€“14 business days, we may restore extraction access for the disputed URL.</p>`
+      },
+      {
+        title: "5. Fair Use",
+        excerpt: "Downloading for commentary, criticism, education, or personal archiving may qualify as fair use. Users are responsible for their own fair use assessment.",
+        content: `<h2>5. Fair Use &amp; Fair Dealing</h2>
+          <p>In the United States, Section 107 of the Copyright Act recognizes "fair use" as a doctrine that permits limited use of copyrighted material without permission for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Similar doctrines exist in other jurisdictions under names like "fair dealing" (UK, Canada, Australia) or "droit de citation" (France).</p>
+          <p>Click2Video is designed to support legitimate fair-use activities, including:</p>
+          <ul>
+            <li>Downloading a video clip for academic research or classroom use</li>
+            <li>Saving a news segment for journalistic commentary or fact-checking</li>
+            <li>Archiving a personal video that you originally uploaded</li>
+            <li>Downloading a Creative Commons-licensed work you intend to reuse under its license terms</li>
+            <li>Creating a personal offline backup of content you have lawfully purchased or subscribed to</li>
+          </ul>
+          <p>However, Click2Video does not make legal determinations on your behalf. Whether a particular use qualifies as fair use depends on a four-factor analysis specific to your situation. You are solely responsible for ensuring your use is legally defensible in your jurisdiction.</p>`
+      },
+      {
+        title: "6. Repeat Infringer Policy",
+        excerpt: "Users who repeatedly download or distribute copyrighted content without authorization will have their accounts permanently terminated.",
+        content: `<h2>6. Repeat Infringer Policy</h2>
+          <p>In accordance with the DMCA's safe harbor requirements (17 U.S.C. Â§ 512(i)), Click2Video maintains and enforces a strict repeat infringer policy. We track abuse patterns by authenticated account and, where necessary, by IP address ranges.</p>
+          <p>A user may be designated a "repeat infringer" if:</p>
+          <ul>
+            <li>We receive multiple verified DMCA complaints specifically naming that user's account</li>
+            <li>The user is found to be systematically bulk-downloading commercial content for redistribution</li>
+            <li>The user attempts to circumvent our domain blacklists or rate limits repeatedly</li>
+            <li>A court or administrative authority identifies the user as having infringed copyright through our platform</li>
+          </ul>
+          <p>Upon designation as a repeat infringer, the account will be permanently terminated without refund of any prepaid subscription fees. The user's IP addresses and device fingerprints may be blocked from the platform. We reserve the right to report serial infringers to the relevant rights holders or law enforcement agencies.</p>`
+      },
+      {
+        title: "7. Attribution & Licensing",
+        excerpt: "When reusing downloaded content, always attribute the original creator and verify the applicable license before distribution.",
+        content: `<h2>7. Attribution &amp; Licensing</h2>
+          <p>Downloading a media file through Click2Video does not grant you any ownership rights over that file beyond what you already hold. The act of downloading does not strip the file of its copyright protection, nor does it grant you a new license to distribute, perform, or modify the work.</p>
+          <p>If you intend to reuse downloaded content in your own projects, you must:</p>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Verify the license</strong> â€” Check whether the content is under a Creative Commons license, a public domain dedication, or a platform-specific license that permits reuse.</li>
+            <li><strong style="color:#e0e0e0;">Provide attribution</strong> â€” Credit the original creator with their name, the work's title, the source URL, and the license name where required.</li>
+            <li><strong style="color:#e0e0e0;">Obtain permission</strong> â€” For commercially licensed content, contact the rights holder to negotiate a license before any redistribution.</li>
+            <li><strong style="color:#e0e0e0;">Respect restrictions</strong> â€” Creative Commons "No Derivatives" (ND) licenses prohibit modification. "Non-Commercial" (NC) licenses prohibit commercial use.</li>
+          </ul>
+          <p>Click2Video assumes no liability for copyright claims arising from a user's subsequent distribution or use of downloaded files.</p>`
+      },
+      {
+        title: "8. Open Source Credits",
+        excerpt: "Click2Video is built on open-source tools including yt-dlp, FFmpeg, and Node.js. We honor all applicable open-source licenses.",
+        content: `<h2>8. Open Source Credits</h2>
+          <p>Click2Video relies on a number of open-source technologies to power its extraction and conversion pipeline. We are grateful to the developer communities behind these tools and honor all applicable open-source licenses.</p>
+          <ul>
+            <li><strong style="color:#e0e0e0;">yt-dlp</strong> â€” A powerful media extraction library (Unlicense / public domain). We use it as a processing backend on our servers, not redistributed to users.</li>
+            <li><strong style="color:#e0e0e0;">FFmpeg</strong> â€” The industry-standard multimedia framework (LGPL 2.1). Used for transcoding, muxing, and format conversion on our server infrastructure.</li>
+            <li><strong style="color:#e0e0e0;">Node.js</strong> â€” JavaScript runtime (MIT License). Powers our API server and asynchronous job queue.</li>
+            <li><strong style="color:#e0e0e0;">Express.js</strong> â€” Web framework for Node.js (MIT License).</li>
+            <li><strong style="color:#e0e0e0;">Firebase SDK</strong> â€” Google Firebase client libraries (Apache 2.0). Used for authentication and Firestore database access.</li>
+          </ul>
+          <p>Where required by applicable open-source licenses (such as LGPL), we provide access to the corresponding source code components upon request. Contact legal@click2video.com for open-source compliance inquiries.</p>`
+      }
+    ];
+
+    const grid = document.getElementById('sectionsGrid');
+    const modal = document.getElementById('articleModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.getElementById('closeModal');
+
+    sections.forEach((s, i) => {
+      const card = document.createElement('article');
+      card.className = 'blog-card';
+      card.innerHTML = `<h2 class="card-title">${s.title}</h2><p class="card-excerpt">${s.excerpt}</p><button class="read-btn" onclick="openSection(${i})">Read More</button>`;
+      grid.appendChild(card);
+    });
+
+    window.openSection = (i) => {
+      modalBody.innerHTML = sections[i].content;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+    closeBtn.onclick = () => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; };
+    window.onclick = (e) => { if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; } };
+  </script>
 </body>
 </html>

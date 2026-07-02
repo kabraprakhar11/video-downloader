@@ -44,7 +44,11 @@ async function createOrder(userId, email) {
     return order;
   } catch (err) {
     logger.error('Failed to create Razorpay order:', err.error || err);
-    throw new Error(err.error?.description || 'Could not initialize payment. Please try again.');
+    let errorMsg = err.error?.description || 'Could not initialize payment. Please try again.';
+    if (errorMsg.toLowerCase().includes('authentication failed') || err.statusCode === 401) {
+      errorMsg = 'Razorpay Authentication Failed: Your API keys in the .env file are invalid or expired. Please update RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET with valid keys from your Razorpay Dashboard.';
+    }
+    throw new Error(errorMsg);
   }
 }
 

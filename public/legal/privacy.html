@@ -1,92 +1,255 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Adsterra Popunder -->
+  <script src="https://pl30157873.effectivecpmnetwork.com/19/c3/1d/19c31d208d63a44651af3265a25b6468.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Click2Video</title>
-  <meta name="description" content="Privacy Policy for Click2Video — Universal Video Downloader." />
+  <title>Privacy Policy â€” Click2Video</title>
+  <meta name="description" content="Learn how Click2Video collects, uses, and protects your personal data." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?t=20260626_1946" />
   <style>
-    .legal-wrapper { max-width: 800px; margin: 0 auto; padding: 48px 24px 100px; position: relative; z-index: 1; }
-    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; transition: color 0.2s; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; }
+    .legal-wrapper { max-width: 1000px; margin: 0 auto; padding: 48px 24px 100px; position: relative; z-index: 1; }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; transition: color 0.2s; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; }
     .legal-back:hover { color: var(--cyan); }
-    .legal-back:hover svg { transform: translateX(-4px); }
     .legal-back svg { transition: transform 0.2s; }
+    .legal-back:hover svg { transform: translateX(-4px); }
     .legal-header { margin-bottom: 48px; text-align: center; }
     .legal-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 100px; padding: 5px 16px; font-size: 0.75rem; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: 'Exo 2', sans-serif; }
     .legal-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em; margin-bottom: 10px; }
-    .legal-meta { font-size: 0.82rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
-    .legal-body { display: flex; flex-direction: column; gap: 8px; }
-    .legal-section { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px 28px; transition: border-color 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
-    .legal-section::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #b300ff, #ff006e); opacity: 0; transition: opacity 0.2s; }
-    .legal-section:hover { border-color: rgba(179,0,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
-    .legal-section:hover::before { opacity: 1; }
-    .legal-section h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--purple, #b300ff); margin-bottom: 12px; letter-spacing: 0.02em; }
-    .legal-section p { font-size: 0.9rem; color: var(--text-sec); line-height: 1.8; margin-bottom: 10px; }
-    .legal-section p:last-child { margin-bottom: 0; }
-    .legal-section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-    .legal-section ul li { font-size: 0.88rem; color: var(--text-sec); line-height: 1.7; padding-left: 20px; position: relative; }
-    .legal-section ul li::before { content: '›'; position: absolute; left: 0; color: var(--purple, #b300ff); font-weight: 700; }
-    @media (max-width: 640px) { .legal-wrapper { padding: 32px 16px 80px; } .legal-section { padding: 18px; } .legal-title { font-size: 1.6rem; } }
+    .legal-meta { font-size: 0.82rem; color: var(--text-muted); font-family: 'Exo 2', sans-serif; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .blog-card { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
+    .blog-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #00d4ff, #b300ff); opacity: 0; transition: opacity 0.2s; }
+    .blog-card:hover { border-color: rgba(0,212,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transform: translateY(-4px); }
+    .blog-card:hover::before { opacity: 1; }
+    .card-title { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: #fff; margin-bottom: 12px; line-height: 1.4; }
+    .card-excerpt { color: var(--text-sec); font-size: 0.88rem; flex-grow: 1; margin-bottom: 20px; line-height: 1.6; }
+    .read-btn { align-self: flex-start; background: transparent; color: var(--cyan); border: 1px solid rgba(0,212,255,0.4); border-radius: 8px; padding: 8px 18px; font-family: 'Orbitron', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; transition: all 0.2s ease; }
+    .read-btn:hover { background: rgba(0,212,255,0.1); border-color: var(--cyan); box-shadow: 0 0 15px rgba(0,212,255,0.2); }
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(6,7,10,0.85); backdrop-filter: blur(12px); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-card { background: rgba(10,11,18,0.95); backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; max-width: 780px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 44px; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+    .close-modal { position: absolute; top: 18px; right: 22px; background: transparent; border: none; color: var(--text-muted); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
+    .close-modal:hover { color: var(--cyan); }
+    .modal-body h2 { font-family: 'Orbitron', sans-serif; margin-bottom: 22px; font-size: 1.6rem; background: linear-gradient(135deg, #00d4ff, #b300ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .modal-body p { margin-bottom: 18px; color: var(--text-sec); font-size: 0.95rem; line-height: 1.85; font-family: 'Exo 2', sans-serif; }
+    .modal-body ul { margin-bottom: 18px; padding-left: 0; list-style: none; }
+    .modal-body li { margin-bottom: 10px; font-size: 0.92rem; line-height: 1.7; color: var(--text-sec); position: relative; padding-left: 22px; font-family: 'Exo 2', sans-serif; }
+    .modal-body li::before { content: 'â€º'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; font-size: 1.1rem; }
+    .modal-body h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; color: rgba(0,212,255,0.8); margin: 24px 0 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* -- Adsterra Ad Containers -- */
+    .ad-wrap { display: flex; justify-content: center; align-items: center; width: 100%; position: relative; z-index: 1; margin: 24px 0; overflow: hidden; }
+    .ad-label { font-size: 0.65rem; color: rgba(255,255,255,0.2); text-align: center; display: block; margin-bottom: 4px; font-family: Exo 2, sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ad-sticky-mobile { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: rgba(6,7,10,0.95); padding: 6px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    @media (max-width: 768px) { .ad-sticky-mobile { display: block; } }
+    @media (max-width: 640px) { .legal-wrapper { padding: 32px 16px 80px; } .modal-card { padding: 24px; } }
   </style>
 </head>
 <body>
-<div class="aurora" aria-hidden="true">
-  <div class="aurora-orb aurora-orb--1"></div>
-  <div class="aurora-orb aurora-orb--2"></div>
-  <div class="aurora-orb aurora-orb--3"></div>
-  <div class="grid-overlay"></div>
-</div>
-
-<div class="legal-wrapper">
-  <a href="/" class="legal-back">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-    Back to Home
-  </a>
-
-  <div class="legal-header">
-    <div class="legal-badge">🔒 Legal Document</div>
-    <h1 class="legal-title">Privacy Policy</h1>
-    <p class="legal-meta">Last updated: June 2026</p>
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-orb aurora-orb--1"></div>
+    <div class="aurora-orb aurora-orb--2"></div>
+    <div class="aurora-orb aurora-orb--3"></div>
+    <div class="grid-overlay"></div>
   </div>
 
-  <div class="legal-body">
-    <div class="legal-section">
-      <h3>1. Information We Collect</h3>
-      <p>We collect information you provide directly (such as your email address and name when creating an account), usage data (such as URLs submitted for processing, download counts, and session activity), and technical data (such as IP address, browser type, and device information) to operate and improve the Service.</p>
-    </div>
-    <div class="legal-section">
-      <h3>2. How We Use Your Information</h3>
-      <p>We use collected information to: provide and maintain the Service; process payments and manage subscriptions; enforce usage quotas and prevent abuse; send transactional communications; and improve our platform through aggregated analytics. We do not sell your personal data to third parties.</p>
-    </div>
-    <div class="legal-section">
-      <h3>3. Data Storage & Security</h3>
-      <p>Your data is stored securely using Google Firebase infrastructure. We implement industry-standard technical and organisational measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction.</p>
-    </div>
-    <div class="legal-section">
-      <h3>4. Third-Party Services</h3>
-      <p>We use the following third-party services which may process your data under their own privacy policies: Google Firebase (authentication &amp; database), Razorpay (payment processing), and Google Cloud Run (backend infrastructure).</p>
-    </div>
-    <div class="legal-section">
-      <h3>5. Cookies</h3>
-      <p>We use essential session cookies necessary for authentication and service operation. We do not use tracking or advertising cookies without your explicit consent.</p>
-    </div>
-    <div class="legal-section">
-      <h3>6. Your Rights</h3>
-      <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or port your personal data, and to object to or restrict certain processing. To exercise these rights, please contact us through the Click2Video website.</p>
-    </div>
-    <div class="legal-section">
-      <h3>7. Data Retention</h3>
-      <p>We retain your account data for as long as your account is active. You may request deletion of your account and associated data at any time. Anonymised usage statistics may be retained indefinitely for analytical purposes.</p>
-    </div>
-    <div class="legal-section">
-      <h3>8. Changes to This Policy</h3>
-      <p>We may update this Privacy Policy periodically. We will notify registered users of material changes via email or a prominent notice on the Service. Your continued use after such notice constitutes acceptance of the updated policy.</p>
+  <div class="legal-wrapper">
+    <a href="/" class="legal-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Home
+    </a>
+    <header class="legal-header">
+      <div class="legal-badge">ðŸ”’ Privacy</div>
+      <h1 class="legal-title">Privacy Policy</h1>
+      <p class="legal-meta">Last updated: June 2026 &nbsp;Â·&nbsp; We do not sell your data â€” ever.</p>
+    </header>
+      <!-- Adsterra Native Banner -->
+  <div class="ad-wrap" style="max-width:1000px;margin:24px auto;padding:0 24px;" aria-label="Advertisement">
+    <div style="width:100%;">
+      <span class="ad-label">Advertisement</span>
+      <script async="async" data-cfasync="false" src="https://pl30157874.effectivecpmnetwork.com/c9bf9833eeaff4f31771822536040402e0/invoke.js"></script>
+      <div id="container-c9bf9833eeaff4f31771822536040402e0"></div>
     </div>
   </div>
-</div>
+  <div class="blog-grid" id="sectionsGrid"></div>
+  </div>
+
+  <div class="modal-overlay" id="articleModal">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal" aria-label="Close">Ã—</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const sections = [
+      {
+        title: "1. What Data We Collect",
+        excerpt: "We collect only what's necessary: submitted URLs, basic browser headers, and (for Premium users) your email and hashed password.",
+        content: `<h2>1. What Data We Collect</h2>
+          <p>We are committed to minimal data collection. Click2Video collects only the information required to operate the service reliably and securely. We do not build advertising profiles, sell your data to third parties, or track your behavior across the web.</p>
+          <h3>For All Users (Free & Premium)</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Submitted URLs</strong> â€” The media URLs you paste into the extractor, retained ephemerally during processing and deleted within 24 hours.</li>
+            <li><strong style="color:#e0e0e0;">IP Address</strong> â€” Used for rate limiting, abuse detection, and regional routing. Not linked to a persistent profile for free users.</li>
+            <li><strong style="color:#e0e0e0;">Browser User-Agent</strong> â€” Used to optimize output format compatibility for your device.</li>
+            <li><strong style="color:#e0e0e0;">Download timestamps</strong> â€” Used for queue management and system diagnostics, anonymized after 48 hours.</li>
+          </ul>
+          <h3>For Premium Account Holders</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Email address</strong> â€” Required for account authentication and subscription management.</li>
+            <li><strong style="color:#e0e0e0;">Password</strong> â€” Stored as a salted bcrypt hash. We never store or can read your plaintext password.</li>
+            <li><strong style="color:#e0e0e0;">Payment tokens</strong> â€” Transaction reference IDs from Stripe/Razorpay only. Raw card numbers never touch our servers.</li>
+            <li><strong style="color:#e0e0e0;">Download history</strong> â€” Retained for 30 days to support re-downloads and account auditing.</li>
+          </ul>`
+      },
+      {
+        title: "2. How We Use Your Data",
+        excerpt: "Your data is used solely to process downloads, prevent abuse, manage subscriptions, and improve platform performance.",
+        content: `<h2>2. How We Use Your Data</h2>
+          <p>Every piece of data we collect has a specific, limited purpose. We do not use your data for advertising, behavioral tracking, or any purpose not listed below.</p>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Processing your downloads</strong> â€” We pass your submitted URL to our extraction pipeline to fetch, transcode, and deliver the media file.</li>
+            <li><strong style="color:#e0e0e0;">Rate limiting & abuse prevention</strong> â€” Your IP is checked against our rate-limit tables to ensure fair resource allocation across all users.</li>
+            <li><strong style="color:#e0e0e0;">Subscription management</strong> â€” Your email and payment tokens are used to verify your Premium status, send invoices, and process renewals.</li>
+            <li><strong style="color:#e0e0e0;">Security monitoring</strong> â€” Server logs are scanned for anomalous patterns, brute-force attempts, and DDoS signatures.</li>
+            <li><strong style="color:#e0e0e0;">Service improvement</strong> â€” Aggregated, anonymized conversion success/failure rates are analyzed to improve our extraction engine.</li>
+            <li><strong style="color:#e0e0e0;">Legal compliance</strong> â€” In rare cases, IP logs may be disclosed in response to a valid court order or law enforcement request.</li>
+          </ul>
+          <p>We never use your data to serve personalized advertisements, and we never sell or rent your information to marketing companies, data brokers, or analytics firms.</p>`
+      },
+      {
+        title: "3. Data Storage & Security",
+        excerpt: "Your credentials are stored in Google Firebase with Firestore security rules. All connections use TLS 1.3 encryption.",
+        content: `<h2>3. Data Storage &amp; Security</h2>
+          <p>Premium account data (email, hashed password, subscription status) is stored in Google Firebase Firestore. We enforce strict Firestore Security Rules that prohibit unauthorized reads or writes. Internal access to user data is restricted to a small set of authorized engineers with mandatory 2FA.</p>
+          <p>All connections between your browser and our servers are encrypted using TLS 1.3. We enforce HTTPS-only access via HTTP Strict Transport Security (HSTS) headers with long-duration max-age policies.</p>
+          <p>Our conversion pipeline operates entirely on ephemeral, in-memory processing. Intermediate video and audio segments are written to temporary disk storage only during the stitching phase, and are securely deleted within minutes of the download link being generated. We do not maintain a library of previously processed media files.</p>
+          <h3>Security Measures in Place</h3>
+          <ul>
+            <li>Passwords hashed with bcrypt (cost factor 12+)</li>
+            <li>Firestore Security Rules enforced at database level</li>
+            <li>TLS 1.3 on all connections with HSTS preloading</li>
+            <li>Rate limiting and IP-based circuit breakers on all API endpoints</li>
+            <li>Automated ephemeral file deletion post-delivery</li>
+            <li>Regular third-party security audits of our infrastructure</li>
+          </ul>`
+      },
+      {
+        title: "4. Cookies & Tracking",
+        excerpt: "We use only functional cookies for session authentication. No third-party advertising trackers or behavioral pixels are placed.",
+        content: `<h2>4. Cookies &amp; Tracking</h2>
+          <p>Click2Video uses a strictly minimal cookie policy. We set only the cookies that are technically necessary for the service to function. We do not use third-party advertising cookies, behavioral tracking pixels, fingerprinting scripts, or any form of cross-site user tracking.</p>
+          <h3>Cookies We Set</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Session cookie</strong> â€” Maintains your login state for Premium accounts. HttpOnly, Secure, SameSite=Strict. Expires after 30 days of inactivity.</li>
+            <li><strong style="color:#e0e0e0;">CSRF token</strong> â€” Protects form submissions against cross-site request forgery. Session-scoped.</li>
+            <li><strong style="color:#e0e0e0;">Theme preference</strong> â€” Stores your UI preference (e.g., language or display setting) locally. Not transmitted to our servers.</li>
+          </ul>
+          <h3>What We Don't Use</h3>
+          <ul>
+            <li>Google Analytics or any third-party analytics SDK</li>
+            <li>Facebook Pixel or similar advertising retargeting cookies</li>
+            <li>Browser fingerprinting libraries</li>
+            <li>Third-party chat widget cookies (we use email for support)</li>
+          </ul>
+          <p>You can manage or delete cookies through your browser settings at any time. Deleting the session cookie will log you out of your Premium account, but will not otherwise affect the service's functionality for free-tier use.</p>`
+      },
+      {
+        title: "5. Third-Party Services",
+        excerpt: "We share minimal data with Stripe/Razorpay for payments and Google Firebase for database hosting. No advertising data sharing.",
+        content: `<h2>5. Third-Party Services</h2>
+          <p>To operate the platform, we integrate with a small number of trusted third-party services. Each integration involves only the minimum necessary data sharing.</p>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Stripe / Razorpay</strong> â€” PCI-DSS Level 1 compliant payment processors. We pass your billing details directly to them; we never receive or store raw card numbers. Their respective privacy policies govern how they handle payment data.</li>
+            <li><strong style="color:#e0e0e0;">Google Firebase</strong> â€” Our database and authentication backend. User credential data is stored within Firebase's infrastructure under Google's data processing agreements.</li>
+            <li><strong style="color:#e0e0e0;">Third-party CDNs (content sources)</strong> â€” When you submit a URL, our crawler fetches data from the originating platform's CDN. Your IP is not forwarded; the request originates from our server IPs.</li>
+          </ul>
+          <p>We do not integrate with Facebook, Twitter/X, TikTok, or any social media platform for tracking purposes. We do not use any advertising network SDKs. We do not share your email address, download history, or any personal data with data brokers.</p>`
+      },
+      {
+        title: "6. Your Rights (GDPR & CCPA)",
+        excerpt: "You have the right to access, correct, or delete your data. GDPR and CCPA rights are fully honored. Requests processed within 30 days.",
+        content: `<h2>6. Your Rights (GDPR &amp; CCPA)</h2>
+          <p>Depending on your location, you may have specific legal rights regarding your personal data. We honor these rights regardless of where you are located.</p>
+          <h3>Your Rights Include</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Right of Access</strong> â€” Request a copy of all personal data we hold about you.</li>
+            <li><strong style="color:#e0e0e0;">Right of Rectification</strong> â€” Ask us to correct inaccurate personal data.</li>
+            <li><strong style="color:#e0e0e0;">Right of Erasure ("Right to be Forgotten")</strong> â€” Request deletion of your account and all associated personal data.</li>
+            <li><strong style="color:#e0e0e0;">Right of Portability</strong> â€” Receive your personal data in a machine-readable format (JSON/CSV).</li>
+            <li><strong style="color:#e0e0e0;">Right to Object</strong> â€” Object to processing of your data for specific purposes.</li>
+            <li><strong style="color:#e0e0e0;">Right to Opt Out of Sale</strong> â€” Under CCPA, you may opt out of the sale of personal information. Note: we do not sell personal data, so this right is inherently honored.</li>
+          </ul>
+          <p>To exercise any of these rights, email compliance@click2video.com with your request and account email address. We will respond within 30 days (or within the shorter timeframe required by your local law). Identity verification may be required before we can act on your request.</p>`
+      },
+      {
+        title: "7. Data Retention",
+        excerpt: "Ephemeral processing files are deleted within 24 hours. Premium account data is retained until you delete your account.",
+        content: `<h2>7. Data Retention</h2>
+          <p>We retain your data only for as long as it is necessary for the purposes described in this policy, or as required by law.</p>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Submitted URLs and processing logs</strong> â€” Deleted within 24 hours of job completion.</li>
+            <li><strong style="color:#e0e0e0;">Intermediate media files (segments, temp files)</strong> â€” Purged within 30 minutes of download delivery.</li>
+            <li><strong style="color:#e0e0e0;">IP-based rate limit records</strong> â€” Anonymized after 7 days.</li>
+            <li><strong style="color:#e0e0e0;">Premium account data (email, subscription)</strong> â€” Retained until you delete your account, plus 90 days for billing disputes.</li>
+            <li><strong style="color:#e0e0e0;">Payment transaction references</strong> â€” Retained for 7 years in accordance with financial record-keeping requirements.</li>
+            <li><strong style="color:#e0e0e0;">Security audit logs</strong> â€” Retained for 12 months, then permanently deleted.</li>
+          </ul>
+          <p>When you delete your account via the dashboard, your email, hashed password, and download history are permanently erased from our primary database within 24 hours. Backups containing your data are rotated and overwritten within 30 days.</p>`
+      },
+      {
+        title: "8. Children's Privacy",
+        excerpt: "Click2Video is not directed at users under 13. We do not knowingly collect data from minors and will delete it immediately if discovered.",
+        content: `<h2>8. Children's Privacy</h2>
+          <p>Click2Video is not intended for, directed at, or designed for use by children under the age of 13 (or the applicable age of digital consent in your jurisdiction, which may be higher in some regions such as the EU where it is 16). We do not knowingly collect, process, or store personal data from minors.</p>
+          <p>If you are a parent or guardian and believe that your child has created a Click2Video account or submitted personal information to our service, please contact us immediately at support@click2video.com. Upon verification, we will promptly delete the child's account and all associated data from our systems.</p>
+          <p>If we discover that we have inadvertently collected data from a user under the applicable age threshold, we will take immediate steps to delete that data and close the account.</p>`
+      },
+      {
+        title: "9. Policy Updates",
+        excerpt: "We may update this policy as our service evolves. Premium users are notified by email. Changes take effect 14 days after publication.",
+        content: `<h2>9. Policy Updates</h2>
+          <p>We may update this Privacy Policy periodically to reflect changes in our data practices, legal requirements, or service features. When we make material changes, we will update the "Last updated" date at the top of the page and, for Premium account holders, send a notification email at least 14 days before the changes take effect.</p>
+          <p>For non-material changes (such as grammatical corrections or clarifications that do not affect your rights), we may update the policy without advance notice. Your continued use of Click2Video after the effective date of any change constitutes your acceptance of the updated policy.</p>
+          <p>We recommend bookmarking this page and reviewing it periodically. If at any point you disagree with our Privacy Policy, you should stop using the service and may request deletion of your account and data.</p>`
+      },
+      {
+        title: "10. Contact Us",
+        excerpt: "Privacy inquiries, GDPR requests, and data deletion requests: compliance@click2video.com",
+        content: `<h2>10. Contact Us</h2>
+          <p>If you have questions, concerns, or requests related to this Privacy Policy or your personal data, please reach out through the appropriate channel below:</p>
+          <ul>
+            <li><strong style="color:#00d4ff;">Privacy & GDPR Requests:</strong> compliance@click2video.com</li>
+            <li><strong style="color:#00d4ff;">General Support:</strong> support@click2video.com</li>
+            <li><strong style="color:#00d4ff;">Security Vulnerabilities:</strong> security@click2video.com</li>
+          </ul>
+          <p>We handle all privacy-related requests with priority and aim to respond within 5 business days, or within the legally mandated timeframe applicable to your jurisdiction. Please include your account email address in any privacy request to help us identify your data efficiently.</p>`
+      }
+    ];
+
+    const grid = document.getElementById('sectionsGrid');
+    const modal = document.getElementById('articleModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.getElementById('closeModal');
+
+    sections.forEach((s, i) => {
+      const card = document.createElement('article');
+      card.className = 'blog-card';
+      card.innerHTML = `<h2 class="card-title">${s.title}</h2><p class="card-excerpt">${s.excerpt}</p><button class="read-btn" onclick="openSection(${i})">Read More</button>`;
+      grid.appendChild(card);
+    });
+
+    window.openSection = (i) => {
+      modalBody.innerHTML = sections[i].content;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+    closeBtn.onclick = () => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; };
+    window.onclick = (e) => { if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; } };
+  </script>
 </body>
 </html>

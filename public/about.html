@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Adsterra Popunder -->
+  <script src="https://pl30157873.effectivecpmnetwork.com/19/c3/1d/19c31d208d63a44651af3265a25b6468.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us â€” Click2Video</title>
+  <meta name="description" content="Learn about Click2Video â€” our mission, the technology behind our downloader, and the team building it." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?t=20260626_1946" />
+  <style>
+    .legal-wrapper { max-width: 1000px; margin: 0 auto; padding: 48px 24px 100px; position: relative; z-index: 1; }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; transition: color 0.2s; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; }
+    .legal-back:hover { color: var(--cyan); }
+    .legal-back svg { transition: transform 0.2s; }
+    .legal-back:hover svg { transform: translateX(-4px); }
+    .legal-header { margin-bottom: 48px; text-align: center; }
+    .legal-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 100px; padding: 5px 16px; font-size: 0.75rem; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: 'Exo 2', sans-serif; }
+    .legal-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .legal-meta { font-size: 0.82rem; color: var(--text-muted); font-family: 'Exo 2', sans-serif; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .blog-card { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
+    .blog-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #00d4ff, #b300ff); opacity: 0; transition: opacity 0.2s; }
+    .blog-card:hover { border-color: rgba(0,212,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transform: translateY(-4px); }
+    .blog-card:hover::before { opacity: 1; }
+    .card-title { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: #fff; margin-bottom: 12px; line-height: 1.4; }
+    .card-excerpt { color: var(--text-sec); font-size: 0.88rem; flex-grow: 1; margin-bottom: 20px; line-height: 1.6; }
+    .read-btn { align-self: flex-start; background: transparent; color: var(--cyan); border: 1px solid rgba(0,212,255,0.4); border-radius: 8px; padding: 8px 18px; font-family: 'Orbitron', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; transition: all 0.2s ease; }
+    .read-btn:hover { background: rgba(0,212,255,0.1); border-color: var(--cyan); box-shadow: 0 0 15px rgba(0,212,255,0.2); }
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(6,7,10,0.85); backdrop-filter: blur(12px); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-card { background: rgba(10,11,18,0.95); backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; max-width: 780px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 44px; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+    .close-modal { position: absolute; top: 18px; right: 22px; background: transparent; border: none; color: var(--text-muted); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
+    .close-modal:hover { color: var(--cyan); }
+    .modal-body h2 { font-family: 'Orbitron', sans-serif; margin-bottom: 22px; font-size: 1.6rem; background: linear-gradient(135deg, #00d4ff, #b300ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .modal-body p { margin-bottom: 18px; color: var(--text-sec); font-size: 0.95rem; line-height: 1.85; font-family: 'Exo 2', sans-serif; }
+    .modal-body ul { margin-bottom: 18px; padding-left: 0; list-style: none; }
+    .modal-body li { margin-bottom: 10px; font-size: 0.92rem; line-height: 1.7; color: var(--text-sec); position: relative; padding-left: 22px; font-family: 'Exo 2', sans-serif; }
+    .modal-body li::before { content: 'â€º'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; font-size: 1.1rem; }
+    .modal-body h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; color: rgba(0,212,255,0.8); margin: 24px 0 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* -- Adsterra Ad Containers -- */
+    .ad-wrap { display: flex; justify-content: center; align-items: center; width: 100%; position: relative; z-index: 1; margin: 24px 0; overflow: hidden; }
+    .ad-label { font-size: 0.65rem; color: rgba(255,255,255,0.2); text-align: center; display: block; margin-bottom: 4px; font-family: Exo 2, sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ad-sticky-mobile { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: rgba(6,7,10,0.95); padding: 6px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    @media (max-width: 768px) { .ad-sticky-mobile { display: block; } }
+    @media (max-width: 640px) { .legal-wrapper { padding: 32px 16px 80px; } .modal-card { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-orb aurora-orb--1"></div>
+    <div class="aurora-orb aurora-orb--2"></div>
+    <div class="aurora-orb aurora-orb--3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="legal-wrapper">
+    <a href="/" class="legal-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Home
+    </a>
+    <header class="legal-header">
+      <div class="legal-badge">ðŸ‘‹ About</div>
+      <h1 class="legal-title">About Click2Video</h1>
+      <p class="legal-meta">Founded 2026 &nbsp;Â·&nbsp; Built by developers who were tired of bad download tools</p>
+    </header>
+      <!-- Adsterra Native Banner -->
+  <div class="ad-wrap" style="max-width:1000px;margin:24px auto;padding:0 24px;" aria-label="Advertisement">
+    <div style="width:100%;">
+      <span class="ad-label">Advertisement</span>
+      <script async="async" data-cfasync="false" src="https://pl30157874.effectivecpmnetwork.com/c9bf9833eeaff4f31771822536040402e0/invoke.js"></script>
+      <div id="container-c9bf9833eeaff4f31771822536040402e0"></div>
+    </div>
+  </div>
+  <div class="blog-grid" id="sectionsGrid"></div>
+  </div>
+
+  <div class="modal-overlay" id="articleModal">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal" aria-label="Close">Ã—</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const sections = [
+      {
+        title: "Our Mission",
+        excerpt: "We believe you should own the media you watch. Click2Video exists to give users back control over their digital content.",
+        content: `<h2>Our Mission</h2>
+          <p>Click2Video was born out of frustration. In 2026, video content is more fragmented than ever â€” spread across dozens of walled-garden platforms, each with their own proprietary player, each actively working to prevent you from saving anything locally. Internet connections go down. Platforms delete content without warning. Regions get geo-blocked. Content creators disappear. History gets rewritten.</p>
+          <p>We built Click2Video because we believe that if you can legally watch something, you should be able to legally save it. The ability to create an offline library of content you've found valuable â€” a documentary, a lecture, a performance, a tutorial â€” is a basic form of digital self-determination that modern platforms have systematically stripped away.</p>
+          <p>Our mission is not to enable piracy. It's to restore a capability that technology has always permitted but commercial incentives have increasingly blocked: the ability to download a file that your own computer already played, and keep it.</p>
+          <h3>What We Stand For</h3>
+          <ul>
+            <li>Digital sovereignty â€” you should control your media library</li>
+            <li>Offline access â€” internet availability shouldn't gatekeep your content</li>
+            <li>Preservation â€” important content disappears online; local copies endure</li>
+            <li>Privacy â€” watching offline means no autoplay algorithm watching you back</li>
+          </ul>`
+      },
+      {
+        title: "How Click2Video Works",
+        excerpt: "Submit a URL â†’ our servers fetch the stream â†’ FFmpeg stitches it â†’ you get a download link. No software to install.",
+        content: `<h2>How Click2Video Works</h2>
+          <p>Click2Video is a server-side media extraction service. When you paste a URL into our tool and click Download, here's exactly what happens behind the scenes:</p>
+          <h3>Step 1: URL Analysis</h3>
+          <p>Our backend identifies the platform from the URL and routes it to the appropriate extraction module. We maintain platform-specific extractors for over 1,000 websites â€” each tuned to handle that platform's specific player architecture, CDN structure, and authentication flow.</p>
+          <h3>Step 2: Stream Fetching</h3>
+          <p>Our servers (not your browser) make the request to the platform's CDN. For adaptive streaming content (HLS/DASH), we fetch the manifest file that lists all the video and audio segments. For direct downloads, we fetch the file URL directly. Because requests originate from our infrastructure, you don't need any browser extensions or modified headers.</p>
+          <h3>Step 3: Transcoding & Muxing</h3>
+          <p>For high-quality video (720p and above), platforms often serve video and audio as separate tracks to minimize bandwidth on adaptive streams. Our FFmpeg clusters download both tracks concurrently and mux (merge) them into a single output container (MP4, WebM, or MKV) without re-encoding â€” preserving original quality.</p>
+          <h3>Step 4: Delivery</h3>
+          <p>Once stitching is complete, we generate a time-limited download link and return it to your browser. The temporary files on our servers are deleted automatically within 30 minutes. You get a clean, fully merged file delivered directly to your Downloads folder.</p>`
+      },
+      {
+        title: "Our Technology Stack",
+        excerpt: "Node.js backend, yt-dlp extraction engine, cloud FFmpeg transcoding, Google Firebase database, and global edge CDN delivery.",
+        content: `<h2>Our Technology Stack</h2>
+          <p>We built Click2Video on proven, battle-tested open-source infrastructure, and we're transparent about what powers the platform.</p>
+          <h3>Core Extraction</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">yt-dlp</strong> â€” The most actively maintained media extraction library available. Supports 1,000+ sites with community-contributed extractors updated daily.</li>
+            <li><strong style="color:#e0e0e0;">Custom extractors</strong> â€” For sites not covered by yt-dlp, we maintain our own headless-browser-based extractors using Playwright, which can navigate JavaScript-heavy video players.</li>
+          </ul>
+          <h3>Transcoding Pipeline</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">FFmpeg</strong> â€” Industry-standard multimedia processing. We use it for HLS stitching, audio/video muxing, and format conversion.</li>
+            <li><strong style="color:#e0e0e0;">Cloud Functions</strong> â€” Transcoding jobs are distributed across auto-scaling serverless functions to handle peak loads without queuing delays.</li>
+          </ul>
+          <h3>Backend & Database</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Node.js + Express</strong> â€” Our API server handles URL intake, job dispatch, and result delivery with asynchronous non-blocking I/O.</li>
+            <li><strong style="color:#e0e0e0;">Google Firebase Firestore</strong> â€” User accounts, subscription status, and session tokens.</li>
+            <li><strong style="color:#e0e0e0;">Redis</strong> â€” In-memory job queue and rate-limit state management.</li>
+          </ul>
+          <h3>Frontend</h3>
+          <ul>
+            <li>Vanilla HTML, CSS, JavaScript â€” no heavyweight frameworks, fast load times</li>
+            <li>Hosted on Firebase Hosting with global CDN edge caching</li>
+          </ul>`
+      },
+      {
+        title: "Privacy-First Design",
+        excerpt: "We don't log your downloads, don't build behavioral profiles, and purge all processing files within 30 minutes. Your downloads are your business.",
+        content: `<h2>Privacy-First Design</h2>
+          <p>We designed Click2Video from day one with a strong privacy philosophy: we should know as little about you as possible, and keep it for as short a time as possible.</p>
+          <p>Here's what that looks like in practice:</p>
+          <ul>
+            <li><strong style="color:#e0e0e0;">No download history tracking for free users</strong> â€” If you use Click2Video without an account, we don't associate your submitted URLs with any persistent identity. Your IP is used only for rate limiting and is anonymized within 48 hours.</li>
+            <li><strong style="color:#e0e0e0;">No analytics SDKs</strong> â€” We don't embed Google Analytics, Facebook Pixel, Hotjar, or any third-party behavioral analytics. We have zero interest in building a profile of your browsing habits.</li>
+            <li><strong style="color:#e0e0e0;">Ephemeral file storage</strong> â€” Downloaded files live on our servers for at most 30 minutes post-conversion. After that, they're gone. We are not a media hosting service.</li>
+            <li><strong style="color:#e0e0e0;">No ads, ever</strong> â€” We monetize through Premium subscriptions. Ads create the wrong incentives â€” they reward engagement over privacy, and they require behavioral tracking. We don't want either.</li>
+            <li><strong style="color:#e0e0e0;">Minimal cookies</strong> â€” Session authentication only. No advertising cookies, no tracking pixels.</li>
+          </ul>
+          <p>Your downloads are your business. We process them, deliver them, and forget about them.</p>`
+      },
+      {
+        title: "Premium vs Free",
+        excerpt: "Free tier: 5 downloads/day, 1080p max, standard queue. Premium: unlimited downloads, 4K/8K, parallel processing, 4hr support SLA.",
+        content: `<h2>Premium vs. Free</h2>
+          <p>Click2Video is free to use for individual, occasional downloading. For power users, researchers, content archivists, and developers, our Premium tier removes the limits.</p>
+          <h3>Free Tier</h3>
+          <ul>
+            <li>Up to 5 downloads per day</li>
+            <li>Maximum output resolution: 1080p</li>
+            <li>Standard processing queue (may wait during peak hours)</li>
+            <li>Single concurrent download</li>
+            <li>MP4 and MP3 output formats only</li>
+            <li>Community support (48-hour response)</li>
+          </ul>
+          <h3>Premium Tier</h3>
+          <ul>
+            <li>Unlimited downloads per day</li>
+            <li>4K and 8K output resolution with lossless audio muxing</li>
+            <li>Priority processing queue â€” typically under 60 seconds</li>
+            <li>Up to 5 simultaneous parallel downloads</li>
+            <li>All output formats: MP4, WebM, MKV, MP3, AAC, M4A, FLAC, SRT, VTT</li>
+            <li>Subtitle and chapter track extraction</li>
+            <li>API access with 10,000 requests/month included</li>
+            <li>Priority support with 4-hour SLA</li>
+            <li>Download history saved for 30 days for re-downloads</li>
+          </ul>
+          <p>Premium plans are available monthly or annually (annual saves ~30%). Pricing is shown on the homepage in your local currency.</p>`
+      },
+      {
+        title: "Our Roadmap",
+        excerpt: "Coming soon: browser extensions for Chrome & Firefox, playlist batch downloading, cloud drive export, and AV1/HEVC format support.",
+        content: `<h2>What We're Building Next</h2>
+          <p>Click2Video is actively developed. Here's what's on our public roadmap for the next 12 months:</p>
+          <h3>Near-Term (Q3 2026)</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Browser Extensions</strong> â€” One-click download buttons embedded directly on video pages in Chrome and Firefox. Detect video in the current tab and trigger extraction without copying URLs.</li>
+            <li><strong style="color:#e0e0e0;">Playlist / Channel Batch Download</strong> â€” Submit a YouTube playlist URL, a TikTok profile, or a podcast feed and queue all videos at once.</li>
+            <li><strong style="color:#e0e0e0;">Progress WebSocket</strong> â€” Real-time download progress bars instead of polling, especially useful for long 4K video stitching jobs.</li>
+          </ul>
+          <h3>Mid-Term (Q4 2026)</h3>
+          <ul>
+            <li><strong style="color:#e0e0e0;">Cloud Drive Export</strong> â€” Send your downloads directly to Google Drive or Dropbox without first downloading to your local device.</li>
+            <li><strong style="color:#e0e0e0;">AV1 & HEVC Output</strong> â€” Support for next-gen codec output formats for smaller file sizes at equivalent quality.</li>
+            <li><strong style="color:#e0e0e0;">Mobile PWA</strong> â€” A Progressive Web App optimized for mobile browsers so you can download on the go.</li>
+          </ul>
+          <h3>Long-Term Vision</h3>
+          <ul>
+            <li>Decentralized archive nodes to accelerate downloads of frequently requested public content</li>
+            <li>Self-hosted deployment option for privacy-critical users</li>
+            <li>AI-powered chapter detection and automatic subtitle generation</li>
+          </ul>`
+      },
+      {
+        title: "Contact & Community",
+        excerpt: "Reach us at support@click2video.com. Follow our changelog for updates, and join our Discord for community discussion.",
+        content: `<h2>Contact &amp; Community</h2>
+          <p>We're a small team that genuinely cares about our users. Here's how to reach us or stay connected:</p>
+          <h3>Direct Contact</h3>
+          <ul>
+            <li><strong style="color:#00d4ff;">General Support:</strong> support@click2video.com</li>
+            <li><strong style="color:#00d4ff;">Billing:</strong> billing@click2video.com</li>
+            <li><strong style="color:#00d4ff;">Developer / API:</strong> api@click2video.com</li>
+            <li><strong style="color:#00d4ff;">Security:</strong> security@click2video.com</li>
+            <li><strong style="color:#00d4ff;">Legal / DMCA:</strong> legal@click2video.com</li>
+          </ul>
+          <h3>Stay Updated</h3>
+          <ul>
+            <li>Read our public changelog at click2video.com/changelog for every update and bug fix</li>
+            <li>Check our status page at status.click2video.com for real-time platform health</li>
+            <li>Follow us on Twitter/X @click2video for announcements and feature previews</li>
+          </ul>
+          <p>We read every support email personally. If you have an idea for a new feature, a platform we should support, or a workflow we could improve, drop us a line. The best features in Click2Video came directly from user suggestions.</p>`
+      }
+    ];
+
+    const grid = document.getElementById('sectionsGrid');
+    const modal = document.getElementById('articleModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.getElementById('closeModal');
+
+    sections.forEach((s, i) => {
+      const card = document.createElement('article');
+      card.className = 'blog-card';
+      card.innerHTML = `<h2 class="card-title">${s.title}</h2><p class="card-excerpt">${s.excerpt}</p><button class="read-btn" onclick="openSection(${i})">Read More</button>`;
+      grid.appendChild(card);
+    });
+
+    window.openSection = (i) => {
+      modalBody.innerHTML = sections[i].content;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+    closeBtn.onclick = () => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; };
+    window.onclick = (e) => { if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; } };
+  </script>
+</body>
+</html>

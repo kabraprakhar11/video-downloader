@@ -3342,3 +3342,58 @@ size=    5368kB time=00:01:31.94 bitrate= 478.2kbits/s speed=9.15x    [https @ 
 
 2026-06-26 17:11:07 [error]: ReferenceError: userRecord is not defined
     at seedAdminUser (D:\video downloader\server\services\firebase.js:83:32)
+2026-06-26 18:29:25 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:25 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:25 [error]: POST /create-guest-order 500 196ms — ::1
+2026-06-26 18:29:28 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:28 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:28 [error]: POST /create-guest-order 500 173ms — ::1
+2026-06-26 18:29:28 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:28 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:28 [error]: POST /create-guest-order 500 57ms — ::1
+2026-06-26 18:29:39 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:39 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:39 [error]: POST /create-guest-order 500 172ms — ::1
+2026-06-26 18:29:41 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:41 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:41 [error]: POST /create-guest-order 500 87ms — ::1
+2026-06-26 18:29:41 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:41 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:41 [error]: POST /create-guest-order 500 63ms — ::1
+2026-06-26 18:29:41 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:41 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:41 [error]: POST /create-guest-order 500 66ms — ::1
+2026-06-26 18:29:51 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:51 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:51 [error]: POST /create-guest-order 500 165ms — ::1
+2026-06-26 18:33:24 [error]: Failed to create Razorpay order:
+2026-06-26 18:33:24 [error]: Error: Authentication failed
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:33:24 [error]: POST /create-guest-order 500 373ms — ::1
+2026-06-29 19:20:25 [error]: [yt-dlp] Binary check failed code=1

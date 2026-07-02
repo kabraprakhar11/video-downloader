@@ -130,6 +130,7 @@ router.get('/stream/:jobId', (req, res) => {
     '-f', session.formatId,
     '--no-playlist',
     '--no-warnings',
+    '--extractor-args', 'youtube:player_client=android,web',
     '--merge-output-format', 'mp4',
     '-o', targetPath
   ];
@@ -144,6 +145,46 @@ router.get('/stream/:jobId', (req, res) => {
   }
 
   args.push(session.pageUrl);
+
+  const isBypassed = session.pageUrl.includes('bilibili.com') || session.pageUrl.includes('b23.tv');
+
+  if (isBypassed && session.videoUrl) {
+    logger.info(`[Stream] Native Node proxy download starting: ${session.displayName}`);
+    
+    const options = {
+      headers: session.headers || {}
+    };
+    
+    // Add default User-Agent if not present
+    if (!options.headers['User-Agent']) {
+      options.headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+    }
+
+    const reqDownload = https.get(session.videoUrl, options, (resDownload) => {
+      if (resDownload.statusCode !== 200 && resDownload.statusCode !== 206) {
+        logger.error(`[Stream] Native proxy failed with status: ${resDownload.statusCode}`);
+        if (!res.headersSent) {
+          return res.status(502).send(`Platform download error. Received status ${resDownload.statusCode}`);
+        }
+        return res.end();
+      }
+      
+      const size = resDownload.headers['content-length'];
+      setDownloadHeaders(size);
+      resDownload.pipe(res);
+    });
+    
+    reqDownload.on('error', (err) => {
+      logger.error(`[Stream] Native proxy error: ${err.message}`);
+      if (!res.headersSent) res.status(500).send('Proxy error');
+      res.end();
+    });
+    
+    req.on('close', () => {
+      reqDownload.destroy();
+    });
+    return;
+  }
 
   const proc = spawn('yt-dlp', args);
   let stderr = '';

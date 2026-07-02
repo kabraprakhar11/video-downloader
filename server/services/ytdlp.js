@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const logger = require('../utils/logger');
 const ALLOWED_EXTRACTORS = require('../utils/allowedExtractors');
+const proxyManager = require('./proxy-manager');
 
 const YTDLP_BIN = 'yt-dlp';
 
@@ -36,25 +37,59 @@ function formatDuration(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`;
 }
 
+// ─── Write Instagram cookies from env var to temp file ───────────────────────
+let _instaCookiesPath = null;
+function getInstagramCookiesPath() {
+  // Support INSTAGRAM_COOKIES env var (Netscape cookie format string)
+  if (process.env.INSTAGRAM_COOKIES && !_instaCookiesPath) {
+    const tmpPath = path.join(__dirname, '../../.instagram_cookies.txt');
+    fs.writeFileSync(tmpPath, process.env.INSTAGRAM_COOKIES, 'utf8');
+    _instaCookiesPath = tmpPath;
+    logger.info('[cookies] Instagram cookies loaded from INSTAGRAM_COOKIES env var');
+  }
+  // Fallback to cookies.txt if it exists
+  const globalCookies = path.join(__dirname, '../../cookies.txt');
+  if (fs.existsSync(globalCookies)) return globalCookies;
+  return _instaCookiesPath;
+}
+
 // ─── yt-dlp args builder ──────────────────────────────────────────────────────
-function buildYtdlpArgs(url) {
+function buildYtdlpArgs(url, proxyUrl = null) {
+  const isInstagram = /instagram\.com|instagr\.am/i.test(url);
+
   const args = [
     '--dump-json',
     '--no-playlist',
     '--no-warnings',
-    '--impersonate', 'chrome',
+    '--age-limit', '99',         // bypass age-gate checks
     '--socket-timeout', '30',
     '--retries', '3',
   ];
 
-  // Only inject cookies if they exist
-  const cookiesPath = path.join(__dirname, '../../cookies.txt');
-  if (fs.existsSync(cookiesPath)) {
+  if (isInstagram) {
+    // Instagram-specific: try multiple API endpoints, no impersonation conflicts
+    args.push(
+      '--extractor-args', 'instagram:api=1',
+      '--add-header', 'User-Agent:Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+      '--add-header', 'Accept-Language:en-US,en;q=0.9',
+    );
+  } else {
+    args.push(
+      '--impersonate', 'chrome',
+      '--extractor-args', 'youtube:player_client=android,web',
+    );
+  }
+
+  // Inject cookies (global cookies.txt or Instagram-specific env cookies)
+  const cookiesPath = getInstagramCookiesPath();
+  if (cookiesPath) {
     args.push('--cookies', cookiesPath);
   }
 
-  // Inject Proxy to bypass datacenter IP bans (e.g. Reddit 429 Too Many Requests)
-  if (process.env.YTDLP_PROXY) {
+  // Proxy
+  if (proxyUrl) {
+    args.push('--proxy', proxyUrl);
+  } else if (process.env.YTDLP_PROXY) {
     args.push('--proxy', process.env.YTDLP_PROXY);
   }
 
@@ -228,10 +263,10 @@ function parseFormats(raw, url) {
 }
 
 // ─── Run yt-dlp ───────────────────────────────────────────────────────────────
-function runYtdlp(url) {
+function runYtdlp(url, proxyUrl = null) {
   return new Promise((resolve, reject) => {
-    const args = buildYtdlpArgs(url);
-    logger.info(`[yt-dlp] Running extraction for: ${url}`);
+    const args = buildYtdlpArgs(url, proxyUrl);
+    logger.info(`[yt-dlp] Running extraction for: ${url} ${proxyUrl ? '(using proxy)' : ''}`);
     const proc = spawn(YTDLP_BIN, args);
     let stdout = '', stderr = '';
     proc.stdout.on('data', c => { stdout += c; });
@@ -256,41 +291,200 @@ const extractionCache = new Map();
 const CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes
 
 // ─── Main extraction function ─────────────────────────────────────────────────
+async function getBilibiliVideo(url) {
+  let bvid = '';
+  const match = url.match(/bilibili\.com\/video\/(BV[a-zA-Z0-9]+)/i);
+  if (match) {
+    bvid = match[1];
+  } else if (url.includes('b23.tv')) {
+    const res = await fetch(url, { redirect: 'manual' });
+    const location = res.headers.get('location');
+    if (location) {
+      const m = location.match(/bilibili\.com\/video\/(BV[a-zA-Z0-9]+)/i);
+      if (m) bvid = m[1];
+    }
+  }
+
+  if (!bvid) throw new Error('Could not find Bilibili BVID from URL.');
+
+  const viewRes = await fetch(`https://api.bilibili.com/x/web-interface/view?bvid=${bvid}`);
+  const viewData = await viewRes.json();
+  if (viewData.code !== 0) throw new Error(`Bilibili API error: ${viewData.message}`);
+  
+  const cid = viewData.data.cid;
+  const title = viewData.data.title;
+  const thumbnail = viewData.data.pic;
+  const duration = viewData.data.duration;
+  const uploader = viewData.data.owner ? viewData.data.owner.name : 'Bilibili';
+
+  const playRes = await fetch(`https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=80&otype=json`, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Referer': 'https://www.bilibili.com/'
+    }
+  });
+  const playData = await playRes.json();
+  if (playData.code !== 0) throw new Error(`Bilibili PlayURL error: ${playData.message}`);
+  
+  const videoUrl = playData.data.durl[0].url;
+  const quality = playData.data.quality === 80 ? '1080p' : (playData.data.quality === 64 ? '720p' : (playData.data.quality === 32 ? '480p' : '360p'));
+  const filesize = playData.data.durl[0].size;
+
+  return {
+    title: title,
+    thumbnail: thumbnail,
+    duration: duration,
+    durationFormatted: formatDuration(duration),
+    extractor: 'bilibili',
+    uploader: uploader,
+    viewCount: viewData.data.stat ? viewData.data.stat.view : null,
+    description: (viewData.data.desc || '').slice(0, 300),
+    webpage_url: url,
+    formats: {
+      combined: [{
+        formatId: 'default',
+        format_id: 'default',
+        ext: 'mp4',
+        resolution: quality,
+        filesize: filesize,
+        filesizeHuman: humanFilesize(filesize),
+        vcodec: 'h264',
+        acodec: 'aac',
+        fps: null,
+        abr: null,
+        tbr: null,
+        height: parseInt(quality.replace('p', '')) || 480,
+        width: null,
+        qualityTier: getQualityTier(null, parseInt(quality.replace('p', '')) || 480),
+        isPremiumOnly: false,
+        type: 'combined',
+        url: videoUrl,
+        headers: { 'Referer': 'https://www.bilibili.com/' }
+      }],
+      videoOnly: [],
+      audioOnly: []
+    },
+    bestAudio: null,
+    hasHDFormats: false
+  };
+}
+
 async function extractInfo(url) {
   logger.info(`[extract] Starting for: ${url}`);
 
   const urlLower = url.toLowerCase();
 
-
-
+  if (urlLower.includes('bilibili.com') || urlLower.includes('b23.tv')) {
+    try {
+      return await getBilibiliVideo(url);
+    } catch (err) {
+      logger.warn(`[getBilibiliVideo] Custom extractor failed: ${err.message}. Falling back to yt-dlp.`);
+    }
+  }
   let raw;
   try {
     raw = await runYtdlp(url);
-    extractionCache.set(urlLower, { data: raw, timestamp: Date.now() });
-    
-    // Cleanup old cache entries
-    for (const [key, val] of extractionCache.entries()) {
-      if (Date.now() - val.timestamp > CACHE_TTL_MS) extractionCache.delete(key);
-    }
   } catch (err) {
     const stderr = err.stderr || '';
-    if (stderr.includes('Unsupported URL')) {
-      throw new Error('This website is not supported. Please try a different platform.');
+    const isInstagram = /instagram\.com|instagr\.am/i.test(url);
+    
+    // ── Instagram-specific handling ──────────────────────────────────────────
+    if (isInstagram) {
+      const needsAuth = stderr.includes('empty media response') ||
+                        stderr.includes('certain audiences') ||
+                        stderr.includes('login') ||
+                        stderr.includes('Login required') ||
+                        stderr.includes('age') ||
+                        stderr.includes('checkpoint');
+
+      if (needsAuth) {
+        // Try with proxy first (helps with geo-restrictions)
+        logger.warn(`[extract] Instagram auth/age issue. Trying proxy fallover...`);
+        const proxies = await proxyManager.getProxyBatch();
+        let proxySuccess = false;
+        for (let i = 0; i < proxies.length; i++) {
+          try {
+            raw = await runYtdlp(url, proxies[i]);
+            proxySuccess = true;
+            break;
+          } catch (proxyErr) {
+            logger.warn(`[extract] Instagram proxy ${i + 1} failed: ${(proxyErr.stderr || '').slice(0, 80)}`);
+          }
+        }
+        if (!proxySuccess) {
+          if (stderr.includes('certain audiences') || stderr.includes('age')) {
+            throw new Error('This Instagram post is age-restricted (18+). To download it, add your Instagram account cookies to the server via the INSTAGRAM_COOKIES environment variable.');
+          }
+          throw new Error('Instagram requires a logged-in session to access this content. The post may be from a private account, age-restricted, or recently made login-only by Instagram.');
+        }
+      } else {
+        // Non-auth Instagram error
+        throw new Error(`Could not extract Instagram video. ${stderr.slice(0, 150)}`);
+      }
     }
-    if (stderr.includes('Video unavailable') || stderr.includes('Private video')) {
-      throw new Error('This video is private or unavailable.');
+    // ── Standard proxy failover for other platforms ─────────────────────────
+    else {
+      const needsProxy = stderr.includes('HTTP Error 429') || 
+                         stderr.includes('Bot detection') || 
+                         stderr.includes('Sign in') || 
+                         stderr.includes('HTTP Error 403') ||
+                         stderr.includes('HTTP Error 401');
+      
+      if (needsProxy) {
+        logger.warn(`[extract] Rate limit / block detected for ${url}. Attempting proxy failover...`);
+        const proxies = await proxyManager.getProxyBatch();
+        
+        let proxySuccess = false;
+        for (let i = 0; i < proxies.length; i++) {
+          try {
+            logger.info(`[extract] Trying proxy ${i + 1}/${proxies.length}...`);
+            raw = await runYtdlp(url, proxies[i]);
+            proxySuccess = true;
+            break;
+          } catch (proxyErr) {
+            logger.warn(`[extract] Proxy ${i + 1} failed: ${(proxyErr.stderr || '').slice(0, 80)}`);
+          }
+        }
+        
+        if (!proxySuccess) {
+          throw new Error('Access denied by the platform, and all proxy fallback attempts failed. The video may be private, age-restricted, or actively blocking datacenter IPs.');
+        }
+      } else {
+        // Standard Errors (not fixable by proxy)
+        if (stderr.includes('Unsupported URL')) {
+          throw new Error('This website is not supported. Please try a different platform.');
+        }
+        if (stderr.includes('Video unavailable') || stderr.includes('Private video')) {
+          throw new Error('This video is private or unavailable.');
+        }
+        if (stderr.includes('HTTP Error 404')) {
+          throw new Error('Video not found. The link may be broken or the video may have been deleted.');
+        }
+        throw new Error(`Could not extract video information. ${stderr.slice(0, 150)}`);
+      }
     }
-    if (stderr.includes('HTTP Error 403') || stderr.includes('HTTP Error 401')) {
-      throw new Error('Access denied by the platform. The video may be private or age-restricted.');
-    }
-    if (stderr.includes('HTTP Error 404')) {
-      throw new Error('Video not found. The link may be broken or the video may have been deleted.');
-    }
-    throw new Error(`Could not extract video information. ${stderr.slice(0, 150)}`);
   }
 
-  const extractor = raw.extractor_key || raw.extractor;
-  if (extractor && !ALLOWED_EXTRACTORS.has(extractor.toLowerCase())) {
+  // Cache successful extraction
+  extractionCache.set(urlLower, { data: raw, timestamp: Date.now() });
+  
+  // Cleanup old cache entries
+  for (const [key, val] of extractionCache.entries()) {
+    if (Date.now() - val.timestamp > CACHE_TTL_MS) extractionCache.delete(key);
+  }
+
+  const extractor = (raw.extractor_key || raw.extractor || '').toLowerCase();
+  
+  let isAllowed = ALLOWED_EXTRACTORS.has(extractor);
+  if (!isAllowed && extractor === 'generic') {
+    const uLower = url.toLowerCase();
+    if (uLower.includes('pinterest.com') || uLower.includes('pin.it') || uLower.includes('snapchat.com')) {
+      isAllowed = true;
+      logger.info(`[extract] Allowed generic extractor for known domain: ${url}`);
+    }
+  }
+
+  if (!isAllowed) {
     throw new Error('This website is not supported. Please try a different platform.');
   }
 
@@ -300,6 +494,17 @@ async function extractInfo(url) {
 // ─── Re-extract a fresh direct URL for a specific format ─────────────────────
 async function extractFormatUrl(pageUrl, formatId) {
   const urlLower = pageUrl.toLowerCase();
+  
+  if (urlLower.includes('bilibili.com') || urlLower.includes('b23.tv')) {
+    const biliData = await getBilibiliVideo(pageUrl);
+    return {
+      videoUrl: biliData.formats.combined[0].url,
+      audioUrl: null,
+      isMerge: false,
+      headers: biliData.formats.combined[0].headers || null
+    };
+  }
+
   let raw;
   
   const cached = extractionCache.get(urlLower);
@@ -310,14 +515,41 @@ async function extractFormatUrl(pageUrl, formatId) {
     logger.info(`[extractFormatUrl] Cache miss/expired, re-extracting: ${pageUrl}`);
     try {
       raw = await runYtdlp(pageUrl);
-      extractionCache.set(urlLower, { data: raw, timestamp: Date.now() });
     } catch (err) {
-      throw new Error(`Re-extraction failed: ${(err.stderr || '').slice(0, 150)}`);
+      const stderr = err.stderr || '';
+      const needsProxy = stderr.includes('HTTP Error 429') || stderr.includes('Bot detection') || stderr.includes('Sign in') || stderr.includes('HTTP Error 403') || stderr.includes('HTTP Error 401');
+      
+      if (needsProxy) {
+        logger.warn(`[extractFormatUrl] Block detected for ${pageUrl}. Attempting proxy failover...`);
+        const proxies = await proxyManager.getProxyBatch();
+        let proxySuccess = false;
+        for (let i = 0; i < proxies.length; i++) {
+          try {
+            raw = await runYtdlp(pageUrl, proxies[i]);
+            proxySuccess = true;
+            break;
+          } catch (proxyErr) {}
+        }
+        if (!proxySuccess) throw new Error('Re-extraction failed: IP blocked and all proxies exhausted.');
+      } else {
+        throw new Error(`Re-extraction failed: ${stderr.slice(0, 150)}`);
+      }
+    }
+    extractionCache.set(urlLower, { data: raw, timestamp: Date.now() });
+  }
+
+  const extractor = (raw.extractor_key || raw.extractor || '').toLowerCase();
+  
+  let isAllowed = ALLOWED_EXTRACTORS.has(extractor);
+  if (!isAllowed && extractor === 'generic') {
+    const uLower = pageUrl.toLowerCase();
+    if (uLower.includes('pinterest.com') || uLower.includes('pin.it') || uLower.includes('snapchat.com')) {
+      isAllowed = true;
+      logger.info(`[extractFormatUrl] Allowed generic extractor for known domain: ${pageUrl}`);
     }
   }
 
-  const extractor = raw.extractor_key || raw.extractor;
-  if (extractor && !ALLOWED_EXTRACTORS.has(extractor.toLowerCase())) {
+  if (!isAllowed) {
     throw new Error('This website is not supported. Please try a different platform.');
   }
 

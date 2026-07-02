@@ -1,244 +1,238 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Adsterra Popunder -->
+  <script src="https://pl30157873.effectivecpmnetwork.com/19/c3/1d/19c31d208d63a44651af3265a25b6468.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms & Conditions — Click2Video</title>
-  <meta name="description" content="Terms and Conditions for Click2Video — Universal Video Downloader." />
+  <title>Terms &amp; Conditions â€” Click2Video</title>
+  <meta name="description" content="Read the Terms and Conditions governing your use of Click2Video, the universal media downloader." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css?t=20260626_1946" />
   <style>
-    /* Legal page specific overrides */
-    .legal-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 48px 24px 100px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .legal-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 40px;
-      transition: color 0.2s;
-      font-family: 'Exo 2', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
+    .legal-wrapper { max-width: 1000px; margin: 0 auto; padding: 48px 24px 100px; position: relative; z-index: 1; }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; transition: color 0.2s; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; }
     .legal-back:hover { color: var(--cyan); }
     .legal-back svg { transition: transform 0.2s; }
     .legal-back:hover svg { transform: translateX(-4px); }
-
-    .legal-header {
-      margin-bottom: 48px;
-      text-align: center;
-    }
-
-    .legal-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0,212,255,0.08);
-      border: 1px solid rgba(0,212,255,0.2);
-      border-radius: 100px;
-      padding: 5px 16px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--cyan);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      font-family: 'Exo 2', sans-serif;
-    }
-
-    .legal-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.02em;
-      margin-bottom: 10px;
-    }
-
-    .legal-meta {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    .legal-body {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .legal-section {
-      background: rgba(255,255,255,0.03);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 24px 28px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .legal-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px; height: 100%;
-      background: linear-gradient(180deg, #00d4ff, #b300ff);
-      border-radius: 0 0 0 0;
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-
-    .legal-section:hover {
-      border-color: rgba(0,212,255,0.2);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    }
-    .legal-section:hover::before { opacity: 1; }
-
-    .legal-section h3 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--cyan);
-      margin-bottom: 12px;
-      letter-spacing: 0.02em;
-    }
-
-    .legal-section p {
-      font-size: 0.9rem;
-      color: var(--text-sec);
-      line-height: 1.8;
-      margin-bottom: 10px;
-    }
-    .legal-section p:last-child { margin-bottom: 0; }
-
-    .legal-section ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .legal-section ul li {
-      font-size: 0.88rem;
-      color: var(--text-sec);
-      line-height: 1.7;
-      padding-left: 20px;
-      position: relative;
-    }
-    .legal-section ul li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--cyan);
-      font-weight: 700;
-    }
-
-    @media (max-width: 640px) {
-      .legal-wrapper { padding: 32px 16px 80px; }
-      .legal-section { padding: 18px 18px; }
-      .legal-title { font-size: 1.6rem; }
-    }
+    .legal-header { margin-bottom: 48px; text-align: center; }
+    .legal-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 100px; padding: 5px 16px; font-size: 0.75rem; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: 'Exo 2', sans-serif; }
+    .legal-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .legal-meta { font-size: 0.82rem; color: var(--text-muted); font-family: 'Exo 2', sans-serif; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .blog-card { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
+    .blog-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #00d4ff, #b300ff); opacity: 0; transition: opacity 0.2s; }
+    .blog-card:hover { border-color: rgba(0,212,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transform: translateY(-4px); }
+    .blog-card:hover::before { opacity: 1; }
+    .card-title { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: #fff; margin-bottom: 12px; line-height: 1.4; }
+    .card-excerpt { color: var(--text-sec); font-size: 0.88rem; flex-grow: 1; margin-bottom: 20px; line-height: 1.6; }
+    .read-btn { align-self: flex-start; background: transparent; color: var(--cyan); border: 1px solid rgba(0,212,255,0.4); border-radius: 8px; padding: 8px 18px; font-family: 'Orbitron', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; cursor: pointer; transition: all 0.2s ease; }
+    .read-btn:hover { background: rgba(0,212,255,0.1); border-color: var(--cyan); box-shadow: 0 0 15px rgba(0,212,255,0.2); }
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(6,7,10,0.85); backdrop-filter: blur(12px); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-card { background: rgba(10,11,18,0.95); backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; max-width: 780px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 44px; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+    .close-modal { position: absolute; top: 18px; right: 22px; background: transparent; border: none; color: var(--text-muted); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
+    .close-modal:hover { color: var(--cyan); }
+    .modal-body h2 { font-family: 'Orbitron', sans-serif; margin-bottom: 22px; font-size: 1.6rem; background: linear-gradient(135deg, #00d4ff, #b300ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .modal-body p { margin-bottom: 18px; color: var(--text-sec); font-size: 0.95rem; line-height: 1.85; font-family: 'Exo 2', sans-serif; }
+    .modal-body ul { margin-bottom: 18px; padding-left: 0; list-style: none; }
+    .modal-body li { margin-bottom: 10px; font-size: 0.92rem; line-height: 1.7; color: var(--text-sec); position: relative; padding-left: 22px; font-family: 'Exo 2', sans-serif; }
+    .modal-body li::before { content: 'â€º'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; font-size: 1.1rem; }
+    .modal-body h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; color: rgba(0,212,255,0.8); margin: 24px 0 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* -- Adsterra Ad Containers -- */
+    .ad-wrap { display: flex; justify-content: center; align-items: center; width: 100%; position: relative; z-index: 1; margin: 24px 0; overflow: hidden; }
+    .ad-label { font-size: 0.65rem; color: rgba(255,255,255,0.2); text-align: center; display: block; margin-bottom: 4px; font-family: Exo 2, sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ad-sticky-mobile { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: rgba(6,7,10,0.95); padding: 6px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    @media (max-width: 768px) { .ad-sticky-mobile { display: block; } }
+    @media (max-width: 640px) { .legal-wrapper { padding: 32px 16px 80px; } .modal-card { padding: 24px; } }
   </style>
 </head>
 <body>
-
-<!-- Aurora Background -->
-<div class="aurora" aria-hidden="true">
-  <div class="aurora-orb aurora-orb--1"></div>
-  <div class="aurora-orb aurora-orb--2"></div>
-  <div class="aurora-orb aurora-orb--3"></div>
-  <div class="grid-overlay"></div>
-</div>
-
-<div class="legal-wrapper">
-
-  <a href="/" class="legal-back">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-    Back to Home
-  </a>
-
-  <div class="legal-header">
-    <div class="legal-badge">📄 Legal Document</div>
-    <h1 class="legal-title">Terms & Conditions</h1>
-    <p class="legal-meta">Last updated: June 2026</p>
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-orb aurora-orb--1"></div>
+    <div class="aurora-orb aurora-orb--2"></div>
+    <div class="aurora-orb aurora-orb--3"></div>
+    <div class="grid-overlay"></div>
   </div>
 
-  <div class="legal-body">
-    <div class="legal-section">
-      <h3>1. Acceptance of Terms</h3>
-      <p>By accessing or using Click2Video (the "Service"), you confirm that you are at least 13 years of age and agree to be bound by these Terms & Conditions ("Terms"). If you do not agree, you must discontinue use of the Service immediately.</p>
+  <div class="legal-wrapper">
+    <a href="/" class="legal-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Home
+    </a>
+    <header class="legal-header">
+      <div class="legal-badge">ðŸ”’ Legal Document</div>
+      <h1 class="legal-title">Terms &amp; Conditions</h1>
+      <p class="legal-meta">Last updated: June 2026 &nbsp;Â·&nbsp; Effective immediately upon use</p>
+    </header>
+      <!-- Adsterra Native Banner -->
+  <div class="ad-wrap" style="max-width:1000px;margin:24px auto;padding:0 24px;" aria-label="Advertisement">
+    <div style="width:100%;">
+      <span class="ad-label">Advertisement</span>
+      <script async="async" data-cfasync="false" src="https://pl30157874.effectivecpmnetwork.com/c9bf9833eeaff4f31771822536040402e0/invoke.js"></script>
+      <div id="container-c9bf9833eeaff4f31771822536040402e0"></div>
     </div>
+  </div>
+  <div class="blog-grid" id="sectionsGrid"></div>
+  </div>
 
-    <div class="legal-section">
-      <h3>2. Description of Service</h3>
-      <p>Click2Video provides a technology platform that facilitates the retrieval and downloading of publicly accessible media content from supported third-party platforms. Click2Video does not host, store, upload, or distribute any media content. All content originates from and remains owned by its respective rights holders.</p>
-    </div>
-
-    <div class="legal-section">
-      <h3>3. User Responsibilities</h3>
-      <p>You acknowledge and agree that:</p>
-      <ul>
-        <li>You will only download content for which you hold the necessary rights or permissions, or that is otherwise freely available under applicable law (e.g., content in the public domain or licensed under Creative Commons).</li>
-        <li>You will not use the Service to infringe upon any intellectual property rights, including copyrights, trademarks, or related rights of any third party.</li>
-        <li>You will comply with the terms of service of any platform from which you retrieve content.</li>
-        <li>You are solely responsible for all content you download and for any consequences arising from its use.</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h3>4. Prohibited Uses</h3>
-      <p>You agree not to use the Service to: (a) download, reproduce, or redistribute copyrighted content without authorisation from the rights holder; (b) circumvent or attempt to circumvent any digital rights management (DRM) or other technological protection measures; (c) engage in any activity that violates applicable local, national, or international law; or (d) use automated means, bots, scrapers, or scripts to access the Service in a volume or frequency that places an unreasonable burden on our infrastructure.</p>
-    </div>
-
-    <div class="legal-section">
-      <h3>5. Premium Subscription</h3>
-      <p>Premium plans are billed on a recurring monthly basis. Payments are processed securely via Razorpay. Subscriptions may be cancelled at any time; cancellation takes effect at the end of the then-current billing period. Click2Video reserves the right to modify pricing with 30 days' prior notice.</p>
-    </div>
-
-    <div class="legal-section">
-      <h3>6. Disclaimer of Warranties</h3>
-      <p>The Service is provided on an "as is" and "as available" basis without any warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-    </div>
-
-    <div class="legal-section">
-      <h3>7. Limitation of Liability</h3>
-      <p>To the fullest extent permitted by law, Click2Video and its affiliates, officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of the Service.</p>
-    </div>
-
-    <div class="legal-section">
-      <h3>8. Changes to Terms</h3>
-      <p>Click2Video reserves the right to amend these Terms at any time. Continued use of the Service following the posting of revised Terms constitutes your acceptance of the changes.</p>
-    </div>
-
-    <div class="legal-section">
-      <h3>9. Governing Law</h3>
-      <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Click2Video operates, without regard to its conflict of law provisions.</p>
-    </div>
-
-    <div class="legal-section">
-      <h3>10. Contact</h3>
-      <p>For any queries regarding these Terms, please contact us through the Click2Video website.</p>
+  <div class="modal-overlay" id="articleModal">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal" aria-label="Close">Ã—</button>
+      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 
-</div>
+  <script>
+    const sections = [
+      {
+        title: "1. Acceptance of Terms",
+        excerpt: "By using Click2Video you accept these Terms in full. Continued use after any update constitutes acceptance of the revised Terms.",
+        content: `<h2>1. Acceptance of Terms</h2>
+          <p>By accessing or using Click2Video â€” including visiting the website, submitting a URL for processing, installing any browser extension, or consuming the Click2Video API â€” you confirm that you have read, understood, and agree to be bound by these Terms and Conditions in their entirety. If you do not agree with any provision herein, you must cease use of the platform immediately.</p>
+          <p>These Terms form a legally binding agreement between you (the "User") and Click2Video ("we," "us," or "our"). They govern all interactions with our media extraction service, frontend interface, backend conversion infrastructure, and any third-party integrations we provide or enable.</p>
+          <p>We reserve the right to revise these Terms at any time. When we do, we will update the "Last updated" date shown at the top of this page. Your continued use of the service following publication of changes constitutes your acceptance of those changes. It is your responsibility to review this document periodically.</p>
+          <h3>Key Points</h3>
+          <ul>
+            <li>Using any part of Click2Video means you accept these Terms without reservation.</li>
+            <li>These Terms supersede any prior informal or verbal understanding.</li>
+            <li>If you are using the platform on behalf of an organization, you represent that you have authority to bind that organization.</li>
+            <li>Users under the applicable age of digital consent in their jurisdiction must not use the service.</li>
+          </ul>`
+      },
+      {
+        title: "2. Description of Service",
+        excerpt: "Click2Video is a server-side media extraction tool that converts public video URLs into downloadable files using cloud transcoding.",
+        content: `<h2>2. Description of Service</h2>
+          <p>Click2Video is a cloud-hosted media extraction and conversion platform. When you submit a publicly accessible URL, our backend workers fetch the media stream from the originating CDN or server, transcode or stitch the segments as needed (using technologies such as FFmpeg and yt-dlp), and return a download link to your browser. We support a wide array of container formats including MP4, WebM, MKV, MP3, M4A, and AAC.</p>
+          <p>Our service acts as a neutral technical intermediary. We do not host, store, index, or cache the underlying media files on a long-term basis. All intermediate processing is ephemeral â€” once a download has been delivered to your device, any temporary server-side segments are purged automatically.</p>
+          <p>We provide both a free tier (subject to rate limits and queue priority) and a Premium tier (with enhanced throughput, 4K/8K stitching support, multi-audio-track merging, and prioritized queue access). Service availability is offered on an "as-is, as-available" basis and may be temporarily disrupted due to third-party CDN changes, network outages, or planned maintenance.</p>
+          <h3>What We Support</h3>
+          <ul>
+            <li>Direct progressive video downloads (MP4, WebM, AVI)</li>
+            <li>HLS (.m3u8) adaptive stream stitching</li>
+            <li>MPEG-DASH manifest extraction and muxing</li>
+            <li>Audio-only extraction (MP3, AAC, FLAC, M4A)</li>
+            <li>Subtitle track extraction (SRT, VTT, ASS)</li>
+          </ul>`
+      },
+      {
+        title: "3. User Responsibilities",
+        excerpt: "You are solely responsible for ensuring you have the legal right to download any content you submit to Click2Video.",
+        content: `<h2>3. User Responsibilities</h2>
+          <p>You bear sole and absolute responsibility for each URL you submit and each file you download using Click2Video. Before downloading any media, you must satisfy yourself that you hold an appropriate legal right to do so â€” whether through copyright ownership, an applicable license, a platform-granted right, or a valid fair-use or fair-dealing exemption under the laws of your jurisdiction.</p>
+          <p>You agree that you will not use Click2Video to: circumvent Digital Rights Management (DRM) technology; download content that is behind a paywall without authorization; scrape or bulk-harvest media at scale for commercial redistribution; or violate the Terms of Service of any third-party platform whose content you are downloading.</p>
+          <p>You must not use our service to download and then redistribute copyrighted music, films, television broadcasts, or any other commercially licensed content without authorization from the rights holder. Click2Video is intended for personal archiving, offline access, educational study, and research â€” not for piracy or unlicensed commercial distribution.</p>
+          <h3>Prohibited Actions</h3>
+          <ul>
+            <li>Bypassing platform authentication or DRM to access protected content</li>
+            <li>Using automated scripts to submit thousands of URLs without a valid API key</li>
+            <li>Re-uploading downloaded commercial content to competing platforms</li>
+            <li>Attempting to stress-test or DDoS our conversion nodes</li>
+            <li>Impersonating other users or submitting fraudulent payment data</li>
+          </ul>`
+      },
+      {
+        title: "4. Premium Subscriptions & Fees",
+        excerpt: "Premium plans are billed monthly or annually and unlock 4K stitching, parallel downloads, and priority queue access.",
+        content: `<h2>4. Premium Subscriptions &amp; Fees</h2>
+          <p>Click2Video offers a Premium subscription that unlocks enhanced features including: multi-threaded concurrent downloads, 4K and 8K video stitching, lossless audio track merging, extended file retention windows, and priority placement in the processing queue. Premium subscribers also receive dedicated support with a 4-hour response SLA.</p>
+          <p>Subscription fees are billed on a recurring monthly or annual cycle through our PCI-compliant payment gateway partners (Stripe and Razorpay). All prices are displayed inclusive of applicable taxes where required by law. Subscriptions are pre-paid and, except where mandated by applicable consumer protection statutes, non-refundable.</p>
+          <p>You may cancel your subscription at any time through your account dashboard. Cancellation prevents future billing cycles while preserving your Premium access until the end of your current pre-paid period. We reserve the right to modify pricing with 30 days' advance notice; continued subscription after the effective date of a price change implies your acceptance of the new rates.</p>
+          <h3>Billing Terms</h3>
+          <ul>
+            <li>Payments auto-renew unless cancelled before the billing date</li>
+            <li>Failed payments may result in temporary suspension of Premium features</li>
+            <li>Refunds are granted only where required by law or at our sole discretion</li>
+            <li>Annual subscribers receive a discounted rate compared to the monthly equivalent</li>
+          </ul>`
+      },
+      {
+        title: "5. Intellectual Property",
+        excerpt: "All Click2Video code, branding, UI design, and algorithms are our exclusive intellectual property. You may not copy or reverse-engineer them.",
+        content: `<h2>5. Intellectual Property</h2>
+          <p>The Click2Video brand name, logo, visual design system, website layout, extraction algorithms, transcoding pipeline logic, API schemas, and all original written content are the exclusive intellectual property of Click2Video and are protected under international copyright, trademark, and trade secret law. All rights are reserved unless explicitly granted herein.</p>
+          <p>You are granted a limited, personal, non-exclusive, non-transferable, revocable license to access the Click2Video website and use the service solely for your own lawful purposes as described in these Terms. This license does not permit you to copy, modify, distribute, sell, sublicense, reverse-engineer, decompile, or create derivative works based on any part of the Click2Video platform.</p>
+          <p>Third-party logos, trademarks, and platform names displayed on our site (such as YouTube, Vimeo, TikTok, etc.) are used purely for compatibility identification purposes. They remain the property of their respective owners, and their appearance on our site does not imply any affiliation with or endorsement by those companies.</p>
+          <h3>What You May Not Do</h3>
+          <ul>
+            <li>Scrape or mirror the Click2Video website or its content</li>
+            <li>Republish our original written guides or documentation without attribution</li>
+            <li>Use our brand name or logo in a way that implies endorsement or partnership</li>
+            <li>Decompile or reverse-engineer our extraction algorithms</li>
+          </ul>`
+      },
+      {
+        title: "6. Disclaimer of Warranties",
+        excerpt: "Click2Video is provided as-is. We make no guarantees regarding uptime, extraction success rates, or file format compatibility.",
+        content: `<h2>6. Disclaimer of Warranties</h2>
+          <p>You expressly acknowledge that your use of Click2Video is at your sole risk. The platform, including all conversion workers, extraction modules, and network infrastructure, is provided on an "AS IS" and "AS AVAILABLE" basis. We expressly disclaim all warranties, whether express, implied, statutory, or otherwise, including warranties of merchantability, fitness for a particular purpose, title, and non-infringement.</p>
+          <p>We do not warrant that: (a) the service will be uninterrupted, timely, secure, or error-free; (b) the quality of extracted files will meet your expectations; (c) any particular URL will be successfully processed; or (d) any defects or errors will be corrected. Because we depend on third-party CDNs and streaming platforms that change their infrastructure constantly, some URLs may fail to extract without warning.</p>
+          <p>Click2Video does not inspect, review, or take responsibility for the content of any media file downloaded through our service. The nature, legality, and appropriateness of downloaded content is the sole responsibility of the user who submitted the URL.</p>`
+      },
+      {
+        title: "7. Limitation of Liability",
+        excerpt: "Our maximum liability to you is capped at the fees you paid us in the past 12 months. We are not liable for consequential damages.",
+        content: `<h2>7. Limitation of Liability</h2>
+          <p>To the fullest extent permitted by applicable law, Click2Video, its officers, directors, employees, agents, suppliers, and hosting providers shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages â€” including but not limited to loss of data, loss of profits, loss of goodwill, or costs of procurement of substitute services â€” arising out of or in connection with your use of Click2Video, even if advised of the possibility of such damages.</p>
+          <p>In no event shall our total aggregate liability to you for all claims arising from or related to these Terms or the service exceed the total amount you paid to Click2Video in the twelve (12) months immediately preceding the event giving rise to the claim. If you have not paid any amounts to Click2Video (i.e., you are a free-tier user), our liability is limited to USD $5.00.</p>
+          <p>Some jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, so the above limitation may not apply to you in full. In those jurisdictions, our liability is limited to the maximum extent permitted by law.</p>`
+      },
+      {
+        title: "8. Termination",
+        excerpt: "We may suspend or terminate your access at any time for Terms violations, including abuse of our servers or copyright infringement.",
+        content: `<h2>8. Termination</h2>
+          <p>We reserve the right, at our sole discretion and without prior notice or liability, to suspend or permanently terminate your access to Click2Video at any time. Grounds for termination include, but are not limited to: violation of these Terms; abusive or fraudulent use of our service; attempting to circumvent rate limits or access controls; submitting illegal content for processing; chargebacks or payment fraud; or any action that we determine causes harm to Click2Video, its infrastructure, or other users.</p>
+          <p>Upon termination, your license to use the service ceases immediately. If your account is terminated due to a Terms violation, you forfeit any remaining prepaid subscription time without refund. Any API keys or access tokens issued to you must be destroyed. We may also block your IP address(es) from accessing our servers.</p>
+          <p>You may also terminate your own account at any time through the account dashboard. Upon self-termination, we will delete your personal data in accordance with our Privacy Policy, subject to any legal retention obligations.</p>
+          <h3>Post-Termination</h3>
+          <ul>
+            <li>Provisions regarding IP rights, disclaimers, and liability survive termination</li>
+            <li>We may retain anonymized usage logs for security auditing</li>
+            <li>Terminated accounts cannot be restored within 30 days</li>
+          </ul>`
+      },
+      {
+        title: "9. Governing Law",
+        excerpt: "These Terms are governed by applicable international digital law. Disputes shall be resolved through binding arbitration before formal litigation.",
+        content: `<h2>9. Governing Law &amp; Dispute Resolution</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Click2Video's operating entity is registered, without regard to its conflict of law principles. Any dispute, controversy, or claim arising out of or in connection with these Terms or your use of Click2Video shall first be submitted to good-faith mediation between the parties.</p>
+          <p>If mediation fails to resolve the dispute within 30 days, the dispute shall be submitted to binding arbitration under the rules of a mutually agreed-upon arbitration body. The arbitration shall be conducted in English, and the arbitrator's decision shall be final and binding on both parties. Class action arbitrations are expressly waived â€” disputes must be brought individually.</p>
+          <p>Notwithstanding the above, either party may seek emergency injunctive or other equitable relief from a court of competent jurisdiction to prevent irreparable harm pending resolution of a dispute. If any provision of these Terms is held unenforceable, the remaining provisions shall continue in full force and effect.</p>`
+      },
+      {
+        title: "10. Contact & Legal Notices",
+        excerpt: "For Terms-related questions or legal notices, contact our legal team at legal@click2video.com.",
+        content: `<h2>10. Contact &amp; Legal Notices</h2>
+          <p>If you have any questions, concerns, or feedback about these Terms and Conditions, please contact our legal team directly. We aim to respond to all formal legal inquiries within 5 business days.</p>
+          <p><strong style="color:#00d4ff;">Legal Desk:</strong> legal@click2video.com<br>
+          <strong style="color:#00d4ff;">DMCA / Copyright:</strong> dmca@click2video.com<br>
+          <strong style="color:#00d4ff;">General Support:</strong> support@click2video.com</p>
+          <p>For billing disputes, subscription cancellations, or account issues, please use the Contact Support page for faster routing to the appropriate team. Legal notices sent to support channels may experience delays.</p>
+          <p>These Terms were last reviewed and updated in June 2026. Previous versions are available on request from our legal desk.</p>`
+      }
+    ];
 
+    const grid = document.getElementById('sectionsGrid');
+    const modal = document.getElementById('articleModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.getElementById('closeModal');
+
+    sections.forEach((s, i) => {
+      const card = document.createElement('article');
+      card.className = 'blog-card';
+      card.innerHTML = `<h2 class="card-title">${s.title}</h2><p class="card-excerpt">${s.excerpt}</p><button class="read-btn" onclick="openSection(${i})">Read More</button>`;
+      grid.appendChild(card);
+    });
+
+    window.openSection = (i) => {
+      modalBody.innerHTML = sections[i].content;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+    closeBtn.onclick = () => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; };
+    window.onclick = (e) => { if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; } };
+  </script>
 </body>
 </html>

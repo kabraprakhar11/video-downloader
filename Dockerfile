@@ -14,9 +14,7 @@ RUN apt-get update && apt-get install -y \
 RUN ln -sf /usr/bin/python3 /usr/bin/python
 
 # Install yt-dlp with all extras + PO Token provider (bypasses YouTube bot detection on server IPs)
-RUN pip3 install --break-system-packages \
-    "yt-dlp[default]" \
-    "bgutil-ytdlp-pot-provider"
+RUN pip3 install --break-system-packages -U --pre "yt-dlp[default]" "curl-cffi"
 
 # Print yt-dlp version for build logs
 RUN yt-dlp --version

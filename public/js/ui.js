@@ -119,6 +119,9 @@
   }
 
   function updateNavAuth({ user, tier, usage }) {
+    // Add/remove premium-user class for global ad hiding
+    document.body.classList.toggle('premium-user', tier === 'premium');
+
     const authArea    = document.getElementById('auth-area');
     const userProfile = document.getElementById('user-profile');
     const userName    = document.getElementById('user-name');

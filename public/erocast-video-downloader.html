@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="index, follow" />
+  <script>
+    window.API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+      ? ''
+      : 'https://streamvault-backend-965260774860.us-central1.run.app';
+  </script>
+  <!-- Ad Scripts removed for redesign -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+  <title>Download Erocast Videos - Best Erocast Video Downloader</title>
+  <meta name="description" content="Download videos instantly from Twitter, Reddit, Facebook, Vimeo, and 1000+ platforms. Free up to 720p. Get 4K and lossless audio merge with premium." />
+  <meta name="author" content="Click2Video" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <link rel="canonical" href="https://click2video.com/erocast-video-downloader" />
+  
+  <meta property="og:title" content="Click2Video - Free Universal Video Downloader in HD" />
+  <meta property="og:description" content="Download videos instantly from Twitter, Reddit, Facebook, Vimeo, and 1000+ platforms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://click2video.com/" />
+  <meta property="og:image" content="https://click2video.com/favicon.svg" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Click2Video - Free Universal Video Downloader in HD" />
+  <meta name="twitter:description" content="Download videos instantly from Twitter, Reddit, Facebook, Vimeo, and 1000+ platforms." />
+  <meta name="twitter:image" content="https://click2video.com/favicon.svg" />
+  
+  <link rel="preload" as="style" href="/css/styles.css?t=20260626_1957" />
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Click2Video",
+    "url": "https://click2video.com/",
+    "description": "Download videos instantly from Twitter, Reddit, Facebook, Vimeo, and 1000+ platforms.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD"
+    }
+  }, {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Click2Video",
+    "url": "https://click2video.com/",
+    "logo": "https://click2video.com/favicon.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@click2video.com",
+      "contactType": "customer support"
+    }
+  }]
+  </script>
+
+  <style>
+    .aeo-content { max-width: 800px; margin: 40px auto 80px; padding: 0 16px; position: relative; z-index: 1; }
+    .aeo-card { padding: 32px; text-align: left; }
+    .aeo-title { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 24px; text-align: center; }
+    .aeo-steps { padding-left: 20px; margin-bottom: 40px; font-size: 0.95rem; line-height: 1.7; color: var(--text-sec); }
+    .aeo-steps li { margin-bottom: 16px; padding-left: 8px; }
+    .aeo-steps strong { color: var(--cyan); }
+    .aeo-faq dt { font-size: 1.05rem; color: #fff; margin-bottom: 10px; font-weight: 600; }
+    .aeo-faq dd { font-size: 0.95rem; line-height: 1.6; color: var(--text-sec); margin-left: 0; margin-bottom: 28px; padding-left: 16px; border-left: 2px solid var(--purple); }
+    /* ── Ad Containers ── */
+    body.premium-user .ad-wrap,
+    body.premium-user .side-banner-left,
+    body.premium-user .side-banner-right,
+    body.premium-user .ad-sticky-mobile {
+      display: none !important;
+    }
+    .ad-wrap { display: flex; justify-content: center; align-items: center; width: 100%; position: relative; z-index: 1; margin: 20px 0; overflow: hidden; }
+    .ad-wrap--leaderboard, .ad-wrap--horizontal { min-height: 90px; background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2); border-radius: 8px; margin: 20px auto; max-width: 728px; }
+    .ad-wrap--rect { min-height: 250px; background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2); border-radius: 8px; }
+    .ad-wrap--mobile { min-height: 50px; display: none; }
+    .ad-label { font-size: 0.65rem; color: rgba(255,255,255,0.2); text-align: center; display: block; margin-bottom: 4px; font-family: 'Exo 2', sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ad-sticky-mobile { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: rgba(6,7,10,0.95); padding: 6px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    
+    /* Layout for Side Banners */
+    .page-wrapper { display: flex; justify-content: center; width: 100%; max-width: 1400px; margin: 0 auto; gap: 20px; padding: 0 16px; }
+    .main-content-column { flex: 1; min-width: 0; max-width: 800px; }
+    .side-banner-left, .side-banner-right { width: 160px; height: 600px; position: sticky; top: 80px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(255,255,255,0.05); border: 1px dashed rgba(255,255,255,0.2); border-radius: 8px; color: rgba(255,255,255,0.4); text-align: center; font-size: 0.8rem; }
+    
+    @media (min-width: 769px) {
+      .ad-wrap--mobile { display: none !important; }
+    }
+    @media (max-width: 1100px) {
+      .side-banner-left, .side-banner-right { display: none !important; }
+    }
+    @media (max-width: 768px) {
+      .ad-sticky-mobile { display: block; }
+    }
+
+    /* Video Ad Modal */
+    .video-ad-container { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; }
+    .video-ad-timer { font-size: 2rem; font-weight: bold; margin-bottom: 10px; color: var(--cyan); }
+    .video-ad-label { font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/styles.css?t=20260626_1957" />
+
+  <!-- Structured Data JSON-LD -->
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+<!-- Aurora Background -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-orb aurora-orb--1"></div>
+  <div class="aurora-orb aurora-orb--2"></div>
+  <div class="aurora-orb aurora-orb--3"></div>
+  <div class="aurora-orb aurora-orb--4"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-left-group">
+      <button class="btn-back hidden" id="btn-nav-back" aria-label="Go back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <a href="/" class="nav-logo" id="nav-logo" aria-label="Click2Video Home">
+        <div class="logo-crystal" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <defs>
+              <linearGradient id="lg1" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#b300ff"/>
+                <stop offset="100%" stop-color="#ff006e"/>
+              </linearGradient>
+            </defs>
+            <rect width="30" height="30" rx="8" fill="url(#lg1)"/>
+            <polygon points="11,8 23,15 11,22" fill="white"/>
+          </svg>
+        </div>
+        <span class="logo-text">Click2<span class="logo-accent">Video</span></span>
+      </a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="quota-badge" id="quota-badge" aria-live="polite"></div>
+      <button class="btn btn--premium btn--sm" id="btn-upgrade" aria-label="Upgrade to Premium">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span class="btn-text">Go Premium</span>
+      </button>
+      <div class="auth-area" id="auth-area">
+        <button class="btn btn--glass btn--sm" id="btn-signin" aria-label="Sign in">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="btn-text">Sign In</span>
+        </button>
+      </div>
+      <div class="user-profile hidden" id="user-profile">
+        <div class="user-avatar-wrap">
+          <img class="user-avatar" id="user-avatar" src="" alt="User Profile Avatar" width="32" height="32" />
+          <span class="user-tier-dot" id="user-tier-dot" aria-hidden="true"></span>
+        </div>
+        <span class="user-name" id="user-name"></span>
+        <button class="btn btn--glass btn--sm" id="btn-signout" aria-label="Sign out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <span class="btn-text">Sign Out</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Wrapper with Side Banners -->
+<div class="page-wrapper">
+  <!-- Left Side Banner -->
+  <aside class="side-banner-left" aria-label="Left Advertisement">
+    <span class="ad-label">Advertisement</span>
+    Left Banner Placeholder (160x600)
+  </aside>
+
+  <!-- Main Content Column -->
+  <div class="main-content-column">
+    <!-- Main -->
+    <main class="main" id="main-content">
+
+  <!-- HERO -->
+  <section class="hero" id="view-idle" role="main" aria-label="Video downloader">
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        Download Any<br/>
+        <span class="hero-title-gradient">Video. Instantly.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Twitter, Reddit, Facebook, Vimeo, TikTok &amp; 1000+ more.<br/>
+        Crystal-clear 4K downloads with lossless audio — zero effort.
+      </p>
+
+      <div class="input-container" role="search" aria-label="Video URL input">
+        <div class="input-glass" id="input-wrap">
+          <div class="input-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <input
+            type="url" class="url-input" id="url-input"
+            placeholder="Paste any video URL here..."
+            autocomplete="off" autocorrect="off" spellcheck="false"
+            aria-label="Video URL" aria-required="true"
+          />
+          <button class="btn-paste" id="btn-paste" aria-label="Paste from clipboard" title="Paste">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Paste
+          </button>
+        </div>
+        <button class="btn-extract" id="btn-extract" aria-label="Extract and download">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Extract &amp; Download</span>
+          <div class="btn-extract-shine"></div>
+        </button>
+      </div>
+
+      <!-- Ad Wrap Below Extract -->
+      <div class="ad-wrap ad-wrap--horizontal" aria-label="Advertisement">
+        <div>
+          <span class="ad-label">Advertisement</span>
+          Banner Placeholder (Below Extract)
+        </div>
+      </div>
+
+      <!-- Platform chips -->
+      <div class="platform-scroll" aria-label="Supported platforms">
+        <div class="platform-track">
+          <a href="/twitter-video-downloader" class="platform-chip">𝕏 Twitter</a>
+          <a href="/reddit-video-downloader" class="platform-chip">Reddit</a>
+          <a href="/facebook-video-downloader" class="platform-chip">Facebook</a>
+          <a href="/vimeo-video-downloader" class="platform-chip">Vimeo</a>
+          <a href="/instagram-video-downloader" class="platform-chip">Instagram</a>
+          <a href="/tiktok-video-downloader" class="platform-chip">TikTok</a>
+          <a href="/dailymotion-video-downloader" class="platform-chip">Dailymotion</a>
+          <a href="/twitch-video-downloader" class="platform-chip">Twitch</a>
+          <a href="/bilibili-video-downloader" class="platform-chip">Bilibili</a>
+          <span class="platform-chip platform-chip--more">+ 1000 more</span>
+          <a href="/twitter-video-downloader" class="platform-chip">𝕏 Twitter</a>
+          <a href="/reddit-video-downloader" class="platform-chip">Reddit</a>
+          <a href="/facebook-video-downloader" class="platform-chip">Facebook</a>
+          <a href="/vimeo-video-downloader" class="platform-chip">Vimeo</a>
+          <a href="/instagram-video-downloader" class="platform-chip">Instagram</a>
+          <a href="/tiktok-video-downloader" class="platform-chip">TikTok</a>
+          <a href="/dailymotion-video-downloader" class="platform-chip">Dailymotion</a>
+          <a href="/twitch-video-downloader" class="platform-chip">Twitch</a>
+          <a href="/bilibili-video-downloader" class="platform-chip">Bilibili</a>
+          <span class="platform-chip platform-chip--more">+ 1000 more</span>
+        </div>
+      </div>
+
+      <!-- 3D floating stat cards -->
+      <div class="stat-cards" aria-label="Key stats">
+        <div class="stat-card" data-tilt>
+          <div class="stat-card-glow stat-card-glow--blue"></div>
+          <div class="stat-icon">🎬</div>
+          <div class="stat-number">4K</div>
+          <div class="stat-label">Max Quality</div>
+        </div>
+        <div class="stat-card" data-tilt>
+          <div class="stat-card-glow stat-card-glow--purple"></div>
+          <div class="stat-icon">🌐</div>
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">Platforms</div>
+        </div>
+        <div class="stat-card" data-tilt>
+          <div class="stat-card-glow stat-card-glow--pink"></div>
+          <div class="stat-icon">⚡</div>
+          <div class="stat-number">Free</div>
+          <div class="stat-label">Up to 720p</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESSING -->
+  <section class="view-processing hidden" id="view-processing" aria-live="polite" aria-label="Processing">
+    <div class="processing-card glass-card">
+      <div class="processing-spinner" aria-hidden="true">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring spinner-ring--2"></div>
+        <div class="spinner-ring spinner-ring--3"></div>
+      </div>
+      <h2 class="processing-title">Extracting Media</h2>
+      <p class="processing-step" id="processing-step">Initializing...</p>
+      <div class="step-timeline" aria-label="Processing steps" role="list">
+        <div class="step-item" id="step-1" role="listitem"><div class="step-dot"></div><span>Validating URL</span></div>
+        <div class="step-item" id="step-2" role="listitem"><div class="step-dot"></div><span>Connecting to platform</span></div>
+        <div class="step-item" id="step-3" role="listitem"><div class="step-dot"></div><span>Parsing media streams</span></div>
+        <div class="step-item" id="step-4" role="listitem"><div class="step-dot"></div><span>Mapping quality formats</span></div>
+        <div class="step-item" id="step-5" role="listitem"><div class="step-dot"></div><span>Preparing download options</span></div>
+      </div>
+      <p class="processing-url" id="processing-url"></p>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="view-results hidden" id="view-results" aria-label="Download results">
+    <!-- Top Result Banner -->
+    <div class="ad-wrap ad-wrap--horizontal" aria-label="Advertisement" style="margin-top: 0;">
+      <div>
+        <span class="ad-label">Advertisement</span>
+        Banner Placeholder (Top of Results)
+      </div>
+    </div>
+    <div class="video-meta-card glass-card" id="video-meta-card">
+      <div class="video-thumbnail-wrap">
+        <img class="video-thumbnail" id="result-thumbnail" src="" alt="Downloaded video thumbnail preview" loading="lazy" crossorigin="anonymous" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'225\' viewBox=\'0 0 400 225\'%3E%3Crect width=\'400\' height=\'225\' fill=\'%230a0a1a\'/%3E%3Ctext x=\'200\' y=\'112\' text-anchor=\'middle\' fill=\'%23334155\' font-size=\'16\' font-family=\'sans-serif\'%3EPreview unavailable%3C/text%3E%3C/svg%3E';" />
+        <div class="duration-badge" id="result-duration"></div>
+        <div class="platform-label" id="result-platform"></div>
+      </div>
+      <div class="video-info">
+        <h2 class="video-title" id="result-title"></h2>
+        <div class="video-meta-row">
+          <span class="meta-item" id="result-uploader"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="result-uploader-name"></span></span>
+          <span class="meta-item" id="result-views"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span id="result-views-count"></span></span>
+          <span class="meta-item tier-badge" id="result-tier-badge"></span>
+        </div>
+        <p class="video-description" id="result-description"></p>
+      </div>
+    </div>
+
+    <div class="results-actions-top">
+      <button class="btn btn--glass btn--sm" id="btn-reset" aria-label="Download another">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,3 21,3 21,9"/><path d="M21 3L10 14"/><path d="M3 12a9 9 0 0 0 9 9 9 9 0 0 0 6.36-2.64"/></svg>
+        Download Another
+      </button>
+    </div>
+
+    <div class="format-tabs" role="tablist" aria-label="Format selection">
+      <button class="format-tab active" id="tab-combined" role="tab" aria-selected="true" aria-controls="panel-combined">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23,7 16,12 23,17 23,7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        Video + Audio
+      </button>
+      <button class="format-tab" id="tab-video" role="tab" aria-selected="false" aria-controls="panel-video">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Video Only
+      </button>
+      <button class="format-tab" id="tab-audio" role="tab" aria-selected="false" aria-controls="panel-audio">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        Audio Only
+      </button>
+    </div>
+
+    <div class="format-panel active" id="panel-combined" role="tabpanel" aria-labelledby="tab-combined">
+      <div class="format-grid" id="grid-combined"></div>
+    </div>
+    <div class="format-panel" id="panel-video" role="tabpanel" aria-labelledby="tab-video">
+      <div class="merge-notice glass-card" id="merge-notice">
+        <div class="merge-notice-icon">⚡</div>
+        <div class="merge-notice-text">
+          <strong>4K Merged Download Available</strong>
+          <p>Premium users can merge video + audio streams via FFmpeg for highest quality.</p>
+        </div>
+        <button class="btn btn--premium btn--sm" id="btn-merge-upgrade">Upgrade</button>
+      </div>
+      <div class="format-grid" id="grid-video"></div>
+    </div>
+    <div class="format-panel" id="panel-audio" role="tabpanel" aria-labelledby="tab-audio">
+      <div class="format-grid" id="grid-audio"></div>
+    </div>
+  </section>
+
+  <!-- Rect Ad Below Formats -->
+  <div class="ad-wrap ad-wrap--rect" aria-label="Advertisement" id="ad-results-rect" style="display:none;">
+    <div>
+      <span class="ad-label">Advertisement</span>
+      Banner Placeholder (Below Formats)
+    </div>
+  </div>
+
+  <!-- Bottom Result Banner -->
+  <div class="ad-wrap ad-wrap--horizontal" aria-label="Advertisement" id="ad-results-bottom" style="display:none;">
+    <div>
+      <span class="ad-label">Advertisement</span>
+      Banner Placeholder (Bottom of Page)
+    </div>
+  </div>
+
+  <!-- ERROR -->
+  <section class="view-error hidden" id="view-error" aria-live="assertive" aria-label="Error">
+    <div class="error-card glass-card">
+      <div class="error-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+      <h2 class="error-title">Extraction Failed</h2>
+      <p class="error-message" id="error-message"></p>
+      <div class="error-actions">
+        <button class="btn btn--primary" id="btn-retry">Try Again</button>
+        <button class="btn btn--glass" id="btn-error-reset">Start Over</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO & LLMO Semantic Context -->
+  <section class="aeo-content" aria-labelledby="aeo-title">
+    <div class="glass-card aeo-card">
+      <h2 id="aeo-title" class="aeo-title">How to Download Videos</h2>
+      <ol class="aeo-steps" itemscope itemtype="https://schema.org/HowTo">
+        <meta itemprop="name" content="How to download videos with Click2Video" />
+        <li itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+          <strong itemprop="name">Copy the Video URL</strong>: <span itemprop="text">Find the video you want to download on any supported platform (Twitter, Reddit, Vimeo, etc.) and copy its URL to your clipboard.</span>
+        </li>
+        <li itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+          <strong itemprop="name">Paste and Extract</strong>: <span itemprop="text">Paste the link into the Click2Video search box above and click "Extract & Download". Our engine will securely fetch the available media streams.</span>
+        </li>
+        <li itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+          <strong itemprop="name">Select Quality and Download</strong>: <span itemprop="text">Choose your preferred format, such as 4K video or high-quality MP3 audio, and save it directly to your device instantly.</span>
+        </li>
+      </ol>
+      
+      <h2 class="aeo-title" style="margin-top: 2rem;">Frequently Asked Questions</h2>
+      <dl class="aeo-faq">
+        <dt><strong>Is Click2Video completely free?</strong></dt>
+        <dd>Yes, downloading videos up to 720p HD is 100% free with no daily limits. We also offer an optional Premium tier for 4K resolution and lossless FFmpeg audio merging.</dd>
+        
+        <dt><strong>What platforms are supported?</strong></dt>
+        <dd>Our universal video downloader supports over 1,000+ platforms worldwide, including Twitter (X), Reddit, Facebook, Vimeo, TikTok, Bilibili, and many standard media hosts.</dd>
+        
+        <dt><strong>Is it safe and secure?</strong></dt>
+        <dd>Absolutely. We do not host any of the videos you download on our servers, nor do we inject watermarks or malware. The extraction is done ephemerally, ensuring complete user privacy.</dd>
+      </dl>
+    </div>
+  </section>
+
+    </main>
+  </div> <!-- /main-content-column -->
+
+  <!-- Right Side Banner -->
+  <aside class="side-banner-right" aria-label="Right Advertisement">
+    <span class="ad-label">Advertisement</span>
+    Right Banner Placeholder (160x600)
+  </aside>
+</div> <!-- /page-wrapper -->
+
+<!-- Video Ad Modal -->
+<div class="modal-overlay hidden" id="modal-video-ad" role="dialog" aria-modal="true" aria-labelledby="video-ad-title">
+  <div class="modal-card glass-card">
+    <div class="modal-badge">Advertisement</div>
+    <h2 class="modal-title" id="video-ad-title" style="margin-bottom: 15px;">Please wait while your action is processed</h2>
+    <div class="video-ad-container">
+      <div class="video-ad-timer" id="video-ad-timer">10</div>
+      <div class="video-ad-label">Video Ad Placeholder</div>
+    </div>
+  </div>
+</div>
+
+<!-- Premium Modal -->
+<div class="modal-overlay hidden" id="modal-upgrade" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card glass-card">
+    <button class="modal-close" id="modal-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal-glow-orb"></div>
+    <div class="sale-ribbon">🔥 LIMITED TIME OFFER</div>
+    <div class="modal-badge">⭐ Premium</div>
+    <h2 class="modal-title" id="modal-title">Unlock Full Power</h2>
+    <p class="modal-subtitle">4K downloads · Unlimited · Lossless audio</p>
+    <div class="pricing-card">
+      <div class="discount-badge">80% OFF</div>
+      <div class="price-display">
+        <div class="price-original-wrap"><span class="price-original">$249</span><span class="price-original-label">/ mo</span></div>
+        <div class="price-current-wrap"><span class="price-currency">$</span><span class="price-amount">49</span><span class="price-period">/month</span></div>
+      </div>
+      <div class="urgency-bar" role="timer" aria-live="polite">
+        <span class="urgency-icon">⏰</span>
+        <span class="urgency-text">Deal expires in&nbsp;</span>
+        <span class="urgency-countdown" id="deal-countdown">23:59:47</span>
+      </div>
+      <ul class="feature-list">
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Unlimited downloads (no daily cap)</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>4K + 2K ultra-high definition</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>On-the-fly FFmpeg audio + video merge</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Priority extraction speed</li>
+        <li class="feature-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Cancel anytime</li>
+      </ul>
+    </div>
+    <button class="btn btn--premium btn--full" id="btn-checkout">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      Get Premium — Only $49/mo
+    </button>
+    <p class="modal-disclaimer">🔒 Secure payment via Razorpay. Was <s>$249/mo</s>.</p>
+    <p class="modal-auth-restore">Already Premium? <a href="#" id="link-modal-signin" class="modal-signin-link">Sign In here</a></p>
+  </div>
+</div>
+
+<!-- Auth Modal -->
+<div class="modal-overlay hidden" id="modal-auth" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+  <div class="modal-card glass-card auth-modal-card">
+    <button class="modal-close" id="auth-modal-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div id="auth-state-signin">
+      <h2 class="modal-title" id="auth-modal-title">Welcome Back</h2>
+      <p class="modal-subtitle">Sign in to your Premium account</p>
+
+      <form id="form-signin" class="auth-form">
+        <div class="form-group"><label for="signin-email">Email</label><input type="email" id="signin-email" required placeholder="you@example.com" class="form-input" /></div>
+        <div class="form-group"><label for="signin-password">Password</label><input type="password" id="signin-password" required placeholder="••••••••" class="form-input" /></div>
+        <button type="submit" class="btn btn--primary btn--full" id="btn-signin-submit">Sign In</button>
+      </form>
+      <p class="auth-switch-text">No account? <a href="#" onclick="document.getElementById('auth-modal-close').click();document.getElementById('btn-upgrade').click();return false;" class="auth-link">Buy Premium to Register</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal-overlay hidden" id="modal-register-premium" role="dialog" aria-modal="true" aria-labelledby="register-modal-title">
+  <div class="modal-card glass-card auth-modal-card">
+    <button class="modal-close" id="register-modal-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <h2 class="modal-title" id="register-modal-title">🎉 Payment Successful!</h2>
+    <p class="modal-subtitle">Complete your profile to activate Premium.</p>
+    <form id="form-register-premium" class="auth-form">
+      <input type="hidden" id="reg-razorpay-payment-id" />
+      <input type="hidden" id="reg-razorpay-order-id" />
+      <input type="hidden" id="reg-razorpay-signature" />
+      <div class="form-row">
+        <div class="form-group"><label for="reg-first-name">First Name</label><input type="text" id="reg-first-name" required placeholder="John" class="form-input" /></div>
+        <div class="form-group"><label for="reg-last-name">Last Name</label><input type="text" id="reg-last-name" required placeholder="Doe" class="form-input" /></div>
+      </div>
+      <div class="form-group"><label for="reg-mobile">Mobile</label><input type="tel" id="reg-mobile" required placeholder="+91 98765 43210" class="form-input" /></div>
+      <div class="form-group"><label for="reg-email">Email</label><input type="email" id="reg-email" required placeholder="you@example.com" class="form-input" /></div>
+      <div class="form-group"><label for="reg-password">Password</label><input type="password" id="reg-password" required placeholder="At least 6 characters" class="form-input" minlength="6" /></div>
+      <div class="form-group"><label for="reg-confirm-password">Confirm Password</label><input type="password" id="reg-confirm-password" required placeholder="Re-type password" class="form-input" minlength="6" /></div>
+      <button type="submit" class="btn btn--premium btn--full" id="btn-register-submit">Activate Premium Account</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Erocast Video Downloader","operatingSystem":"Any","applicationCategory":"MultimediaApplication","offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},"description":"Download videos directly from Erocast for free. Fast, secure, and no installation required.","url":"https://click2video.com/erocast-video-downloader"}</script>
+<div id="seo-content-injection"></div>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" aria-label="Click2Video Home">
+        <svg width="22" height="22" viewBox="0 0 30 30" fill="none">
+          <defs><linearGradient id="fl" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#b300ff"/><stop offset="100%" stop-color="#ff006e"/></linearGradient></defs>
+          <rect width="30" height="30" rx="8" fill="url(#fl)"/>
+          <polygon points="11,8 23,15 11,22" fill="white"/>
+        </svg>
+        <span>Click2<span class="logo-accent">Video</span></span>
+      </a>
+      <p class="footer-tagline">Download any video. Any platform. Instantly.</p>
+    </div>
+    <div class="footer-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; width: 100%;">
+      <div class="footer-col">
+        <h3 class="footer-col-title">Product & Tools</h3>
+        <ul>
+          <li><a href="/">Video Downloader</a></li>
+          <li><a href="#" id="footer-upgrade-link">Go Premium</a></li>
+          <li><a href="#">Browser Extensions</a></li>
+          <li><a href="#">API Access</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Top Platforms</h3>
+        <ul>
+          <li><a href="/youtube-video-downloader">YouTube</a></li>
+          <li><a href="/twitter-video-downloader">Twitter (X)</a></li>
+          <li><a href="/reddit-video-downloader">Reddit</a></li>
+          <li><a href="/tiktok-video-downloader">TikTok</a></li>
+          <li><a href="/instagram-video-downloader">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Articles & Guides</h3>
+        <ul>
+          <li><a href="/articles/tech-blog.html">Tech Blog</a></li>
+          <li><a href="/articles/downloading-guides.html">Downloading Guides</a></li>
+          <li><a href="/supported-sites.html">Supported Formats</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Legal &amp; Support</h3>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/legal/terms.html" id="footer-terms-link">Terms &amp; Conditions</a></li>
+          <li><a href="/legal/privacy.html" id="footer-privacy-link">Privacy Policy</a></li>
+          <li><a href="/legal/copyright.html">Copyright Notice</a></li>
+          <li><a href="/legal/contact.html">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-row">
+      <p class="footer-copyright">&copy; 2026 Click2Video. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/legal/terms.html" id="footer-terms-link-bottom">Terms</a>
+        <span class="footer-divider">|</span>
+        <a href="/legal/privacy.html" id="footer-privacy-link-bottom">Privacy</a>
+        <span class="footer-divider">|</span>
+        <a href="/legal/copyright.html" id="footer-copyright-link">Copyright</a>
+      </div>
+    </div>
+    <p class="footer-legal-note">Click2Video is an independent service not affiliated with any third-party platform. Users bear sole legal responsibility for compliance with applicable copyright law and platform terms of service.</p>
+  </div>
+</footer>
+
+<script src="/js/api.js?t=20260626_1939"></script>
+<script src="/js/auth.js?t=20260626_1939"></script>
+<script src="/js/ui.js?t=20260626_1939"></script>
+<script src="/js/app.js?t=20260626_1939"></script>
+
+<script>
+  // Footer upgrade link
+  const fu = document.getElementById('footer-upgrade-link');
+  if (fu) fu.addEventListener('click', e => { e.preventDefault(); document.getElementById('btn-upgrade')?.click(); });
+
+  // 3D tilt effect on stat cards
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(600px) rotateY(${x * 18}deg) rotateX(${-y * 18}deg) translateZ(8px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) translateZ(0px)';
+    });
+  });
+</script>
+
+<!-- Adsterra Mobile Sticky Banner (320x50) -->
+<div class="ad-sticky-mobile" id="ad-sticky-mobile" aria-label="Advertisement">
+  <span class="ad-label" style="margin-bottom:2px;">Advertisement</span>
+  <script>
+    atOptions = {
+      'key' : '71901d9fee00c535f3f2dc39da0bd537',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/71901d9fee00c535f3f2dc39da0bd537/invoke.js"></script>
+</div>
+
+<script>
+  // Show results ads when results section is displayed
+  const resultsSection = document.getElementById('view-results');
+  const adRect = document.getElementById('ad-results-rect');
+  const adBottom = document.getElementById('ad-results-bottom');
+  if (resultsSection) {
+    const observer = new MutationObserver(() => {
+      if (!resultsSection.classList.contains('hidden')) {
+        if (adRect) adRect.style.display = 'flex';
+        if (adBottom) adBottom.style.display = 'flex';
+      } else {
+        if (adRect) adRect.style.display = 'none';
+        if (adBottom) adBottom.style.display = 'none';
+      }
+    });
+    observer.observe(resultsSection, { attributes: true, attributeFilter: ['class'] });
+  }
+</script>
+
+</body>
+</html>

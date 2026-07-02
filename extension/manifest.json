@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Click2Video - Universal Video Downloader",
+  "version": "1.0.0",
+  "description": "Download any video from any platform (YouTube, Twitter, Reddit, TikTok) with a single click in HD/4K.",
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+  "action": {
+    "default_title": "Download with Click2Video",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

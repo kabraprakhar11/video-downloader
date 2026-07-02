@@ -1,0 +1,239 @@
+:root {
+  --bg-color: #050510;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.08);
+  --text-main: #ffffff;
+  --text-sec: #94a3b8;
+  --purple: #b300ff;
+  --pink: #ff006e;
+  --cyan: #00d4ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 320px;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Exo 2', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Neon Gradient Background Effect */
+body::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(179,0,255,0.2) 0%, rgba(0,0,0,0) 70%);
+  z-index: -1;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  padding: 2px;
+}
+
+.brand-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-title .accent {
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-sec);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tab-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--cyan);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.tab-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.tab-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.tab-url {
+  font-size: 0.75rem;
+  color: var(--text-sec);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: white;
+  padding: 14px;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(179,0,255,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,0,110,0.4);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(255,255,255,0.2);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 4px 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border);
+}
+.divider span {
+  padding: 0 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.input-group input {
+  flex: 1;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: var(--cyan);
+}
+
+.btn-secondary {
+  width: auto;
+  padding: 0 16px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+
+.footer-link {
+  color: var(--text-sec);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-link.premium {
+  color: #f59e0b;
+}
+.footer-link.premium:hover {
+  color: #fbbf24;
+}

@@ -26,7 +26,7 @@ echo.
 echo ===================================================
 echo [2/2] Deploying container to Google Cloud Run...
 echo ===================================================
-call gcloud run deploy streamvault-backend --image gcr.io/video-downloader-499911/streamvault-backend --platform managed --allow-unauthenticated --region us-central1 --memory 1Gi --cpu 1 --update-env-vars="NODE_ENV=production,FIREBASE_PROJECT_ID=video-downloader-fd8ef" --quiet
+call gcloud run deploy streamvault-backend --image gcr.io/video-downloader-499911/streamvault-backend --platform managed --allow-unauthenticated --region us-central1 --memory 1Gi --cpu 1 --env-vars-file=env.yaml --quiet
 if %ERRORLEVEL% neq 0 (
   echo Cloud Run deployment failed with exit code %ERRORLEVEL%
   exit /b %ERRORLEVEL%

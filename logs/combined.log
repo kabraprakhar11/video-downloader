@@ -8296,3 +8296,2117 @@ size=    5368kB time=00:01:31.94 bitrate= 478.2kbits/s speed=9.15x    [https @ 
 2026-06-26 17:23:58 [info]: [yt-dlp] Update check complete.
 2026-06-26 17:23:58 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
 2026-06-26 17:23:59 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:29:09 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 18:29:12 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 18:29:12 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 18:29:12 [info]: [yt-dlp] Running auto-update...
+2026-06-26 18:29:12 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 18:29:12 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 18:29:12 [info]:    Environment: development
+2026-06-26 18:29:12 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 18:29:13 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 18:29:15 [info]: [yt-dlp] Update check complete.
+2026-06-26 18:29:15 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:29:15 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-26 18:29:16 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:29:21 [debug]: GET / 200 10ms — ::1
+2026-06-26 18:29:21 [debug]: GET /css/styles.css 200 5ms — ::1
+2026-06-26 18:29:21 [debug]: GET /js/api.js 200 14ms — ::1
+2026-06-26 18:29:21 [debug]: GET /js/auth.js 200 10ms — ::1
+2026-06-26 18:29:21 [debug]: GET /js/ui.js 200 10ms — ::1
+2026-06-26 18:29:21 [debug]: GET /js/app.js 200 11ms — ::1
+2026-06-26 18:29:22 [debug]: GET /api/config 200 5ms — ::1
+2026-06-26 18:29:23 [debug]: GET /favicon.ico 200 7ms — ::1
+2026-06-26 18:29:25 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-26 18:29:25 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:25 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:25 [error]: POST /create-guest-order 500 196ms — ::1
+2026-06-26 18:29:27 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-26 18:29:27 [debug]: POST /verify 200 2425ms — ::1
+2026-06-26 18:29:28 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:28 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:28 [error]: POST /create-guest-order 500 173ms — ::1
+2026-06-26 18:29:28 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:28 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:28 [error]: POST /create-guest-order 500 57ms — ::1
+2026-06-26 18:29:28 [debug]: POST /create-guest-order 200 114ms — ::1
+2026-06-26 18:29:36 [debug]: GET / 200 4ms — ::1
+2026-06-26 18:29:36 [debug]: GET /css/styles.css 200 4ms — ::1
+2026-06-26 18:29:36 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:29:36 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 18:29:36 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 18:29:36 [debug]: GET /js/app.js 200 5ms — ::1
+2026-06-26 18:29:37 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 18:29:37 [debug]: GET /favicon.ico 200 4ms — ::1
+2026-06-26 18:29:38 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-26 18:29:39 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:39 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:39 [error]: POST /create-guest-order 500 172ms — ::1
+2026-06-26 18:29:39 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-26 18:29:39 [debug]: POST /verify 200 2205ms — ::1
+2026-06-26 18:29:41 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:41 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:41 [error]: POST /create-guest-order 500 87ms — ::1
+2026-06-26 18:29:41 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:41 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:41 [error]: POST /create-guest-order 500 63ms — ::1
+2026-06-26 18:29:41 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:41 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:41 [error]: POST /create-guest-order 500 66ms — ::1
+2026-06-26 18:29:42 [debug]: POST /create-guest-order 200 144ms — ::1
+2026-06-26 18:29:46 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:29:46 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 18:29:46 [debug]: GET /js/api.js 200 6ms — ::1
+2026-06-26 18:29:46 [debug]: GET /js/auth.js 200 5ms — ::1
+2026-06-26 18:29:46 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 18:29:46 [debug]: GET /js/app.js 200 5ms — ::1
+2026-06-26 18:29:47 [debug]: GET / 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/auth.js 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/app.js 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET / 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/ui.js 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /css/styles.css 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/auth.js 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/ui.js 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/app.js 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET / 200 3ms — ::1
+2026-06-26 18:29:47 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/api.js 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/auth.js 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/ui.js 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/app.js 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:29:47 [debug]: GET /css/styles.css 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/auth.js 200 5ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 18:29:47 [debug]: GET /js/app.js 200 2ms — ::1
+2026-06-26 18:29:48 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:29:48 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 18:29:48 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:29:48 [debug]: GET /css/styles.css 200 6ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/api.js 200 6ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/ui.js 200 2ms — ::1
+2026-06-26 18:29:48 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 18:29:48 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 18:29:48 [debug]: GET /favicon.ico 200 5ms — ::1
+2026-06-26 18:29:49 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-26 18:29:51 [error]: Failed to create Razorpay order:
+2026-06-26 18:29:51 [error]: Error: Could not initialize payment. Please try again.
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:29:51 [error]: POST /create-guest-order 500 165ms — ::1
+2026-06-26 18:29:51 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-26 18:29:51 [debug]: POST /verify 200 2147ms — ::1
+2026-06-26 18:30:22 [debug]: GET / 304 2ms — ::1
+2026-06-26 18:30:23 [debug]: GET /api/config 304 1ms — ::1
+2026-06-26 18:30:24 [debug]: GET /favicon.ico 304 4ms — ::1
+2026-06-26 18:30:25 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-26 18:30:27 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-26 18:30:27 [debug]: POST /verify 200 2146ms — ::1
+2026-06-26 18:30:27 [debug]: GET / 200 3ms — ::1
+2026-06-26 18:30:27 [debug]: GET /css/styles.css 200 4ms — ::1
+2026-06-26 18:30:27 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:30:27 [debug]: GET /js/auth.js 200 2ms — ::1
+2026-06-26 18:30:27 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-26 18:30:27 [debug]: GET /js/app.js 200 4ms — ::1
+2026-06-26 18:30:28 [debug]: GET /api/config 200 0ms — ::1
+2026-06-26 18:30:28 [debug]: GET /favicon.ico 200 3ms — ::1
+2026-06-26 18:30:29 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-26 18:30:31 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:30:31 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 18:30:31 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 18:30:31 [debug]: GET /js/auth.js 200 4ms — ::1
+2026-06-26 18:30:31 [debug]: GET /js/ui.js 200 4ms — ::1
+2026-06-26 18:30:31 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 18:30:31 [debug]: GET /api/config 200 0ms — ::1
+2026-06-26 18:30:31 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-26 18:30:31 [debug]: GET /favicon.ico 200 2ms — ::1
+2026-06-26 18:30:32 [info]: Firestore user record created/updated for uid VxlLrNpocffZ6GxookNgFXT6bC83
+2026-06-26 18:30:34 [debug]: [Auth] Token verified: uid=VxlLrNpocffZ6GxookNgFXT6bC83 tier=premium
+2026-06-26 18:30:34 [debug]: POST /verify 200 2496ms — ::1
+2026-06-26 18:30:39 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 18:30:40 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 18:30:40 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 18:30:40 [info]: [yt-dlp] Running auto-update...
+2026-06-26 18:30:40 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 18:30:40 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 18:30:40 [info]:    Environment: development
+2026-06-26 18:30:40 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 18:30:41 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 18:30:43 [info]: [yt-dlp] Update check complete.
+2026-06-26 18:30:43 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:30:44 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-26 18:30:44 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:31:43 [debug]: POST /create-guest-order 200 484ms — ::1
+2026-06-26 18:31:50 [debug]: GET / 200 15ms — ::1
+2026-06-26 18:31:50 [debug]: GET /css/styles.css 200 15ms — ::1
+2026-06-26 18:31:50 [debug]: GET /js/api.js 200 16ms — ::1
+2026-06-26 18:31:50 [debug]: GET /js/auth.js 200 17ms — ::1
+2026-06-26 18:31:50 [debug]: GET /js/ui.js 200 14ms — ::1
+2026-06-26 18:31:50 [debug]: GET /js/app.js 200 13ms — ::1
+2026-06-26 18:31:50 [debug]: GET /api/config 200 3ms — ::1
+2026-06-26 18:31:50 [debug]: GET /favicon.ico 200 19ms — ::1
+2026-06-26 18:31:51 [debug]: GET / 200 8ms — ::1
+2026-06-26 18:31:51 [debug]: GET /css/styles.css 200 7ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/api.js 200 13ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/auth.js 200 14ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/app.js 200 8ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/ui.js 200 11ms — ::1
+2026-06-26 18:31:51 [debug]: GET / 200 4ms — ::1
+2026-06-26 18:31:51 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/auth.js 200 9ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/ui.js 200 9ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/api.js 200 15ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/app.js 200 11ms — ::1
+2026-06-26 18:31:51 [debug]: GET / 200 3ms — ::1
+2026-06-26 18:31:51 [debug]: GET /css/styles.css 200 7ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/api.js 200 10ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/auth.js 200 11ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/ui.js 200 11ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/app.js 200 9ms — ::1
+2026-06-26 18:31:51 [debug]: GET / 200 3ms — ::1
+2026-06-26 18:31:51 [debug]: GET /css/styles.css 200 6ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/api.js 200 7ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/auth.js 200 9ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/ui.js 200 10ms — ::1
+2026-06-26 18:31:51 [debug]: GET /js/app.js 200 8ms — ::1
+2026-06-26 18:31:51 [debug]: GET /api/config 200 2ms — ::1
+2026-06-26 18:31:52 [debug]: GET /favicon.ico 200 5ms — ::1
+2026-06-26 18:31:56 [debug]: POST /create-guest-order 200 194ms — ::1
+2026-06-26 18:33:16 [debug]: POST /create-guest-order 200 307ms — ::1
+2026-06-26 18:33:20 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:33:20 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 18:33:20 [debug]: GET /js/api.js 200 9ms — ::1
+2026-06-26 18:33:20 [debug]: GET /js/auth.js 200 8ms — ::1
+2026-06-26 18:33:20 [debug]: GET /js/ui.js 200 9ms — ::1
+2026-06-26 18:33:20 [debug]: GET /js/app.js 200 7ms — ::1
+2026-06-26 18:33:20 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 18:33:20 [debug]: GET /favicon.ico 200 2ms — ::1
+2026-06-26 18:33:24 [error]: Failed to create Razorpay order:
+2026-06-26 18:33:24 [error]: Error: Authentication failed
+    at Object.createOrder (D:\video downloader\server\services\razorpay.js:47:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async D:\video downloader\server\routes\razorpay.js:56:19
+2026-06-26 18:33:24 [error]: POST /create-guest-order 500 373ms — ::1
+2026-06-26 18:33:27 [debug]: GET / 304 3ms — ::1
+2026-06-26 18:33:27 [debug]: GET /api/config 304 1ms — ::1
+2026-06-26 18:33:27 [debug]: GET /favicon.ico 304 5ms — ::1
+2026-06-26 18:33:33 [debug]: POST /create-guest-order 200 265ms — ::1
+2026-06-26 18:37:36 [debug]: GET / 200 2ms — ::1
+2026-06-26 18:37:36 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 18:37:36 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:37:36 [debug]: GET /js/auth.js 200 2ms — ::1
+2026-06-26 18:37:36 [debug]: GET /js/ui.js 200 2ms — ::1
+2026-06-26 18:37:36 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 18:37:37 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 18:37:37 [debug]: GET /favicon.ico 200 2ms — ::1
+2026-06-26 18:37:40 [debug]: POST /create-guest-order 200 215ms — ::1
+2026-06-26 18:38:55 [debug]: GET / 200 3ms — ::1
+2026-06-26 18:38:56 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 18:38:56 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 18:38:56 [debug]: GET /js/auth.js 200 2ms — ::1
+2026-06-26 18:38:56 [debug]: GET /js/ui.js 200 2ms — ::1
+2026-06-26 18:38:56 [debug]: GET /js/app.js 200 2ms — ::1
+2026-06-26 18:38:56 [debug]: GET /api/config 200 2ms — ::1
+2026-06-26 18:38:56 [debug]: GET /favicon.ico 200 4ms — ::1
+2026-06-26 18:38:59 [debug]: POST /create-guest-order 200 293ms — ::1
+2026-06-26 18:40:27 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 18:40:46 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 18:41:21 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 18:41:22 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 18:41:22 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 18:41:22 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 18:41:22 [info]: [yt-dlp] Running auto-update...
+2026-06-26 18:41:22 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 18:41:22 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 18:41:22 [info]:    Environment: development
+2026-06-26 18:41:22 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 18:41:24 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:41:24 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-26 18:41:24 [info]: [yt-dlp] Update check complete.
+2026-06-26 18:41:25 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:42:46 [debug]: GET / 200 12ms — ::1
+2026-06-26 18:42:46 [debug]: GET /css/styles.css 200 7ms — ::1
+2026-06-26 18:42:46 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 18:42:46 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 18:42:47 [debug]: GET /js/ui.js 200 4ms — ::1
+2026-06-26 18:42:47 [debug]: GET /js/app.js 200 5ms — ::1
+2026-06-26 18:42:47 [debug]: GET /api/config 200 4ms — ::1
+2026-06-26 18:42:47 [debug]: GET /favicon.ico 200 6ms — ::1
+2026-06-26 18:42:50 [debug]: POST /create-guest-order 200 337ms — ::1
+2026-06-26 18:46:59 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 18:47:00 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 18:47:01 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 18:47:01 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 18:47:01 [info]: [yt-dlp] Running auto-update...
+2026-06-26 18:47:01 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 18:47:01 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 18:47:01 [info]:    Environment: development
+2026-06-26 18:47:01 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 18:47:01 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:47:02 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-26 18:47:02 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:47:03 [info]: [yt-dlp] Update check complete.
+2026-06-26 18:47:21 [debug]: GET / 200 12ms — ::1
+2026-06-26 18:47:21 [debug]: GET /css/styles.css 200 8ms — ::1
+2026-06-26 18:47:21 [debug]: GET /js/api.js 200 7ms — ::1
+2026-06-26 18:47:21 [debug]: GET /js/auth.js 200 7ms — ::1
+2026-06-26 18:47:21 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 18:47:21 [debug]: GET /js/app.js 200 4ms — ::1
+2026-06-26 18:47:22 [debug]: GET /api/config 200 3ms — ::1
+2026-06-26 18:47:23 [debug]: GET /favicon.ico 200 7ms — ::1
+2026-06-26 18:47:25 [debug]: POST /create-guest-order 200 296ms — ::1
+2026-06-26 18:48:46 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-26 18:48:47 [info]: [yt-dlp] Binary found and ready.
+2026-06-26 18:48:47 [info]: ✅ yt-dlp found: vtrue
+2026-06-26 18:48:47 [info]: [yt-dlp] Running auto-update...
+2026-06-26 18:48:47 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-26 18:48:47 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-26 18:48:47 [info]:    Environment: development
+2026-06-26 18:48:47 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-26 18:48:49 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-26 18:48:50 [info]: [yt-dlp] Update check complete.
+2026-06-26 18:48:51 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 18:48:52 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-26 18:48:52 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-26 19:05:54 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:05:56 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:05:56 [debug]: POST /verify 200 3894ms — ::1
+2026-06-26 19:06:57 [debug]: GET / 200 13ms — ::1
+2026-06-26 19:06:57 [debug]: GET /css/styles.css 200 5ms — ::1
+2026-06-26 19:06:58 [debug]: GET /api/config 304 2ms — ::1
+2026-06-26 19:06:58 [debug]: GET /favicon.ico 200 8ms — ::1
+2026-06-26 19:06:59 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:07:01 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:07:01 [debug]: POST /verify 200 2683ms — ::1
+2026-06-26 19:13:14 [debug]: GET / 200 4ms — ::1
+2026-06-26 19:13:14 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 19:13:14 [debug]: GET /js/api.js 200 6ms — ::1
+2026-06-26 19:13:14 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-26 19:13:14 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 19:13:14 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 19:13:15 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:13:16 [debug]: GET /favicon.ico 200 7ms — ::1
+2026-06-26 19:13:16 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:13:17 [debug]: GET / 200 2ms — ::1
+2026-06-26 19:13:17 [debug]: GET /js/api.js 200 2ms — ::1
+2026-06-26 19:13:17 [debug]: GET /css/styles.css 200 4ms — ::1
+2026-06-26 19:13:17 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 19:13:17 [debug]: GET /js/ui.js 200 4ms — ::1
+2026-06-26 19:13:17 [debug]: GET /js/app.js 200 4ms — ::1
+2026-06-26 19:13:17 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET /css/styles.css 200 5ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/api.js 200 6ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/auth.js 200 5ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/ui.js 200 7ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET / 200 2ms — ::1
+2026-06-26 19:13:18 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/auth.js 200 2ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/ui.js 200 2ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET /css/styles.css 200 4ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/auth.js 200 4ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET / 200 2ms — ::1
+2026-06-26 19:13:18 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:13:18 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/auth.js 200 5ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/ui.js 200 6ms — ::1
+2026-06-26 19:13:18 [debug]: GET /js/app.js 200 6ms — ::1
+2026-06-26 19:13:18 [debug]: GET /api/config 200 2ms — ::1
+2026-06-26 19:13:18 [debug]: GET /favicon.ico 200 7ms — ::1
+2026-06-26 19:13:19 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:13:21 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:13:21 [debug]: POST /verify 200 2177ms — ::1
+2026-06-26 19:13:26 [debug]: GET / 304 9ms — ::1
+2026-06-26 19:13:26 [debug]: GET /api/config 304 1ms — ::1
+2026-06-26 19:13:27 [debug]: GET /favicon.ico 304 5ms — ::1
+2026-06-26 19:13:27 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:13:29 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:13:29 [debug]: POST /verify 200 2340ms — ::1
+2026-06-26 19:13:34 [debug]: GET / 304 2ms — ::1
+2026-06-26 19:13:35 [debug]: GET /api/config 304 1ms — ::1
+2026-06-26 19:13:35 [debug]: GET /favicon.ico 304 2ms — ::1
+2026-06-26 19:13:35 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:13:37 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:13:37 [debug]: POST /verify 200 2216ms — ::1
+2026-06-26 19:14:14 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:14:14 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 19:14:14 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 19:14:14 [debug]: GET /js/auth.js 200 5ms — ::1
+2026-06-26 19:14:14 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-26 19:14:14 [debug]: GET /js/app.js 200 4ms — ::1
+2026-06-26 19:14:14 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:14:15 [debug]: GET /favicon.ico 200 5ms — ::1
+2026-06-26 19:14:15 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:14:17 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:14:17 [debug]: POST /verify 200 2422ms — ::1
+2026-06-26 19:15:54 [debug]: POST /create-guest-order 200 564ms — ::1
+2026-06-26 19:17:19 [debug]: GET / 200 5ms — ::1
+2026-06-26 19:17:19 [debug]: GET /css/styles.css 200 5ms — ::1
+2026-06-26 19:17:19 [debug]: GET /js/api.js 200 5ms — ::1
+2026-06-26 19:17:19 [debug]: GET /js/auth.js 200 5ms — ::1
+2026-06-26 19:17:19 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 19:17:19 [debug]: GET /js/app.js 200 7ms — ::1
+2026-06-26 19:17:19 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:17:20 [debug]: GET /favicon.ico 200 8ms — ::1
+2026-06-26 19:17:21 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:17:22 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:17:22 [debug]: POST /verify 200 2326ms — ::1
+2026-06-26 19:17:32 [debug]: Auth: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:17:32 [warn]: URL validation failed: Connection to private IP ::1 is forbidden (SSRF protection). | Input: http://localhost:3000/
+2026-06-26 19:17:32 [warn]: POST / 400 8ms — ::1
+2026-06-26 19:22:18 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:22:18 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 19:22:18 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 19:22:18 [debug]: GET /js/auth.js 200 4ms — ::1
+2026-06-26 19:22:18 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 19:22:18 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 19:22:18 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:22:19 [debug]: GET /favicon.ico 200 3ms — ::1
+2026-06-26 19:22:21 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:22:23 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:22:23 [debug]: POST /verify 200 3854ms — ::1
+2026-06-26 19:26:13 [debug]: GET / 200 2ms — ::1
+2026-06-26 19:26:13 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 19:26:13 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 19:26:13 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 19:26:13 [debug]: GET /js/ui.js 200 3ms — ::1
+2026-06-26 19:26:13 [debug]: GET /js/app.js 200 3ms — ::1
+2026-06-26 19:26:15 [debug]: GET /api/config 200 0ms — ::1
+2026-06-26 19:26:16 [debug]: GET /favicon.ico 200 4ms — ::1
+2026-06-26 19:26:17 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:26:18 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:26:18 [debug]: POST /verify 200 2137ms — ::1
+2026-06-26 19:36:30 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:36:30 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 19:36:30 [debug]: GET /js/api.js 200 4ms — ::1
+2026-06-26 19:36:30 [debug]: GET /js/auth.js 200 4ms — ::1
+2026-06-26 19:36:30 [debug]: GET /js/ui.js 200 4ms — ::1
+2026-06-26 19:36:30 [debug]: GET /js/app.js 200 5ms — ::1
+2026-06-26 19:36:30 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:36:31 [debug]: GET /favicon.ico 200 7ms — ::1
+2026-06-26 19:36:33 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:36:35 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:36:35 [debug]: POST /verify 200 3719ms — ::1
+2026-06-26 19:45:43 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:45:43 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 19:45:43 [debug]: GET /js/api.js 200 6ms — ::1
+2026-06-26 19:45:43 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-26 19:45:43 [debug]: GET /js/ui.js 200 7ms — ::1
+2026-06-26 19:45:43 [debug]: GET /js/app.js 200 7ms — ::1
+2026-06-26 19:45:43 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:45:44 [debug]: GET /favicon.ico 200 5ms — ::1
+2026-06-26 19:45:46 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:45:48 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:45:48 [debug]: POST /verify 200 3921ms — ::1
+2026-06-26 19:49:10 [debug]: GET / 200 4ms — ::1
+2026-06-26 19:49:10 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 19:49:10 [debug]: GET /js/api.js 200 2ms — ::1
+2026-06-26 19:49:10 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-26 19:49:10 [debug]: GET /js/ui.js 200 7ms — ::1
+2026-06-26 19:49:10 [debug]: GET /js/app.js 200 11ms — ::1
+2026-06-26 19:49:10 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:49:11 [debug]: GET / 200 2ms — ::1
+2026-06-26 19:49:11 [debug]: GET /css/styles.css 200 7ms — ::1
+2026-06-26 19:49:11 [debug]: GET /js/api.js 200 7ms — ::1
+2026-06-26 19:49:11 [debug]: GET /js/auth.js 200 12ms — ::1
+2026-06-26 19:49:11 [debug]: GET /js/ui.js 200 13ms — ::1
+2026-06-26 19:49:11 [debug]: GET /js/app.js 200 9ms — ::1
+2026-06-26 19:49:11 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:49:12 [debug]: GET /favicon.ico 200 6ms — ::1
+2026-06-26 19:49:14 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:49:16 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:49:16 [debug]: POST /verify 200 2273ms — ::1
+2026-06-26 19:50:43 [debug]: GET /legal/terms.html 200 5ms — ::1
+2026-06-26 19:50:43 [debug]: GET /favicon.ico 304 3ms — ::1
+2026-06-26 19:50:44 [debug]: GET /favicon.ico 304 2ms — ::1
+2026-06-26 19:50:46 [debug]: GET /legal/privacy.html 200 3ms — ::1
+2026-06-26 19:50:46 [debug]: GET /favicon.ico 304 3ms — ::1
+2026-06-26 19:50:47 [debug]: GET /favicon.ico 304 2ms — ::1
+2026-06-26 19:50:48 [debug]: GET /legal/copyright.html 200 3ms — ::1
+2026-06-26 19:50:48 [debug]: GET /favicon.ico 304 2ms — ::1
+2026-06-26 19:50:49 [debug]: GET /favicon.ico 304 2ms — ::1
+2026-06-26 19:55:09 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:55:09 [debug]: GET /css/styles.css 200 3ms — ::1
+2026-06-26 19:55:09 [debug]: GET /js/api.js 200 3ms — ::1
+2026-06-26 19:55:09 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 19:55:09 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 19:55:09 [debug]: GET /js/app.js 200 6ms — ::1
+2026-06-26 19:55:10 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:55:11 [debug]: GET /favicon.ico 200 4ms — ::1
+2026-06-26 19:55:13 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:55:14 [debug]: GET /legal/terms.html 200 4ms — ::1
+2026-06-26 19:55:15 [debug]: GET /favicon.ico 304 6ms — ::1
+2026-06-26 19:55:15 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:55:15 [debug]: POST /verify 200 3863ms — ::1
+2026-06-26 19:55:20 [debug]: GET /favicon.ico 304 4ms — ::1
+2026-06-26 19:55:21 [debug]: GET /legal/privacy.html 200 3ms — ::1
+2026-06-26 19:55:22 [debug]: GET /favicon.ico 304 3ms — ::1
+2026-06-26 19:55:24 [debug]: GET /favicon.ico 304 4ms — ::1
+2026-06-26 19:57:13 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:57:14 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 19:57:14 [debug]: GET /js/auth.js 200 3ms — ::1
+2026-06-26 19:57:14 [debug]: GET /js/api.js 200 5ms — ::1
+2026-06-26 19:57:14 [debug]: GET /js/ui.js 200 6ms — ::1
+2026-06-26 19:57:14 [debug]: GET /js/app.js 200 7ms — ::1
+2026-06-26 19:57:14 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:57:15 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:57:18 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:57:18 [debug]: POST /verify 200 2753ms — ::1
+2026-06-26 19:57:18 [debug]: GET /favicon.ico 200 3ms — ::1
+2026-06-26 19:57:29 [debug]: GET / 200 3ms — ::1
+2026-06-26 19:57:29 [debug]: GET /css/styles.css 200 2ms — ::1
+2026-06-26 19:57:29 [debug]: GET /js/api.js 200 6ms — ::1
+2026-06-26 19:57:29 [debug]: GET /js/auth.js 200 6ms — ::1
+2026-06-26 19:57:29 [debug]: GET /js/ui.js 200 5ms — ::1
+2026-06-26 19:57:29 [debug]: GET /js/app.js 200 5ms — ::1
+2026-06-26 19:57:29 [debug]: GET /api/config 200 1ms — ::1
+2026-06-26 19:57:29 [debug]: GET /favicon.ico 200 4ms — ::1
+2026-06-26 19:57:30 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 19:57:32 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 19:57:32 [debug]: POST /verify 200 2426ms — ::1
+2026-06-26 20:00:51 [debug]: GET / 200 5ms — ::1
+2026-06-26 20:00:51 [debug]: GET /api/config 304 1ms — ::1
+2026-06-26 20:00:52 [debug]: GET /favicon.ico 200 31ms — ::1
+2026-06-26 20:00:53 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 20:00:55 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 20:00:55 [debug]: POST /verify 200 2800ms — ::1
+2026-06-26 20:01:01 [debug]: GET /legal/terms.html 304 2ms — ::1
+2026-06-26 20:01:01 [debug]: GET /favicon.ico 304 4ms — ::1
+2026-06-26 20:01:07 [debug]: GET / 304 2ms — ::1
+2026-06-26 20:01:07 [debug]: GET /api/config 304 1ms — ::1
+2026-06-26 20:01:07 [debug]: GET /favicon.ico 304 2ms — ::1
+2026-06-26 20:01:08 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 20:01:10 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 20:01:10 [debug]: POST /verify 200 2507ms — ::1
+2026-06-26 20:01:11 [debug]: GET /legal/terms.html 304 2ms — ::1
+2026-06-26 20:01:11 [debug]: GET /favicon.ico 304 4ms — ::1
+2026-06-26 20:01:26 [debug]: GET / 304 2ms — ::1
+2026-06-26 20:01:26 [debug]: GET /api/config 304 1ms — ::1
+2026-06-26 20:01:26 [debug]: GET /favicon.ico 304 2ms — ::1
+2026-06-26 20:01:27 [info]: Firestore user record created/updated for uid Jb1iCsMfRpY3iaQR4SBLE6m6RIA2
+2026-06-26 20:01:29 [debug]: [Auth] Token verified: uid=Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 tier=premium
+2026-06-26 20:01:29 [debug]: POST /verify 200 2302ms — ::1
+2026-06-26 20:01:44 [debug]: POST /create-guest-order 200 281ms — ::1
+2026-06-27 14:51:25 [info]: [extract] Starting for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 14:51:25 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 14:51:31 [info]: [extract] Starting for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 14:51:31 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 14:51:35 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Instagram sent an empty media response. Check if this post is accessible in your browser without being logged-in. If it is not, then use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to
+2026-06-27 14:51:37 [info]: [extract] Starting for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 14:51:37 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 14:51:41 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: No video could be found in this tweet
+
+2026-06-27 14:51:43 [info]: [extract] Starting for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 14:51:43 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 14:51:46 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 7106594312292453675: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-06-27 14:51:48 [info]: [extract] Starting for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 14:51:48 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 14:51:52 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:51:54 [info]: [extract] Starting for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 14:51:54 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 14:51:57 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:51:59 [info]: [extract] Starting for: https://www.pinterest.com/pin/106679313626284260/
+2026-06-27 14:51:59 [info]: [yt-dlp] Running extraction for: https://www.pinterest.com/pin/106679313626284260/
+2026-06-27 14:52:02 [warn]: [yt-dlp] Failed (code=1): ERROR: [Pinterest] 106679313626284260: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:52:04 [info]: [extract] Starting for: https://www.linkedin.com/posts/linkedin_linkedin-tips-and-tricks-activity-7128038872935272448-ABC
+2026-06-27 14:52:04 [info]: [yt-dlp] Running extraction for: https://www.linkedin.com/posts/linkedin_linkedin-tips-and-tricks-activity-7128038872935272448-ABC
+2026-06-27 14:52:07 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:52:09 [info]: [extract] Starting for: https://vk.com/video-22822305_456239018
+2026-06-27 14:52:09 [info]: [yt-dlp] Running extraction for: https://vk.com/video-22822305_456239018
+2026-06-27 14:52:18 [info]: [extract] Starting for: https://clips.twitch.tv/KathishRichCiderTheRinger-Q2x4yH2X7O9a_Y31
+2026-06-27 14:52:18 [info]: [yt-dlp] Running extraction for: https://clips.twitch.tv/KathishRichCiderTheRinger-Q2x4yH2X7O9a_Y31
+2026-06-27 14:52:21 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:clips] KathishRichCiderTheRinger-Q2x4yH2X7O9a_Y31: This clip is no longer available
+
+2026-06-27 14:52:23 [info]: [extract] Starting for: https://vimeo.com/76979871
+2026-06-27 14:52:23 [info]: [yt-dlp] Running extraction for: https://vimeo.com/76979871
+2026-06-27 14:52:29 [info]: [extract] Starting for: https://www.dailymotion.com/video/x7tg3l1
+2026-06-27 14:52:29 [info]: [yt-dlp] Running extraction for: https://www.dailymotion.com/video/x7tg3l1
+2026-06-27 14:52:32 [warn]: [yt-dlp] Failed (code=1): ERROR: [dailymotion] x7tg3l1: Not found.
+
+2026-06-27 14:52:34 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1xx411c7mD
+2026-06-27 14:52:34 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1xx411c7mD
+2026-06-27 14:52:40 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1xx411c7mD: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-27 14:52:42 [info]: [extract] Starting for: https://rumble.com/v1b0fbb-cats-are-funny.html
+2026-06-27 14:52:42 [info]: [yt-dlp] Running extraction for: https://rumble.com/v1b0fbb-cats-are-funny.html
+2026-06-27 14:52:47 [warn]: [yt-dlp] Failed (code=1): ERROR: [Rumble] v1b0fbb-cats-are-funny.html: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:52:49 [info]: [extract] Starting for: https://www.bbc.co.uk/news/av/technology-68499878
+2026-06-27 14:52:49 [info]: [yt-dlp] Running extraction for: https://www.bbc.co.uk/news/av/technology-68499878
+2026-06-27 14:52:52 [warn]: [yt-dlp] Failed (code=1): ERROR: [bbc] technology-68499878: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:52:54 [info]: [extract] Starting for: https://edition.cnn.com/videos/world/2024/03/01/video-test.cnn
+2026-06-27 14:52:54 [info]: [yt-dlp] Running extraction for: https://edition.cnn.com/videos/world/2024/03/01/video-test.cnn
+2026-06-27 14:52:58 [warn]: [yt-dlp] Failed (code=1): ERROR: [CNN] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:53:00 [info]: [extract] Starting for: https://www.foxnews.com/video/6347000000001
+2026-06-27 14:53:00 [info]: [yt-dlp] Running extraction for: https://www.foxnews.com/video/6347000000001
+2026-06-27 14:53:03 [warn]: [yt-dlp] Failed (code=1): ERROR: [foxnews] 6347000000001: Unable to download Akamai AMP feed: HTTP Error 400: Bad Request (caused by <HTTPError 400: Bad Request>)
+
+2026-06-27 14:53:05 [info]: [extract] Starting for: https://www.bloomberg.com/news/videos/2024-01-01/test-video
+2026-06-27 14:53:05 [info]: [yt-dlp] Running extraction for: https://www.bloomberg.com/news/videos/2024-01-01/test-video
+2026-06-27 14:53:09 [warn]: [yt-dlp] Failed (code=1): ERROR: [Bloomberg] test-video: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:53:11 [info]: [extract] Starting for: https://www.patreon.com/posts/test-video-123456
+2026-06-27 14:53:11 [info]: [yt-dlp] Running extraction for: https://www.patreon.com/posts/test-video-123456
+2026-06-27 14:53:13 [warn]: [yt-dlp] Failed (code=1): ERROR: [patreon] 123456: Patreon said: post with id 123456 was not found.
+
+2026-06-27 14:53:15 [info]: [extract] Starting for: https://www.kickstarter.com/projects/peak-design/travel-tripod
+2026-06-27 14:53:15 [info]: [yt-dlp] Running extraction for: https://www.kickstarter.com/projects/peak-design/travel-tripod
+2026-06-27 14:53:18 [warn]: [yt-dlp] Failed (code=1): ERROR: [KickStarter] peak-design: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 14:53:20 [info]: [extract] Starting for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 14:53:20 [info]: [yt-dlp] Running extraction for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 14:53:26 [info]: [extract] Starting for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 14:53:26 [info]: [yt-dlp] Running extraction for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 14:53:33 [info]: [extract] Starting for: https://imgur.com/gallery/q3Kx7
+2026-06-27 14:53:33 [info]: [yt-dlp] Running extraction for: https://imgur.com/gallery/q3Kx7
+2026-06-27 14:53:37 [info]: [extract] Starting for: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+2026-06-27 14:53:37 [info]: [yt-dlp] Running extraction for: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+2026-06-27 14:53:47 [warn]: [yt-dlp] Failed (code=1): ERROR: Unsupported URL: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+
+2026-06-27 14:53:49 [info]: [extract] Starting for: https://www.amazon.in/minitv/tp/8a011cd6-6701-4475-ae9e-10b240cc8c51
+2026-06-27 14:53:49 [info]: [yt-dlp] Running extraction for: https://www.amazon.in/minitv/tp/8a011cd6-6701-4475-ae9e-10b240cc8c51
+2026-06-27 14:53:53 [warn]: [yt-dlp] Failed (code=1): ERROR: [AmazonMiniTV] 8a011cd6-6701-4475-ae9e-10b240cc8c51: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:01:29 [info]: [ProxyManager] Fetching fresh free proxy list...
+2026-06-27 15:01:31 [info]: [ProxyManager] Successfully loaded 1915 proxies.
+2026-06-27 15:02:40 [info]: [extract] Starting for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 15:02:40 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 15:02:47 [info]: [extract] Starting for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:02:47 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:02:50 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Instagram sent an empty media response. Check if this post is accessible in your browser without being logged-in. If it is not, then use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to
+2026-06-27 15:02:50 [warn]: [extract] Initial extraction failed, attempting proxy fallback. Error: ERROR: [Instagram] C_aJ5J2R5Qy: Instagram sent an empty media response. Check if this post is access
+2026-06-27 15:02:50 [info]: [ProxyManager] Fetching fresh free proxy list...
+2026-06-27 15:02:51 [info]: [ProxyManager] Successfully loaded 1915 proxies.
+2026-06-27 15:02:51 [info]: [extract] Retrying with proxy: socks5://77.110.126.90:1081
+2026-06-27 15:02:51 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:03:02 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Unable to download webpage: Failed to perform, curl: (7) Failed to connect to 77.110.126.90 port 1081 after 3342 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, cu
+2026-06-27 15:03:02 [warn]: [extract] Proxy socks5://77.110.126.90:1081 failed.
+2026-06-27 15:03:02 [info]: [extract] Retrying with proxy: socks5://167.233.56.179:1081
+2026-06-27 15:03:02 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:03:15 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Instagram sent an empty media response. Check if this post is accessible in your browser without being logged-in. If it is not, then use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to
+2026-06-27 15:03:15 [warn]: [extract] Proxy socks5://167.233.56.179:1081 failed.
+2026-06-27 15:03:15 [info]: [extract] Retrying with proxy: socks5://206.123.156.230:11536
+2026-06-27 15:03:15 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:03:24 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Unable to download webpage: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
+
+2026-06-27 15:03:24 [warn]: [extract] Proxy socks5://206.123.156.230:11536 failed.
+2026-06-27 15:03:24 [info]: [extract] Retrying with proxy: socks5://144.124.232.204:5222
+2026-06-27 15:03:24 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:03:34 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Requested content is not available, rate-limit reached or login required. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+
+2026-06-27 15:03:34 [warn]: [extract] Proxy socks5://144.124.232.204:5222 failed.
+2026-06-27 15:03:34 [info]: [extract] Retrying with proxy: socks5://206.123.156.223:5377
+2026-06-27 15:03:34 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:05:27 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Requested content is not available, rate-limit reached or login required. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+
+2026-06-27 15:05:27 [warn]: [extract] Proxy socks5://206.123.156.223:5377 failed.
+2026-06-27 15:05:29 [info]: [extract] Starting for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:05:29 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:05:33 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: No video could be found in this tweet
+
+2026-06-27 15:05:33 [warn]: [extract] Initial extraction failed, attempting proxy fallback. Error: ERROR: [twitter] 1768270570533036490: No video could be found in this tweet
+
+2026-06-27 15:05:33 [info]: [extract] Retrying with proxy: socks5://194.26.192.168:8080
+2026-06-27 15:05:33 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:05:41 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: Unable to download JSON metadata: Failed to perform, curl: (97) cannot complete SOCKS5 connection to api.x.com. (4). See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by ProxyError('Failed to perform, curl: (97) cannot complete SO
+2026-06-27 15:05:41 [warn]: [extract] Proxy socks5://194.26.192.168:8080 failed.
+2026-06-27 15:05:41 [info]: [extract] Retrying with proxy: socks5://184.178.172.13:15311
+2026-06-27 15:05:41 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:05:51 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: No video could be found in this tweet
+
+2026-06-27 15:05:51 [warn]: [extract] Proxy socks5://184.178.172.13:15311 failed.
+2026-06-27 15:05:51 [info]: [extract] Retrying with proxy: socks5://206.123.156.210:8804
+2026-06-27 15:05:51 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:06:25 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: Unable to download JSON metadata: Failed to perform, curl: (28) Connection timed out after 30001 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out
+2026-06-27 15:06:25 [warn]: [extract] Proxy socks5://206.123.156.210:8804 failed.
+2026-06-27 15:06:25 [info]: [extract] Retrying with proxy: socks5://206.123.156.227:6409
+2026-06-27 15:06:25 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:06:49 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: Unable to download JSON metadata: Failed to perform, curl: (28) Failed to connect to 206.123.156.227 port 6409 after 21038 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Faile
+2026-06-27 15:06:49 [warn]: [extract] Proxy socks5://206.123.156.227:6409 failed.
+2026-06-27 15:06:49 [info]: [extract] Retrying with proxy: socks5://206.123.156.223:8264
+2026-06-27 15:06:49 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:07:28 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: Unable to download JSON metadata: Failed to perform, curl: (28) Failed to connect to 206.123.156.223 port 8264 after 21054 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Faile
+2026-06-27 15:07:28 [warn]: [extract] Proxy socks5://206.123.156.223:8264 failed.
+2026-06-27 15:07:30 [info]: [extract] Starting for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 15:07:30 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 15:07:33 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 7106594312292453675: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-06-27 15:07:33 [warn]: [extract] Initial extraction failed, attempting proxy fallback. Error: ERROR: [TikTok] 7106594312292453675: Unexpected response from webpage request; please report this is
+2026-06-27 15:07:33 [info]: [extract] Retrying with proxy: socks5://206.123.156.219:4375
+2026-06-27 15:07:33 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 15:07:57 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 7106594312292453675: Unable to download webpage: Failed to perform, curl: (28) Failed to connect to 206.123.156.219 port 4375 after 21037 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to pe
+2026-06-27 15:07:57 [warn]: [extract] Proxy socks5://206.123.156.219:4375 failed.
+2026-06-27 15:07:57 [info]: [extract] Retrying with proxy: socks5://206.123.156.213:7126
+2026-06-27 15:07:57 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 15:08:06 [info]: [extract] Starting for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:08:06 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:08:09 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:08:09 [warn]: [extract] Initial extraction failed, attempting proxy fallback. Error: ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTT
+2026-06-27 15:08:09 [info]: [extract] Retrying with proxy: socks5://206.123.156.236:5513
+2026-06-27 15:08:09 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:08:55 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: Failed to perform, curl: (28) Failed to connect to 206.123.156.236 port 5513 after 21048 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform,
+2026-06-27 15:08:55 [warn]: [extract] Proxy socks5://206.123.156.236:5513 failed.
+2026-06-27 15:08:55 [info]: [extract] Retrying with proxy: socks5://206.123.156.236:4344
+2026-06-27 15:08:55 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:09:48 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: Failed to perform, curl: (28) Connection timed out after 30014 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out after 30014 
+2026-06-27 15:09:48 [warn]: [extract] Proxy socks5://206.123.156.236:4344 failed.
+2026-06-27 15:09:48 [info]: [extract] Retrying with proxy: socks5://68.71.254.6:4145
+2026-06-27 15:09:48 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:09:54 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) S
+2026-06-27 15:09:54 [warn]: [extract] Proxy socks5://68.71.254.6:4145 failed.
+2026-06-27 15:09:54 [info]: [extract] Retrying with proxy: socks5://206.123.156.210:7177
+2026-06-27 15:09:54 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:10:48 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: Failed to perform, curl: (28) Connection timed out after 30006 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out after 30006 
+2026-06-27 15:10:48 [warn]: [extract] Proxy socks5://206.123.156.210:7177 failed.
+2026-06-27 15:10:48 [info]: [extract] Retrying with proxy: socks5://206.123.156.227:4170
+2026-06-27 15:10:48 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:11:10 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: Failed to perform, curl: (97) cannot complete SOCKS5 connection to www.reddit.com. (1). See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by ProxyError('Failed to perform, curl: (97) cannot complete SOCKS5 con
+2026-06-27 15:11:10 [warn]: [extract] Proxy socks5://206.123.156.227:4170 failed.
+2026-06-27 15:11:12 [info]: [extract] Starting for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:11:12 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:11:15 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:11:15 [warn]: [extract] Initial extraction failed, attempting proxy fallback. Error: ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: No
+2026-06-27 15:11:15 [info]: [extract] Retrying with proxy: socks5://165.154.227.39:1081
+2026-06-27 15:11:15 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:11:38 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: Failed to perform, curl: (28) Failed to connect to 165.154.227.39 port 1081 after 21045 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Fai
+2026-06-27 15:11:38 [warn]: [extract] Proxy socks5://165.154.227.39:1081 failed.
+2026-06-27 15:11:38 [info]: [extract] Retrying with proxy: socks5://206.123.156.220:5880
+2026-06-27 15:11:38 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:11:57 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: Failed to perform, curl: (97) cannot complete SOCKS5 connection to story.snapchat.com. (1). See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by ProxyError('Failed to perform, curl: (97) cannot complete SOCKS5 connection to
+2026-06-27 15:11:57 [warn]: [extract] Proxy socks5://206.123.156.220:5880 failed.
+2026-06-27 15:11:57 [info]: [extract] Retrying with proxy: socks5://103.138.145.202:1999
+2026-06-27 15:11:57 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:12:20 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: Failed to perform, curl: (28) Failed to connect to 103.138.145.202 port 1999 after 21038 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Fa
+2026-06-27 15:12:20 [warn]: [extract] Proxy socks5://103.138.145.202:1999 failed.
+2026-06-27 15:12:20 [info]: [extract] Retrying with proxy: socks5://206.123.156.222:7479
+2026-06-27 15:12:20 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:12:44 [info]: [extract] Starting for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 15:12:44 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 15:12:49 [info]: [extract] Starting for: https://vk.com/video-22822305_456239018
+2026-06-27 15:12:49 [info]: [yt-dlp] Running extraction for: https://vk.com/video-22822305_456239018
+2026-06-27 15:12:56 [info]: [extract] Starting for: https://vimeo.com/76979871
+2026-06-27 15:12:56 [info]: [yt-dlp] Running extraction for: https://vimeo.com/76979871
+2026-06-27 15:13:00 [info]: [extract] Starting for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 15:13:00 [info]: [yt-dlp] Running extraction for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 15:13:04 [info]: [extract] Starting for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 15:13:04 [info]: [yt-dlp] Running extraction for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 15:13:07 [info]: [extract] Starting for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:13:07 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:13:09 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 6768504823336815877: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-06-27 15:13:09 [warn]: [extract] Initial extraction failed, attempting proxy fallback. Error: ERROR: [TikTok] 6768504823336815877: Unexpected response from webpage request; please report this is
+2026-06-27 15:13:09 [info]: [ProxyManager] Fetching fresh free proxy list...
+2026-06-27 15:13:10 [info]: [ProxyManager] Successfully loaded 1589 proxies.
+2026-06-27 15:13:10 [info]: [extract] Retrying with proxy: socks5://98.191.0.47:4145
+2026-06-27 15:13:10 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:13:16 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 6768504823336815877: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: 
+2026-06-27 15:13:16 [warn]: [extract] Proxy socks5://98.191.0.47:4145 failed.
+2026-06-27 15:13:16 [info]: [extract] Retrying with proxy: socks5://67.201.59.70:4145
+2026-06-27 15:13:16 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:13:20 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 6768504823336815877: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: 
+2026-06-27 15:13:20 [warn]: [extract] Proxy socks5://67.201.59.70:4145 failed.
+2026-06-27 15:13:20 [info]: [extract] Retrying with proxy: socks5://206.123.156.221:8706
+2026-06-27 15:13:20 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:13:27 [info]: [extract] Starting for: https://www.twitch.tv/ninja
+2026-06-27 15:13:27 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/ninja
+2026-06-27 15:13:30 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:stream] ninja: The channel is not currently live
+
+2026-06-27 15:13:30 [warn]: [extract] Initial extraction failed, attempting proxy fallback. Error: ERROR: [twitch:stream] ninja: The channel is not currently live
+
+2026-06-27 15:13:30 [info]: [extract] Retrying with proxy: socks5://193.221.203.192:1081
+2026-06-27 15:13:30 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/ninja
+2026-06-27 15:13:35 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:stream] ninja: Unable to download JSON metadata: Failed to perform, curl: (7) Failed to connect to 193.221.203.192 port 1081 after 2956 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perfo
+2026-06-27 15:13:35 [warn]: [extract] Proxy socks5://193.221.203.192:1081 failed.
+2026-06-27 15:13:35 [info]: [extract] Retrying with proxy: socks5://121.169.46.116:1090
+2026-06-27 15:13:35 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/ninja
+2026-06-27 15:13:47 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:stream] ninja: The channel is not currently live
+
+2026-06-27 15:13:47 [warn]: [extract] Proxy socks5://121.169.46.116:1090 failed.
+2026-06-27 15:13:47 [info]: [extract] Retrying with proxy: socks5://206.123.156.227:10328
+2026-06-27 15:13:47 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/ninja
+2026-06-27 15:13:56 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:stream] ninja: The channel is not currently live
+
+2026-06-27 15:13:56 [warn]: [extract] Proxy socks5://206.123.156.227:10328 failed.
+2026-06-27 15:13:56 [info]: [extract] Retrying with proxy: socks5://206.123.156.240:9078
+2026-06-27 15:13:56 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/ninja
+2026-06-27 15:14:29 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:stream] ninja: Unable to download JSON metadata: Failed to perform, curl: (28) Connection timed out after 30005 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out after 3
+2026-06-27 15:14:29 [warn]: [extract] Proxy socks5://206.123.156.240:9078 failed.
+2026-06-27 15:14:29 [info]: [extract] Retrying with proxy: socks5://206.123.156.223:4605
+2026-06-27 15:14:29 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/ninja
+2026-06-27 15:14:36 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:stream] ninja: The channel is not currently live
+
+2026-06-27 15:14:36 [warn]: [extract] Proxy socks5://206.123.156.223:4605 failed.
+2026-06-27 15:21:08 [info]: [extract] Starting for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 15:21:08 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 15:21:11 [info]: [extract] Starting for: https://vk.com/video-22822305_456239018
+2026-06-27 15:21:11 [info]: [yt-dlp] Running extraction for: https://vk.com/video-22822305_456239018
+2026-06-27 15:21:16 [info]: [extract] Starting for: https://vimeo.com/76979871
+2026-06-27 15:21:16 [info]: [yt-dlp] Running extraction for: https://vimeo.com/76979871
+2026-06-27 15:21:20 [info]: [extract] Starting for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 15:21:20 [info]: [yt-dlp] Running extraction for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 15:21:23 [info]: [extract] Starting for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 15:21:23 [info]: [yt-dlp] Running extraction for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 15:21:26 [info]: [extract] Starting for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:21:26 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:21:28 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 6768504823336815877: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-06-27 15:21:28 [warn]: [extract] Initial extraction failed. Error: ERROR: [TikTok] 6768504823336815877: Unexpected response from webpage request; please report this is
+2026-06-27 15:21:28 [warn]: [extract] Bot detection detected, attempting proxy fallback...
+2026-06-27 15:21:28 [info]: [ProxyManager] Fetching fresh free proxy list...
+2026-06-27 15:21:29 [info]: [ProxyManager] Successfully loaded 1603 proxies.
+2026-06-27 15:21:29 [info]: [extract] Retrying with proxy: socks5://43.135.135.136:9050
+2026-06-27 15:21:29 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:22:01 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 6768504823336815877: Unable to download webpage: Failed to perform, curl: (28) Connection timed out after 30008 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out after 
+2026-06-27 15:22:01 [warn]: [extract] Proxy socks5://43.135.135.136:9050 failed.
+2026-06-27 15:22:01 [info]: [extract] Retrying with proxy: socks5://68.1.210.189:4145
+2026-06-27 15:22:01 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:22:08 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 6768504823336815877: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: 
+2026-06-27 15:22:08 [warn]: [extract] Proxy socks5://68.1.210.189:4145 failed.
+2026-06-27 15:22:08 [info]: [extract] Retrying with proxy: socks5://109.68.215.84:1081
+2026-06-27 15:22:08 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:22:13 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 6768504823336815877: Unable to download webpage: Failed to perform, curl: (7) Failed to connect to 109.68.215.84 port 1081 after 3339 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perfor
+2026-06-27 15:22:13 [warn]: [extract] Proxy socks5://109.68.215.84:1081 failed.
+2026-06-27 15:22:13 [info]: [extract] Retrying with proxy: socks5://206.123.156.210:7300
+2026-06-27 15:22:13 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@zachking/video/6768504823336815877
+2026-06-27 15:22:35 [info]: [extract] Starting for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:22:35 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 15:22:38 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: No video could be found in this tweet
+
+2026-06-27 15:22:38 [warn]: [extract] Initial extraction failed. Error: ERROR: [twitter] 1768270570533036490: No video could be found in this tweet
+
+2026-06-27 15:22:38 [info]: [extract] Starting for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:22:38 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:22:47 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Instagram sent an empty media response. Check if this post is accessible in your browser without being logged-in. If it is not, then use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to
+2026-06-27 15:22:47 [warn]: [extract] Initial extraction failed. Error: ERROR: [Instagram] C_aJ5J2R5Qy: Instagram sent an empty media response. Check if this post is access
+2026-06-27 15:22:47 [warn]: [extract] Bot detection detected, attempting proxy fallback...
+2026-06-27 15:22:47 [info]: [extract] Retrying with proxy: socks5://185.151.86.121:3699
+2026-06-27 15:22:47 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:23:52 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Unable to download webpage: Failed to perform, curl: (28) Failed to connect to 185.151.86.121 port 3699 after 21050 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform,
+2026-06-27 15:23:52 [warn]: [extract] Proxy socks5://185.151.86.121:3699 failed.
+2026-06-27 15:23:52 [info]: [extract] Retrying with proxy: socks5://206.123.156.236:4058
+2026-06-27 15:23:52 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:25:00 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Requested content is not available, rate-limit reached or login required. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+
+2026-06-27 15:25:00 [warn]: [extract] Proxy socks5://206.123.156.236:4058 failed.
+2026-06-27 15:25:00 [info]: [extract] Retrying with proxy: socks5://104.37.135.145:4145
+2026-06-27 15:25:00 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:25:07 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) 
+2026-06-27 15:25:07 [warn]: [extract] Proxy socks5://104.37.135.145:4145 failed.
+2026-06-27 15:25:07 [info]: [extract] Retrying with proxy: socks5://206.123.156.229:4444
+2026-06-27 15:25:07 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:26:25 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Requested content is not available, rate-limit reached or login required. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies
+
+2026-06-27 15:26:25 [warn]: [extract] Proxy socks5://206.123.156.229:4444 failed.
+2026-06-27 15:26:25 [info]: [extract] Retrying with proxy: socks5://206.123.156.230:5488
+2026-06-27 15:26:25 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 15:27:17 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Unable to download webpage: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
+
+2026-06-27 15:27:17 [warn]: [extract] Proxy socks5://206.123.156.230:5488 failed.
+2026-06-27 15:27:17 [info]: [extract] Starting for: https://www.dailymotion.com/video/x2m8jpp
+2026-06-27 15:27:17 [info]: [yt-dlp] Running extraction for: https://www.dailymotion.com/video/x2m8jpp
+2026-06-27 15:27:19 [warn]: [yt-dlp] Failed (code=1): ERROR: [dailymotion] x2m8jpp: Access forbidden.
+
+2026-06-27 15:27:19 [warn]: [extract] Initial extraction failed. Error: ERROR: [dailymotion] x2m8jpp: Access forbidden.
+
+2026-06-27 15:27:19 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1xx411c7mD
+2026-06-27 15:27:19 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1xx411c7mD
+2026-06-27 15:27:24 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1xx411c7mD: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-27 15:27:24 [warn]: [extract] Initial extraction failed. Error: ERROR: [BiliBili] 1xx411c7mD: Unable to download JSON metadata: HTTP Error 412: Precondition Failed 
+2026-06-27 15:27:24 [info]: [extract] Starting for: https://www.twitch.tv/ninja
+2026-06-27 15:27:24 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/ninja
+2026-06-27 15:27:27 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:stream] ninja: The channel is not currently live
+
+2026-06-27 15:27:27 [warn]: [extract] Initial extraction failed. Error: ERROR: [twitch:stream] ninja: The channel is not currently live
+
+2026-06-27 15:27:27 [info]: [extract] Starting for: https://rumble.com/v2n9l86-tucker-on-twitter-episode-1.html
+2026-06-27 15:27:27 [info]: [yt-dlp] Running extraction for: https://rumble.com/v2n9l86-tucker-on-twitter-episode-1.html
+2026-06-27 15:27:31 [warn]: [yt-dlp] Failed (code=1): ERROR: [Rumble] v2n9l86-tucker-on-twitter-episode-1.html: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:27:31 [warn]: [extract] Initial extraction failed. Error: ERROR: [Rumble] v2n9l86-tucker-on-twitter-episode-1.html: Unable to download webpage: HTTP Error 404
+2026-06-27 15:27:31 [info]: [extract] Starting for: https://www.bbc.co.uk/news/av/technology-68499878
+2026-06-27 15:27:31 [info]: [yt-dlp] Running extraction for: https://www.bbc.co.uk/news/av/technology-68499878
+2026-06-27 15:27:33 [warn]: [yt-dlp] Failed (code=1): ERROR: [bbc] technology-68499878: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:27:33 [warn]: [extract] Initial extraction failed. Error: ERROR: [bbc] technology-68499878: Unable to download webpage: HTTP Error 404: Not Found (caused by <
+2026-06-27 15:27:33 [info]: [extract] Starting for: https://edition.cnn.com/videos/world/2024/03/01/video-test.cnn
+2026-06-27 15:27:33 [info]: [yt-dlp] Running extraction for: https://edition.cnn.com/videos/world/2024/03/01/video-test.cnn
+2026-06-27 15:27:37 [warn]: [yt-dlp] Failed (code=1): ERROR: [CNN] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:27:37 [warn]: [extract] Initial extraction failed. Error: ERROR: [CNN] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Fo
+2026-06-27 15:27:37 [info]: [extract] Starting for: https://imgur.com/gallery/q3Kx7
+2026-06-27 15:27:37 [info]: [yt-dlp] Running extraction for: https://imgur.com/gallery/q3Kx7
+2026-06-27 15:27:39 [warn]: [extract] Initial extraction failed. Error: JSON parse error: Unexpected end of JSON input
+2026-06-27 15:27:39 [info]: [extract] Starting for: https://www.patreon.com/posts/test-video-123456
+2026-06-27 15:27:39 [info]: [yt-dlp] Running extraction for: https://www.patreon.com/posts/test-video-123456
+2026-06-27 15:27:41 [warn]: [yt-dlp] Failed (code=1): ERROR: [patreon] 123456: Patreon said: post with id 123456 was not found.
+
+2026-06-27 15:27:41 [warn]: [extract] Initial extraction failed. Error: ERROR: [patreon] 123456: Patreon said: post with id 123456 was not found.
+
+2026-06-27 15:27:41 [info]: [extract] Starting for: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+2026-06-27 15:27:41 [info]: [yt-dlp] Running extraction for: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+2026-06-27 15:27:48 [warn]: [yt-dlp] Failed (code=1): ERROR: Unsupported URL: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+
+2026-06-27 15:27:48 [warn]: [extract] Initial extraction failed. Error: ERROR: Unsupported URL: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+
+2026-06-27 15:27:48 [info]: [extract] Starting for: https://www.pinterest.com/pin/106679313626284260/
+2026-06-27 15:27:48 [info]: [yt-dlp] Running extraction for: https://www.pinterest.com/pin/106679313626284260/
+2026-06-27 15:27:51 [warn]: [yt-dlp] Failed (code=1): ERROR: [Pinterest] 106679313626284260: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:27:51 [warn]: [extract] Initial extraction failed. Error: ERROR: [Pinterest] 106679313626284260: Unable to download JSON metadata: HTTP Error 404: Not Found (
+2026-06-27 15:27:51 [info]: [extract] Starting for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:27:51 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 15:27:54 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:27:54 [warn]: [extract] Initial extraction failed. Error: ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: No
+2026-06-27 15:27:54 [info]: [extract] Starting for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:27:54 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 15:27:57 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:27:57 [warn]: [extract] Initial extraction failed. Error: ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTT
+2026-06-27 15:27:57 [info]: [extract] Starting for: https://www.foxnews.com/video/6347000000001
+2026-06-27 15:27:57 [info]: [yt-dlp] Running extraction for: https://www.foxnews.com/video/6347000000001
+2026-06-27 15:28:00 [warn]: [yt-dlp] Failed (code=1): ERROR: [foxnews] 6347000000001: Unable to download Akamai AMP feed: HTTP Error 400: Bad Request (caused by <HTTPError 400: Bad Request>)
+
+2026-06-27 15:28:00 [warn]: [extract] Initial extraction failed. Error: ERROR: [foxnews] 6347000000001: Unable to download Akamai AMP feed: HTTP Error 400: Bad Request (cau
+2026-06-27 15:28:00 [info]: [extract] Starting for: https://www.bloomberg.com/news/videos/2024-01-01/test-video
+2026-06-27 15:28:00 [info]: [yt-dlp] Running extraction for: https://www.bloomberg.com/news/videos/2024-01-01/test-video
+2026-06-27 15:28:04 [warn]: [yt-dlp] Failed (code=1): ERROR: [Bloomberg] test-video: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:28:04 [warn]: [extract] Initial extraction failed. Error: ERROR: [Bloomberg] test-video: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTT
+2026-06-27 15:28:04 [info]: [extract] Starting for: https://www.kickstarter.com/projects/peak-design/travel-tripod
+2026-06-27 15:28:04 [info]: [yt-dlp] Running extraction for: https://www.kickstarter.com/projects/peak-design/travel-tripod
+2026-06-27 15:28:06 [warn]: [yt-dlp] Failed (code=1): ERROR: [KickStarter] peak-design: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:28:06 [warn]: [extract] Initial extraction failed. Error: ERROR: [KickStarter] peak-design: Unable to download webpage: HTTP Error 404: Not Found (caused by <
+2026-06-27 15:28:06 [info]: [extract] Starting for: https://www.linkedin.com/posts/linkedin_linkedin-tips-and-tricks-activity-7128038872935272448-ABC
+2026-06-27 15:28:06 [info]: [yt-dlp] Running extraction for: https://www.linkedin.com/posts/linkedin_linkedin-tips-and-tricks-activity-7128038872935272448-ABC
+2026-06-27 15:28:09 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:28:09 [warn]: [extract] Initial extraction failed. Error: ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: No
+2026-06-27 15:28:09 [info]: [extract] Starting for: https://www.amazon.in/minitv/tp/8a011cd6-6701-4475-ae9e-10b240cc8c51
+2026-06-27 15:28:09 [info]: [yt-dlp] Running extraction for: https://www.amazon.in/minitv/tp/8a011cd6-6701-4475-ae9e-10b240cc8c51
+2026-06-27 15:28:12 [warn]: [yt-dlp] Failed (code=1): ERROR: [AmazonMiniTV] 8a011cd6-6701-4475-ae9e-10b240cc8c51: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 15:28:12 [warn]: [extract] Initial extraction failed. Error: ERROR: [AmazonMiniTV] 8a011cd6-6701-4475-ae9e-10b240cc8c51: Unable to download JSON metadata: HTTP E
+2026-06-27 16:04:11 [info]: [extract] Starting for: https://www.instagram.com/reel/DZxIQDORtO3/?igsh=MWZrMWNoY2Q2N3pzaQ==
+2026-06-27 16:04:11 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/reel/DZxIQDORtO3/?igsh=MWZrMWNoY2Q2N3pzaQ==
+2026-06-27 16:04:14 [info]: [extract] Starting for: https://www.reddit.com/r/MxRMods/comments/liwe27/i_found_tha_video_from_where_there_video_from_jan/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+2026-06-27 16:04:14 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/MxRMods/comments/liwe27/i_found_tha_video_from_where_there_video_from_jan/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+2026-06-27 16:04:22 [info]: [extract] Starting for: https://snapchat.com/t/DkcbZfsX
+2026-06-27 16:04:22 [info]: [yt-dlp] Running extraction for: https://snapchat.com/t/DkcbZfsX
+2026-06-27 16:04:28 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 16:04:28 [warn]: [extract] Initial extraction failed. Error: ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: No
+2026-06-27 16:04:28 [info]: [extract] Starting for: https://x.com/narendramodi/status/2066717403707564188
+2026-06-27 16:04:28 [info]: [yt-dlp] Running extraction for: https://x.com/narendramodi/status/2066717403707564188
+2026-06-27 16:04:32 [info]: [extract] Starting for: https://www.facebook.com/narendramodi/videos/maoist-terror-is-breathing-its-last-in-india/1563221405529979/
+2026-06-27 16:04:32 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/narendramodi/videos/maoist-terror-is-breathing-its-last-in-india/1563221405529979/
+2026-06-27 16:04:36 [info]: [extract] Starting for: https://vkvideo.ru/video-43618728_456357566
+2026-06-27 16:04:36 [info]: [yt-dlp] Running extraction for: https://vkvideo.ru/video-43618728_456357566
+2026-06-27 16:04:56 [info]: [extract] Starting for: https://vimeo.com/ondemand/marblehalls
+2026-06-27 16:04:56 [info]: [yt-dlp] Running extraction for: https://vimeo.com/ondemand/marblehalls
+2026-06-27 16:05:07 [info]: [extract] Starting for: https://www.ted.com/talks/dhruv_khullar_can_ozempic_end_addiction?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare
+2026-06-27 16:05:07 [info]: [yt-dlp] Running extraction for: https://www.ted.com/talks/dhruv_khullar_can_ozempic_end_addiction?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare
+2026-06-27 16:05:11 [info]: [extract] Starting for: https://soundcloud.com/jadekoth/roll-like-thunder-prod-by-kushgrams?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+2026-06-27 16:05:11 [info]: [yt-dlp] Running extraction for: https://soundcloud.com/jadekoth/roll-like-thunder-prod-by-kushgrams?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+2026-06-27 16:05:14 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:05:14 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:05:18 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-27 16:05:18 [warn]: [extract] Initial extraction failed. Error: ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: HTTP Error 412: Precondition Failed 
+2026-06-27 16:05:18 [info]: [extract] Starting for: https://www.twitch.tv/sahranisworld/clip/GracefulCheerfulPuppyAliens-6Al2hH2pzMpFeGkL
+2026-06-27 16:05:18 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/sahranisworld/clip/GracefulCheerfulPuppyAliens-6Al2hH2pzMpFeGkL
+2026-06-27 16:05:21 [info]: [extract] Starting for: https://rumble.com/v7buvvu-getting-jumpscared.html
+2026-06-27 16:05:21 [info]: [yt-dlp] Running extraction for: https://rumble.com/v7buvvu-getting-jumpscared.html
+2026-06-27 16:05:27 [info]: [extract] Starting for: https://dai.ly/xaj8k6q
+2026-06-27 16:05:27 [info]: [yt-dlp] Running extraction for: https://dai.ly/xaj8k6q
+2026-06-27 16:05:30 [info]: [extract] Starting for: https://www.bbc.com/news/videos/c5yz05y6vvqo
+2026-06-27 16:05:30 [info]: [yt-dlp] Running extraction for: https://www.bbc.com/news/videos/c5yz05y6vvqo
+2026-06-27 16:05:37 [info]: [extract] Starting for: https://www.cnn.com/2026/06/26/world/video/israel-hezbollah-drone-threat-diamond-digvid
+2026-06-27 16:05:37 [info]: [yt-dlp] Running extraction for: https://www.cnn.com/2026/06/26/world/video/israel-hezbollah-drone-threat-diamond-digvid
+2026-06-27 16:05:46 [info]: [extract] Starting for: https://imgur.com/gallery/relaxing-sound-9Vfiz2W
+2026-06-27 16:05:46 [info]: [yt-dlp] Running extraction for: https://imgur.com/gallery/relaxing-sound-9Vfiz2W
+2026-06-27 16:05:51 [info]: [extract] Starting for: https://www.pinterest.com/ideas/pinterest-video/928397394202/
+2026-06-27 16:05:51 [info]: [yt-dlp] Running extraction for: https://www.pinterest.com/ideas/pinterest-video/928397394202/
+2026-06-27 16:05:53 [warn]: [yt-dlp] Failed (code=1): ERROR: [PinterestCollection] pinterest-video: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 16:05:53 [warn]: [extract] Initial extraction failed. Error: ERROR: [PinterestCollection] pinterest-video: Unable to download JSON metadata: HTTP Error 404: Not 
+2026-06-27 16:05:53 [info]: [extract] Starting for: https://www.foxnews.com/video/6399495572112
+2026-06-27 16:05:53 [info]: [yt-dlp] Running extraction for: https://www.foxnews.com/video/6399495572112
+2026-06-27 16:05:55 [info]: [extract] Starting for: https://www.bloomberg.com/news/videos/2026-06-26/auto-industry-fears-usmca-shakeup-video
+2026-06-27 16:05:55 [info]: [yt-dlp] Running extraction for: https://www.bloomberg.com/news/videos/2026-06-26/auto-industry-fears-usmca-shakeup-video
+2026-06-27 16:05:59 [warn]: [yt-dlp] Failed (code=1): ERROR: [Bloomberg] auto-industry-fears-usmca-shakeup-video: Unable to extract id; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-06-27 16:05:59 [warn]: [extract] Initial extraction failed. Error: ERROR: [Bloomberg] auto-industry-fears-usmca-shakeup-video: Unable to extract id; please report this
+2026-06-27 16:06:45 [info]: [extract] Starting for: https://snapchat.com/t/DkcbZfsX
+2026-06-27 16:06:45 [info]: [yt-dlp] Running extraction for: https://snapchat.com/t/DkcbZfsX
+2026-06-27 16:06:51 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 16:06:51 [warn]: [extract] Initial extraction failed. Error: ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: No
+2026-06-27 16:06:51 [info]: [extract] Starting for: https://vimeo.com/ondemand/marblehalls
+2026-06-27 16:06:51 [info]: [yt-dlp] Running extraction for: https://vimeo.com/ondemand/marblehalls
+2026-06-27 16:06:55 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:06:55 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:07:00 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-27 16:07:00 [warn]: [extract] Initial extraction failed. Error: ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: HTTP Error 412: Precondition Failed 
+2026-06-27 16:07:00 [warn]: [extract] Bot detection detected, attempting proxy fallback...
+2026-06-27 16:07:00 [info]: [ProxyManager] Fetching fresh free proxy list...
+2026-06-27 16:07:01 [info]: [ProxyManager] Successfully loaded 1708 proxies.
+2026-06-27 16:07:01 [info]: [extract] Retrying with proxy: socks5://192.252.214.20:15864
+2026-06-27 16:07:01 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:07:07 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) SS
+2026-06-27 16:07:07 [warn]: [extract] Proxy socks5://192.252.214.20:15864 failed.
+2026-06-27 16:07:07 [info]: [extract] Retrying with proxy: socks5://192.111.137.34:18765
+2026-06-27 16:07:07 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:07:10 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) SS
+2026-06-27 16:07:10 [warn]: [extract] Proxy socks5://192.111.137.34:18765 failed.
+2026-06-27 16:07:10 [info]: [extract] Retrying with proxy: socks5://206.123.156.223:8299
+2026-06-27 16:07:10 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:07:43 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (28) Connection timed out after 30002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out after 30002 m
+2026-06-27 16:07:43 [warn]: [extract] Proxy socks5://206.123.156.223:8299 failed.
+2026-06-27 16:07:43 [info]: [extract] Retrying with proxy: socks5://193.176.244.151:8888
+2026-06-27 16:07:43 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:07:45 [info]: [extract] Starting for: https://www.instagram.com/reel/DZxIQDORtO3/?igsh=MWZrMWNoY2Q2N3pzaQ==
+2026-06-27 16:07:45 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/reel/DZxIQDORtO3/?igsh=MWZrMWNoY2Q2N3pzaQ==
+2026-06-27 16:07:48 [info]: [extract] Starting for: https://www.reddit.com/r/MxRMods/comments/liwe27/i_found_tha_video_from_where_there_video_from_jan/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+2026-06-27 16:07:48 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/MxRMods/comments/liwe27/i_found_tha_video_from_where_there_video_from_jan/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+2026-06-27 16:07:52 [info]: [extract] Starting for: https://snapchat.com/t/DkcbZfsX
+2026-06-27 16:07:52 [info]: [yt-dlp] Running extraction for: https://snapchat.com/t/DkcbZfsX
+2026-06-27 16:07:57 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 16:07:57 [warn]: [extract] Initial extraction failed. Error: ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: No
+2026-06-27 16:07:57 [info]: [extract] Starting for: https://x.com/narendramodi/status/2066717403707564188
+2026-06-27 16:07:57 [info]: [yt-dlp] Running extraction for: https://x.com/narendramodi/status/2066717403707564188
+2026-06-27 16:08:00 [info]: [extract] Starting for: https://www.facebook.com/narendramodi/videos/maoist-terror-is-breathing-its-last-in-india/1563221405529979/
+2026-06-27 16:08:00 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/narendramodi/videos/maoist-terror-is-breathing-its-last-in-india/1563221405529979/
+2026-06-27 16:08:03 [info]: [extract] Starting for: https://vkvideo.ru/video-43618728_456357566
+2026-06-27 16:08:03 [info]: [yt-dlp] Running extraction for: https://vkvideo.ru/video-43618728_456357566
+2026-06-27 16:08:09 [info]: [extract] Starting for: https://vimeo.com/ondemand/marblehalls
+2026-06-27 16:08:09 [info]: [yt-dlp] Running extraction for: https://vimeo.com/ondemand/marblehalls
+2026-06-27 16:08:12 [info]: [extract] Starting for: https://www.ted.com/talks/dhruv_khullar_can_ozempic_end_addiction?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare
+2026-06-27 16:08:12 [info]: [yt-dlp] Running extraction for: https://www.ted.com/talks/dhruv_khullar_can_ozempic_end_addiction?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare
+2026-06-27 16:08:16 [info]: [extract] Starting for: https://soundcloud.com/jadekoth/roll-like-thunder-prod-by-kushgrams?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+2026-06-27 16:08:16 [info]: [yt-dlp] Running extraction for: https://soundcloud.com/jadekoth/roll-like-thunder-prod-by-kushgrams?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+2026-06-27 16:08:19 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:08:19 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:08:24 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: HTTP Error 412: Precondition Failed (caused by <HTTPError 412: Precondition Failed>)
+
+2026-06-27 16:08:24 [warn]: [extract] Initial extraction failed. Error: ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: HTTP Error 412: Precondition Failed 
+2026-06-27 16:08:24 [warn]: [extract] Bot detection detected, attempting proxy fallback...
+2026-06-27 16:08:24 [info]: [ProxyManager] Fetching fresh free proxy list...
+2026-06-27 16:08:24 [info]: [ProxyManager] Successfully loaded 1708 proxies.
+2026-06-27 16:08:24 [info]: [extract] Retrying with proxy: socks5://192.252.214.20:15864
+2026-06-27 16:08:24 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:08:27 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) SS
+2026-06-27 16:08:27 [warn]: [extract] Proxy socks5://192.252.214.20:15864 failed.
+2026-06-27 16:08:27 [info]: [extract] Retrying with proxy: socks5://192.111.137.34:18765
+2026-06-27 16:08:27 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:08:31 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) SS
+2026-06-27 16:08:31 [warn]: [extract] Proxy socks5://192.111.137.34:18765 failed.
+2026-06-27 16:08:31 [info]: [extract] Retrying with proxy: socks5://206.123.156.223:8299
+2026-06-27 16:08:31 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:08:55 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (28) Failed to connect to 206.123.156.223 port 8299 after 21058 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, 
+2026-06-27 16:08:55 [warn]: [extract] Proxy socks5://206.123.156.223:8299 failed.
+2026-06-27 16:08:55 [info]: [extract] Retrying with proxy: socks5://193.176.244.151:8888
+2026-06-27 16:08:55 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:09:06 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: Failed to perform, curl: (28) Connection timed out after 30011 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out after 3
+2026-06-27 16:09:06 [warn]: [extract] Proxy socks5://193.176.244.151:8888 failed.
+2026-06-27 16:09:06 [info]: [extract] Retrying with proxy: socks5://199.102.107.145:4145
+2026-06-27 16:09:06 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:09:09 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) SS
+2026-06-27 16:09:09 [warn]: [extract] Proxy socks5://199.102.107.145:4145 failed.
+2026-06-27 16:09:09 [info]: [extract] Starting for: https://www.twitch.tv/sahranisworld/clip/GracefulCheerfulPuppyAliens-6Al2hH2pzMpFeGkL
+2026-06-27 16:09:09 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/sahranisworld/clip/GracefulCheerfulPuppyAliens-6Al2hH2pzMpFeGkL
+2026-06-27 16:09:11 [info]: [extract] Starting for: https://www.pinterest.com/ideas/pinterest-video/928397394202/
+2026-06-27 16:09:11 [info]: [yt-dlp] Running extraction for: https://www.pinterest.com/ideas/pinterest-video/928397394202/
+2026-06-27 16:09:14 [warn]: [yt-dlp] Failed (code=1): ERROR: [PinterestCollection] pinterest-video: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 16:09:14 [warn]: [extract] Initial extraction failed. Error: ERROR: [PinterestCollection] pinterest-video: Unable to download JSON metadata: HTTP Error 404: Not 
+2026-06-27 16:09:14 [info]: [extract] Starting for: https://www.bloomberg.com/news/videos/2026-06-26/auto-industry-fears-usmca-shakeup-video
+2026-06-27 16:09:14 [info]: [yt-dlp] Running extraction for: https://www.bloomberg.com/news/videos/2026-06-26/auto-industry-fears-usmca-shakeup-video
+2026-06-27 16:09:18 [warn]: [yt-dlp] Failed (code=1): ERROR: [Bloomberg] auto-industry-fears-usmca-shakeup-video: Unable to extract id; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-06-27 16:09:18 [warn]: [extract] Initial extraction failed. Error: ERROR: [Bloomberg] auto-industry-fears-usmca-shakeup-video: Unable to extract id; please report this
+2026-06-27 16:10:09 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download JSON metadata: Failed to perform, curl: (28) Connection timed out after 30009 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Connection timed out after 3
+2026-06-27 16:10:09 [warn]: [extract] Proxy socks5://193.176.244.151:8888 failed.
+2026-06-27 16:10:09 [info]: [extract] Retrying with proxy: socks5://199.102.107.145:4145
+2026-06-27 16:10:09 [info]: [yt-dlp] Running extraction for: https://www.bilibili.com/video/BV1fv4y1G7jB/?share_source=copy_web
+2026-06-27 16:10:12 [warn]: [yt-dlp] Failed (code=1): ERROR: [BiliBili] 1fv4y1G7jB: Unable to download webpage: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by CertificateVerifyError('Failed to perform, curl: (60) SS
+2026-06-27 16:10:12 [warn]: [extract] Proxy socks5://199.102.107.145:4145 failed.
+2026-06-27 16:10:12 [info]: [extract] Starting for: https://www.twitch.tv/sahranisworld/clip/GracefulCheerfulPuppyAliens-6Al2hH2pzMpFeGkL
+2026-06-27 16:10:12 [info]: [yt-dlp] Running extraction for: https://www.twitch.tv/sahranisworld/clip/GracefulCheerfulPuppyAliens-6Al2hH2pzMpFeGkL
+2026-06-27 16:10:15 [info]: [extract] Starting for: https://rumble.com/v7buvvu-getting-jumpscared.html
+2026-06-27 16:10:15 [info]: [yt-dlp] Running extraction for: https://rumble.com/v7buvvu-getting-jumpscared.html
+2026-06-27 16:10:19 [info]: [extract] Starting for: https://dai.ly/xaj8k6q
+2026-06-27 16:10:19 [info]: [yt-dlp] Running extraction for: https://dai.ly/xaj8k6q
+2026-06-27 16:10:23 [info]: [extract] Starting for: https://www.bbc.com/news/videos/c5yz05y6vvqo
+2026-06-27 16:10:23 [info]: [yt-dlp] Running extraction for: https://www.bbc.com/news/videos/c5yz05y6vvqo
+2026-06-27 16:10:28 [info]: [extract] Starting for: https://www.cnn.com/2026/06/26/world/video/israel-hezbollah-drone-threat-diamond-digvid
+2026-06-27 16:10:28 [info]: [yt-dlp] Running extraction for: https://www.cnn.com/2026/06/26/world/video/israel-hezbollah-drone-threat-diamond-digvid
+2026-06-27 16:10:35 [info]: [extract] Starting for: https://imgur.com/gallery/relaxing-sound-9Vfiz2W
+2026-06-27 16:10:35 [info]: [yt-dlp] Running extraction for: https://imgur.com/gallery/relaxing-sound-9Vfiz2W
+2026-06-27 16:10:39 [info]: [extract] Starting for: https://www.pinterest.com/ideas/pinterest-video/928397394202/
+2026-06-27 16:10:39 [info]: [yt-dlp] Running extraction for: https://www.pinterest.com/ideas/pinterest-video/928397394202/
+2026-06-27 16:10:42 [warn]: [yt-dlp] Failed (code=1): ERROR: [PinterestCollection] pinterest-video: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 16:10:42 [warn]: [extract] Initial extraction failed. Error: ERROR: [PinterestCollection] pinterest-video: Unable to download JSON metadata: HTTP Error 404: Not 
+2026-06-27 16:10:42 [info]: [extract] Starting for: https://www.foxnews.com/video/6399495572112
+2026-06-27 16:10:42 [info]: [yt-dlp] Running extraction for: https://www.foxnews.com/video/6399495572112
+2026-06-27 16:10:44 [info]: [extract] Starting for: https://www.bloomberg.com/news/videos/2026-06-26/auto-industry-fears-usmca-shakeup-video
+2026-06-27 16:10:44 [info]: [yt-dlp] Running extraction for: https://www.bloomberg.com/news/videos/2026-06-26/auto-industry-fears-usmca-shakeup-video
+2026-06-27 16:10:48 [warn]: [yt-dlp] Failed (code=1): ERROR: [Bloomberg] auto-industry-fears-usmca-shakeup-video: Unable to extract id; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+
+2026-06-27 16:10:48 [warn]: [extract] Initial extraction failed. Error: ERROR: [Bloomberg] auto-industry-fears-usmca-shakeup-video: Unable to extract id; please report this
+2026-06-27 16:59:50 [info]: [ProxyManager] Fetching fresh free proxy list...
+2026-06-27 16:59:51 [info]: [ProxyManager] Successfully loaded 1667 proxies.
+2026-06-27 18:28:01 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1fv4y1G7jB/
+2026-06-27 23:08:01 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:08:04 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:08:04 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:08:04 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:08:04 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:08:04 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:08:04 [info]:    Environment: development
+2026-06-27 23:08:04 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:08:04 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:08:07 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:08:07 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:08:07 [info]: [yt-dlp] Update check complete.
+2026-06-27 23:08:07 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:09:28 [debug]: GET / 200 17ms — ::1
+2026-06-27 23:09:29 [debug]: GET /css/styles.css 200 13ms — ::1
+2026-06-27 23:09:29 [debug]: GET /js/app.js 304 8ms — ::1
+2026-06-27 23:09:29 [debug]: GET /js/api.js 304 8ms — ::1
+2026-06-27 23:09:29 [debug]: GET /js/auth.js 304 9ms — ::1
+2026-06-27 23:09:29 [debug]: GET /js/ui.js 304 9ms — ::1
+2026-06-27 23:09:29 [debug]: GET /api/config 304 8ms — ::1
+2026-06-27 23:09:30 [debug]: GET /favicon.svg 200 7ms — ::1
+2026-06-27 23:11:12 [debug]: GET /articles/antigravity-physics-explained.html 200 5ms — ::1
+2026-06-27 23:11:12 [debug]: GET /css/styles.css 200 5ms — ::1
+2026-06-27 23:11:12 [debug]: GET /favicon.ico 200 12ms — ::1
+2026-06-27 23:12:03 [debug]: GET / 304 2ms — ::1
+2026-06-27 23:12:03 [debug]: GET /api/config 304 1ms — ::1
+2026-06-27 23:12:12 [debug]: GET /articles/antigravity-physics-explained.html 304 2ms — ::1
+2026-06-27 23:12:12 [debug]: GET /favicon.ico 304 3ms — ::1
+2026-06-27 23:12:19 [debug]: GET / 304 2ms — ::1
+2026-06-27 23:12:19 [debug]: GET /api/config 304 1ms — ::1
+2026-06-27 23:12:26 [debug]: GET /about.html 200 4ms — ::1
+2026-06-27 23:12:26 [debug]: GET /favicon.ico 304 4ms — ::1
+2026-06-27 23:12:45 [debug]: GET / 304 2ms — ::1
+2026-06-27 23:12:46 [debug]: GET /api/config 304 1ms — ::1
+2026-06-27 23:12:53 [debug]: GET /about.html 304 4ms — ::1
+2026-06-27 23:12:54 [debug]: GET /favicon.ico 304 4ms — ::1
+2026-06-27 23:12:56 [debug]: GET / 304 1ms — ::1
+2026-06-27 23:12:57 [debug]: GET /api/config 304 1ms — ::1
+2026-06-27 23:50:38 [info]: [extract] Starting for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 23:50:38 [info]: [yt-dlp] Running extraction for: https://www.facebook.com/facebook/videos/10153231379946729/
+2026-06-27 23:50:44 [info]: [extract] Starting for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 23:50:44 [info]: [yt-dlp] Running extraction for: https://www.instagram.com/p/C_aJ5J2R5Qy/
+2026-06-27 23:50:48 [warn]: [yt-dlp] Failed (code=1): ERROR: [Instagram] C_aJ5J2R5Qy: Instagram sent an empty media response. Check if this post is accessible in your browser without being logged-in. If it is not, then use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to
+2026-06-27 23:50:50 [info]: [extract] Starting for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 23:50:50 [info]: [yt-dlp] Running extraction for: https://x.com/SpaceX/status/1768270570533036490
+2026-06-27 23:50:53 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitter] 1768270570533036490: No video could be found in this tweet
+
+2026-06-27 23:50:55 [info]: [extract] Starting for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 23:50:55 [info]: [yt-dlp] Running extraction for: https://www.tiktok.com/@tiktok/video/7106594312292453675
+2026-06-27 23:51:19 [warn]: [yt-dlp] Failed (code=1): ERROR: [TikTok] 7106594312292453675: Unable to download webpage: Failed to perform, curl: (28) Failed to connect to www.tiktok.com port 443 after 21196 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perf
+2026-06-27 23:51:21 [info]: [extract] Starting for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 23:51:21 [info]: [yt-dlp] Running extraction for: https://www.reddit.com/r/aww/comments/16l5q6j/my_dog_learning_to_howl/
+2026-06-27 23:51:25 [warn]: [yt-dlp] Failed (code=1): ERROR: [Reddit] 16l5q6j: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:51:27 [info]: [extract] Starting for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 23:51:27 [info]: [yt-dlp] Running extraction for: https://story.snapchat.com/p/e9c1db16-86c3-4d4d-bc93-7848692994c6/1684307525330944
+2026-06-27 23:51:29 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:51:31 [info]: [extract] Starting for: https://www.pinterest.com/pin/106679313626284260/
+2026-06-27 23:51:31 [info]: [yt-dlp] Running extraction for: https://www.pinterest.com/pin/106679313626284260/
+2026-06-27 23:51:34 [warn]: [yt-dlp] Failed (code=1): ERROR: [Pinterest] 106679313626284260: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:51:36 [info]: [extract] Starting for: https://www.linkedin.com/posts/linkedin_linkedin-tips-and-tricks-activity-7128038872935272448-ABC
+2026-06-27 23:51:36 [info]: [yt-dlp] Running extraction for: https://www.linkedin.com/posts/linkedin_linkedin-tips-and-tricks-activity-7128038872935272448-ABC
+2026-06-27 23:51:38 [warn]: [yt-dlp] Failed (code=1): ERROR: [generic] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:51:40 [info]: [extract] Starting for: https://vk.com/video-22822305_456239018
+2026-06-27 23:51:40 [info]: [yt-dlp] Running extraction for: https://vk.com/video-22822305_456239018
+2026-06-27 23:51:49 [info]: [extract] Starting for: https://clips.twitch.tv/KathishRichCiderTheRinger-Q2x4yH2X7O9a_Y31
+2026-06-27 23:51:49 [info]: [yt-dlp] Running extraction for: https://clips.twitch.tv/KathishRichCiderTheRinger-Q2x4yH2X7O9a_Y31
+2026-06-27 23:51:51 [warn]: [yt-dlp] Failed (code=1): ERROR: [twitch:clips] KathishRichCiderTheRinger-Q2x4yH2X7O9a_Y31: This clip is no longer available
+
+2026-06-27 23:51:53 [info]: [extract] Starting for: https://vimeo.com/76979871
+2026-06-27 23:51:53 [info]: [yt-dlp] Running extraction for: https://vimeo.com/76979871
+2026-06-27 23:52:00 [info]: [extract] Starting for: https://www.dailymotion.com/video/x7tg3l1
+2026-06-27 23:52:00 [info]: [yt-dlp] Running extraction for: https://www.dailymotion.com/video/x7tg3l1
+2026-06-27 23:52:02 [warn]: [yt-dlp] Failed (code=1): ERROR: [dailymotion] x7tg3l1: Not found.
+
+2026-06-27 23:52:04 [info]: [extract] Starting for: https://www.bilibili.com/video/BV1xx411c7mD
+2026-06-27 23:52:07 [info]: [extract] Starting for: https://rumble.com/v1b0fbb-cats-are-funny.html
+2026-06-27 23:52:07 [info]: [yt-dlp] Running extraction for: https://rumble.com/v1b0fbb-cats-are-funny.html
+2026-06-27 23:52:12 [warn]: [yt-dlp] Failed (code=1): ERROR: [Rumble] v1b0fbb-cats-are-funny.html: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:52:14 [info]: [extract] Starting for: https://www.bbc.co.uk/news/av/technology-68499878
+2026-06-27 23:52:14 [info]: [yt-dlp] Running extraction for: https://www.bbc.co.uk/news/av/technology-68499878
+2026-06-27 23:52:16 [warn]: [yt-dlp] Failed (code=1): ERROR: [bbc] technology-68499878: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:52:18 [info]: [extract] Starting for: https://edition.cnn.com/videos/world/2024/03/01/video-test.cnn
+2026-06-27 23:52:18 [info]: [yt-dlp] Running extraction for: https://edition.cnn.com/videos/world/2024/03/01/video-test.cnn
+2026-06-27 23:52:21 [warn]: [yt-dlp] Failed (code=1): ERROR: [CNN] Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:52:23 [info]: [extract] Starting for: https://www.foxnews.com/video/6347000000001
+2026-06-27 23:52:23 [info]: [yt-dlp] Running extraction for: https://www.foxnews.com/video/6347000000001
+2026-06-27 23:52:25 [warn]: [yt-dlp] Failed (code=1): ERROR: [foxnews] 6347000000001: Unable to download Akamai AMP feed: HTTP Error 400: Bad Request (caused by <HTTPError 400: Bad Request>)
+
+2026-06-27 23:52:27 [info]: [extract] Starting for: https://www.bloomberg.com/news/videos/2024-01-01/test-video
+2026-06-27 23:52:27 [info]: [yt-dlp] Running extraction for: https://www.bloomberg.com/news/videos/2024-01-01/test-video
+2026-06-27 23:52:39 [warn]: [yt-dlp] Failed (code=1): ERROR: [Bloomberg] test-video: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:52:41 [info]: [extract] Starting for: https://www.patreon.com/posts/test-video-123456
+2026-06-27 23:52:41 [info]: [yt-dlp] Running extraction for: https://www.patreon.com/posts/test-video-123456
+2026-06-27 23:52:44 [warn]: [yt-dlp] Failed (code=1): ERROR: [patreon] 123456: Patreon said: post with id 123456 was not found.
+
+2026-06-27 23:52:46 [info]: [extract] Starting for: https://www.kickstarter.com/projects/peak-design/travel-tripod
+2026-06-27 23:52:46 [info]: [yt-dlp] Running extraction for: https://www.kickstarter.com/projects/peak-design/travel-tripod
+2026-06-27 23:52:49 [warn]: [yt-dlp] Failed (code=1): ERROR: [KickStarter] peak-design: Unable to download webpage: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:52:51 [info]: [extract] Starting for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 23:52:51 [info]: [yt-dlp] Running extraction for: https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready
+2026-06-27 23:52:57 [info]: [extract] Starting for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 23:52:57 [info]: [yt-dlp] Running extraction for: https://soundcloud.com/postmalone/rockstar-feat-21-savage
+2026-06-27 23:53:02 [info]: [extract] Starting for: https://imgur.com/gallery/q3Kx7
+2026-06-27 23:53:02 [info]: [yt-dlp] Running extraction for: https://imgur.com/gallery/q3Kx7
+2026-06-27 23:53:07 [info]: [extract] Starting for: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+2026-06-27 23:53:07 [info]: [yt-dlp] Running extraction for: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+2026-06-27 23:53:14 [warn]: [yt-dlp] Failed (code=1): ERROR: Unsupported URL: https://podcasts.apple.com/us/podcast/the-daily/id1200361736
+
+2026-06-27 23:53:16 [info]: [extract] Starting for: https://www.amazon.in/minitv/tp/8a011cd6-6701-4475-ae9e-10b240cc8c51
+2026-06-27 23:53:16 [info]: [yt-dlp] Running extraction for: https://www.amazon.in/minitv/tp/8a011cd6-6701-4475-ae9e-10b240cc8c51
+2026-06-27 23:53:19 [warn]: [yt-dlp] Failed (code=1): ERROR: [AmazonMiniTV] 8a011cd6-6701-4475-ae9e-10b240cc8c51: Unable to download JSON metadata: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)
+
+2026-06-27 23:55:08 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:55:09 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:55:09 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:55:09 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:55:09 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:55:09 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:55:09 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:55:09 [info]:    Environment: development
+2026-06-27 23:55:09 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:55:11 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:55:11 [info]: [yt-dlp] Update check complete.
+2026-06-27 23:55:11 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:55:12 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:55:16 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:55:17 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:55:17 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:55:17 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:55:17 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:55:17 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:55:17 [info]:    Environment: development
+2026-06-27 23:55:17 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:55:18 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:55:19 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:55:19 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:55:20 [info]: [yt-dlp] Update check complete.
+2026-06-27 23:55:20 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:55:27 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:55:28 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:55:28 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:55:28 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:55:28 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:55:28 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:55:28 [info]:    Environment: development
+2026-06-27 23:55:28 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:55:28 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:55:30 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:55:31 [info]: [yt-dlp] Update check complete.
+2026-06-27 23:55:31 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:55:31 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:55:44 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:55:45 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:55:45 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:55:45 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:55:45 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:55:45 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:55:45 [info]:    Environment: development
+2026-06-27 23:55:45 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:55:45 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:55:47 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:55:47 [info]: [yt-dlp] Update check complete.
+2026-06-27 23:55:48 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:55:48 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:58:37 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:58:38 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:58:39 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:58:39 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:58:39 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:58:39 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:58:39 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:58:39 [info]:    Environment: development
+2026-06-27 23:58:39 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:58:41 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:58:41 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:58:42 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:58:47 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:58:49 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:58:50 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:58:50 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:58:50 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:58:50 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:58:50 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:58:50 [info]:    Environment: development
+2026-06-27 23:58:50 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:58:52 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:58:53 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:58:53 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:58:57 [info]: [yt-dlp] Update check complete.
+2026-06-27 23:59:24 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-27 23:59:25 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-27 23:59:25 [info]: [yt-dlp] Binary found and ready.
+2026-06-27 23:59:25 [info]: ✅ yt-dlp found: vtrue
+2026-06-27 23:59:25 [info]: [yt-dlp] Running auto-update...
+2026-06-27 23:59:25 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-27 23:59:25 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-27 23:59:25 [info]:    Environment: development
+2026-06-27 23:59:25 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-27 23:59:26 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:59:26 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-27 23:59:27 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-27 23:59:28 [info]: [yt-dlp] Update check complete.
+2026-06-28 00:09:23 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-28 00:09:24 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-28 00:09:24 [info]: [yt-dlp] Binary found and ready.
+2026-06-28 00:09:24 [info]: ✅ yt-dlp found: vtrue
+2026-06-28 00:09:24 [info]: [yt-dlp] Running auto-update...
+2026-06-28 00:09:24 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-28 00:09:24 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-28 00:09:24 [info]:    Environment: development
+2026-06-28 00:09:24 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-28 00:09:24 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-28 00:09:25 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-28 00:09:25 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-28 00:09:27 [info]: [yt-dlp] Update check complete.
+2026-06-28 00:13:14 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-28 00:13:15 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-28 00:13:15 [info]: [yt-dlp] Binary found and ready.
+2026-06-28 00:13:15 [info]: ✅ yt-dlp found: vtrue
+2026-06-28 00:13:15 [info]: [yt-dlp] Running auto-update...
+2026-06-28 00:13:15 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-28 00:13:15 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-28 00:13:15 [info]:    Environment: development
+2026-06-28 00:13:15 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-28 00:13:17 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-28 00:13:17 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-28 00:13:17 [info]: [yt-dlp] Update check complete.
+2026-06-28 00:13:18 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 11:46:22 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 11:46:25 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 11:46:25 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 11:46:25 [info]: [yt-dlp] Running auto-update...
+2026-06-29 11:46:25 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 11:46:25 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 11:46:25 [info]:    Environment: development
+2026-06-29 11:46:25 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 11:46:30 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 11:46:31 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 11:46:32 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 11:46:33 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 11:46:33 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 11:46:46 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 11:46:47 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 11:46:47 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 11:46:47 [info]: [yt-dlp] Running auto-update...
+2026-06-29 11:46:47 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 11:46:47 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 11:46:47 [info]:    Environment: development
+2026-06-29 11:46:47 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 11:46:49 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 11:46:57 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 11:47:01 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 11:47:01 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 11:47:01 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 11:54:02 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 11:54:04 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 11:54:04 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 11:54:04 [info]: [yt-dlp] Running auto-update...
+2026-06-29 11:54:04 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 11:54:04 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 11:54:04 [info]:    Environment: development
+2026-06-29 11:54:04 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 11:54:18 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 11:54:26 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 11:54:27 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 11:54:33 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 11:54:34 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 12:00:12 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 12:00:13 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 12:00:13 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 12:00:13 [info]: [yt-dlp] Running auto-update...
+2026-06-29 12:00:13 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 12:00:13 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 12:00:13 [info]:    Environment: development
+2026-06-29 12:00:13 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 12:00:21 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 12:00:21 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 12:00:23 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 12:00:23 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 12:00:24 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 12:00:31 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 12:00:33 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 12:00:33 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 12:00:33 [info]: [yt-dlp] Running auto-update...
+2026-06-29 12:00:33 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 12:00:33 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 12:00:33 [info]:    Environment: development
+2026-06-29 12:00:33 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 12:00:34 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 12:00:36 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 12:00:36 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 12:00:37 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 12:00:37 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 12:00:42 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 12:00:44 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 12:00:44 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 12:00:44 [info]: [yt-dlp] Running auto-update...
+2026-06-29 12:00:44 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 12:00:44 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 12:00:44 [info]:    Environment: development
+2026-06-29 12:00:44 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 12:00:45 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 12:00:50 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 12:00:50 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 12:00:50 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 12:00:50 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 18:00:30 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 18:00:31 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 18:00:32 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 18:00:32 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 18:00:32 [info]: [yt-dlp] Running auto-update...
+2026-06-29 18:00:32 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 18:00:32 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 18:00:32 [info]:    Environment: development
+2026-06-29 18:00:32 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 18:00:34 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 18:00:34 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 18:00:34 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 18:00:35 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 18:09:41 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 18:09:43 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 18:09:43 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 18:09:43 [info]: [yt-dlp] Running auto-update...
+2026-06-29 18:09:43 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 18:09:43 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 18:09:43 [info]:    Environment: development
+2026-06-29 18:09:43 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 18:09:43 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 18:09:48 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 18:09:49 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 18:09:51 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 18:10:09 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 18:11:38 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 18:11:39 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 18:11:39 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 18:11:39 [info]: [yt-dlp] Running auto-update...
+2026-06-29 18:11:39 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 18:11:39 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 18:11:39 [info]:    Environment: development
+2026-06-29 18:11:39 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 18:11:40 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 18:11:41 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 18:11:41 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 18:11:42 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 18:11:43 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 19:17:55 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:17:57 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:17:57 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:17:57 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:17:57 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:17:57 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:17:57 [info]:    Environment: development
+2026-06-29 19:17:57 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:18:05 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:18:13 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:18:13 [warn]: [yt-dlp] Update exited with code 100
+2026-06-29 19:18:17 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:18:20 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:20:25 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:20:25 [error]: [yt-dlp] Binary check failed code=1
+2026-06-29 19:20:25 [warn]: ⚠️  yt-dlp NOT FOUND — install via: pip install yt-dlp
+2026-06-29 19:20:25 [warn]:    Video extraction will fail until yt-dlp is installed.
+2026-06-29 19:20:25 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:20:25 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:20:25 [info]:    Environment: development
+2026-06-29 19:20:25 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:20:38 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:20:42 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:20:43 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:20:43 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:21:57 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:21:58 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:22:00 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:22:01 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:22:01 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:22:01 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:22:01 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:22:01 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:22:01 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:22:01 [info]:    Environment: development
+2026-06-29 19:22:01 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:22:01 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:22:06 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:22:07 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:22:07 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:22:07 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:22:07 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:22:07 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:22:07 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:22:07 [info]:    Environment: development
+2026-06-29 19:22:07 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:22:09 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:22:10 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:22:10 [info]: [yt-dlp] Update check complete.
+2026-06-29 19:22:10 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:34:49 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:34:50 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:34:50 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:34:50 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:34:50 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:34:50 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:34:50 [info]:    Environment: development
+2026-06-29 19:34:50 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:34:56 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:34:57 [info]: [yt-dlp] Update check complete.
+2026-06-29 19:35:03 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:35:06 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:35:07 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:43:00 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:43:01 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:43:01 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:43:01 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:43:01 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:43:01 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:43:01 [info]:    Environment: development
+2026-06-29 19:43:01 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:43:05 [info]: [yt-dlp] Update check complete.
+2026-06-29 19:43:09 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:43:11 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:43:12 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:43:13 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:43:23 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:43:24 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:43:24 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:43:24 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:43:24 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:43:24 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:43:24 [info]:    Environment: development
+2026-06-29 19:43:24 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:43:24 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:43:26 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:43:26 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:43:27 [info]: [yt-dlp] Update check complete.
+2026-06-29 19:43:27 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:48:26 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:48:27 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:48:28 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:48:28 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:48:28 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:48:28 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:48:28 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:48:28 [info]:    Environment: development
+2026-06-29 19:48:28 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:48:30 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:48:30 [info]: [yt-dlp] Update check complete.
+2026-06-29 19:48:30 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:48:31 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:49:01 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:49:02 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:49:02 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:49:02 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:49:02 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:49:02 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:49:02 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:49:02 [info]:    Environment: development
+2026-06-29 19:49:02 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:49:04 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:49:04 [info]: [yt-dlp] Update check complete.
+2026-06-29 19:49:05 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:49:05 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:52:17 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-06-29 19:52:18 [info]: [yt-dlp] Binary found and ready.
+2026-06-29 19:52:18 [info]: ✅ yt-dlp found: vtrue
+2026-06-29 19:52:18 [info]: [yt-dlp] Running auto-update...
+2026-06-29 19:52:18 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-06-29 19:52:18 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-06-29 19:52:18 [info]:    Environment: development
+2026-06-29 19:52:18 [info]:    Open http://localhost:3000 in your browser
+
+2026-06-29 19:52:19 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-06-29 19:52:21 [info]: [yt-dlp] Update check complete.
+2026-06-29 19:52:22 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-06-29 19:52:22 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-06-29 19:52:23 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 16:56:57 [debug]: GET /sitemap.xml 200 7ms — ::1
+2026-07-01 16:57:56 [debug]: GET /sitemap.xml 200 6ms — ::1
+2026-07-01 17:06:05 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:06:08 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:06:08 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:06:08 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:06:08 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:06:08 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:06:08 [info]:    Environment: development
+2026-07-01 17:06:08 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:06:08 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:06:10 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:06:11 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:06:11 [info]: [yt-dlp] Update check complete.
+2026-07-01 17:06:11 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:06:21 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:06:22 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:06:22 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:06:22 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:06:22 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:06:22 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:06:22 [info]:    Environment: development
+2026-07-01 17:06:22 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:06:23 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:06:24 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:06:24 [info]: [yt-dlp] Update check complete.
+2026-07-01 17:06:24 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:06:25 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:07:06 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:07:07 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:07:07 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:07:07 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:07:07 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:07:07 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:07:07 [info]:    Environment: development
+2026-07-01 17:07:07 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:07:08 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:07:10 [info]: [yt-dlp] Update check complete.
+2026-07-01 17:07:10 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:07:10 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:07:11 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:07:15 [debug]: GET /twitter-video-downloader 200 8ms — ::1
+2026-07-01 17:09:03 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:09:05 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:09:05 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:09:05 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:09:05 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:09:05 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:09:05 [info]:    Environment: development
+2026-07-01 17:09:05 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:09:05 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:09:07 [info]: [yt-dlp] Update check complete.
+2026-07-01 17:09:08 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:09:08 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:09:09 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:10:15 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:10:16 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:10:16 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:10:16 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:10:16 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:10:16 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:10:16 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:10:16 [info]:    Environment: development
+2026-07-01 17:10:16 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:10:18 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:10:18 [info]: [yt-dlp] Update check complete.
+2026-07-01 17:10:18 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:10:19 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:10:30 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:10:31 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:10:31 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:10:31 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:10:31 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:10:31 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:10:31 [info]:    Environment: development
+2026-07-01 17:10:31 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:10:31 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:10:33 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:10:34 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:10:34 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:10:34 [info]: [yt-dlp] Update check complete.
+2026-07-01 17:10:41 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:10:42 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:10:42 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:10:42 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:10:42 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:10:42 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:10:42 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:10:42 [info]:    Environment: development
+2026-07-01 17:10:42 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:10:44 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:10:44 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:10:45 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:10:45 [info]: [yt-dlp] Update check complete.
+2026-07-01 17:11:36 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 17:11:37 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 17:11:38 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 17:11:38 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 17:11:38 [info]: [yt-dlp] Running auto-update...
+2026-07-01 17:11:38 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 17:11:38 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 17:11:38 [info]:    Environment: development
+2026-07-01 17:11:38 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 17:11:39 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:11:40 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 17:11:40 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 17:11:40 [info]: [yt-dlp] Update check complete.
+2026-07-01 18:25:58 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 18:25:59 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 18:25:59 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 18:25:59 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 18:25:59 [info]: [yt-dlp] Running auto-update...
+2026-07-01 18:25:59 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 18:25:59 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 18:25:59 [info]:    Environment: development
+2026-07-01 18:25:59 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 18:26:01 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:26:02 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 18:26:02 [info]: [yt-dlp] Update check complete.
+2026-07-01 18:26:02 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:45:52 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 18:45:54 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 18:45:54 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 18:45:54 [info]: [yt-dlp] Running auto-update...
+2026-07-01 18:45:54 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 18:45:54 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 18:45:54 [info]:    Environment: development
+2026-07-01 18:45:54 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 18:45:55 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 18:45:56 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:45:56 [info]: [yt-dlp] Update check complete.
+2026-07-01 18:45:57 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 18:45:58 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:47:28 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 18:47:29 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 18:47:29 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 18:47:29 [info]: [yt-dlp] Running auto-update...
+2026-07-01 18:47:29 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 18:47:29 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 18:47:29 [info]:    Environment: development
+2026-07-01 18:47:29 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 18:47:39 [info]: [yt-dlp] Update check complete.
+2026-07-01 18:47:39 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 18:47:41 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:47:42 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 18:47:42 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:54:39 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 18:54:40 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 18:54:41 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 18:54:41 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 18:54:41 [info]: [yt-dlp] Running auto-update...
+2026-07-01 18:54:41 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 18:54:41 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 18:54:41 [info]:    Environment: development
+2026-07-01 18:54:41 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 18:54:43 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:54:43 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 18:54:44 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 18:54:44 [info]: [yt-dlp] Update check complete.
+2026-07-01 19:37:32 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 19:37:33 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 19:37:34 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 19:37:34 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 19:37:34 [info]: [yt-dlp] Running auto-update...
+2026-07-01 19:37:34 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 19:37:34 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 19:37:34 [info]:    Environment: development
+2026-07-01 19:37:34 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 19:37:35 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:37:36 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 19:37:36 [info]: [yt-dlp] Update check complete.
+2026-07-01 19:37:36 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:45:54 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 19:45:55 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 19:45:55 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 19:45:55 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 19:45:55 [info]: [yt-dlp] Running auto-update...
+2026-07-01 19:45:55 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 19:45:55 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 19:45:55 [info]:    Environment: development
+2026-07-01 19:45:55 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 19:45:57 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:45:57 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 19:45:58 [info]: [yt-dlp] Update check complete.
+2026-07-01 19:45:58 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:47:04 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 19:47:04 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 19:47:05 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 19:47:05 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 19:47:05 [info]: [yt-dlp] Running auto-update...
+2026-07-01 19:47:05 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 19:47:05 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 19:47:05 [info]:    Environment: development
+2026-07-01 19:47:05 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 19:47:05 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:47:05 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 19:47:06 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:47:07 [info]: [yt-dlp] Update check complete.
+2026-07-01 19:49:46 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 19:49:47 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 19:49:48 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 19:49:48 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 19:49:48 [info]: [yt-dlp] Running auto-update...
+2026-07-01 19:49:48 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 19:49:48 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 19:49:48 [info]:    Environment: development
+2026-07-01 19:49:48 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 19:49:49 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:49:50 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 19:49:50 [info]: [yt-dlp] Update check complete.
+2026-07-01 19:49:50 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:54:58 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 19:54:58 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 19:54:59 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 19:54:59 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 19:54:59 [info]: [yt-dlp] Running auto-update...
+2026-07-01 19:54:59 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 19:54:59 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 19:54:59 [info]:    Environment: development
+2026-07-01 19:54:59 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 19:55:00 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:55:01 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 19:55:01 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:55:01 [info]: [yt-dlp] Update check complete.
+2026-07-01 19:57:20 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 19:57:21 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 19:57:21 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 19:57:21 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 19:57:21 [info]: [yt-dlp] Running auto-update...
+2026-07-01 19:57:21 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 19:57:21 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 19:57:21 [info]:    Environment: development
+2026-07-01 19:57:21 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 19:57:23 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:57:23 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 19:57:23 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 19:57:23 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:00:24 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:00:25 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:00:25 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:00:25 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:00:25 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:00:25 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:00:25 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:00:25 [info]:    Environment: development
+2026-07-01 20:00:25 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:00:25 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:00:26 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:00:27 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:00:27 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:04:00 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:04:01 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:04:02 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:04:02 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:04:02 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:04:02 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:04:02 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:04:02 [info]:    Environment: development
+2026-07-01 20:04:02 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:04:03 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:04:03 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:04:04 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:04:04 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:08:17 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:08:18 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:08:18 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:08:18 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:08:18 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:08:18 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:08:18 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:08:18 [info]:    Environment: development
+2026-07-01 20:08:18 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:08:20 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:08:21 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:08:21 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:08:21 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:10:35 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:10:36 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:10:36 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:10:36 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:10:36 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:10:36 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:10:36 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:10:36 [info]:    Environment: development
+2026-07-01 20:10:36 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:10:39 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:10:39 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:10:39 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:10:40 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:12:33 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:12:34 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:12:35 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:12:35 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:12:35 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:12:35 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:12:35 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:12:35 [info]:    Environment: development
+2026-07-01 20:12:35 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:12:36 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:12:36 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:12:37 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:12:37 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:12:43 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:12:44 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:12:45 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:12:45 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:12:45 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:12:45 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:12:45 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:12:45 [info]:    Environment: development
+2026-07-01 20:12:45 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:12:45 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:12:45 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:12:46 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:12:47 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:18:23 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:18:24 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:18:24 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:18:24 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:18:24 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:18:24 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:18:24 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:18:24 [info]:    Environment: development
+2026-07-01 20:18:24 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:18:26 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:18:26 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:18:26 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:18:27 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:20:56 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:20:57 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:20:57 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:20:57 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:20:57 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:20:57 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:20:57 [info]:    Environment: development
+2026-07-01 20:20:57 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:20:57 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:20:59 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:21:00 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:21:00 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:21:00 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:21:09 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:21:10 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:21:10 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:21:10 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:21:10 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:21:10 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:21:10 [info]:    Environment: development
+2026-07-01 20:21:10 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:21:10 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:21:12 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:21:12 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:21:13 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:21:13 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:23:09 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 20:23:09 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 20:23:10 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 20:23:10 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 20:23:10 [info]: [yt-dlp] Running auto-update...
+2026-07-01 20:23:10 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 20:23:10 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 20:23:10 [info]:    Environment: development
+2026-07-01 20:23:10 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 20:23:11 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 20:23:12 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 20:23:12 [info]: [yt-dlp] Update check complete.
+2026-07-01 20:23:12 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 23:53:17 [info]: Firebase Admin SDK initialized for project: video-downloader-fd8ef
+2026-07-01 23:53:18 [info]: [yt-dlp] Binary found and ready.
+2026-07-01 23:53:18 [info]: ✅ yt-dlp found: vtrue
+2026-07-01 23:53:18 [info]: [yt-dlp] Running auto-update...
+2026-07-01 23:53:18 [info]: ✅ FFmpeg found: ffmpeg version 6.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+2026-07-01 23:53:18 [info]: 
+🚀 Video Downloader API running at http://localhost:3000
+2026-07-01 23:53:18 [info]:    Environment: development
+2026-07-01 23:53:18 [info]:    Open http://localhost:3000 in your browser
+
+2026-07-01 23:53:23 [info]: [yt-dlp] Update check complete.
+2026-07-01 23:53:25 [info]: Admin user arjitdaga@example.com already exists in Firebase Auth.
+2026-07-01 23:53:27 [info]: User VxlLrNpocffZ6GxookNgFXT6bC83 upgraded to premium (Razorpay Order: admin-seed)
+2026-07-01 23:53:28 [info]: Admin user kabraprakhar11@gmail.com already exists in Firebase Auth.
+2026-07-01 23:53:29 [info]: User Jb1iCsMfRpY3iaQR4SBLE6m6RIA2 upgraded to premium (Razorpay Order: admin-seed)

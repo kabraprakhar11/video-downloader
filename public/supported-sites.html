@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Adsterra Popunder -->
+  <script src="https://pl30157873.effectivecpmnetwork.com/19/c3/1d/19c31d208d63a44651af3265a25b6468.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supported Sites â€” Click2Video</title>
+  <meta name="description" content="Supported Sites for Click2Video â€” Universal Video Downloader." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?t=20260626_1946" />
+  <style>
+    .legal-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 48px 24px 100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      transition: color 0.2s;
+      font-family: 'Exo 2', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+    .legal-back:hover { color: var(--cyan); }
+    .legal-back svg { transition: transform 0.2s; }
+    .legal-back:hover svg { transform: translateX(-4px); }
+
+    .legal-header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,212,255,0.08);
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-family: 'Exo 2', sans-serif;
+    }
+
+    .legal-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #00d4ff, #b300ff, #ff006e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .legal-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: 'Exo 2', sans-serif;
+    }
+
+    /* Grid Layout */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    /* Card styling */
+    .blog-card {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, #00d4ff, #b300ff);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .blog-card:hover {
+      border-color: rgba(0,212,255,0.2);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      transform: translateY(-4px);
+    }
+    .blog-card:hover::before { opacity: 1; }
+
+    .card-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .card-excerpt {
+      color: var(--text-sec);
+      font-size: 0.9rem;
+      flex-grow: 1;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .read-btn {
+      align-self: flex-start;
+      background: transparent;
+      color: var(--cyan);
+      border: 1px solid rgba(0, 212, 255, 0.4);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .read-btn:hover {
+      background: rgba(0, 212, 255, 0.1);
+      border-color: var(--cyan);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+    }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(6, 7, 10, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-card {
+      background: rgba(10, 11, 18, 0.9);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .close-modal:hover {
+      color: var(--cyan);
+    }
+
+    .modal-body {
+      margin-top: 15px;
+    }
+    
+    .modal-body h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, #00d4ff, #b300ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .modal-body p {
+      margin-bottom: 20px;
+      color: var(--text-sec);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .modal-body ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      list-style: none;
+    }
+    
+    .modal-body li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-sec);
+      position: relative;
+      padding-left: 20px;
+    }
+    .modal-body li::before {
+      content: 'â€º';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+        /* -- Adsterra Ad Containers -- */
+    .ad-wrap { display: flex; justify-content: center; align-items: center; width: 100%; position: relative; z-index: 1; margin: 24px 0; overflow: hidden; }
+    .ad-label { font-size: 0.65rem; color: rgba(255,255,255,0.2); text-align: center; display: block; margin-bottom: 4px; font-family: Exo 2, sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ad-sticky-mobile { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: rgba(6,7,10,0.95); padding: 6px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+    @media (max-width: 768px) { .ad-sticky-mobile { display: block; } }
+    @media (max-width: 640px) {
+      .legal-wrapper { padding: 32px 16px 80px; }
+      .blog-card { padding: 20px; }
+      .modal-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Aurora Background -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-orb aurora-orb--1"></div>
+    <div class="aurora-orb aurora-orb--2"></div>
+    <div class="aurora-orb aurora-orb--3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="legal-wrapper">
+    <a href="/" class="legal-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Home
+    </a>
+    
+    <header class="legal-header">
+      <div class="legal-badge">ðŸŒ Network</div>
+      <h1 class="legal-title">Supported Sites</h1>
+      <p class="legal-meta">Our growing list of compatible platforms.</p>
+    </header>
+
+      <!-- Adsterra Native Banner -->
+  <div class="ad-wrap" style="max-width:1000px;margin:24px auto;padding:0 24px;" aria-label="Advertisement">
+    <div style="width:100%;">
+      <span class="ad-label">Advertisement</span>
+      <script async="async" data-cfasync="false" src="https://pl30157874.effectivecpmnetwork.com/c9bf9833eeaff4f31771822536040402e0/invoke.js"></script>
+      <div id="container-c9bf9833eeaff4f31771822536040402e0"></div>
+    </div>
+  </div>
+  <div class="blog-grid" id="sectionsGrid">
+      <!-- Cards generated dynamically -->
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="articleModal">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal">Ã—</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected Content -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sections = [
+  {
+    "title": "Major Social Platforms",
+    "excerpt": "Support for Twitter, Facebook, Instagram, and TikTok media extraction...",
+    "content": "<p>Customer satisfaction and comprehensive support are paramount to our overall operational strategy. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. If you receive an unexpected error code, our documentation provides a comprehensive lookup table. We constantly update our documentation to reflect the latest features and platform changes. Our technical support team monitors service health and ticket queues around the clock. We believe that excellent support is the key to building lasting relationships with our users.</p><p>Customer satisfaction and comprehensive support are paramount to our overall operational strategy. If you discover a security vulnerability, please report it via our responsible disclosure program. We guarantee a response to all premium support tickets within a strict four-hour SLA window. We ask that users remain respectful and polite when communicating with our customer service agents. We provide clear guidelines on what constitutes fair use and platform abuse in our help center. We believe that excellent support is the key to building lasting relationships with our users.</p><ul><li>Our ultimate goal is to resolve your inquiry on the very first contact whenever possible.</li><li>We provide detailed API documentation complete with code examples in Python, Node.js, and cURL.</li><li>If you require assistance in a language we do not officially support, we will utilize translation tools.</li></ul><p>Customer satisfaction and comprehensive support are paramount to our overall operational strategy. We provide offline documentation PDFs for users who need to reference our guides without internet access. If your IP address has been blocked, you must contact support to appeal the automated ban. Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials. Response times for support inquiries may vary slightly depending on the severity of the reported issue. We are constantly striving to improve, and your support inquiries help us identify areas for growth.</p><p>When reaching out for assistance, we highly recommend providing detailed logs and clear descriptions. You can reach our support staff via email, the contact form, or our active community forums. If you have lost access to your account, our recovery process is designed to be secure and efficient. We guarantee a response to all premium support tickets within a strict four-hour SLA window. If you discover a security vulnerability, please report it via our responsible disclosure program. Thank you for your understanding as we work diligently to maintain our high support standards.</p><ul><li>Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials.</li><li>Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage.</li><li>If you discover a security vulnerability, please report it via our responsible disclosure program.</li></ul><p>This section is designed to provide you with all the necessary tools and information for success. Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage. Our billing department handles all inquiries related to subscriptions, refunds, and payment failures. We frequently post updates on our tech blog regarding new features and known temporary issues. We provide clear guidelines on what constitutes fair use and platform abuse in our help center. We deeply appreciate your patience and cooperation while we work to resolve these matters.</p><p>This section is designed to provide you with all the necessary tools and information for success. Response times for support inquiries may vary slightly depending on the severity of the reported issue. Our system automatically sends you an email confirmation when your support ticket is successfully received. We constantly update our documentation to reflect the latest features and platform changes. We take all reports of platform abuse or malicious activity extremely seriously. We are dedicated to making sure your interactions with our service are smooth and trouble-free.</p><p>We strive to provide clear, actionable guidance for every feature available on our platform. We provide detailed API documentation complete with code examples in Python, Node.js, and cURL. Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials. Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage. We provide offline documentation PDFs for users who need to reference our guides without internet access. We hope these resources have been helpful in answering your questions and guiding your usage.</p><p>We have compiled these comprehensive resources to answer your most pressing questions. If you have lost access to your account, our recovery process is designed to be secure and efficient. Our knowledge base contains dozens of video tutorials demonstrating advanced downloading techniques. Our technical support team monitors service health and ticket queues around the clock. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. We are dedicated to making sure your interactions with our service are smooth and trouble-free.</p><p>We are committed to fostering a transparent, helpful, and responsive relationship with our users. Our ultimate goal is to resolve your inquiry on the very first contact whenever possible. We frequently post updates on our tech blog regarding new features and known temporary issues. You can reach our support staff via email, the contact form, or our active community forums. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. We value your business and are committed to providing exceptional customer service.</p><ul><li>If you discover a security vulnerability, please report it via our responsible disclosure program.</li><li>Our team is fluent in multiple languages to provide global support to our diverse user base.</li><li>Our billing department handles all inquiries related to subscriptions, refunds, and payment failures.</li></ul><p>Providing world-class support is just as important to us as developing world-class technology. Our support metrics, including average resolution time, are reviewed weekly by management. We regularly survey our users to gauge their satisfaction with our customer service performance. Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials. Our team is fluent in multiple languages to provide global support to our diverse user base. We value your business and are committed to providing exceptional customer service.</p><p>We strive to provide clear, actionable guidance for every feature available on our platform. Our community moderators are often available to provide quick tips and user-to-user assistance. Our support metrics, including average resolution time, are reviewed weekly by management. If you discover a security vulnerability, please report it via our responsible disclosure program. We regularly survey our users to gauge their satisfaction with our customer service performance. We hope these resources have been helpful in answering your questions and guiding your usage.</p><p>Your feedback is essential to our continuous improvement and platform evolution processes. We constantly update our documentation to reflect the latest features and platform changes. Our technical support team monitors service health and ticket queues around the clock. We value constructive feedback and often implement user-suggested features in our development roadmap. If a bug is confirmed, we will link your ticket to the internal engineering tracker for updates. Our primary goal is to provide a seamless, rapid, and definitive resolution to your inquiry.</p><p>This section is designed to provide you with all the necessary tools and information for success. If you receive an unexpected error code, our documentation provides a comprehensive lookup table. We offer a specialized support channel for users experiencing accessibility issues with the site. We appreciate it when users provide screenshots or screencasts of the issues they are experiencing. We offer customized support plans and dedicated account managers for our enterprise API clients. We are constantly striving to improve, and your support inquiries help us identify areas for growth.</p>"
+  },
+  {
+    "title": "Video Hosting Services",
+    "excerpt": "Downloading from YouTube, Vimeo, Dailymotion, and Rumble...",
+    "content": "<p>We are dedicated to resolving your issues promptly, professionally, and with the utmost care. We ask that users remain respectful and polite when communicating with our customer service agents. If you are unsure how to use a specific tool, our interactive walkthroughs can provide guidance. We guarantee a response to all premium support tickets within a strict four-hour SLA window. Premium subscribers receive prioritized routing in our support system for faster resolution times. Thank you for being a vital part of our community and helping us improve the platform.</p><p>We strive to provide clear, actionable guidance for every feature available on our platform. Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials. If you require assistance in a language we do not officially support, we will utilize translation tools. We take all reports of platform abuse or malicious activity extremely seriously. We provide clear instructions on how to cancel your subscription safely through the user dashboard. Thank you for your understanding as we work diligently to maintain our high support standards.</p><p>Our support infrastructure is designed to address user inquiries efficiently and accurately. Our system automatically sends you an email confirmation when your support ticket is successfully received. We value constructive feedback and often implement user-suggested features in our development roadmap. Our support team can help you configure your browser settings for optimal download speeds. Users are encouraged to check our public status page for real-time updates on server outages. Thank you for reaching out; we are always here to support your downloading journey.</p><p>We strive to provide clear, actionable guidance for every feature available on our platform. We guarantee a response to all premium support tickets within a strict four-hour SLA window. Our system automatically sends you an email confirmation when your support ticket is successfully received. Our support team can help you configure your browser settings for optimal download speeds. We offer a specialized support channel for users experiencing accessibility issues with the site. Your satisfaction is our top priority, and we will not rest until your issue is fixed.</p><p>Our support team is trained to handle a wide variety of inquiries, from billing to technical bugs. Our support team can help you configure your browser settings for optimal download speeds. We frequently post updates on our tech blog regarding new features and known temporary issues. We are committed to continuous training for our support staff to keep them updated on new tech. Our system automatically sends you an email confirmation when your support ticket is successfully received. We believe that excellent support is the key to building lasting relationships with our users.</p><p>This section is designed to provide you with all the necessary tools and information for success. We offer a specialized support channel for users experiencing accessibility issues with the site. If you have lost access to your account, our recovery process is designed to be secure and efficient. Our support staff works closely with the engineering team to escalate critical bugs immediately. If you are unsure how to use a specific tool, our interactive walkthroughs can provide guidance. We hope these resources have been helpful in answering your questions and guiding your usage.</p><p>Customer satisfaction and comprehensive support are paramount to our overall operational strategy. We take all reports of platform abuse or malicious activity extremely seriously. We provide detailed API documentation complete with code examples in Python, Node.js, and cURL. When submitting a bug report, including the exact source URL and error message is incredibly helpful. Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage. We are dedicated to making sure your interactions with our service are smooth and trouble-free.</p><p>This section is designed to provide you with all the necessary tools and information for success. If you require assistance in a language we do not officially support, we will utilize translation tools. You can reach our support staff via email, the contact form, or our active community forums. Premium subscribers receive prioritized routing in our support system for faster resolution times. Our system automatically sends you an email confirmation when your support ticket is successfully received. We deeply appreciate your patience and cooperation while we work to resolve these matters.</p><p>Your feedback is essential to our continuous improvement and platform evolution processes. We guarantee a response to all premium support tickets within a strict four-hour SLA window. Our billing department handles all inquiries related to subscriptions, refunds, and payment failures. We utilize a ticketing system to ensure that no user inquiry is ever lost or overlooked. Our support staff works closely with the engineering team to escalate critical bugs immediately. Thank you for choosing us; we are here to support you every step of the way.</p><ul><li>If a bug is confirmed, we will link your ticket to the internal engineering tracker for updates.</li><li>Users are encouraged to check our public status page for real-time updates on server outages.</li><li>When submitting a bug report, including the exact source URL and error message is incredibly helpful.</li></ul><p>Navigating the complexities of media downloading is made easier with our dedicated support resources. Response times for support inquiries may vary slightly depending on the severity of the reported issue. If you are having trouble downloading a specific format, please consult our supported formats list. We encourage users to search the knowledge base before opening a new ticket to save time. If you discover a security vulnerability, please report it via our responsible disclosure program. We believe that excellent support is the key to building lasting relationships with our users.</p><ul><li>Our support staff works closely with the engineering team to escalate critical bugs immediately.</li><li>You can reach our support staff via email, the contact form, or our active community forums.</li><li>Our support team can help you configure your browser settings for optimal download speeds.</li></ul><p>Navigating the complexities of media downloading is made easier with our dedicated support resources. We offer a highly detailed FAQ section that addresses the most common user concerns and errors. When submitting a bug report, including the exact source URL and error message is incredibly helpful. We provide clear instructions on how to cancel your subscription safely through the user dashboard. Our refund policy is clearly outlined, and our billing team processes eligible requests promptly. Our team is standing by, ready to tackle any technical challenges you might throw our way.</p><p>The following information is provided to help you maximize your utility of our various services. If you are having trouble downloading a specific format, please consult our supported formats list. Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. Our team is fluent in multiple languages to provide global support to our diverse user base. Our support door is always openâ€”feel free to drop us a line whenever you need assistance.</p><p>Customer satisfaction and comprehensive support are paramount to our overall operational strategy. Our ultimate goal is to resolve your inquiry on the very first contact whenever possible. Our community moderators are often available to provide quick tips and user-to-user assistance. We frequently post updates on our tech blog regarding new features and known temporary issues. You can reach our support staff via email, the contact form, or our active community forums. Thank you for choosing us; we are here to support you every step of the way.</p>"
+  },
+  {
+    "title": "News & Broadcast Networks",
+    "excerpt": "Extracting clips from CNN, BBC, Fox News, and international broadcasters...",
+    "content": "<p>Your feedback is essential to our continuous improvement and platform evolution processes. We regularly survey our users to gauge their satisfaction with our customer service performance. Our support team can help you configure your browser settings for optimal download speeds. Our refund policy is clearly outlined, and our billing team processes eligible requests promptly. Our ultimate goal is to resolve your inquiry on the very first contact whenever possible. Thank you for being a vital part of our community and helping us improve the platform.</p><ul><li>Our community moderators are often available to provide quick tips and user-to-user assistance.</li><li>We provide a dedicated email address specifically for legal inquiries and DMCA takedown notices.</li><li>We ask that users remain respectful and polite when communicating with our customer service agents.</li></ul><p>The following information is provided to help you maximize your utility of our various services. Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage. Our knowledge base contains dozens of video tutorials demonstrating advanced downloading techniques. We constantly update our documentation to reflect the latest features and platform changes. We frequently post updates on our tech blog regarding new features and known temporary issues. We believe that excellent support is the key to building lasting relationships with our users.</p><ul><li>Our support staff works closely with the engineering team to escalate critical bugs immediately.</li><li>Our team is fluent in multiple languages to provide global support to our diverse user base.</li><li>We offer a specialized support channel for users experiencing accessibility issues with the site.</li></ul><p>The following information is provided to help you maximize your utility of our various services. If you are having trouble downloading a specific format, please consult our supported formats list. We provide clear instructions on how to cancel your subscription safely through the user dashboard. You can reach our support staff via email, the contact form, or our active community forums. We appreciate it when users provide screenshots or screencasts of the issues they are experiencing. We believe that excellent support is the key to building lasting relationships with our users.</p><p>We stand ready to assist you with any challenges you may encounter while using the platform. Our billing department handles all inquiries related to subscriptions, refunds, and payment failures. Our team is fluent in multiple languages to provide global support to our diverse user base. We ask that users remain respectful and polite when communicating with our customer service agents. Our support staff works closely with the engineering team to escalate critical bugs immediately. We hope these resources have been helpful in answering your questions and guiding your usage.</p><p>We stand ready to assist you with any challenges you may encounter while using the platform. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. Our support metrics, including average resolution time, are reviewed weekly by management. If you require assistance in a language we do not officially support, we will utilize translation tools. If you experience a conversion loop, please clear your browser cache before submitting a ticket. Thank you for reaching out; we are always here to support your downloading journey.</p><p>We stand ready to assist you with any challenges you may encounter while using the platform. We constantly update our documentation to reflect the latest features and platform changes. Our support team can help you configure your browser settings for optimal download speeds. We value constructive feedback and often implement user-suggested features in our development roadmap. Our support portal is optimized for mobile devices, allowing you to submit tickets on the go. Our support door is always openâ€”feel free to drop us a line whenever you need assistance.</p><p>Effective communication is the cornerstone of our dedicated user support and service delivery. If a bug is confirmed, we will link your ticket to the internal engineering tracker for updates. We value constructive feedback and often implement user-suggested features in our development roadmap. We provide clear guidelines on what constitutes fair use and platform abuse in our help center. We constantly update our documentation to reflect the latest features and platform changes. We believe that excellent support is the key to building lasting relationships with our users.</p><p>Our goal is to ensure that every user has a seamless and highly productive experience. Our community moderators are often available to provide quick tips and user-to-user assistance. Response times for support inquiries may vary slightly depending on the severity of the reported issue. We constantly update our documentation to reflect the latest features and platform changes. If you experience a conversion loop, please clear your browser cache before submitting a ticket. We are constantly striving to improve, and your support inquiries help us identify areas for growth.</p><ul><li>If you experience a conversion loop, please clear your browser cache before submitting a ticket.</li><li>Our team is fluent in multiple languages to provide global support to our diverse user base.</li><li>Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage.</li></ul><p>We encourage you to explore these resources fully to understand the capabilities of our system. If you have lost access to your account, our recovery process is designed to be secure and efficient. If you require assistance in a language we do not officially support, we will utilize translation tools. Our technical support team monitors service health and ticket queues around the clock. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. Please let us know if there is anything else we can do to enhance your experience.</p><p>These guidelines are established to ensure that your support requests are routed correctly. Our team is fluent in multiple languages to provide global support to our diverse user base. We provide clear guidelines on what constitutes fair use and platform abuse in our help center. If you discover a security vulnerability, please report it via our responsible disclosure program. Our technical support team monitors service health and ticket queues around the clock. We appreciate your trust in our platform and our commitment to serving your needs.</p><p>This section is designed to provide you with all the necessary tools and information for success. We constantly update our documentation to reflect the latest features and platform changes. Our support staff works closely with the engineering team to escalate critical bugs immediately. Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials. We utilize a ticketing system to ensure that no user inquiry is ever lost or overlooked. Our support door is always openâ€”feel free to drop us a line whenever you need assistance.</p><p>We have compiled these comprehensive resources to answer your most pressing questions. If a bug is confirmed, we will link your ticket to the internal engineering tracker for updates. Our refund policy is clearly outlined, and our billing team processes eligible requests promptly. Our ultimate goal is to resolve your inquiry on the very first contact whenever possible. Our community moderators are often available to provide quick tips and user-to-user assistance. Thank you for choosing us; we are here to support you every step of the way.</p><p>These guidelines are established to ensure that your support requests are routed correctly. When submitting a bug report, including the exact source URL and error message is incredibly helpful. If you receive an unexpected error code, our documentation provides a comprehensive lookup table. Our team is fluent in multiple languages to provide global support to our diverse user base. We regularly survey our users to gauge their satisfaction with our customer service performance. Thank you for your understanding as we work diligently to maintain our high support standards.</p><ul><li>We ask that users remain respectful and polite when communicating with our customer service agents.</li><li>Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage.</li><li>Users are encouraged to check our public status page for real-time updates on server outages.</li></ul>"
+  },
+  {
+    "title": "Educational Portals",
+    "excerpt": "Archiving lectures from Coursera, Udemy, MIT OpenCourseWare...",
+    "content": "<p>We are dedicated to resolving your issues promptly, professionally, and with the utmost care. We constantly update our documentation to reflect the latest features and platform changes. If you receive an unexpected error code, our documentation provides a comprehensive lookup table. We ask that users remain respectful and polite when communicating with our customer service agents. Our team is fluent in multiple languages to provide global support to our diverse user base. We are dedicated to making sure your interactions with our service are smooth and trouble-free.</p><p>Navigating the complexities of media downloading is made easier with our dedicated support resources. We are committed to continuous training for our support staff to keep them updated on new tech. We offer customized support plans and dedicated account managers for our enterprise API clients. If you receive an unexpected error code, our documentation provides a comprehensive lookup table. Our team is fluent in multiple languages to provide global support to our diverse user base. Your satisfaction is our top priority, and we will not rest until your issue is fixed.</p><p>Customer satisfaction and comprehensive support are paramount to our overall operational strategy. When submitting a bug report, including the exact source URL and error message is incredibly helpful. Our knowledge base contains dozens of video tutorials demonstrating advanced downloading techniques. We provide step-by-step troubleshooting guides for common browser extension installation issues. If your IP address has been blocked, you must contact support to appeal the automated ban. Our support door is always openâ€”feel free to drop us a line whenever you need assistance.</p><p>We have compiled these comprehensive resources to answer your most pressing questions. Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage. Our support metrics, including average resolution time, are reviewed weekly by management. We utilize a ticketing system to ensure that no user inquiry is ever lost or overlooked. We take all reports of platform abuse or malicious activity extremely seriously. We hope these resources have been helpful in answering your questions and guiding your usage.</p><p>Our support infrastructure is designed to address user inquiries efficiently and accurately. We value constructive feedback and often implement user-suggested features in our development roadmap. We constantly update our documentation to reflect the latest features and platform changes. Our refund policy is clearly outlined, and our billing team processes eligible requests promptly. We provide offline documentation PDFs for users who need to reference our guides without internet access. We deeply appreciate your patience and cooperation while we work to resolve these matters.</p><ul><li>We constantly update our documentation to reflect the latest features and platform changes.</li><li>We frequently post updates on our tech blog regarding new features and known temporary issues.</li><li>Our knowledge base contains dozens of video tutorials demonstrating advanced downloading techniques.</li></ul><p>Navigating the complexities of media downloading is made easier with our dedicated support resources. We take all reports of platform abuse or malicious activity extremely seriously. Our community moderators are often available to provide quick tips and user-to-user assistance. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. If a bug is confirmed, we will link your ticket to the internal engineering tracker for updates. We deeply appreciate your patience and cooperation while we work to resolve these matters.</p><p>Providing world-class support is just as important to us as developing world-class technology. If you are having trouble downloading a specific format, please consult our supported formats list. Our billing department handles all inquiries related to subscriptions, refunds, and payment failures. We frequently post updates on our tech blog regarding new features and known temporary issues. If you require assistance in a language we do not officially support, we will utilize translation tools. We believe that excellent support is the key to building lasting relationships with our users.</p><ul><li>You can reach our support staff via email, the contact form, or our active community forums.</li><li>Our ultimate goal is to resolve your inquiry on the very first contact whenever possible.</li><li>If you receive an unexpected error code, our documentation provides a comprehensive lookup table.</li></ul><p>Providing world-class support is just as important to us as developing world-class technology. We provide step-by-step troubleshooting guides for common browser extension installation issues. If your IP address has been blocked, you must contact support to appeal the automated ban. We provide detailed API documentation complete with code examples in Python, Node.js, and cURL. We encourage users to search the knowledge base before opening a new ticket to save time. Our support door is always openâ€”feel free to drop us a line whenever you need assistance.</p><p>This section is designed to provide you with all the necessary tools and information for success. If you discover a security vulnerability, please report it via our responsible disclosure program. We provide detailed API documentation complete with code examples in Python, Node.js, and cURL. Premium subscribers receive prioritized routing in our support system for faster resolution times. We take all reports of platform abuse or malicious activity extremely seriously. We are dedicated to making sure your interactions with our service are smooth and trouble-free.</p><ul><li>We offer customized support plans and dedicated account managers for our enterprise API clients.</li><li>Response times for support inquiries may vary slightly depending on the severity of the reported issue.</li><li>Our refund policy is clearly outlined, and our billing team processes eligible requests promptly.</li></ul><p>Our support team is trained to handle a wide variety of inquiries, from billing to technical bugs. Our technical support team monitors service health and ticket queues around the clock. We regularly survey our users to gauge their satisfaction with our customer service performance. Our system automatically sends you an email confirmation when your support ticket is successfully received. We encourage users to search the knowledge base before opening a new ticket to save time. Rest assured, your concerns are being handled by a team of dedicated professionals.</p><ul><li>Users are encouraged to check our public status page for real-time updates on server outages.</li><li>Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage.</li><li>If you are having trouble downloading a specific format, please consult our supported formats list.</li></ul><p>We have compiled these comprehensive resources to answer your most pressing questions. If a bug is confirmed, we will link your ticket to the internal engineering tracker for updates. Our support team cannot provide assistance with bypassing DRM or downloading copyrighted materials. Response times for support inquiries may vary slightly depending on the severity of the reported issue. Our support metrics, including average resolution time, are reviewed weekly by management. We appreciate your trust in our platform and our commitment to serving your needs.</p><ul><li>If you require assistance in a language we do not officially support, we will utilize translation tools.</li><li>If you have lost access to your account, our recovery process is designed to be secure and efficient.</li><li>Our knowledge base contains dozens of video tutorials demonstrating advanced downloading techniques.</li></ul><p>Our goal is to ensure that every user has a seamless and highly productive experience. If you discover a security vulnerability, please report it via our responsible disclosure program. We encourage users to search the knowledge base before opening a new ticket to save time. Our support portal is optimized for mobile devices, allowing you to submit tickets on the go. Our ultimate goal is to resolve your inquiry on the very first contact whenever possible. We are dedicated to making sure your interactions with our service are smooth and trouble-free.</p>"
+  },
+  {
+    "title": "Audio & Podcast Hosts",
+    "excerpt": "Pulling tracks from SoundCloud, Bandcamp, and Spotify podcasts...",
+    "content": "<p>We have compiled these comprehensive resources to answer your most pressing questions. We encourage users to search the knowledge base before opening a new ticket to save time. Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage. Our community moderators are often available to provide quick tips and user-to-user assistance. Our support portal is optimized for mobile devices, allowing you to submit tickets on the go. We believe that excellent support is the key to building lasting relationships with our users.</p><p>We are dedicated to resolving your issues promptly, professionally, and with the utmost care. If you are unsure how to use a specific tool, our interactive walkthroughs can provide guidance. Our system automatically sends you an email confirmation when your support ticket is successfully received. We take all reports of platform abuse or malicious activity extremely seriously. We frequently post updates on our tech blog regarding new features and known temporary issues. Please do not hesitate to contact us again if you require any further clarification or help.</p><p>We understand that technical issues can be frustrating, and we are here to help resolve them. We regularly survey our users to gauge their satisfaction with our customer service performance. We offer customized support plans and dedicated account managers for our enterprise API clients. We offer a specialized support channel for users experiencing accessibility issues with the site. We provide clear guidelines on what constitutes fair use and platform abuse in our help center. We hope to resolve your issue swiftly so you can get back to enjoying our services.</p><p>We encourage you to explore these resources fully to understand the capabilities of our system. Our support team can help you configure your browser settings for optimal download speeds. If you receive an unexpected error code, our documentation provides a comprehensive lookup table. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. Our support metrics, including average resolution time, are reviewed weekly by management. Thank you for being a vital part of our community and helping us improve the platform.</p><p>Our support team is trained to handle a wide variety of inquiries, from billing to technical bugs. Premium subscribers receive prioritized routing in our support system for faster resolution times. If your IP address has been blocked, you must contact support to appeal the automated ban. Our team is fluent in multiple languages to provide global support to our diverse user base. We appreciate it when users provide screenshots or screencasts of the issues they are experiencing. We value your business and are committed to providing exceptional customer service.</p><ul><li>We provide step-by-step troubleshooting guides for common browser extension installation issues.</li><li>If you require assistance in a language we do not officially support, we will utilize translation tools.</li><li>If you experience a conversion loop, please clear your browser cache before submitting a ticket.</li></ul><p>We encourage you to explore these resources fully to understand the capabilities of our system. Our ultimate goal is to resolve your inquiry on the very first contact whenever possible. Our technical support team monitors service health and ticket queues around the clock. We encourage users to search the knowledge base before opening a new ticket to save time. Our support team can help you configure your browser settings for optimal download speeds. Rest assured, your concerns are being handled by a team of dedicated professionals.</p><ul><li>We offer customized support plans and dedicated account managers for our enterprise API clients.</li><li>We are committed to continuous training for our support staff to keep them updated on new tech.</li><li>We ask that users remain respectful and polite when communicating with our customer service agents.</li></ul><p>We have compiled these comprehensive resources to answer your most pressing questions. Our technical support team monitors service health and ticket queues around the clock. Our API support team can assist with optimizing your queries to reduce your overall bandwidth usage. We offer a highly detailed FAQ section that addresses the most common user concerns and errors. Our refund policy is clearly outlined, and our billing team processes eligible requests promptly. Thank you for reaching out; we are always here to support your downloading journey.</p><p>We strive to provide clear, actionable guidance for every feature available on our platform. If you experience a conversion loop, please clear your browser cache before submitting a ticket. We provide offline documentation PDFs for users who need to reference our guides without internet access. We monitor social media channels for urgent user reports, though official tickets are preferred. If you have lost access to your account, our recovery process is designed to be secure and efficient. Thank you for being a vital part of our community and helping us improve the platform.</p><ul><li>Our team is fluent in multiple languages to provide global support to our diverse user base.</li><li>If you discover a security vulnerability, please report it via our responsible disclosure program.</li><li>Our support portal is optimized for mobile devices, allowing you to submit tickets on the go.</li></ul><p>Customer satisfaction and comprehensive support are paramount to our overall operational strategy. When submitting a bug report, including the exact source URL and error message is incredibly helpful. If you experience a conversion loop, please clear your browser cache before submitting a ticket. Users are encouraged to check our public status page for real-time updates on server outages. We host regular webinars and Q&A sessions to help users get the most out of their premium accounts. Our support door is always openâ€”feel free to drop us a line whenever you need assistance.</p><p>This section is designed to provide you with all the necessary tools and information for success. Our support metrics, including average resolution time, are reviewed weekly by management. We provide a dedicated email address specifically for legal inquiries and DMCA takedown notices. We ask that users remain respectful and polite when communicating with our customer service agents. Our support team can help you configure your browser settings for optimal download speeds. Thank you for being a vital part of our community and helping us improve the platform.</p><p>The following information is provided to help you maximize your utility of our various services. We offer a highly detailed FAQ section that addresses the most common user concerns and errors. When submitting a bug report, including the exact source URL and error message is incredibly helpful. Our system automatically sends you an email confirmation when your support ticket is successfully received. We offer customized support plans and dedicated account managers for our enterprise API clients. Our support door is always openâ€”feel free to drop us a line whenever you need assistance.</p><p>We believe that a well-informed user is an empowered user, which is why we provide detailed guides. We provide step-by-step troubleshooting guides for common browser extension installation issues. You can reach our support staff via email, the contact form, or our active community forums. We frequently post updates on our tech blog regarding new features and known temporary issues. When submitting a bug report, including the exact source URL and error message is incredibly helpful. We appreciate your trust in our platform and our commitment to serving your needs.</p><p>We are dedicated to resolving your issues promptly, professionally, and with the utmost care. Our technical support team monitors service health and ticket queues around the clock. We offer a highly detailed FAQ section that addresses the most common user concerns and errors. Our community moderators are often available to provide quick tips and user-to-user assistance. Our support team can help you configure your browser settings for optimal download speeds. Please do not hesitate to contact us again if you require any further clarification or help.</p><ul><li>Our support portal is optimized for mobile devices, allowing you to submit tickets on the go.</li><li>We encourage users to search the knowledge base before opening a new ticket to save time.</li><li>If you are unsure how to use a specific tool, our interactive walkthroughs can provide guidance.</li></ul>"
+  }
+];
+
+    const grid = document.getElementById('sectionsGrid');
+    const modal = document.getElementById('articleModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.getElementById('closeModal');
+
+    // Render Cards
+    sections.forEach((section, index) => {
+      const card = document.createElement('article');
+      card.className = 'blog-card';
+      card.innerHTML = `
+        <h2 class="card-title">${section.title}</h2>
+        <p class="card-excerpt">${section.excerpt}</p>
+        <button class="read-btn" onclick="openSection(${index})">Read More</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Modal Logic
+    window.openSection = (index) => {
+      modalBody.innerHTML = `<h2>${sections[index].title}</h2>` + sections[index].content;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    closeBtn.onclick = () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    };
+
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    };
+  </script>
+</body>
+</html>

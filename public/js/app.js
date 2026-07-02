@@ -50,6 +50,10 @@
     }
 
     lastUrl = url;
+
+    // Show 10-second video ad if free user
+    await showVideoAd();
+
     setState(State.PROCESSING);
     StreamUI.startProcessingAnimation(url);
 
@@ -124,42 +128,45 @@
     // Step 2: Navigate the browser to the stream URL to trigger native download
     StreamUI.setDownloadProgress(btn, 100);
     
-    const a = document.createElement('a');
-    a.href = (window.API_BASE || '') + downloadUrl;
-    // We can't always rely on a.download for cross-origin or programmatic redirects,
-    // but the backend sets Content-Disposition attachment anyway.
-    a.target = '_blank';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => { try { document.body.removeChild(a); } catch {} }, 500);
+    // We use location.href instead of an anchor with target="_blank" to bypass 
+    // Safari's strict popup blocker on asynchronous callbacks. 
+    // Because the backend returns "Content-Disposition: attachment", 
+    // the browser will download the file without leaving the current page.
+    window.location.href = (window.API_BASE || '') + downloadUrl;
   }
 
   // ── Ad Trigger Helpers ────────────────────────────────────────────────────
-  function triggerPopunderAd() {
-    console.log('[Ads] Triggering Popunder click-popup ad...');
-    // In production, your ad network (e.g. Adsterra) Popunder script will automatically bind to click events,
-    // or you can manually trigger their SmartLink / Direct Link opening in a new tab:
-    // window.open('https://your-adsterra-direct-link.com', '_blank');
-    if (typeof window.adsterra_popunder === 'function') {
-      window.adsterra_popunder();
-    } else {
-      console.log('%c[AD DISPLAYED] Popunder ad window popped up.', 'color: #f59e0b; font-weight: bold;');
-    }
-  }
+  async function showVideoAd() {
+    // Premium users bypass video ads completely
+    if (document.body.classList.contains('premium-user')) return;
 
-  function triggerInterstitialAd() {
-    console.log('[Ads] Triggering Vignette / Interstitial full-screen ad...');
-    if (typeof window.adsterra_interstitial === 'function') {
-      window.adsterra_interstitial();
-    } else {
-      console.log('%c[AD DISPLAYED] Vignette/Interstitial full-screen ad shown.', 'color: #f59e0b; font-weight: bold;');
-      StreamUI.showToast('ℹ️ [AD PLACEHOLDER] Vignette full-screen ad triggered.', 'info', 3000);
-    }
+    return new Promise((resolve) => {
+      const modal = document.getElementById('modal-video-ad');
+      const timerEl = document.getElementById('video-ad-timer');
+      if (!modal || !timerEl) {
+        resolve();
+        return;
+      }
+      
+      modal.classList.remove('hidden');
+      let timeLeft = 10;
+      timerEl.textContent = timeLeft;
+      
+      const interval = setInterval(() => {
+        timeLeft--;
+        timerEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          modal.classList.add('hidden');
+          resolve();
+        }
+      }, 1000);
+    });
   }
 
   // ── Download Handler ──────────────────────────────────────────────────────
   async function handleDownload(btn) {
-    triggerPopunderAd();
+    await showVideoAd();
     const pageUrl  = btn.dataset.pageUrl;
     const formatId = btn.dataset.formatId;
     const title    = btn.dataset.title || 'download';
@@ -182,7 +189,7 @@
 
   // ── Merge Handler ─────────────────────────────────────────────────────────
   async function handleMerge(btn) {
-    triggerPopunderAd();
+    await showVideoAd();
     const pageUrl       = btn.dataset.pageUrl;
     const formatId      = btn.dataset.formatId;
     const audioFormatId = btn.dataset.audioFormatId;
@@ -302,7 +309,6 @@
 
     // Reset / Retry
     const handleReset = () => {
-      triggerInterstitialAd();
       setState(State.IDLE);
       if (urlInput) { urlInput.value = ''; urlInput.focus(); }
       lastExtractedData = null;
@@ -483,6 +489,17 @@
     if (params.get('upgraded') === 'true') {
       StreamUI.showToast('🎉 Welcome to Premium! Enjoy unlimited 4K downloads.', 'success', 6000);
       // Clean URL
+      window.history.replaceState({}, '', '/');
+    }
+
+    // Chrome Extension Integration: Automatically extract if URL is passed
+    const passedUrl = params.get('url');
+    if (passedUrl && urlInput) {
+      urlInput.value = passedUrl;
+      urlInput.dispatchEvent(new Event('input'));
+      // Wait a tiny bit for the UI to settle before triggering extract
+      setTimeout(() => handleExtract(passedUrl), 100);
+      // Clean URL so refresh doesn't re-trigger immediately
       window.history.replaceState({}, '', '/');
     }
 
